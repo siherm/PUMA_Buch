@@ -1,0 +1,1178 @@
+\documentclass[a4paper,11pt,twoside]{scrbook}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}      % Unterstützung für Europäische-Zeichen-Ausgabe
+%\usepackage{ae}               % verbesserte Unterstützung für Umlaute
+\usepackage[ngerman]{babel}% deutsche Übersetzungen und Wortumbrüche
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage[scaled=.90]{helvet}  % schönere Schriftart: Helvetica
+\usepackage{graphicx}              % Unterstützung für Graphiken
+\usepackage[                
+   pdftex,                  % Ausgabe-Medium: PDF
+   colorlinks=true,         % farbige Links in der Bildschirm-Version?
+   linkcolor=blue,          % Farbe für Querverweise
+   citecolor=black,         % Farbe für Zitierungen
+   urlcolor=red,           % Farbe für Links
+   bookmarks=true
+   ]{hyperref}              % Paket für Links im PDF
+   
+\makeatletter 
+\renewcommand*\thesection{\@arabic\c@section.}
+\renewcommand*\thesubsection{\thesection\@arabic\c@subsection.}
+\renewcommand*\thesubsubsection{\thesubsection\@arabic\c@subsubsection.}
+\renewcommand*\theparagraph{\thesubsubsection\@arabic\c@paragraph.}
+\renewcommand*\thesubparagraph{\theparagraph\@arabic\c@subparagraph.}
+\makeatother 
+
+ 
+
+\begin{document}
+
+%\begin{center}
+    %\vspace*{1cm}
+    \title{\Huge Literaturverwaltung mit PUMA}
+    %\vspace{0.5cm}
+    \subtitle{\Large Ein umfassendes Handbuch}
+    %\vspace{1.5cm}
+    \author{\textbf{Selina Eckert}}
+    \date{2016}
+    %\vfill
+    %\includegraphics
+    %[scale=0.25]
+    %{USt_logo3_07_klein.jpg}\newline
+    %\vspace{1cm}
+%\end{center}
+
+\maketitle
+%\setcounter{tocdepth}{6}
+%\newpage
+\pagenumbering{Roman} 
+\tableofcontents 
+\newpage
+\pagenumbering{arabic} 
+\section{PUMA- der digitale Zettelkasten}
+Das Akademische Publikationsmanagement (PUMA) ist zu vergleichen mit einem riesigen digitalen Zettelkasten, der für alle möglichen Quellen und Medien einsetzbar ist. Es schafft Struktur und Ordnung in die von Ihnen gesammelten Publikationslisten und weiß immer, wo Sie etwas finden können. Gleichzeitig bietet PUMA Platz für Notizen und Anmerkungen, sowie eine Zusammenarbeit mit anderen Mitgliedern von PUMA. 
+\subsection{Was ist PUMA?}
+PUMA ist ein System zum Sammeln, Verwalten, Teilen und Entdecken von Lesezeichen und Publikationen. \newline
+Die Web-Anwendung PUMA ist ein Schwester-System von BibSonomy.  PUMA wurde durch das Deutsche Forschungsgemeinschaft (DFG) von Anfang August 2009 bis Juli 2011 gefördert. Die Universitätsbibliothek Kassel und das Fachgebiet Wissensverarbeitung der Universität Kassel sind an PUMA beteiligt. Nach der ersten Projektphase wurden das System als Open Source-Software veröffentlicht. PUMA profitiert von der Weiterentwicklung seines Schwester-Systems BibSonomy und wird immer wieder aktualisiert. In einer zweiten Förderphase der DFG von 2013 bis 2015 trat die DMIR-Gruppe (Data Mining \& Information Retrieval Group) von der Universität Würzburg dem PUMA-Team bei. In ihrem Rahmen wurde die Zusammenarbeit mit Fremdsystemen ausgebaut, wie z. B. die Integration von PUMA im Discovery Service des HeBIS-Verbundes, dem die Open-Source-Software Vufind zugrunde liegt. Ergebnis ist ein Modul, das die Merklistenfunktion dahingehend erweitert, dass die Einträge automatisch in PUMA gespeichert und die Inhalte der Merkliste aus PUMA geholt werden. Bis zum derzeitigen Stand gibt es PUMA an insgesamt ... Universitätsbibliotheken in Deutschland.
+\newline  
+\newline
+PUMA ist so konzipiert, dass es als alleiniges Eingabeportal für bibliografische Metadaten dienen kann. So können Forscher PUMA nicht nur als Online-Literaturverwaltung nutzen, sondern auch eigene Publikationen auf dem Dokumentenserver ihrer Universitätsbibliothek oder vergleichbaren Einrichtungen veröffentlichen. Außerdem können zu Literatureinträgen Dokumente, bis zu einer Größe von maximal 50 Megabyte, hochgeladen werden. \newline
+Durch die Vielzahl an Exportformaten und Schnittstellen zu anderen Programmen, fördert PUMA  die Zusammenarbeit von Nutzern, sowie das Eingeben und Teilen von Lesezeichen und Publikationen. 
+\subsection{Gebrauch von PUMA}
+PUMA ist für viele unterschiedliche Zielgruppen geeignet. Beispielsweise für ...\newline 
+... \textbf{StudentInnen}, die ihre gesammelte Literatur verwalten wollen. PUMA hilft Ihnen bei Literaturrecherchen für eine Hausarbeit/Bachelor-oder Masterarbeit, indem Sie sich gefundene Literatur in PUMA merken können. Um Zeit zu sparen können Webseiten und Publikationen mittels einer Schaltfläche in den eigenen Browser direkt in PUMA abspeichern werden. Am Ende der Hausarbeit hilft Ihnen PUMA noch dabei das Literaturverzeichnis zu erstellen.
+\newline 
+... \textbf{Institutmitarbeiter}, die kollektiv an einer Literaturliste arbeiten wollen. Durch den Gebrauch von PUMA wird die Zusammenarbeit in Instituten um ein vielfaches vereinfacht. Die Mitarbeiter können ihre eigenen und gemeinsamen Literaturlisten besser pflegen und erhalten eine Überblick. \newline ... 
+\subsection{Anmelden bei PUMA} 
+\textbf{Vorab:} Sie benötigen einen gültigen Bibliotheksausweis!
+\begin{enumerate}
+    \item Rufen Sie die Anmeldeseite von PUMA auf: \url{https://puma.ub.uni-stuttgart.de/}
+    \item Geben Sie unter \enquote{Benutzername} Ihr ac- oder st-Konto der Universität Stuttgart ein. Diesen finden Sie auf der Rückseite Ihres Bibliotheksausweises unterhalb des Strichcodes. %stimmt das?
+    \item Unter  \enquote{Passwort} geben Sie Ihren Pin-Code ein. Bei der Ausstellung Ihres Ausweises wird dieser automatisch aus Ihrem Geburtsdatum generiert. Er hat das folgende Format: DDMMYY (DD= Tag (ggf. mit führender 0) / MM= Monat (ggf. mit führender 0) / YY= Jahr (die letzten zwei Ziffern des Geburtsjahres)). Beispiel: Wenn Sie am 25.03.1996 geboren sind, dann lautet Ihr Passwort: 250396.
+    \item Klicken Sie auf \enquote{Anmelden}.
+    \item Wenn Ihre Anmeldung erfolgreich war, dann zeigt Ihnen PUMA Ihre persönlichen Daten an (diese wurden bereits bei der Beantragung des Bibliotheksausweises hinterlegt). Überprüfen Sie die vorliegenden Daten und klicken Sie anschließend auf \enquote{Registrieren}.
+\end{enumerate}
+Gratulation! Sie haben sich erfolgreich bei PUMA angemeldet. Ab sofort können Sie sich bei PUMA mit den Daten ihres Bibliotheksausweises anmelden. 
+
+\newpage
+\section{Aufbau}
+%Screenshot vom Hauptmenü
+\subsection{Suchleiste}
+Die Suche bei PUMA bietet Ihnen viele Möglichkeiten den Datensatz nach unterschiedlichen Informationen zu durchsuchen. Klicken Sie auf den kleinen Pfeil neben \enquote{Suche} und wählen Sie sich aus dem erscheinenden Menü den Datensatz aus, den Sie durchsuchen wollen, z.B. Benutzer um nach einen bestimmten Benutzer zu suchen. Anschließend geben Sie in das weiße Feld daneben Ihren Suchbegriff ein. Klicken Sie anschließend auf \enquote{Suche} oder \enquote{Enter} und PUMA gibt Ihnen in wenigen Sekunden die Ergebnisse aus.
+\subsection{Spracheinstellung}
+Hier haben Sie die Möglichkeit zwischen den drei verfügbaren Sprachen in PUMA zu wechseln. Es gibt die Möglichkeiten zwischen Englisch (en), Deutsch (de) und Russisch (ru) zu wählen.
+\newline
+\textbf{TIPP:} Um die Sprache für die Seite festzulegen, sodass diese bei jedem neuen Besuch bei PUMA gleich ist, müssen Sie dies in den Einstellungen festlegen. Dorthin gelangen Sie über das Personensymbol rechts im Hauptmenü. Sie klicken auf die schwarzen Einstellungs-Zahnräder und die Seite mit den Einstellungen öffnet sich. Anschließend klicken Sie auf den Reiter \enquote{Einstellungen}. Auf der erscheinenden Seite können Sie nun die gewünschte Sprache festlegen und müssen anschließend auf \enquote{Layout speichern} die Änderung bestätigen.
+\subsection{Linkes Hauptmenü}
+Das Hauptmenü stellt die wichtigsten Funktionen von PUMA bereit. Es ist zu beachten, dass sich einige Einstellungen unterscheiden, da es bei PUMA die Unterscheidung zwischen einfachen Funktionen und erweiterten Funktionen gibt (vgl. Kapitel 4.3: Freischalten von erweiterten Funktionen), dies betrifft vor allem den unten genannten Punkt \enquote{Mein PUMA}. 
+\subsubsection{Home}
+Damit gelangen Sie zur Startseite und erhalten einen Überblick über Publikationen und Lesezeichen die vor kurzer Zeit eingetragen wurden.
+\subsubsection{Mein PUMA}
+Es ist zu beachten, dass sich einige Einstellungen unterscheiden, da es bei PUMA die Unterscheidung zwischen einfachen Funktionen und erweiterten Funktionen gibt. Durch das Freischalten der erweiterten Funktionen kommen weitere Funktionen dazu.
+\begin{enumerate}
+    \item Einfache Funktion:
+    \begin{itemize}
+        \item meine Einträge: Hier gelangen Sie zu dem eigenen Publikations- und Lesezeichenverzeichnis, das Sie sich angelegt haben.
+        \item Diskutierte Einträge: Hier finden Sie alle Publikationen und Lesezeichen, die Sie selber bewertet haben. Ebenso werden Kommentare und Rezessionen von Anderen zu Ihren Publikationen hier angezeigt.
+    \end{itemize}
+    \item Erweiterte Funktionen:
+    \begin{itemize}
+        \item Private Einträge: Damit gelangen Sie zu Ihren Einträgen, die nur für Sie sichtbar sind. 
+        \item Einträge für Freunde: Zeigt die Einträge, die nur Sie selber und Ihre Freunde sehen können.
+        \item Dokumente: Wenn Sie Ihren Einträgen Dokumente (z.B. eine PDF) angehängt haben, können Sie hier eine Übersicht über die angehängten Dokumente sehen.
+        \item Duplikate: Zeigt Ihnen die Einträge, die wahrscheinlich Dublikate sind. So können Sie ihre Literaturliste ganz einfach bereinigen. 
+        \item Konzepte: Konzepte ermöglichen es Ihnen mehreren Schlagwörtern zu gruppieren. %vllt noch mehr
+        \item Lebenslauf: Hier können Sie Ihre persönlichen Daten hinterlegen, welche für andere Nutzer in PUMA sichtbar sind.
+        \item Publikationen durchstöbern: Mit dieser Funktion können Sie ihre eigenen Lesezeichen/Publikation durchstöbern können. Sie erhalten so einen schnellen Überblick über den eigenen Literaturbestand. (vgl. kapitel 4.5)
+        \item BibTex exportieren: Exportiert Ihre Daten in das BibTex-Format.
+    \end{itemize}
+\end{enumerate}
+\subsubsection{Eintragen}
+\begin{enumerate}
+    \item Lesezeichen eintragen: Fügen Sie ein neues Lesezeichen Ihrer Sammlung hinzu. (vgl. Kapitel 3.2) 
+    \item Publikation eintragen: Fügen Sie ein neue Publikation Ihrer Sammlung hinzu. (Vgl. 3.3)
+\end{enumerate}
+\subsubsection{Gruppen}
+Zeigt Ihnen die Funktionen zu Gruppen an, sowie die Gruppen in denen Sie Mitglied sind.
+\begin{enumerate}
+    \item Alle Gruppen: Verschafft Ihnen einen Überblick über alle existierenden Gruppe bei PUMA.
+    \item Eine neue Gruppe erstellen: Bietet Ihnen die Möglichkeit eine eigene Gruppe zu erstellen.
+\end{enumerate}
+\subsubsection{Beliebt}
+Ermöglicht Ihnen, die derzeitig beliebtesten Einträge bei PUMA zu durchforsten.
+\begin{enumerate}
+    \item Einträge: Zeigt die beliebtesten Einträge an.
+    \item Tags: Zeigt die beliebtesten Tags in einer Schlagwortwolke an. Je größer ein Tag ist, desto beliebter ist er.
+    \item Autor: Zeigt die beliebtesten Autoren an.
+    \item Konzepte: Zeigt die beliebtesten Konzepte und deren Zuordnungen an. 
+    \item Diskussionen: Zeigt Lesezeichen und Publikationen an, über welche viel diskutiert wurde. 
+\end{enumerate}
+\subsubsection{Genealogie}
+
+%InHALT
+\subsection{Rechtes Hauptmenü}
+\subsubsection{@username}
+Über diesen Button gelangen Sie zu Ihrer Publikations- und Lesezeichensammlung. 
+\subsubsection{Das Personensymbol}
+\begin{enumerate}
+    \item Eingang: Dies ist Ihr Lesenzeichen-/Publikations-Posteingang. Freunde/ Gruppen können Ihnen Publikationen und Lesezeichen zuschicken, diese Eingänge landen dann hier.
+    \item Ablage: In der Ablage können Sie aktuelle Literaturlisten zusammenstellen. \hyperlink{Ablage}{(vgl. Kapitel 3.8)}
+    \item Freunde: Hier erhalten Sie einen Überblick über Ihre Freunde. 
+    \item Tags bearbeiten: Hier können Sie Tags und Konzepte überarbeiten, beispielsweise alte Tags durch neue ersetzten. Genauere Informationen zu Tags vgl. Kapitel 3.5 .
+    \item Einstellungen: Zeigt Ihre persönlichen Benutzereinstellungen an. Sie können hier Ihr Profil, die allgemeinen Einstellungen, Ihren Lebensauf sowie Einstellungen zu Gruppen ändern.
+    \item Weblog: Leitet Sie zu dem Weblog von PUMA weiter.
+    \item Hilfe: Damit gelangen Sie zur Online-Hilfe.
+    \item Abmelden: Wenn Sie PUMA verlassen wollen melden Sie sich hier ab. 
+\end{enumerate}
+\subsection{Inhaltsbereich}
+Hier sehen Sie die aktuellsten Lesezeichen und Publikationen von Ihnen und anderen Nutzern. 
+\subsection{Beliebte Tags}
+Zeigt Ihnen die beliebtesten Tags an. Sie können zwischen der Wolken-oder Listen-Ansicht wählen.
+\newpage
+\section{Erste Schritte}
+\subsection{CV/Lebenslauf}
+Ihr Lebenslauf ermöglicht anderen Benutzern Sie und Ihre Arbeiten kennen zu lernen. Die Daten, die Sie in Ihr Profil schreiben sind für alle PUMA-Nutzer sichtbar. Für Ihr Profil können Sie entweder vordefinierte Layouts benutzen oder selber ein Layout mit Hilfe der MediaWiki-Sytax\footnote{\url{https://en.wikipedia.org/wiki/Help:Wiki_markup}} definieren. 
+\newline
+\newline
+Lebenslauf bearbeiten:
+\begin{enumerate}
+    \item Klicken Sie auf Ihren Benutzernamen (@username).
+    \item Klicken Sie rechts neben Ihrem Profilbild auf den CV-Button.
+    \item Ihr Lebenslauf öffnet sich (Ansicht: So wie ihn andere Nutzer sehen).
+    \item Um den Lebenslauf zu bearbeiten klicken Sie auf das schwarze Zahnrad neben \enquote{Curriculum Vitae}.
+    \item Klicken Sie anschließend im Untermenü auf "Lebenslauf bearbeiten". Sie können nun ein vordefiniertes Layout auswählen oder selber ein Layout mit der MediaWiki-Sytax definieren \hyperlink{Eignes Layout}{(Siehe eigenes Layout unten)}.%link im Text erstellen
+\end{enumerate}
+\textbf{Alternativer Weg:} 
+\begin{enumerate}
+    \item Klicken Sie auf das Personensymbol. Es öffnet sich ein Untermenü.
+    \item Klicken Sie im Untermenü auf \enquote{Einstellungen}.
+    \item Eine neue Seite öffnet sich. Klicken Sie auf den Reiter "Lebenslauf". Sie können nun ein vordefiniertes Layout auswählen oder selber ein Layout mit der MediaWiki-Sytax definieren \hyperlink{Eigenes Layout}{(Siehe eigenes Layout unten)}.%link im Text erstellen
+\end{enumerate}
+\textbf{ACHTUNG:} Wenn Sie zwischen den vordefinierten Layouts wechseln geht ihr selbst definiertes Layout verloren. % In der Hilfe steht dies sei nicht der Fall, wenn man speichert, aber geht bei mir nicht
+\newline
+\newline
+\hypertarget{Eigenes Layout}{Eigenes Layout:}
+\newline
+Um sich selber ein Layout zu definieren müssen Sie die MediaWiki-Sytax verwenden. Um Zeit zu sparen bieten wir Ihnen einige XHTML-Tags an: % Tabelle % ist XHTML bei wiki???
+\newline
+Für die Tags \textit{<publications />} und \textit{<bookmarks />} können Sie außerdem eigene Tags als Ressourcenselektoren benutzen, wenn Sie tags=\enquote{tag1 tag2 (...)} als Attribute anfügen. Beispielsweise liefert \textit{<publications tags=\enquote{data mining} />} alle Ihre Publikationen zurück, die Sie sowohl mit data als auch mit mining getagged haben. 
+\subsection{Publikationen}% Screenshot vom hauptmenü mit den reitern
+Grundlagen:
+\newline
+Unter Publikationen versteht man in PUMA alle Arten von Dokumenten (Artikel, Monografie, usw.). Sie können eigene oder fremde Publikationen (z. B. als Basis für eine Literaturrecherche) mit PUMA erstellen/ verwalten/ recherchieren. 
+\newline
+\newline
+Publikationen eintragen:
+\begin{enumerate}
+    \item Klicken Sie auf den Menüpunkt \enquote{Eintragen} im Hauptmenü. Ein Untermenü klappt auf.
+    \item Klicken Sie im Untermenü auf \enquote{Publikation eintragen}.
+    \item Sie können nun zwischen fünf Möglichkeiten wählen, wie Sie die Publikation eintragen wollen:
+    \begin{itemize}
+        \item Per Hand:
+        \begin{enumerate}
+            \item Klicken Sie auf den Reiter \enquote{Per Hand}.
+            \item Geben Sie alle geforderten Daten in die entsprechenden Felder ein und klicken Sie anschließend auf \enquote{Weiter}. 
+            \item Im nächsten Schritt können Sie weiterführende Informationen angeben. Sie können aber auch gleich auf \enquote{Speichern} klicken, um die Publikation einzutragen.
+        \end{enumerate}
+        \item BibTex/EndNote-Schnipsel:
+        \newline
+        Voraussetzung ist, dass Sie Ihre Literaturliste aus Ihrem bisherigen Literaturverwaltungsprogramm in die Zwischenablage exportieren.
+        \begin{enumerate}
+            \item Klicken Sie auf den Reiter \enquote{BibTex/EndNote-Schnipsel}.
+            \item Fügen Sie den Text aus der Zwischenablage in das Textfeld \enquote{Auswahl} ein. Dies können Sie so erreichen, indem Sie auf das Textfeld Auswahl gehen und mit der rechte Maustaste das Menü öffnen und auf \enquote{Einfügen} klicken. Erscheint das Wort \enquote{Einfügen} grau, dann haben Sie keine Daten in die Zwischenablage exportiert und Sie müssen den Text erneut in die Zwischenablage einfügen.
+            \item Klicken Sie auf \enquote{Weiter}.
+            \item PUMA zeigt Ihnen nun eine Übersicht über alle Daten an. Überprüfen Sie diese auf ihre Richtigkeit.
+            \item Klicken Sie \enquote{Speichern}.
+        \end{enumerate}
+        \item Datei hochladen:\newline
+        Voraussetzung ist, dass es sich um eine BibTex- oder EndNote-Datei handeln.
+        \begin{enumerate}
+            \item Klicken Sie auf \enquote{Datei hochladen}.
+            \item Über den \enquote{Durchsuchen} Button haben Sie die Möglichkeit die gewünschte Datei auszuwählen.
+            \item Der Dateiname der ausgewählten Datei erscheint hinter dem Durchsuchen-Button. Sie können anschließend die Sichtbarkeit des Eintrags festlegen. Durch das Klicken auf \enquote{Speicher} erhalten Sie die Detailansicht der Publikation und können diese nochmals überarbeiten und auf Ihre Richtigkeit überprüfen.
+            \item Klicken Sie anschließend nochmals auf \enquote{Speichern} um die Publiaktion in Ihre Sammlung einzutragen.
+        \end{enumerate}
+        \item ISBN/ DOI:
+        \begin{enumerate}
+            \item Klicken Sie auf den Reiter \enquote{ISBN/DOI}.
+            \item Tragen Sie in das entsprechende Feld entweder die ISBN, ISSN oder DOI ein.
+            \item Klicken Sie auf \enquote{Weiter}.
+            \item Die Daten werden automatisch aus verschiedenen Verbundkatalogen abgerufen.
+            \item Nachdem Sie die Daten auf Ihre Richtigkeit überprüft haben klicken Sie auf \enquote{Speichern}.
+        \end{enumerate}
+        \item Code Scannen: %Screenshot
+        \newline
+        Voraussetzung ist, dass Sie über eine eingebaute Webcam verfügen oder eine externe Webcam anschließen, bevor Sie mit der Aufnahme beginnen können.
+        \begin{enumerate}
+            \item Klicken Sie auf den Reiter \enquote{Code scannen}. Es kann passieren, dass Ihr Webbrowser eine Warnmeldung anzeigt, dass die Webseite (PUMA) versucht auf Ihre Webcam zuzugreifen. Falls dies der Fall sein sollte erlauben Sie den Zugriff.
+            \item Das Bild der Webcam erscheint auf Ihrem Bildschirm. Halten Sie den Strichcode ruhig und gut sichtbar vor Ihre Webcam. Sobald PUMA den ISBN-Strichcode erkennt ertönt ein Kamerageräusch.
+            \item Wenn der Strichcode erkannt wurde werden die Daten automatisch angezeigt. Überprüfen Sie diese auf ihre Richtigkeit und klicken Sie anschließend auf \enquote{Speichern}.
+        \end{enumerate}
+    \end{itemize}
+\end{enumerate}
+\subsection{Lesezeichen} % 2Screenshots: Anfang+Möglichkeiten
+Grundlagen:
+\newline
+Lesezeichen (engl. Bookmark) ermöglichen es, das Internet wie ein Buch zu verwenden. Mit einem Lesezeichen merken Sie sich die genaue Adresse eines Internet-Dokuments. PUMA gibt Ihnen die Möglichkeit Lesezeichen zentral zu speichern, zu verwalten und auf sie zuzugreifen. 
+\newline
+\newline
+Lesezeichen hinzufügen:
+\begin{enumerate}
+    \item Klicken Sie auf den Menüpunkt \enquote{Eintragen} im Hauptmenü. Ein Untermenü klappt auf.
+    \item Klicken Sie im Untermenü auf \enquote{Lesezeichen eintragen}.
+    \item Tragen Sie in das Feld URL die Adresse (URL) der Webseite ein, die Sie als Lesezeichen hinzufügen möchten. Anschließend klicken Sie auf \enquote{Weiter}. 
+    \item Im Folgenden werden Sie aufgefordert einige Zusatzdaten einzugeben:
+    \begin{itemize}
+        \item URL: Wird automatisch aus dem Schritt davor übernommen.
+        \item Titel: Tragen Sie den Titel der Seite ein. %TIPP in der Hilfe war bei mir nie so
+        \item Beschreibung/Kommentar: Hier können Sie eigene Kommentare zum Lesezeichen hinterlegen. \textbf{TIPP:} In diesem Feld können Sie z. B. auch ein kleines Abstract hinterlegen. 
+        \item Tags: Tags (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Sie können so viele Tags verwenden wie Sie wollen. Die einzelnen Tags werden durch Leerzeichen von einander getrennt. \newline \textbf{TIPP 1:} Wenn Sie einen Tag verwenden möchten, der aus mehreren Worten besteht (z.B. Fachbereich Architektur) dann verwenden Sie PascalCase, z.B. FachbereichArchitektur. \newline \textbf{TIPP 2:} PUMA generiert Ihnen an Hand der URL und Ihrem Kommentar  mögliche Tags. Diese finden Sie bei Empfehlungen und können sie per Mausklick übernehmen.
+        \item Sichtbarkeit: Legen Sie fest, wer Ihr Lesezeichen sehen darf. Sie können wählen zwischen öffentlich (alle Nutzer), privat (nur Sie selber) oder andere (Freunde oder eine Gruppe). Außerdem können Sie bei \enquote{Interessant für} eine spezielle Gruppe auf Ihr Lesezeichen aufmerksam machen.  
+    \end{itemize}
+    \item Klicken Sie abschließend auf \enquote{Speichern} um das Lesezeichen einzutragen. Das Lesezeichen ist nun gespeichert. Bitte beachten Sie, dass ein neues Lesezeichen bei der Suchanfrage ein bisschen Zeit benötigt (1 Sekunde bis weniger als eine Minute). 
+\end{enumerate}
+Wichtig bei der Recherche und Archivierung von Lesezeichen:
+\begin{itemize}
+    \item Puma speichern nicht das eigentliche Dokument, sondern nur die Adresse des Internet-Dokuments. Es kann somit passieren, dass ein Dokument zu einem späteren Zeitpunkt nicht mehr abrufbar ist, da z.B. sich die Adresse geändert hat oder es gelöscht wurde.  Aus diesem Grund ist es nützlich, dass Sie sich ein Sicherheitskopie des Dokuments anlegen und diese auf Ihrem Computer speichern.
+    \item Neben den oben genannten Punkten bitten wir Sie auch darum zu bedenken, dass ein Internet-Dokument jederzeit geändert werden kann. Aus diesem Grund empfiehlt sich hier ebenfalls eine Sicherungskopie. 
+    \item Zudem sollten Sie beachten, dass in der Literaturangabe zu einem Internet-Dokument IMMER das Datum und die Uhrzeit des letzten Abrufs mit angegeben werden muss. Dies entspricht den allgemeinen Richtlinien wissenschaftlichen Arbeitens. Diese Angaben können Sie in das Feld Beschreibung/Kommentar eintragen.
+    \item PUMA unterstützt die RFC 7089\footnote{\url{http://tools.ietf.org/html/rfc7089}} Spezifikation. Damit wird es möglich Lesezeichen so zu betrachten wie sie in PUMA gespeichert wurden, selbst wenn sich die Seite in der Zwischenzeit geändert hat. Um diese Funktion zu nutzen, müssen Sie das Memento-Plugin in ihrem Browser installieren. Das Plugin existiert für Mozilla Firefox\footnote{\url{https://addons.mozilla.org/de/firefox/addon/mementofox/}} und Google Chrome\footnote{\url{https://chrome.google.com/webstore/detail/memento-time-travel/jgbfpjledahoajcppakbgilmojkaghgm?hl=en&gl=US}}. 
+\end{itemize} 
+\subsection{Lesezeichen importieren}
+\subsubsection{Delicious}
+Sie möchten Ihre Lesezeichen von Delicious nach PUMA impotieren, klicken Sie auf das \enquote{Personensymbol} und wählen im Dropdown-Menü \enquote{Einstellungen} aus. Es öffnet sich eine neue Seite. Klicken Sie auf den Reiter \enquote{Importieren}. Geben Sie unter dem Bereich \enquote{Importieren Sie Ihre Delicious Daten} Ihre Delicious-Nutzerdaten ein. Wählen Sie die Option \enquote{Lesezeichen} aus. Zusammen mit Ihren Lesezeichen werden die dazugehörigen Tags und Sichtbarkeitsdefinitionen ebenfalls hinzugefügt.
+\newline Sie können ebenfalls Ihre Tag Bundles als Relationen zu PUMA importieren lassen, indem Sie beim Importieren die Option \enquote{Tag-Bundles} wählen. 
+\newline Klicken Sie abschließend auf \enquote{Importieren} um den Import engültig durchzuführen.
+\subsubsection{Browser}
+Sie können Ihre Lesezeichen aus Ihrem Browser als HTML-Datei exportieren und dann diese HTML-Datei in PUMA importieren. 
+\newline
+\newline
+\textbf{Chrome}%Screenshots hab ich schon
+\newline Um Ihre Lesezeichen in Chrome als HTML-Datei zu exportieren, klicken Sie im Menü ganz oben rechts auf \enquote{Lesezeichen} und anschließend auf \enquote{Lesezeichen-Manager}. Es öffnet sich ein neues Fenster, in dem Sie auf \enquote{Organisieren} klicken und im Dropdown-Menü \enquote{Lesezeichen in HTML-Datei exportieren...} wählen. Speichern Sie die Datei ab und fahren mit Schritt 1 von HTML-Datei in PUMA importieren fort, um Ihre Lesezeichen endgültig nach PUMA zu importieren.  
+\newline
+\newline
+\textbf{Firefox}
+\newline Um Ihre Lesezeichen in Firefox als HTML-Datei zu exportieren, klicken Sie auf das Lesezeichensymbol rechts neben der Suchleiste. Wählen Sie im Dropdown-Menü \enquote{Lesezeichen verwalten} aus. Anschließend klicken Sie auf \enquote{Importieren und Sichern} und wählen \enquote{Lesezeichen nach HTML exportieren} aus. Speichern Sie die Datei ab und fahren mit Schritt 1 von HTML-Datei in PUMA importieren fort, um Ihre Lesezeichen endgültig nach PUMA zu importieren.  
+\subsubsection{HTML-Datei in PUMA importieren}
+\begin{enumerate}
+    \item Klicken Sie auf das "Personensymbol" und wählen im Dropdown-Menü \enquote{Einstellungen} aus.
+    \item Es öffnet sich eine neue Seite. Klicken Sie auf den Reiter "Importieren".
+    \item In dem Bereich \enquote{Importieren Sie Ihre Lesezeichen aus Ihrem Browser} können Sie nun Ihre Datei hochladen. Legen Sie die Sichtbarkeit der Lesezeichen fest und bestätigen Sie Ihren Import anschließend mit \enquote{Importieren}.
+\end{enumerate}
+\subsection{OpenAccess-Zugriff auf Publikationsdienste}%Screenshot
+Der Zugriff auf OpenAccess Publikationsdienste ermöglicht Ihnen über die Detailansicht einer Publikation nach der digitalen Ausgabe in einer OpenAccess-Datenbank zu suchen. Voraussetzung hierfür ist, dass die Detailansicht der Publikation aufgerufen ist. Zur Detailansicht gelangen Sie, indem Sie im Inhaltsbereich oder Ihrer persönlichen Sammlung (unter \enquote{Mein PUMA}) auf den Titel einer Publikation klicken. 
+\begin{enumerate}
+    \item Klicken Sie auf das Auswahlmenü \enquote{Suchen auf}. Ein Untermenü erscheint.
+    \item Wählen Sie aus der angezeigten Liste die OpenAccess-Datenbank, die Sie nach diesem Artikel durchsuchen möchten. 
+\end{enumerate}
+ So gelangen Sie schnell und einfach zu der digitalen Ausgabe einer Publikation.   
+\subsection{Bookmarklet-Buttons für Ihre Lesezeichen-Leiste}
+Die Bookmarklet-Buttons ermöglichen Ihnen ein schnelles Arbeiten mit PUMA, während Sie im Internet unterwegs sind. Sie vereinfachen das Eintragen von Publikationen und Lesezeichen, sowie das Gelangen zu PUMA. Ziehen Sie die Buttons einfach in Ihre Lesezeichen-Leiste\footnote{\url{https://puma.ub.uni-stuttgart.de/buttons}} und schon können Sie loslegen.
+\subsection{Tags/ Schlagwortsystem}
+Tags (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Einem Literatureintrag können so viele Tags geordnet werden, wie Sie wollen. Durch den Gebrauch von Tags wird die Suche zu einem bestimmten Thema erleichtert, da Sie in die Such-Leiste nur den entsprechenden Tag eingeben müssen und Ihnen werden alle Einträge mit diesem Tag vorgelegt. Ein weiterer Vorteil des Tag-Systems ist, dass Sie bei der Literatur-Suche  Tags kombinieren können und so spezifische Ergebnisse erhalten. So können Sie beispielsweise, wenn Sie Literatur zu dem Thema \enquote{Politik in Deutschland} suchen, die Tags \enquote{Politik} und \enquote{Deutschland} eingeben und erhalten die gesamte Literatur, die sich mit den Themen befasst. 
+\newline
+\newline
+\textbf{Tags zu Lesezeichen/ Publikationen hinzufügen}\newline
+Tags (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Sie können so viele Tags verwenden wie Sie wollen. Die einzelnen Tags werden durch Leerzeichen voneinander getrennt. \newline \textbf{TIPP 1:} Wenn Sie einen Tag verwenden möchten, der aus mehreren Worten besteht (z.B. Fachbereich Architektur) dann verwenden Sie PascalCase (z.B. FachbereichArchitektur). \newline \textbf{TIPP 2:} PUMA generiert Ihnen an Hand der URL und Ihrem Kommentar  mögliche Tags. Diese finden Sie bei Empfehlungen und können sie per Mausklick übernehmen. Im Falle, dass Sie einen Eintrag in Ihre Sammlung kopieren, zeigt Ihnen PUMA die Tags des kopierten Eintrags an, diese können Sie übernehmen.%screenshot
+\newline
+\newline
+\textbf{Tags von Lesezeichen/ Publikationen bearbeiten} \newline
+PUMA bietet Ihnen die Möglichkeit bei Publikationen/ Lesezeichen, die schon Teil Ihrer Sammlung sind, die Tags zu bearbeiten. Es gibt drei Möglichkeiten die Tags zu bearbeiten:
+\begin{enumerate}
+    \item Tags bearbeiten über die \enquote{Schnellbearbeitung}\newline
+    Klicken Sie neben der Publikation/Lesezeichen auf den blauen Stift (Tags bearbeiten). Es öffnet sich ein Pop-Up-Fenster. Sie können nun alte Tags entfernen, indem Sie auf das \enquote{X-Symbol} klicken. Um neue Tags hinzuzufügen klicken Sie in das Textfeld und geben die Tags getrennt durch Leerzeichen ein. Um die Änderungen zu speichern klicken Sie auf \enquote{Speichern} und anschließend auf das \enquote{X} um das PopUp-Fenster zu schließen. Wenn Sie die Änderung verwerfen möchten klicken Sie auf \enquote{Schließen}.
+    \item Tags bearbeiten über \enquote{Eintrag bearbeiten}\newline
+    Klicken Sie auf den schwarzen Stift (Dieses Lesezeichen/ Diese Publikation bearbeiten) rechts neben einem Eintrag. Sie können nun die Informationen, die Tags und die Sichtbarkeit des Eintrages bearbeiten. Klicken Sie anschließend auf \enquote{Speichern}.
+    \item Tags bearbeiten über \enquote{Tags bearbeiten}\newline
+    PUMA bietet nicht nur die Möglichkeit die Tags eines einzelnen Eintrags zu bearbeiten, sondern auch alle Tags die Sie verwenden. Klicken Sie auf das Personensymbol und wählen \enquote{Tags bearbeiten}. Sie können auf dieser Seite Tags und Konzepte bearbeiten:
+    \begin{enumerate}
+        \item Umbenennen/ Ersetzten von Tags: Hier können Sie alte Tags durch Neue ersetzen. Sie haben so die Möglichkeit ähnliche Tags zu einem Tag zusammenzufügen.
+        \item Subtags zu Konzepten hinzufügen: Um ein Subtag zu einem Konzept hinzuzufügen geben Sie den Namen des Konzepts in das Feld \enquote{Supertag} ein und das Tag, das Sie hinzufügen möchten in das Feld \enquote{Subtag}. Anschließend klicken Sie auf \enquote{Einfügen}.
+        \item Subtags von Konzepten löschen: Um ein Subtag von einem Konzept zu löschen geben Sie den Namen des Konzepts in das Feld \enquote{Supertag} ein und das Tag, welches Sie löschen wollen, in das Feld \enquote{Subtag} ein. Anschließend klicken Sie auf \enquote{Löschen}.
+    \end{enumerate}
+\end{enumerate}
+\textbf{Suchen via Tags}\newline
+PUMA ermöglicht, dass Sie mit Hilfe der Tags Lesezeichen und Publikationen finden können. \newline
+Möglichkeit 1: Um einen Eintrag mit einem bestimmten Tag zu finden klicken Sie in der Suchleiste neben \enquote{Suche} auf den blauen Pfeil und wählen im Dropdown-Menü \enquote{Tags} aus. Geben Sie den Tag in das Suchfeld ein und drücken auf das Lupensymbol oder die Entre-Taste.\newline
+Möglichkeit 2: Wenn Sie bei einem Eintrag auf einen Tag klicken öffnet sich eine Seite mit allen Einträgen des Nutzer mit diesem bestimmten Tag. Auf der rechten Seite sehen Sie Informationen zu diesen Tag: der Tag als Tag von allen Nutzern, verwandte Tags, die Konzepte des Nutzers und die verwendeten Tags des Nutzers. 
+\newline
+\newline
+\textbf{Systemtags}
+\newline
+Systemtags sind spezielle Tags (Schlagworte), die eine feste Bedeutung haben. Derzeit bietet PUMA drei Typen von Systemtags an: \newline\newline
+- \textbf{Ausführbare Systemtags}\newline
+Ausführbare Systemtags werden zu einem Eintrag hinzugefügt, um eine spezielle Aktion mit diesem Eintrag auszuführen. Sie tragen ausführende Systemtags, wie die anderen Tags, in das Feld \enquote{Tags} ein. 
+\begin{enumerate}
+    \item \textit{for:<Gruppenname>} : Mit diesem Systemtag kopiert Sie den Eintrag in die Sammlung der Gruppe. In der Gruppe wird der Tag durch \textit{from:<IhrBenutzername>} ersetzt. Wenn Sie ihren Eintrag löschen oder bearbeiten, so bleibt der in die Gruppe kopierte Eintrag unverändert. Nur Mitglieder der Gruppe können Einträge für die Gruppe kopieren.
+    \item \textit{send:<Benutzername>} : Damit senden Sie den Eintrag in den Eingang eines anderen Benutzers. Damit dies funktioniert, muss der Empfänger Sie als Freund eingetragen haben oder Sie müssen Mitglied in der gleichen Gruppe sein. (Eine genaue Erklärung vgl. Kapitel 5.3) Sobald der Eintrag bei dem Nutzer angekommen ist wird der Tag durch \textit{sent:<Benutzername>} ersetzt.
+\end{enumerate}
+- \textbf{Meta-Systemtags}
+\newline   
+Mit Meta-Systemtags markieren Sie Einträge. Derzeit werden folgende Meta-Systemtags unterstützt:
+\begin{enumerate}
+    \item \textit{myown:} Ein Eintrag, der mit dem Tag myown versehen wurde, erscheint auf Ihrer CV-Seite. Durch den Tag geben Sie an, dass Sie der Verfasser des Lesezeichen/ der Publikation sind.
+    \item \textit{sys:relevantFor:<Gruppenname>:} Einträge mit dem Tag sys:relevantFor:xy werden auf der \enquote{Interessant für}-Seite der Gruppe xy angezeigt. Damit hat dieser Tag den gleichen Effekt wie das  Auswählen der Gruppe xy in der \enquote{Interessant für}-Box beim Bearbeiten eines Eintrages. Der Tag wird durch eine blaue Blume am Anfang der Tag-Reihe dargestellt. 
+    \item \textit{sys:hidden:<tag>:} Der Tag ist nur für Sie selbst sichtbar. Man findet diesen Tag bei einer Publikation, die im Inhaltsbereich abgebildet wird, nicht sichtbar in der Reihe der anderen Tags. Der Tag wird durch eine blaue Blume am Anfang der Tag-Reihe dargestellt. Wenn Sie auf die Detailansicht der Publikation klicken taucht er sichtbar in der Tag-Reihe auf.
+\end{enumerate}
+- \textbf{Such-Systemtags}\newline
+Such-Systemtags sind nicht dazu da, um in einen Eintrag geschrieben zu werden, sondern um Einträge nach Suchanfragen zu filtern. Alle Such-Systemtags haben die gleiche Syntax: \textit{sys:<Feldname>:<Feldwert>}. Beispielsweise werden  bei der Suchanfrage \textit{sys:author:xyz} nur die Einträge angezeigt, welche von dem Autor \textit{xyz} stammen.\newline
+Die Syntax können Sie entweder in die Suchleiste oder mit der URL eingeben. Folgende Filter unterstützt PUMA (Suche beschränkt sich auf die Publiaktionseinträge):\newline
+\newline
+Für die Suche nach einem bestimmten Autor oder Erscheinungsjahr müssen Sie vorher festlegen, in welchen Einträgen eines Nutzers Sie nach dem Autor oder dem Erscheinungsjahr suchen möchten. Z.B. suchen Sie, wenn Sie diese Daten eingeben:  https://puma.ub.uni-stuttgart.de/user/droessler/sys:year:2013  Publikationen aus dem Jahr 2013 in den Einträgen des Nutzers Droessler. 
+\begin{enumerate}
+    \item \textit{sys:author:<Autorenname>} filtert die Suche nach dem Autor.
+    \item \textit{sys:year:<Jahr>} filtert die Suche nach dem Erscheinungsjahr. Dabei sind mehrere Schreibweisen für das Jahr möglich:
+    \begin{enumerate}
+        \item 2000: alle Einträge aus dem Jahr 2000
+        \item 2000-: alle Einträge aus dem Jahr 2000 oder einem Jahr danach
+        \item -2000: alle Einträge aus dem Jahr 2000 oder einem Jahr davor
+        \item 1990-2000: alle Einträge aus den Jahren 1990 bis 2000
+    \end{enumerate}
+%muss noch raus rutschen
+Bei der Suche nach Titel, Gruppe, Nutzer, usw. spielt der Nutzer, bei dem Sie suchen keine Rolle. Sie müssen dementsprechend nur den Zusatz tag/ vor die Suchsyntax setzten., z.B.  https://puma.ub.uni-stuttgart.de/tag/sys:entrytype:article. Hier finden Sie nun alle Artikel, die auf PUMA eingetragen wurden.
+    \item \textit{sys:title:<title>} sucht nach Einträgen mit diesem Titel.
+    \item \textit{sys:user:<user>} sucht nach Einträgen eines Nutzers.
+    \item \textit{sys:group:<group>} filtert die Suche nach einer bestimmten Gruppe.
+    \item \textit{sys:entrytype:<Eintragstyp>} filtert die Suche nach dem Eintragstypen. Eintragstypen\footnote{\url{https://www.ctan.org/pkg/biblatex?lang=de}} werden verwendet, um BibTex-Einträge nach ihren Typen zu klassifizieren. Derzeit unterstützt Puma folgende Eintragstype:
+    \begin{enumerate}
+        \item \textbf{article:} Zeitungs- oder Zeitschriftenartikel\newline
+        Erforderliche Felder: Autor, Titel, Zeitschriftentitel, Jahr/Datum, % Ausgabennummer
+        \item \textbf{book:} Buch, Monografie mit angegebenem Verlag\newline
+        Erforderliche Felder: Autor, Titel, Jahr
+        \item \textbf{booklet:} gebundenes Druckwerk, aber ohne Verlag oder Sponsororganisation\newline
+        Erforderliche Felder: Autor/Lektor, Titel, Jahr/ Datum
+        \item conference: Ein Beitrag zu einer Konferenz, der nicht in einem Konferenzband erschienen ist\newline
+        Erforderliche Felder:
+        \item electronic: Elektronische Veröffentlichungen, z. B. eBooks oder Blogeinträge\newline 
+        Erforderliche Felder:
+        \item \textbf{inbook:} Teil eines Buches, z. B. ein Kapitel oder ein Seitenbereich\newline
+        Erforderliche Felder: Autor, Titel, Buchtitel, Jahr/ Datum 
+        \item \textbf{incollection:} Teil eines Buches mit einem eigenem Titel, z. B. Beitrag in einem Sammelband\newline
+        Erforderliche Felder: Autor, Titel, Buchtitel, Jahr/Datum
+        \item \textbf{inproceedings:} Artikel in einem Tagungsband bzw. Konferenzband\newline
+        Erforderliche Felder: Autor, Titel, Buchtitel, Jahr/Datum
+        \item \textbf{manual:} Technische Dokumentation, Handbuch\newline
+        Erforderliche Felder: Autor/Lektor, Titel, Jahr/Datum
+        \item \textbf{mastersthesis:} Master-, Magister- oder Diplomarbeit\newline
+        Erforderliche Felder: Autor, Titel, Art der Arbeit, Institut, Jahr/Datum
+        \item \textbf{misc:} Diesen Eintragstyp können Sie wählen, wenn nichts anderes zu passen scheint. \newline
+        Erforderliche Felder: Autor/Lektor, Titel, Jahr/Datum
+        \item \textbf{patent:} Patent\newline 
+        Erforderliche Felder: Autor, Titel, Nummer, Jahr/Datum
+        \item \textbf{periodical:} Ein regelmäßig erscheinendes Werk, z.B. Zeitschrift\newline
+        Erforderliche Felder: Lektor, Titel, Jahr/Datum
+        \item phdthesis: Doktor- oder andere Promotionsarbeit\newline 
+        Erforderliche Felder:
+        \item preamble: Eine meist feierliche Erklärung am Anfang eines Dokuments, z.B. einer Urkunde\newline 
+        Erforderliche Felder:
+        \item presentation: Präsentation, Vortrag auf einer Veranstaltung\newline 
+        Erforderliche Felder:
+        \item \textbf{proceedings:} Tagungsband einer Konferenz\newline
+        Erforderliche Felder: Titel, Jahr/ Datum
+        \item standard: Standard\newline 
+        Erforderliche Felder:
+        \item \textbf{techreport:} Bericht einer Hochschule oder einer anderen Institution\newline
+        Erforderliche Felder: Autor, Titel, Jahr/ Datum
+        \item \textbf{unpublished:} Nicht formell veröffentlichtes Dokument\newline 
+        Erforderliche Felder: Autor, Titel, Jahr/ Datum
+    \end{enumerate}
+    \item \textit{sys:not:<tag>} filtert die Suche, indem alle Ergebnisse ignoriert werden, die diesen Tag enthalten. An dieser Stelle können Sie auch Platzhalter verwenden, z.B. werden bei sys:not:news\_ 
+    alle Ergebnisse ignoriert, die Tags enthalten, die mit news\_
+    beginnen.
+    \item \textit{sys:bibtexkey:<bibtexkey>} filtert die Suche nach einem bestimmten BibTeX-Schlüssel.
+\end{enumerate}
+\hypertarget{Ablage}{\subsection{Ablage}}
+Die Ablage ermöglicht es Ihnen eigene und fremde Publikationen vorzumerken. Sie können so in der Ablage aktuelle Literaturlisten zusammenstellen.
+\newline
+Publikationen in Ablage aufnehmen: %Screenshot
+\begin{enumerate}
+    \item Klicken Sie auf das Symbol \enquote{Diese Publikation zur Ablage hinzufügen}.
+    \item Die Publikationen gelangen direkt in die Ablage. Zur Ablage gelangen Sie über das Personensymbol.
+\end{enumerate}
+Falls Sie die vorgemerkten Publikationen nicht mehr in der Ablage haben möchten können Sie diese löschen, indem Sie auf das schwarze \enquote{X} (diese Publikation aus Ihrer Sammlung löschen) klicken (\textbf{ACHTUNG:} Wenn Sie die Publikation in der Ablage löschen ist diese gleichzeitig auch in Ihrer Sammlung gelöscht und kann nicht wiederhergestellt werden).
+Eine andere Möglichkeit ist das Leeren der Ablage. Dies erreichen Sie, indem Sie auf das schwarze Einstellungs-Zahnrad klicken. Im Untermenü können Sie nun die Ablage leeren. In diesem Fall werden die Publikationen aus der Ablage entfernt, sind aber in Ihrer Sammlung noch vorhanden.
+\newpage
+\section{Die nächsten Schritte}
+\subsection{Literaturlisten exportieren}
+PUMA ermöglicht den vollständigen Export von Publikationslisten aus PUMA in andere Programme. Das gängigste Datenformat, dass die meisten Programme unterstützen, ist BibTex. \newline 
+Der Export erfolgt in zwei Schritten. Es wird zuerst ein Literaturverzeichnis in Puma zusammengestellt und exportiert, bevor es dann in das andere Programm importiert wird.
+\subsubsection{Literaturverzeichnis zusammenstellen}
+\begin{enumerate}
+    \item Um eine Literaturverzeichnis zusammenzustellen müssen Sie im ersten Schritt die Publikationen, die in Ihr Verzeichnis sollen, in Ihre Ablage kopieren. Hierfür gehen Sie in Ihre persönliche Publiaktions- und Lesezeichensammlung über den @Ihr Benutzername-Button oder klicken im Dropdown-Menü von \enquote{meinPUMA} auf \enquote{meine Einträge}.  Neben jeder Publikation befindet sich eine Symbolleiste.
+    \item Klicken Sie auf das Symbol mit dem weißen und schwarzen Rechteck (Diese Publikation zur Ablage hinzufügen). Die Publikation gelangt nun automatisch in Ihre Ablage und wird dort gespeichert.
+    \item Zur Ablage gelangen Sie über das Personensymbol. Klicken Sie im Dropdown-Menü auf \enquote{Ablage} und Ihnen werden alle Publikationen, die sich in Ihrer Ablage befinden angezeigt. 
+\end{enumerate}
+\subsubsection{Literaturverzeichnis exportieren}
+\textbf{Voraussetzung:} Sie haben ein Literaturverzeichnis zusammengestellt.
+\begin{enumerate}
+    \item KLicken Sie in der Ablage auf das schwarze Zahnrad oben rechts. Ein Dropdown-Menü erscheint.
+    \item Eine Rubrik ist \enquote{Export}. Wählen Sie das Format, in dem Sie ihr Literaturverzeichnis haben möchten. PUMA gibt Ihnen einige Beispiele vor (RSS, BibTex, RDF). Klicken Sie auf \enquote{mehr...} haben Sie auch die Möglichkeit Ihr Literaturverzeichnis mit weiteren Formaten zu exportieren. \textbf{TIPP:} Der Gebrauch des BibTex-Formates ist zu empfehlen, da dieses Format sehr verbreitet ist.
+    \item Sobald Sie das gewählte Format angeklickt haben erscheint ein neues Fenster. Klicken Sie mit der rechten Maustaste auf die Seite und wählen \enquote{Speichern unter} um die Datei zu speichern.
+\end{enumerate}
+\subsubsection{Literaturverzeichnis exportieren- Programmspezifisch}
+\textbf{Word} 
+\begin{enumerate}
+    \item Klicken Sie in der Ablage auf das schwarze Zahnrad.
+    \item Wählen Sie im Dropdown-Menü in der Rubrik \enquote{Export} \enquote{mehr...} aus.
+    \item Es öffnet sich die Übersichtsseite der Exportformate. Wählen Sie das Format \enquote{MSOffice XML}. Speichern Sie anschließend die Datei.
+    \item In Microsoft Word können Sie nun die gespeicherte Datei hochladen, indem Sie unter \enquote{Verweise} auf \enquote{Quellen verwalten} klicken. Im erscheinenden Dialog (Quellen-Manager) können Sie auf "Durchsuchen" klicken und die gespeicherte Datei auswählen. 
+    \item Kopieren Sie Quellen in die Aktuelle Liste, durch markieren der entsprechenden Quellen und klicken auf \enquote{Kopieren}. Schließen Sie anschließend das Fenster.
+    \item Sie können sich nun das Literaturverzeichnis anzeigen lassen, indem Sie auf \enquote{Literaturverzeichnis} klicken und sich das gewünschte Layout aussuchen.
+\end{enumerate}
+\textbf{Citavi}\newline
+...\newline
+\textbf{Zotero}
+\begin{enumerate}
+    \item Sie befinden sich auf einer PUMA-Seite (z.B. die Home-Seite oder Ihre Benutzerseite), von der Sie eine Publikation in Ihre Zotero-Bibliothek übernehmen möchten. Klicken Sie auf den schwarzen Pfeil neben dem Zotero-Symbol.
+    \item Ein Dropdown-Menü öffnet sich. Wählen Sie \enquote{In Zotero mit \enquote{unAPI} speichern}.
+    \item Es öffnet sich ein Popup-Fenster, in dem alle Publikationen der entsprechenden PUMA-Seite aufgelistet sind. Wählen Sie die Publikationen aus, die Sie in Ihre Zotero-Bibliothek übernehmen möchten. Bestätigen Sie anschließend Ihre Wahl mit \enquote{OK} und Ihre ausgewählten Einträge erscheinen in Ihrer Zotero-Bibliothek.
+\end{enumerate} 
+\textbf{JabRef}
+\begin{enumerate}
+    \item Legen Sie alle Publikationen, die Sie in JabRef exportieren möchten in Ihre Anlage.
+    \item Klicken Sie auf das schwarze Zahnrad oben rechts in der Anlage und wählen Sie im Dropdown- Menü unter \enquote{Export} das Dateiformat \enquote{Bibtex} aus.
+    \item Ihre Publikationen werden Ihnen anschließend dem ausgewählten Dateiformat angezeigt. Drücken Sie auf die rechte Maustaste und speichern Sie die Publikationen, indem Sie \enquote{Speichern unter...} wählen, an dem gewünschten Platz. 
+    \item Öffnen Sie JabRef und klicken auf den Reiter \enquote{Datei}. 
+    \item Es öffnet sich ein Dropdown-Menü. Wählen Sie zwischen den Optionen: \enquote{Importieren in neue Datenbank} oder \enquote{Importieren in aktuelle Datenbank}.
+    \item Auf dem Bildschirm erscheint ein Popup-Fenster, indem Sie, die in Schritt 3 abgespeicherte Datei, auswählen können. Bestätigen Sie anschließend Ihre Wahl mit \enquote{Öffnen}. Die Publikationen werden Ihnen in der ausgewählten Datenbank automatisch angezeigt.
+\end{enumerate}
+\textbf{Bibliographix}...
+\subsection{Literaturlisten importieren}
+Das Importieren von Literaturlisten aus anderen Programmen zu PUMA ist jederzeit möglich. Das gängigste Datenformat, dass die meisten Programme unterstützen, ist BibTex. \newline 
+Der Import erfolgt in zwei Schritten. Exportieren Sie zuerst die gewünschten Publikationen aus dem Litertaurverwaltungsprgramm, bevor Sie sie anschließend nach PUMA importieren. 
+\subsubsection{BibTex-Export aus verwendeten Literaturverwaltungsprogrammen}
+Literaturverwaltungsprogramm Citavi %gibt eine andere Erklärung bei BibSonomy aber die geht nicht ebi PUMA nach Update nochmal überprüfen
+\begin{enumerate}
+    \item Klicken Sie bei Citavi oben rechts auf \enquote{Datei}, dann im Dropdown-Menü auf \enquote{Exportieren}.
+    \item Ein Dialog erscheint. Wählen Sie aus, ob Sie nur den markierten oder alle Artikel exportieren möchten. Klicken Sie dann im Dialog unten auf \enquote{Weiter}.
+%\begin{figure}[ht]
+    %\centering
+    %\includegraphics{CitaviSchritt2.jpg}
+    %\caption{Citavi}
+    %\label{fig:CitaviSchritt2}
+%\end{figure}
+    \item Im nächsten Schritt werden Sie nach dem Export-Format gefragt, wählen Sie hier \enquote{BibTex}%laut BibSonomy steht hier noch: (Ohne Erweiterung)
+     aus und klicken anschließend auf \enquote{Weiter}.
+    \item Sie werden nach dem Speicherort gefragt, wählen Sie hier \enquote{Textdaten in der Zwischenablage speichern}. Klicken Sie anschließend auf \enquote{Weiter}.
+    \item Anschließend werden Sie gefragt, ob Sie die Export-Vorlage speichern möchten. Wählen Sie hierfür \enquote{Ja, unter dem Namen:} aus und tragen in das Textfeld \textit{BibTex} als Namen ein. Klicken Sie anschließend auf \enquote{Weiter}.%in Bibsonomy wird noch ein weiterer Schritt aufgezählt, dieser war bei mir aber nicht.
+    \item Es öffnet sich ein Popup-Fenster \enquote{Export erfolgreich abgeschlossen}. Bestätigen Sie den Export mit \enquote{OK}.
+\end{enumerate}
+Die von Ihnen exportierten Daten befindet sich nun in der Zwischenablage. Fahren Sie mit Schritt 1 von BibTex aus der Zwischenablage importieren (Unterkapitel von Kapitel 4.2) fort, um Ihre Daten endgültig nach PUMA zu exportieren.\newline
+\newline
+Litertuarverwaltungsprogramm Zotero
+\newline \newline
+Um den Import von Zotero zu PUMA möglich zu machen muss Zotero erst einmal für PUMA konfiguriert werden. In den folgenden Schritten erfahren Sie, wie Sie genau vorgehen müssen:
+\begin{enumerate}
+    \item Öffnen Sie Zotero, indem Sie oben rechts bei Firefox auf das Zotero-Symbol klicken.
+    \item Ändern Sie die Einstellungen, indem Sie auf das schwarze Zahnrad klicken. 
+    \item Wählen Sie im Dropdown-Menü \enquote{Einstellungen} aus.
+    \item Es öffnet sich ein Popup-Fenster, wählen Sie hier den Menüpunkt \enquote{Export} aus. 
+    \item Fügen Sie zu den Website-spezifischen Einstellungen, durch Klicken auf das \enquote{ '+'-Symbol}, einen neuen Eintrag hinzu. Geben Sie in dem Popup-Fenster \textit{puma.ub.uni-stuttgart.de} ein und wählen Sie \textit{BibTeX} als Ausgabeformat. Bestätigen Sie den Eintrag mit \enquote{OK}. 
+\end{enumerate}
+Nachdem Sie die Konfiguration vorgenommen haben können Sie die Publikationen nach PUMA importieren. 
+\begin{enumerate}
+    \item Klicken Sie im Hauptmenü auf \enquote{Eintragen} und wählen im Dropdown-Menü die Option \enquote{Publikation eintragen} aus.  
+    \item Klicken Sie auf den Reiter \enquote{BibTex/EndNote-Schnipsel}. In das Feld \enquote{Auswahl} können Sie nun den entsprechenden Eintrag aus Ihrer Zotero-Bibliothek durch Drag und Drop hineinziehen (klicken Sie auf den Zotero-Eintrag, halten Sie die linke Maustaste gedrückt, bewegen Sie den Mauszeiger in das Feld und lassen Sie dann die linke Maustaste los). Durch Klicken auf \enquote{Weiter} werden die Daten aus dem Zotero-Eintrag extrahiert und in die entsprechenden Felder eingetragen. 
+    \item Klicken Sie anschließend auf \enquote{Speichern} um den Eintrag in Ihre Sammlung zu übernehmen.
+\end{enumerate}  
+Literaturverwaltungsprogramm JabRef
+\begin{enumerate}
+    \item Klicken Sie mit der rechten Maustaste auf die Publikation, die Sie nach PUMA importieren möchten.
+    \item Es erscheint ein Dialog. Wählen Sie \enquote{In die Zwischenablage kopieren} aus.
+    \item Im nächsten Schritt werden Sie nach dem Export-Format gefragt, wählen Sie hier \enquote{Endnote} aus.
+\end{enumerate}
+Die von Ihnen exportierte Publikation befindet sich nun in der Zwischenablage. Fahren Sie mit Schritt 1 von BibTex/EndNote aus der Zwischenablage importieren (Unterkapitel von Kapitel 4.2) fort, um Ihre Publikation endgültig nach PUMA zu exportieren.\newline
+\newline
+Literaturverwaltungsprogramm Bibliograhix...
+%Programm fehlt mir
+\subsubsection{BibTex/ EndNote aus der Zwischenablage importieren}
+Vorraussetzung ist, dass Sie Ihre Literaturliste aus Ihrem bisherigen Literaturverwaltungsprogramm in die Zwischenablage exportieren.
+\begin{enumerate}
+    \item Klicken Sie auf den Menüpunkt \enquote{Eintragen} im Hauptmenü. Ein Untermenü klappt auf.
+    \item Klicken Sie im Untermenü auf \enquote{Publikation eintragen}.
+    \item Klicken Sie auf den Reiter \enquote{BibTex/EndNote-Schnipsel}.
+    \item Fügen Sie den Text aus der Zwischenablage in das Textfeld \enquote{Auswahl} ein. Dies können Sie so erreichen, indem Sie auf das Textfeld Auswahl gehen und mit der rechte Maustaste das Menü öffnen und auf \enquote{Einfügen} klicken. Erscheint das \enquote{Einfügen} grau, dann haben Sie keine Daten in die Zwischenablage exportiert und Sie müssen den Text erneut in die Zwischenablage einfügen.
+    \item Klicken Sie auf \enquote{Weiter}.
+    \item PUMA zeigt Ihnen nun eine Übersicht über alle Daten an. Überprüfen Sie diese auf ihre Richtigkeit.
+    \item Klicken Sie \enquote{Speichern}.
+\end{enumerate}
+    
+\subsection{Freischalten erweiterter Funktionen}
+Bei PUMA gibt es die Unterscheidung zwischen einfachen und erweiterten Funktionen. In den Grundeinstellungen stehen jedem Nutzer, bei dessen Anmeldung bei PUMA, die einfachen Funktionen zur Verfügung. Durch das Freischalten der erweiterten Funktionen kommen weiter Funktionen dazu, sodass Sie mehr Möglichkeiten haben, um PUMA zu nutzen.  Wenn Sie die erweiterten Funktionen freischalten möchten gehen Sie wie folgt vor:
+\begin{enumerate}
+    \item Klicken Sie auf das Personensymbol. Ein Dropdown-Menü öffnet sich, klicken Sie auf \enquote{Einstellungen}.
+    \item Es öffnet sich die Einstellungs-Seite. Klicken Sie oben auf den Reiter \enquote{Einstellungen}.
+    \item Unter dem Bereich \enquote{Layouts Ihrer Tagbox und Ihrer Eintragslisten} befindet sich das Feld \enquote{Erscheinungsbild}. Sie können nun zwischen den Standardeinstellungen Erweitert (Alle Optionen werden stets angezeigt) oder Einfach (Einige \enquote{Experten}-Optionen werden standardmäßig nicht angezeigt) wählen.
+    \item Klicken Sie anschließend auf \enquote{Layout speichern} um Ihre Änderung festzuhalten.
+\end{enumerate}
+\subsection{Duplikate}
+Beim Sammeln von Publikationen und Lesezeichen kann es schon mal vorkommen, dass man ohne es zu bemerkten eine Publikationen zweimal in seine PUMA-Sammlung einträgt. Hier bietet PUMA die Möglichkeit Duplikate sofort zu erkennen und seine Sammlung aufzuräumen. Um eine Übersicht über alle Duplikate in seiner Sammlung zu erhalten klicken Sie im Hauptmenü auf \enquote{meinPuma}. Im Dropdown- Menü können Sie nun \enquote{Duplikate} auswählen und gelangen so auf die Übersichtsseite. Ein anderer Weg, um sich einen Überblick zu verschaffen, bieten die Zahlen oben rechts bei jedem Eintrag. Sie geben an wie viele Einträge mit dem gleichen Titel es in der Sammlung gibt. Ist diese Zahl größer als 1 handelt es sich um Duplikate. Wenn Sie auf die Zahl klicken werden ihnen die Duplikate angezeigt.
+\subsection{Publikationen durchstöbern}
+Oftmals verliert man schnell den Überblick über seine Einträge. Um sich schnell einen Überblick über seinen Literaturbestand machen zu können bietet PUMA die Funktion \enquote{Publikation durchstöbern} an. 
+\begin{enumerate}
+    \item Klicken Sie im Hauptmenü auf \enquote{meinPUMA}. Ein Dropdown- Menü öffnet sich.
+    \item Klicken Sie auf \enquote{Publikationen durchstöbern}.
+    \item Unter \enquote{Suchoptionen} können Sie verschiedene Tags und Autoren auswählen, zu denen Sie die Einträge sehen möchten. Um mehrere Begriffe aus der Liste auszuwählen halten Sie die STRG- bzw. CTRL-Taste während des Mausklicks gedrückt.
+    \item Die Buttons \enquote{und/ oder} können Sie dazu nutzen, um die Listenauswahl unterschiedlich zu verknüpfen. 
+    \item Unter \enquote{Suchergebnisse} sehen Sie alle Ergebnisse, die zu ihren Vorgaben aus 3. und 4. passen.
+    \item Das Textfeld \enquote{Filter} ermöglicht es die Ergebnisse aus Schritt 5 noch weiter zu filtern.
+\end{enumerate}
+\subsection{Private Dateien anhängen}
+Sie können an jede Ihrer Publikationen ein Dokument anhängen (max. 50 MB pro Datei - erlaubte Dateiendungen: pdf, ps, djv, djvu, txt, tex, doc, docx, ppt, pptx, xls, xlsx, ods, odt, odp, jpg, jpeg, svg, tif, tiff, png, htm, html, epub). Der Anhang ist aus urheberrechtlichen Gründen nur für Sie selber sichtbar.
+\newline
+\newline
+\textbf{BEDINGUNG:} Um an eine Publikation eine Datei anzuhängen muss die Publikation in Ihrer Sammlung eingetragen sein.
+\begin{enumerate}
+    \item Klicken Sie auf den Titel der Publikation. Es öffnet sich die Detailansicht der Publikation.
+    \item Klicken Sie nun entweder auf den schwarzen Stift oben rechts auf der Seite. Es öffnet sich eine neue Seite, auf der Sie die Publikation bearbeiten können. Scrollen Sie runter bis zu \enquote{private Dokumente} und klicken auf \enquote{Durchsuchen}. \newline \textbf{ODER:} Sie klicken in der Detailansicht unter das Bild der Publikation auf \enquote{Durchsuchen}.
+    \item Es öffnet sich ein Pop-Up Fenster, indem Sie das Dokument auswählen können, welches Sie anhängen wollen. Klicken Sie anschließend auf "Öffnen".
+    \item Der Upload startet automatisch. Sobald er abgeschlossen ist wird der Dateienname der hochgeladenen Datei und ein schwarzes \enquote{X} unter dem Abschnitt \enquote{private Dokumente} angezeigt. (Über das schwarze \enquote{X} kann das Dokument wieder entfernt werden.)
+    \item Klicken Sie anschließend ganz unten auf der Seite auf \enquote{Speichern}, da ansonsten Ihre Änderung nicht gespeichert wird.
+\end{enumerate}
+\subsection{Open-URL Resolver}%funktioniert noch nicht 
+...\newline geht nicht
+\textbf{Voraussetzung:} Sie kennen die URL des OpenURL-Resolvers Ihrer Bibliothek.
+\begin{enumerate}
+    \item Klicken Sie auf das Personensymbol, ein Untermenü öffnet sich.
+    \item Klicken Sie auf \enquote{Einstellungen}.
+    \item Geben Sie in der Rubrik \enquote{Kontakt} in das Feld \enquote{OpenURL} die URL des OpenURL-Resolvers ein. Im Beispiel ist der OpenURL-Resolver der Universitätsbibliothek der Universität Stuttgart zu sehen. 
+\end{enumerate}
+\subsection{Konzepte}
+Was sind Konzepte?
+\newline
+Durch Konzepte können Sie ihre Tags nach Gruppen ordnen und sich so die Suche erleichtern. Sie haben beispielsweise das Konzept mit dem Supertag (Namen) Obst, diesem sind die Subtags Banane, Apfel und Kiwi zugeordnet. Wenn Sie nun mit dem Konzept Obst suchen werden Ihnen automatisch alles Publikationen und Lesezeichen angezeigt, die mit mindestens einem der Subtags getagged wurde. Dies erleichtert Ihre Suche, da oft nach Publikationen/Lesezeichen zu einem bestimmten Thema gesucht wird. 
+\newline Ihre angelegten Konzepte finden Sie über das Untermenü von \enquote{mein PUMA}. Um zu den beliebten Konzepten von PUMA zu gelangen klicken Sie im Hauptmenü auf \enquote{Beliebte} und anschließend im Untermenü auf \enquote{Konzepte}. 
+\newline
+\newline
+Konzepte erstellen
+\newline
+Um Konzepte zu erstellen oder zu überarbeiten klicken Sie auf das Personensymbol auf der rechten Seite. Ein Untermenü öffnet sich und Sie klicken auf Tags bearbeiten. 
+\newline
+\newline %Screenshots noch
+\textbf{Subtags zu Konzepten hinzufügen:} PUMA ermöglicht Ihnen neue Konzepte zu erstellen oder zu einem bereits existierenden Konzept neue Tags hinzufügen. Um ein neues Konzept hinzuzufügen wählen Sie einen Tag, der als Name für das Konzept stehen soll, aus. Diesen Tag geben Sie in das Feld \enquote{Supertag} ein. Den Tag, der dem Konzept hinzugefügt werden soll geben Sie in das Feld \enquote{Subtag} ein.
+\textbf{ACHTUNG:} Es kann immer nur ein Subtag eingegeben werden, wenn Sie zwei Subtags gleichzeitig eingeben wird das Konzept nicht erstellt. Um mehrere Subtags in einem Konzept zu vereinen müssen sie den oben genannten Ablauf zur Erstellung eines Konzeptes mit jedem neuen Subtag wiederholen und dabei das Supertag unverändert lassen. 
+\newline
+\newline
+\textbf{Subtags von Konzept löschen:} Sie können auch Tags aus einem Konzept entfernen. Dafür geben Sie in das Feld \enquote{Supertag} den Namen des Konzepts ein und in das Feld \enquote{Subtag} den Tag, der gelöscht werden soll. \textbf{ACHTUNG:} Hier kann ebenfalls immer nur ein Tag in das Feld Subtag eingegeben werden, da sonst die Aktion nicht durchgeführt wird.
+\newline
+\newline
+Navigation mit Konzepten
+\newline
+Um mit Konzepten zu suchen, benutzen Sie einfach die Suchleiste rechts oben. Klicken Sie auf den blauen Pfeil neben 'Suche' und wählen Sie im Dropdown-Menü Konzepte. Geben Sie den Namen des Konzepts, mit dem Sie suchen möchten, in das Suchfeld ein und klicken Sie auf das Lupensymbol oder drücken Sie die Enter-Taste. Die Lesezeichen/Publikationen, die mit einem der Subtags des Konzepts getagged worden sind, werden Ihnen angezeigt. 
+\subsection{Eigene Literaturliste erstellen}
+PUMA bietet Ihnen die Möglichkeit aus Ihren gesammelten Publikationen Literaturlisten zu erstellen, die Sie später beispielsweise auf externen Webseiten verwenden können. Für das Erstellen einer solchen Literaturliste verwenden Sie folgenden URLs, die Sie in Ihren Browser eingeben:
+\begin{enumerate}%Beispielscreenshots ?
+    \item \textbf{Allgemeine Liste:}\newline
+    \textit{https://puma.ub.uni-stuttgart.de/publ/user/<username>} \newline
+    Ersetzen Sie <username> durch Ihren Benutzernamen und Ihnen werden alle Publikationen aus Ihrer Sammlung in einer Literaturliste angezeigt.\newline
+    \textbf{Beispiel:} https://puma.ub.uni-stuttgart.de/publ/user/eckert 
+    \item \textbf{Allgemeine Liste ohne Tags:}\newline
+    \textit{https://puma.ub.uni-stuttgart.de/publ/user/<username>?notags=1}\newline
+    Ersetzen Sie <username> durch Ihren Benutzernamen und Ihnen werden alle Publikationen aus Ihrer Sammlung, ohne Tags, in einer Literaturlisten angezeigt.\newline
+    \textbf{Beispiel:} https://puma.ub.uni-stuttgart.de/publ/user/eckert?notags=1 
+    \item \textbf{Allgemeine Liste mit Tag-Einschränkung:}\newline
+    \textit{https://puma.ub.uni-stuttgart.de/publ/user/<username>/<tagname>}\newline
+    Ersetzen Sie <username> durch Ihren Benutzernamen und <tagname> durch den Tag, der in den Publikationen enthalten sein soll. Ihnen wird eine Literaturlisten angezeigt, die jene Publikationen aus Ihrer Sammlung enthält, die den speziellen Tag enthalten. Ein besonderes Beispiel hierfür ist der Tag \textit{myown}. Durch diesen Tag geben Sie an, dass Sie der/die Verfasser/in der Publikation sind. \newline
+    \textbf{Beispiel:} https://puma.ub.uni-stuttgart.de/publ/user/eckert/puma
+    \item \textbf{BibTeX-Liste:}\newline
+    \textit{https://puma.ub.uni-stuttgart.de/bib/user/<username>} \newline
+    Ersetzen Sie <username> durch Ihren Benutzernamen. Ihnen wird eine Literaturliste mit alle Ihren Publikationen im BibTex-Format angezeigt.\newline
+    \textbf{Beispiel:} https://puma.ub.uni-stuttgart.de/bib/user/eckert 
+\end{enumerate}
+
+
+
+
+
+
+\newpage
+\section{Zusammmenarbeit/ Soziale Funktion}
+\subsection{Freunde}% Screenshot von beiden Seiten (Menü und nutzerseite)
+%Funktion von Freunden fehlt noch
+PUMA bietet zwei unterschiedliche Wege, um Freunde/Kollegen hinzuzufügen.
+\newline
+Weg 1:
+\begin{enumerate}
+    \item Klicken Sie auf den Nutzernamen. Diesen finden Sie bei allen Einträgen, die der Nutzer erstellt hat.
+    \item Sie gelangen auf die Seite des Nutzers, auf der alle seine öffentlichen Einträge zu sehen sind. In der rechten Spalte der Seite wird Ihnen der Benutzer angezeigt. Klicken Sie auf \enquote{Freund hinzufügen}.
+\end{enumerate}
+Weg 2:
+\begin{enumerate}
+    \item Wählen Sie in der Suchleiste \enquote{Benutzer} aus und geben den Nutzernamen ein.
+    \item Sie gelangen auf die Seite des Nutzers, auf der alle seine öffentlichen Einträge zu sehen sind. In der rechten Spalte der Seite wird Ihnen der Benutzer angezeigt. Klicken Sie auf \enquote{Freund hinzufügen}.
+\end{enumerate}
+%Hinzufügen mit Publikationen und wie man  des sieht 
+\textbf{Freundesübersicht} \newline
+Die Freundesübersicht bietet Ihnen einen Überblick über Ihre Freunde in PUMA. Sie gelangen zu der Übersicht über das Dropdown-Menü des Personensymbols. Klicken Sie auf den Reiter \enquote{Freunde}. Sie erhalten nun einen Überblick über Ihre Freunde und können sich auch anschauen, welche Nutzer Sie als Freund angegeben haben. \newline
+Es besteht jeder Zeit die Möglichkeit Freunde wieder zu entfernen. Gehen Sie hierfür mit der Maus auf den jeweiligen grünen Kasten \enquote{Freund} des Freundes, den Sie entfernen möchten. Der Kasten wird sich von Grün zu Rot verändern und Sie können durch einen linken Mausklick den Freund entfernen. 
+\subsection{Gruppen}
+Gruppen vereinfachen die Zusammenarbeit auf Puma. Es ermöglicht eine gemeinsame Literaturrecherche und erleichtert so die Umsetzung von gemeinsamen Projekten. Gleichzeitig kann innerhalb einer Institution/Arbeitsgruppe die Kommunikationen über neue und interessante fremde/eigene Artikel über PUMA erfolgen und somit die Kommunikation vereinfachen. 
+\subsubsection{Gruppen suchen und beitreten}%2 Screenshots Hauptmenü+beitreten
+\begin{enumerate}
+    \item Klicken Sie auf \enquote{Gruppen} im Hauptmenü. Ein Untermenü öffnet sich.
+    \item Klicken Sie im Untermenü auf \enquote{Alle Gruppen}.
+    \item Es öffnet sich ein Übersicht über alle Gruppen bei PUMA in alphabetischer Reihenfolge. Von Links nach Rechts sehen Sie nun den jeweiligen Gruppennamen, sowie den Curriculum Vitae von den einzelnen Gruppen. Rechts befindet sich für jede Gruppe ein Button um ihr beizutreten. Klicken Sie auf den entsprechenden  \enquote{Beitreten-Button} um der jeweiligen Gruppe beizutreten.
+    \item Eine neue Seite erscheint. Geben Sie in das Feld \enquote{Begründung} eine Begründung ein, warum Sie der Gruppe beitreten möchten.
+    \item Bitte geben Sie den angezeigten Captcha-Text in das vorgegebene Feld ein, damit wir ausschließen können, dass es sich bei Ihnen um eine Maschine/Roboter handelt.
+    \item Klicken Sie anschließend auf \enquote{Anfrage absenden}.
+    \item Der Gruppen-Administrator erhält eine Nachricht, dass Sie in die Gruppe eintreten wollen. Allein der Administrator entscheidet über die Aufnahme, weswegen ein plausibler Begründungstext sinnvoll ist.
+\end{enumerate}
+\subsubsection{Gruppen erstellen}
+\begin{enumerate}
+    \item Klicken Sie im Hauptmenü auf \enquote{Gruppen}. Ein Untermenü öffnet sich.
+    \item Klicken Sie im Untermenü auf \enquote{eine neue Gruppe erstellen}.
+    \item Füllen Sie die freien Felder aus. Erklären Sie bitte auch (unter Begründung) warum bzw. wofür die neue Gruppe genutzt werden soll.   Um Spamgruppen zu vermeiden werden alle Gruppenanträge manuell überprüft. 
+    \item Klicken Sie anschließend auf \enquote{Gruppe beantragen}. Der Gruppenantrag wird nun von den Administratoren überprüft. Sobald die Gruppe freigeschaltet wurde erhalten Sie ein Benachrichtigung per E-Mail.
+\end{enumerate}
+Ab sofort können Sie die Vorteile der gemeinsamen Literaturrecherche von PUMA nutzen und Publikationen  für spezielle Gruppen sichtbar machen. Dies legen Sie beim Eintragen einer neuen Publikation oder eines neuen Lesezeichen fest, indem Sie bei der Sichtbarkeit unter dem Punkt \textit{andere} die spezielle Gruppe auswählen. Wenn Sie diese Publikation nun speichern sehen diese automatisch alle Gruppenmitglieder.
+\subsubsection{Die Gruppenseite}
+Um zur Gruppenseite zu gelangen klicken Sie im Dropdown-Menü vom Reiter  \enquote{Gruppen} auf den entsprechenden Namen der Gruppe. Sie gelangen zur Gruppenseite, auf der Sie einen Überblick über alle Lesezeichen und Publikationen erhalten.%Screenshot
+\newline
+Funktionen auf der Gruppenseite:\newline
+- \textbf{CV/Lebenslauf der Gruppe} finden Sie auf der rechten Seite. Durch klicken auf den CV-Button erhalten Sie alle wichtigen Informationen zu der Gruppe. \newline - Unterhalb des Gruppenbildes befindet sich die \textbf{Liste alle Mitglieder}. \newline - Um sich einen Überblick über die \textbf{diskutierten Einträge} zu verschaffen klicken Sie unter dem Abschnitt Diskussion auf der rechten Seite auf \enquote{Zeige kürzlich diskutierte Einträge von PUMA}.  
+\subsubsection{Rollen in einer Gruppe}
+In einer Gruppe können die unterschiedlichsten Rollen und Aufgaben übernommen werden. In PUMA gibt es drei Rollenarten:
+\begin{enumerate}
+    \item Den Administrator: Er hat die größte Befugnis in der Gruppe. Er ist zuständig für die Einstellungen der Gruppenseite und kann das Layout des Gruppenlebenslaufes editieren. Ebenfalls kann er neue Mitglieder einladen und vorhandene ausladen, sowie die Rollen der anderen Mitglieder verändern (z.B. weiteren Administrator ernennen).
+    \item Den Moderator: Er ist eine Stufe unter dem Administrator. Er hat nur Zugriff auf die Mitgliederliste und kann andere Nutzer in die Gruppe einladen und seine eigene Rolle herabsetzen, indem er zu \textit{Nutzer} wechselt.
+    \item Den Nutzer: Er ist ein Mitglied der Gruppe und hat keine Befugnisse in der Gruppe Änderungen oder neue Einstellungen vorzunehmen.
+\end{enumerate}
+\subsection{Eingang}
+In Ihrem Eingang finden Sie alle Beträge, die Ihnen von Freunden geschickt wurden.
+\newline
+\newline
+Einträge verschicken
+\newline
+Um einem anderen Nutzer ein Lesezeichen oder eine Publikation zu schicken verwenden Sie das Systemtag \textit{send:xyz}. Dieses Tag geben Sie mit weiteren Tags beim Eintragen einer Publikation/ Lesezeichen mit ein. Der Eintrag wird dann getaggt mit from:<YourUserName> und in den Eingang von dem Nutzer xyz kopiert. Um den Missbrauch des Eingangs zu verhindern muss der Empfänger des Eintrags
+\begin{enumerate}
+    \item entweder mit Ihnen befreundet sein
+    \item oder Mitglied einer gemeinsamen Gruppe sein.
+\end{enumerate}
+Nachdem der Eintrag gesendet wurde wird der Tag von \textit{send:xyz} in \textit{sent:xyz} automatisch umgewandelt.
+\newline
+\newline
+Einträge erhalten
+\newline
+In Ihrem Eingang liegen alle Einträge, die Ihnen geschickt wurden. Sie können diese Einträge über den Button \enquote{Diese Publikation in die eigene Sammlung einfügen}, rechts neben dem Eintrag (zwei Blätter) übernehmen. Mit \enquote{Diese Publikation aus Ihrem Eingang entfernen} können Sie den Eintrag aus dem Eingang löschen und über das schwarze Zahnrad den ganzen Eingang leeren.
+\subsection{Community-Posts}
+
+\subsection{Diskutiere Einträge/Kommentare, Rezensionen, Bewertung}
+PUMA verfügt über die Möglichkeit Publikationen/ Lesezeichen zu bewerten und Rezensionen zu verfassen. Außerdem ermöglicht es mit anderen über Publikationen/Lesezeichen zu diskutieren und seine eigene Meinung zu einer Publikation/ Lesezeichen durch Sterne zu verdeutlichen.
+\newline
+\newline
+Publikationen/ Lesezeichen bewerten:
+\begin{enumerate}
+    \item Klicken Sie auf die Stern-Leiste (diese befindet sich unterhalb von jedem Eintrag eines Lesezeichen oder einer Publikation).  
+    \item Sie gelangen auf die Detailansicht, in der Sie sowohl die Details zu Publikation/ Lesezeichen finden, sowie den Bereich \textbf{Kommentare und Rezensionen}. Dieser Bereich kann in vier Teile (A, B, C, D) unterteilt werden:
+    \begin{itemize} %muss mit abcd nummeriert sein
+        \item \textbf{A (Bewertungsverteilung):} Dies ist ein Diagramm, das alle bisherigen Bewertungen anschaulich darzustellen. %In diesem Fall ... Beispiel an Hand eines Bildes
+        \item \textbf{B (Durchschnittliche Bewertung):} Diese Stern-Leiste fasst die Bewertungen aus A zusammen.
+        \item \textbf{C (Kommentar erstellen):} Dieser Bereich bietet Ihnen die Möglichkeit selber Bewertungen oder Kommentare zu verfassen (Siehe Schritt 2-5 unten).  % überlegen wie in der Umsetzung es am Besten ist
+        \item \textbf{D (Bisherige Kommentare):} In diesem Bereich werden alle für Sie sichtbaren Kommentare/ Bewertungen angezeigt. Bei jedem Eintrag können Sie sehen, wer ihn veröffentlicht hat und wann. Sie haben außerdem die Möglichkeit auf Kommentare/ Bewertungen beliebig oft zu reagieren und zu antworten. Neben jedem Kommentar befindet sich ein Button mit einem kleinen schwarzen Pfeil, über ihn können Sie Rezensionen kommentieren. 
+    \end{itemize}
+    \item Um eine Rezension zu erstellen füllen Sie den Bereich \textbf{C (Kommentar erstellen)} aus.
+    \begin{enumerate}
+        \item Beitrag bewerten: Sie können den Betrag auf einer Sternen-Leiste mit 0-5 Sternen bewerten. Je höher die Anzahl der Sterne, umso besser ist die Bewertung.
+        \item Sichtbarkeit: Legen Sie fest, wer Ihre Bewertung sehen darf.
+        \begin{enumerate}
+            \item öffentlich: Jeder Nutzer kann Ihre Rezension sehen.
+            \item privat: Nur Sie können Ihre Rezension sehen.
+            \item andere: Sie können bestimmte Freunde oder Gruppen festlegen, die Ihre Rezension sehen sollen.
+            \item anonym: Ihr Kommentar wird ohne Ihren Benutzernamen veröffentlicht. Die Bewertung ist trotzdem für alle Nutzer sichtbar.
+        \end{enumerate}
+        \item Eigene Rezension erstellen: Sie können zu der Publikation/ dem Lesezeichen einen eigenen Kommentar schreiben.
+        \item Verweis hinzufügen: Sie können einen Verweis einem Eintrag hinzufügen. Eine genaue Anleitung zu diesem Vorgehen finden Sie weiter unten unter Literaturverweise erstellen.
+    \end{enumerate}
+    \item Klicken Sie auf \enquote{Rezension erstellen} um Ihre Bewertung und Ihren Kommentar zu speichern.
+\end{enumerate}
+Literaturverweise erstellen:
+\begin{enumerate}
+    \item Klicken Sie auf das Feld \enquote{Verweis hinzufügen}.
+    \item Geben Sie den Titel ein, den Sie zitieren möchten. Ab dem dritten Buchstaben werden Sie von einer Autokorrektur unterstützt, die Ihnen passende Titel vorschlägt.
+    \item Wählen Sie den entsprechenden Titel aus den Vorschlägen der Autokorrektur aus.
+    \item Der ausgewählte Artikel wird in einen Verweis-Link umgewandelt. Diesen können Sie mit Hilfe von Drag und Drop kopieren und an die Stelle in Ihre Rezension (in das Feld Kommentar erstellen) einfügen, an der er benötigt wird um Ihre Rezension zu fundieren.
+\end{enumerate}
+\subsection{RSS-Feed abonnieren}
+RSS (engl. Really Simple Syndication)-Feeds sind Dateienformate, die Ihnen Veränderungen auf Websites zeigen. So können Sie immer auf dem neusten Stadn sein und werden über Neuigkeiten informiert. Für PUMA bedeutet das RSS-Feed, dass Sie eigene oder fremde Publikations-/Lesezeichenlisten abonnieren können. Dies funktioniert auch mit Publikationslisten von Gruppen. Nach dem Abonnieren werden Sie über jede Neuigkeit (z.B. Neue Einträge) informiert. %Wie äußert sich das informiert werden?
+\begin{enumerate}
+    \item Klicken Sie auf das schwarze Zahnrad in der Publikations-/Lesezeichenspalte, die Sie abonnieren wollen. Es öffnet sich ein Dropdown- Menü.
+    \item  Klicken Sie unter Export auf "RSS". Der RSS-Feed wird erzeugt und an Ihren RSS-Reader weitergeleitet. 
+\newline 
+\textbf{ACHTUNG:} Das weitere Vorgehen ist exemplarisch, es richtet sich sowohl nach Ihrem Webbrowser als auch nach Ihrem RSS-Reader. Im gezeigten Fall übernimmt der Browser \enquote{Mozilla Firefox} sowohl die Aufgabe des Webbrowsers als auch die des RSS-Readers.
+    \item Es werden Ihnen von Mozilla Firefox einige Optionen zum Abonnieren angeboten. Wählen Sie hier \enquote{Dynamische Lesezeichen} und klicken Sie anschließend auf \enquote{Jetzt abonnieren}.
+    \item Ein Pop-Up Fenster öffnet sich. Wählen Sie einen Namen für das RSS-Feed aus. PUMA generiert immer automatisch einen Namen, diesen können Sie übernehmen.
+    \item Wählen Sie den Ordner aus, in dem das RSS-Feed gespeichert werden soll.
+    \item Klicken Sie abschließend auf \enquote{Abonnieren}, um das Feed zu abonnieren/ speichern.
+\end{enumerate}
+Dies ist nun die Ansicht des RSS-Feeds-Readers im Vergleich zur Ansicht in PUMA:
+%screenshot als Vergleich
+\newpage
+\section{Für Nerds}
+\subsection{URL-Sytax}
+\textbf{Parameter zum Sortieren} \newline
+Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/Publikationsliste haben, können Sie diese sortieren, indem Sie an die URL einen/mehrere der folgenden Parameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
+\begin{enumerate}
+    \item \textbf{sortPage - Wonach wird sortiert?}
+    \begin{enumerate}
+        %\item Werte (können durch | verknüpft werden):%ist nicht so
+        \item author - Autorenname
+        \item editor - Herausgebername
+        \item year - Erscheinungsjahr
+        \item entrytype - Publikationstyp
+        \item title - Titel
+        \item booktitle - Buchtitel (insb. bei Artikel in Sammelbänden)
+        \item journal - Journalname
+        \item school - Universitätsname 
+    \end{enumerate}
+    \item \textbf{sortPageOrder - Reihenfolge der Sortierung}
+    \begin{enumerate}
+        \item asc - aufsteigend
+        \item desc - absteigend 
+    \end{enumerate}
+    \item \textbf{duplicates- Duplikate}
+    \begin{enumerate}
+        \item yes - Erlaubt Duplikate in der Lesezeichen/- Publikationsliste
+        \item no - Entfernt Duplikate aus der Ergebnisliste
+    \end{enumerate}
+\end{enumerate}
+Beispiel: ?sortPage=year\&sortPageOrder=asc\&duplicates=no \newline
+Sortiere nach Erscheinungsjahr (sortPage=year) aufsteigend (sortPageOrder=asc) und entferne alle Duplikate (duplicates=no). \newline
+\newline
+\textbf{Allgemeine Seiten}
+\begin{enumerate}
+    \item \textbf{/} \newline
+    Homepage von BibSonomy, zeigt die aktuellsten 50 öffentlichen Einträge.
+    \item \textbf{/popular} \newline
+    Zeigt die 100 häufigsten Einträge der letzten 100.000 öffentlichen Einträge.
+    \item \textbf{/IhrBenutzername} \newline
+    Sie gelangen zu Ihrer persönlichen Sammlung.
+    \item \textbf{/settings} \newline
+    Auf dieser Seite können Sie:
+    \begin{enumerate}
+        \item Ihr Profil bearbeiten und Kontoeinstellungen ändern,
+        \item einen Benutzer zu Ihrer Gruppe hinzufügen,
+        \item Ihren API-Schlüssel finden und einen neuen erzeugen,
+        \item Ihr Passwort ändern,
+        \item Ihre Daten zwischen BibSonomy und PUMA synchronisieren.
+    \end{enumerate}
+    \item \textbf{/help\_de} \newline
+    Sie gelangen zu der Hilfeseite.
+    %\textbf{Verwaltungsseiten} ob diese Ordnung oder eine andere
+    \item \textbf{/postBookmark} \newline
+    Hier können Sie über die Eingabe der URL eines Lesezeichen überprüfen, ob sich dieses Lesezeichen schon in Ihrer Sammlung befindet. Durch die Überprüfung können Sie Duplikate vermeiden. Wenn sich das Lesezeichen noch nicht in Ihrer Sammlung befindet haben Sie im Anschluss an die Überprüfung die Möglichkeit die Metadaten des Lesezeichens einzutragen, um es in Ihre Sammlung auf zu nehmen.
+    \item \textbf{/postPublication} \newline
+    Auf dieser Seite können Sie neue Publikationen eintragen. 
+    \item \textbf{/user/eckert} \newline
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{eckert}.
+    \item \textbf{/user/eckert/politik} \newline
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} des Benutzers \textit{eckert}.
+    \item \textbf{/user/eckert/politik+menschenrechte} \newline
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschnerechte} des Benutzers \textit{eckert}.
+     \item \textbf{/myBibTeX} \newline
+    Ihnen wird Ihre gesamte Sammlung im BibTex-Format angezeigt.
+    \item \textbf{/myRelations} \newline
+    Ihnen werden Ihre Konzepte/ Relationen angezeigt.
+    \item \textbf{/myDuplicates} \newline
+    Zeigt Ihre eigenen Duplikaten, die sich in Ihrer Sammlung befinden.
+\end{enumerate}
+    
+\subsubsection{Suchen mit der URL-Syntax}
+PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL-Syntax nach bestimmten Seiten zu suchen. Es gibt verschiedene Wege, diese Suchergebnisse zu filtern. Gegenwärtig beinhalten die Filter: Tags, den Autor, das Publikationsjahr, den Benutzernamen der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. \newline
+\newline
+\textbf{Tag-/Schlagwortseiten}
+\begin{enumerate}
+    \item \textbf{/tag/politik} \newline
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} an.
+    \item \textbf{/tag/politik+menschenrechte}\newline
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an.
+\end{enumerate}
+\textbf{Autorenseiten}
+\begin{enumerate}
+    \item \textbf{/author/müller} \newline
+    Zeigt alle Einträge mit dem Autornamen \textit{müller} an.
+    %\item \textbf{/author/stumme+hotho+schmitz} \newline
+    %Zeigt alle Publikationen, die von den Autoren Stumme, Hotho und Schmitz veröffentlicht wurden.
+    %\item \textbf{/author/stumme+hotho+!schmitz} \newline
+    %Geben Sie den Namen eines Autors an, der nicht Teil der gesuchten Publikationen sein soll, z.B. zeige alle Publikationen an, die von Stumme und Hotho geschrieben sind, aber nicht von Schmitz.
+    \item \textbf{/author/müller/dblp} \newline
+    Zeigt alle Einträge mit dem Tag \textit{dblp} und dem Autor Müller.
+    \item \textbf{/author/müller/sys:user:eckert}\newline
+    Zeigt alle Publikationen des Autors Müller in Eckerts Sammlung.
+    %\item \textbf{/author/stumme+hotho+!schmitz+sys:year:2002-2007+sys:user:hoth} \newline
+    %Diese Kombination von Suchergebnissen zeigt alle Publikationen der Autoren Stumme und Hotho, aber nicht von Schmitz in den Jahren 2002 bis 2007 in der Sammlung des Benutzers Hotho.
+    \item \textbf{/author/müller/sys:group:puma} \newline
+    Zeigt alle Publikationen des Autors Müller in der Sammlung aller Gruppenmitglieder der Gruppe \textit{puma} an. 
+\newline
+\newline
+Ein Systemtag (System-Schlagwort) kann das Ergebnis Ihrer Autoren-Suche auf ein bestimmtes Erscheinungsjahr oder einen bestimmten Zeitraum beschränken. Es sind vier Formate möglich:%muss rausrücken
+    \item \textbf{/author/hotho+sys:year:2007} \newline
+    Zeigt alle Publikationen des Autors Hotho aus dem Jahre 2007.
+    \item \textbf{/author/hotho+sys:year:2003-2007} \newline
+    Zeigt alle Publikationen des Autors Hotho zwischen 2003 und 2007.
+    \item \textbf{/author/hotho+sys:year:-2005} \newline
+    Zeigt alle Publikationen des Autors Hotho bis zum Jahr 2005 an.
+    \item \textbf{/author/hotho+sys:year:1997-} \newline
+    Zeigt alle Publikationen des Autors Hotho seit 1997 an.
+\end{enumerate}
+\textbf{Freundeseiten} 
+\begin{enumerate}
+    \item \textbf{/friends} \newline
+    Hier werden die Einträge angezeigt, die nur für Freunde sichtbar sind und von Benutzern stammen auf deren Freundesliste Sie stehen.
+    \item \textbf{/friend/eckert} \newline
+    Hier werden alle Beiträge angezeigt, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    \item \textbf{/friend/eckert/politik} \newline
+    Zeigt alle Beiträge mit dem Tag \textit{politik} an, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können sie nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    \item \textbf{/friend/eckert/politik+menschenrechte} \newline
+    Zeigt alle Beiträge mit den Tags \textit{politik} und \textit{menschenrechte} an, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können sie nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+\end{enumerate}
+\textbf{Gruppenseiten}
+\begin{enumerate}
+    \item \textbf{/groups} \newline
+    Zeigt alle Gruppen, die es in PUMA gint, an.
+    \item \textbf{/group/puma} \newline
+    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
+    \item \textbf{/group/puma/politik}\newline
+    Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
+    \item \textbf{/group/puma/politik+menschnerechte}\newline
+    Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
+    \item \textbf{/relevantfor/group/puma} \newline
+    Zeigt Ihnen alle Einträge an,  die für die Teilnehmer der Gruppe relevant sind.
+    \item \textbf{/followers} \newline
+    Zeigt die neuesten Einträge aller Benutzer, denen Sie folgen. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für Sie relevantesten Einträge ganz oben stehen. %wie wird man follower???
+\end{enumerate}
+\textbf{Konzeptseiten}
+\begin{enumerate}
+    \item \textbf{/concepts/eckert} \newline
+    Es werden Ihnen alle Kozepte des Benutzers \textit{eckert} angezeigt.
+    \item \textbf{/concept/user/eckert/psychologie} \newline
+    Zeigt alle Lesezeichen und Publikationen des Benutzers \textit{eckert} an, denen das Tag \textit{psychologie} oder eines der Unterschlagwörter des Konzeptes als Tag zugeordnet ist. 
+\end{enumerate}
+\textbf{Suchseiten}\newline
+Mit der URL-Syntax \textit{/search...} suchen Sie im VOlltext nach einem bestimmten Wort. Es handelt sich dabei nicht um Schlagwörter/Tags. Bei Lesezeichen enthält der Volltext die URL, den Titel und die Beschreibung. Bei Publikationen sind der Titel, die Beschreibung und alle BibTex-Felder enthalten.
+\begin{enumerate}
+    \item \textbf{/search/politik} \newline
+    Zeigt Ihnen alle öffentlichen Einträge an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} enthalten. 
+    \item \textbf{/search/politik+menschenrechte}\newline
+    Zeigt alle öffentlichen Einträge, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
+    \item \textbf{/search/politik+-menschenrechte} \newline
+    Zeigt alle öffentlichen Einträge an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik}, aber nicht das Wort \textit{menschenrechte} enthalten. 
+    \item \textbf{/search/politik+user:droessler} \newline
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler}, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} enthalten. 
+    \item \textbf{/search/politik+menschenrechte+user:droessler}\newline
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
+    \item \textbf{/search/politik+-menschenrechte+user:droessler} \newline
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik}, aber nicht das Wort \textit{menschnerechte} enthalten. 
+    \item \textbf{/mySearch} \newline
+    Diese Seite bietet eine Schnellsuche in Ihrer eigenen Sammlung.
+\end{enumerate}
+\textbf{Sichtbare Seiten}
+\begin{enumerate}
+    \item \textbf{/viewable/public} \newline
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar} eingestellt haben.
+    \item \textbf{/viewable/public/politik} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{öffentlich sichtbar} eingestellt haben.
+    \item \textbf{/viewable/public/politik+menschenrechte} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte}, die Sie als \enquote{öffentlich sichtbar} eingestellt haben.
+    \item \textbf{/viewable/private} \newline
+    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar} eingestellt haben.
+    \item \textbf{/viewable/private/politik} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{privat sichtbar} eingestellt haben.
+    \item \textbf{/viewable/private/politik+menschenrechte} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an, die Sie als \enquote{privat sichtbar} eingestellt haben.
+    \item \textbf{/viewable/friends} \newline
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar} eingestellt haben.
+    \item \textbf{/viewable/friends/politik} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{für Freunde sichtbar} eingestellt haben.
+    \item \textbf{/viewable/friends/politik+menschenrechte} \newline
+    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an, die Sie als \enquote{für Freunde sichtbar} eingestellt haben.
+    \item \textbf{/viewable/puma} \newline
+    Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
+    \item \textbf{/viewable/puma/politik} \newline
+    Zeigt alle Einträge mit dem Tag \textit{politik} an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
+    \item \textbf{/viewable/puma/politik+menschenrechte} \newline
+    Zeigt alle Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte}, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
+\end{enumerate}
+\textbf{Umgang mit Duplikaten}\newline
+Auf Gruppenseiten kann es häufig vorkommen, dass Einträge (Publikationen) mehrfach angezeigt werden, wenn innerhalb einer Gruppe zwei oder mehr Benutzer denselben Eintrag in Ihrer Sammlung haben.\newline
+Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \textit{duplicates} wie folgt angepasst werden:
+\begin{enumerate}
+    \item \textbf{/group/puma/myown} \newline
+    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind (auch Duplikate).
+    \item \textbf{/group/puma/myown?duplicates=no} \newline
+    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind. Für jedes Duplikat wird nur der erste Eintrag angezeigt.
+    \item \textbf{/group/puma/myown?duplicates=merged} \newline
+    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind. Für jedes Duplikat werden alle Tags "aufgesammelt" und aggregiert an einem einzelnen Eintrag angezeigt.
+\end{enumerate}
+
+
+\textbf{Export von Seiten}
+\begin{enumerate}
+    \item RSS Feeds
+    \begin{enumerate}
+        \item \textbf{/publrss/} \newline
+        Zeigt einen RSS-Feed der Publikationen aus dem Inhaltsbereich an.
+        \item \textbf{/burst/} \newline
+        Zeigt ein BuRST-Feed für die Publikationen aus dem Inhaltsbereich an.
+        \item \textbf{/aparss/} \newline
+        Zeigt ein RSS-Feed im APA-Format für die Publikationen aus dem Inhaltsbereich an.
+    \end{enumerate}
+    \item Referenz-Metadaten und Formatierung
+    \begin{enumerate}
+        \item \textbf{/bib/} \newline
+        Zeigt alle Publikationen aus dem Inhaltsbereich im BibTeX-Format an.
+        \item \textbf{/bib/user/eckert} \newline
+        Zeigt alle öffentlichen Publikationseinträge des Nutzers \textit{eckert} im BibTeX-Format an.
+        \item \textbf{/endnote/} \newline
+        Zeigt alle Publikationen aus dem Inhaltsbereich im EndNote-Format an.
+    \end{enumerate}
+    \item HTML-Formatierung
+    \begin{enumerate}
+        \item \textbf{ /publ/} \newline
+        Es wird eine einfache Übersicht angezeigt, in der jeder Eintrag als Zeile in einer Tabelle dargestellt ist.
+        \item \textbf{/publ/?notags=1} \newline
+        In der einfachen Tabellenübersicht werden die PUMA-Schlagwörter in der HTML-Ausgabe unterdrückt.
+        \item \textbf{/publ/user/eckert} \newline
+        Es werden die Publikationen des Nutzers \textit{eckert} in Tabellenform dargestellt.
+        \item \textbf{ /publ/user/eckert/myown} \newline
+        Es werden die Publikationen des Nutzers \textit{eckert}, die unter dem Tag \textit{myown} abgespeichert wurden, in der Tabellenübersicht angezeigt. 
+    \end{enumerate}
+    \item Semantic Web-Formatierung
+    \begin{enumerate}
+        \item \textbf{/swrc/} \newline
+        RDF-Ausgabe gemäß der SWRC-Ontologie.
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+\textbf{URL- oder BibTex-Seiten}%noch fehler es fehlen community Seiten
+\begin{enumerate}
+    \item 
+    \item 
+    \item 
+    \item \textbf{/bibtex/253aa20e7f5e790b745e604039667c47b/eckert}\newline
+    Zeigt den PUMA-Publikationseintrag des Benutzers \textit{eckert} mit dem\newline Hashkey 253aa20e7f5e790b745e604039667c47b an. Der benutzte Hash ist der Intra-Hash. PUMA liefert einen Tag-JSON-Feed, der zu einem BibTeX-Eintrag gehört.
+    \item \textbf{/json/tags/bibtex/218a34049610d50537e6e09ce71b65605}\newline 
+    
+    \item \textbf{/bibtexkey/Martin\_2014} \newline
+    Liefert Publikationen mit dem BibTex-Schlüssel \textit{Martin\_2014}.
+    \item \textbf{/bibtexkey/Martin\_2014/droessler} 
+    oder \newline \textbf{/bibtexkey/Martin\_2014+sys:user:droessler}\newline
+    Liefert Publikationen mit dem BibTex-Schlüssel \textit{Martin\_2014} des Nutzers \textit{droessler}.
+    \item \textbf{/bibtexkey/Martin\_2014+sys\%3Auser\%3Adroessler} \newline
+    Zeigt alle Einträge mit dem vorgegebenen BibTex-Schlüssel \textit{Martin\_2014} des Benutzers \textit{droessler} an. Haben Sie mehr als einen Eintrag mit dem gleichen BibTeX-Schlüssel, so erhalten Sie eine Liste aller Treffer.
+    \item \textbf{/bibtexkey/journals/jacm/HopcroftU69/dblp} \newline
+    Sie können die BibTex-Semantik benutzen, um auf Einträge zu verweisen, die wir von DBLP spiegeln  %, sobald Sie gelernt haben, wie DBLP seine BibTeX-Schlüssel erzeugt.
+\end{enumerate}
+
+\textbf{Inhaltsvereinbarungsseiten}
+\begin{enumerate}
+    \item 
+    \item \textbf{/uri/author/eckert} \newline
+    Zeigt alle Einträge mit dem Autor Namens Eckert.
+\end{enumerate}
+
+\subsubsection{Rest-API}
+PUMA bietet Ihnen einen Webservice auf Basis des Representational State Transfer (REST) an. REST ist ein Architekturstil für verteilte Softwaresysteme, bei dem eine einheitliche Schnittstelle die Interaktion erleichtert. \newline
+Die REST-API ist für Softwareentwickler gedacht, deren Anwendungen mit PUMA interagieren sollen. Um auf die API zuzugreifen, können Sie die angebotene Client Library in der Programmiersprache Java nutzen. Falls Sie mit einer anderen Programmiersprache schreiben möchten, können Sie direkt mit dem Webserver interagieren.\newline
+Das REST-API-Repository\footnote{\url{http://dev.bibsonomy.org/maven2/org/bibsonomy/bibsonomy-rest-client/}} und die Benutzung der REST-API\footnote{\url{https://bitbucket.org/bibsonomy/bibsonomy/wiki/documentation/api/REST API}} können Sie unter den Links nachlesen.
+\newline
+\newline
+Um auf die API zugreifen zu können benötigen Sie den API-Key. Diesen finden Sie auf der Einstellungsseite unter dem Reiter \enquote{Einstellungen}. 
+
+
+
+\subsubsection{OAuth}
+OAuth ist ein etabliertes Protokoll für sichere API-Autorisierung, die es Nutzern ermöglicht, einer dritten Anwendung den Zugriff auf ihre Daten zu erlauben, ohne, dass sie ihre Anmeldeinformationen außerhalb von PUMA angeben müssen. 
+\newline
+\newline
+\textbf {Wie erhalten Sie durch OAuth in Ihrer Anwendung Zugriff auf PUMA?} \newline
+\textbf {1)} Beantragen Sie einen OAuth Consumer Key und Consumer Secret\newline 
+Bevor Ihre Anwendung auf die API von PUMA zugreifen kann, müssen Sie für beide Anwendungen einen gesicherten Kommunikationskanal aufbauen. Dies wird durch den Austausch von Anmeldedaten, dem sogenannten Consumer Key und dem Consumer Secret, erreicht. Der Consumer Key identifiziert Ihre Anwendung. Durch den Consumer Secret werden Ihre Anfragen verifiziert. Sowohl symmetrische (HMAC\footnote{\url{https://de.wikipedia.org/wiki/Keyed-Hash_Message_Authentication_Code}}) als auch Public Key (RSA\footnote{\url{https://de.wikipedia.org/wiki/Public-Key-Verschlüsselungsverfahren}})-Verschlüsselung wird unterstützt.
+Um einen consumer key und ein consumer secret zu beantragen, schreiben Sie bitte eine E-Mail an api-support@bibsonomy.org. \newline
+\newline
+\textbf{2)} Implementieren Sie den Autorisierungsprozess von OAuth\newline
+Wenn ein Nutzer Ihrer Anwendung in PUMA Zugriff auf seine Daten gewährt, wird der Nutzer zwischen Ihrer Anwendung und PUMA hin- und wieder zurückgelenkt, bis am Ende der sogenannte \textit{access token} Ihre Anwendung erreicht. Dieser wird dann dazu genutzt, um Ihre Anfragen an die API zu autorisieren. Dieser Prozess wird in der OAuth-Anleitung \footnote{\url{https://hueniverse.com/oauth/guide/workflow/}} genauer beschrieben.\newline
+Im Wesentlichen muss Ihre Anwendung den Nutzer zu der PUMA-OAuth-Autorisierungsseite weiterleiten, mit den vorher erhaltenen Anmeldedaten als Request-Parameter\newline (z.B. http://www.puma.ub.uni-stuttgart.de/oauth/authorize?oauth\_token=xxxxxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx): %bild
+\newline
+\newline
+Wenn der Nutzer Ihre temporären Anmeldedaten autorisiert, wird er entweder zu Ihrer Seite weitergeleitet (falls Sie eine Callback-URL angegeben haben), oder der Nutzer muss manuell zu Ihrer Seite wechseln. Die autorisierten Anmeldedaten können dann dazu genutzt werden, um den \textit{access token} zu erhalten, mit dem Anfragen autorisiert werden.
+%bild
+\newline
+\newline
+Die OAuth-Rest-API von PUMA für Java erleichtert diesen Prozess. Falls Sie Maven nutzen, fügen Sie einfach Ihrer pom.xml-Datei den folgenden Code hinzu:
+
+%<project>\newline
+ % <repositories>\newline
+    %<repository>\newline
+      %<id>bibsonomy-repo</id>\newline
+      %<name>Releases von BibSonomy-Modulen</name>
+      %<url>http://dev.bibsonomy.org/maven2/</url>
+    %</repository>
+  %[...]
+  %<dependencies>
+    %<dependency>
+      %<groupId>org.bibsonomy</groupId>
+      %<artifactId>bibsonomy-rest-client-oauth</artifactId>
+     % <version>2.0.22-SNAPSHOT</version>
+    %</dependency>
+  %</dependencies>
+  %[...]
+  
+Alternativ können Sie die jar-Dateien auch direkt herunterladen.\newline
+Temporäre Anmeldedaten zu erhalten funktioniert dann folgendermaßen:\newline
+\newline
+\textit{BibSonomyOAuthAccesssor accessor = new BibSonomyOAuthAccesssor("<YOUR CONSUMER KEY>", "<YOUR CONSUMER SECRET>", "<YOUR CALLBACK URL>");\newline
+String redirectURL = accessor.getAuthorizationUrl();}
+\newline
+\newline 
+Nun müssen Sie den Nutzer zu redirectURL weiterleiten. Danach werden die vorher erhaltenen temporären Anmeldedaten zu einem access token umgeformt:\newline
+\newline
+\textit{accessor.obtainAccessToken();}
+\newline
+\newline
+\textbf{3)} Machen Sie Anfragen an die PUMA-API\newline
+Jetzt können Sie das PUMA-\textit{rest logic interface} nutzen, um auf die API zuzugreifen.
+\newline
+\newline
+RestLogicFactory rlf = new RestLogicFactory("http://www.puma.ub.uni-stuttgart.de/api", RenderingFormat.XML);\newline
+LogicInterface rl = rlf.getLogicAccess(accessor);\newline
+[...]\newline
+rl.createPosts(uploadPosts);\newline
+[...]\newline
+
+
+
+
+\subsection{Programmiersprachen}
+\subsubsection{Java}    
+
+
+\subsubsection{PHP}
+PUMA-API ist ein Paket aus PHP-Skripten, das einen REST-Client enthält, sowie einige Utilities, die hilfreich sind für die Entwicklung einer PHP-Applikation, die mit der PUMA-REST-API interagieren soll. Der REST-Client verwaltet Funktionen, die von der PUMA REST-API angeboten werden.
+\newline
+Weitere Informationen und Sources finden Sie in dem BitBucket-Repository\footnote{\url{https://bitbucket.org/bibsonomy/restclient-php}}.  
+
+\subsubsection{Python}
+Es gibt einen API Client, um mit Hilfe der Programmiersprache Python\footnote{\url{https://www.python.org/}} Einträge aus PUMA abzurufen. Der folgende Codeabschnitt beispielsweise erstellt eine Liste aus Ihren Publikationen:
+
+%bibsonomy = BibSonomy('YOUR_USERNAME', 'YOUR_APIKEY')
+%posts = bibsonomy.getPosts('bibtex')
+%# do something with the posts...
+%for post in posts:
+%print post.resource.title %für bibsonomy für PUMA?
+ 
+
+
+\subsection{JavaScript- Codeschnipsel}
+Durch die Verwendung von JavaScript- Codeschnipseln erleichtern Sie Ihren Webseitenbesuchern das Vermerken und Arbeiten mit PUMA, und Sie vergrößern ihre eigene Reichweite. PUMA macht dies mit ein paar Zeilen JavaScript möglich. Fügen Sie den folgenden Code in Ihre Webseite ein und schon gelangen Besucher mit einem Klick zu PUMA und können dort ganz einfach Lesezeichen und Kommentare hinterlegen.
+\newline
+\newline
+<!-- post bookmark to link code -->\newline
+      <script type="text/JavaScript">\newline
+      <!--\newline
+      var url=encodeURIComponent(document.location.href);\newline
+      var title=encodeURIComponent(document.title);\newline
+      document.write(\"<a href=https://puma.ub.uni-	stuttgart.de/ShowBookmarkEntry?c=b\&jump=yes\&url="+url+ "\&description="+title +"\" title=\"Bookmark this page to PUMA Stuttgart.\">Bookmark to PUMA Stuttgart!</a>");\newline% " und \ stimmen noch nicht in der PDF muss noch geändert werden 
+      //-->\newline
+      </script>\newline
+      <!-- end post bookmark to link code -->\newline
+\subsection{Texteditoren}
+\begin{enumerate}
+    \item Emacs\footnote{\url{http://www.gnu.org/software/emacs/}} ist ein mächtiger, anpassbarer Texteditor. Das Package AUCTeX macht Emacs zu einer komfortablen LaTeX-Umgebung. In unserem Blogpost beschreiben wir, wie Emacs aufgesetzt werden muss, damit es automatisch BibTeX-Referenzen aus BibSonomy verwenden kann. 
+    \item Sublime Text %ausprobieren ob des auch mit PUMA geht
+    \item KBibTeX
+    \item Eclipse
+\end{enumerate}
+\subsection{Ilias}
+\subsection{Eigenen Webseiten}
+Es gibt mehrere Möglichkeiten, Inhalte aus PUMA oder Links zu PUMA auf Ihrer eigenen Webseite zu integrieren.
+
+\subsubsection{Bookmarklinks}
+Einige Webseiten bieten  auf ihrer Seite einen Bookmarklink an, damit der Benutzer ganz einfach Artikel der Seite in sozialen Netzwerken teilen oder in einem Lesezeichensystem speichern kann. 
+\newline Auch PUMA verfügt über einen Bookmarklink, den Sie auf Ihrer eigenen Webseite oder Blog hinzufügen können. Fügen Sie dafür Sie einen kurzen JavaScript-Code ein (dieser befindet sich auf der \enquote{Browser Add-ons \& Bookmarklets Seite}\footnote{\url{https://puma.ub.uni-stuttgart.de/buttons}}) und schon können Ihre Besucher zu Ihren Publikationen und Lesezeichen bei PUMA gelangen.
+
+\subsubsection{Publikationslisten}
+Integrieren Sie Publikationslisten (z.B. Ihre eigenen Publikationen), die das gleiche Format haben wie in PUMA, auf Ihrer Webseite. Dazu müssen Sie ein iframe in Ihren HTML-Code einfügen, das folgendermaßen aussieht: %Screenshot
+\newline Die URL kann jede beliebige Seite aus PUMA sein, z.B. Ihre Benutzerseite oder die Seite einer Ihrer Gruppen. \textbf{Wichtig:} Am Ende der URL muss der Parameter \textit{format=embed} steht. Beispielsweise zeigt die URL \url{https://puma.ub.uni-stuttgart.de/user/droessler/myown?items=1000&resourcetype=publication&sortPage=year&sortPageOrder=desc&format=embed}
+alle (bis zu 1000) Publikationen des Nutzers \textit{droessler} an, denen das Schlagwort \enquote{myown} zugeordnet wurde, absteigend nach Jahr sortiert.
+
+\subsubsection{JSON-Feed}
+Sie können für jede PUMA-Seite einen JSON-Feed\footnote{\url{http://www.json.org/}} generieren, indem Sie \textit{json/} vor den Pfadteil der URL stellen. Um beispielsweise den JSON-Feed für \textit{/tag/json} zu bekommen, geben Sie \textit{/json/tag/json} ein.
+
+Sie erhalten einen JSON-Feed, der mit Exhibit\footnote{\url{http://www.simile-widgets.org/exhibit/}} kompatibel ist und alle Lesezeichen und Publikationen der entsprechenden Seite enthält. Um den JSON-Feed in Ihr Exhibit einzugeben, fügen Sie einen Link dazu in den Header Ihres Exhibit HTML Codes:\newline
+\newline
+<link href="https://puma.ub.uni-stuttgart.de/tag/json?callback=cb" type=\enquote{application/jsonp} rel=\enquote{exhibit/data} ex:jsonp-callback=\enquote{cb} />%muss noch geschaut werden wegen den " 
+\newline
+%  Ist von kassel :  Schauen Sie sich diese Liste von Publikationen\footnote{\url{http://www.kde.cs.uni-kassel.de/hotho/publication_json.html}} an, um zu sehen, welche Möglichkeiten Sie mit JSON und Exhibit haben.
+
+\subsubsection{Zope}
+Sie können Inhalte aus PUMA dem Content Management System von Zope\footnote{\url{http://www.zope.org/}} hinzufügen.
+\begin{enumerate}
+    \item Publikationen\newline
+    Publikationslisten können mit Hilfe des PUMA-RSS-Feeds auf Ihrer Zope-Seite dargestellt werden. Eine detaillierte Beschreibung des RDF Summary Produkts\footnote{\url{http://old.zope.org/Members/EIONET/RDFSummary/}} erhalten Sie bei Zope.
+    \item Tagwolken\newline
+    Sie haben die Möglichkeit Tagwolken auf Ihren Zope-Seiten zu  erstellen. Eine Anleitung zum Vorgang wird im Folgenden erklärt.
+\end{enumerate}
+\textbf{Tag-Wolken auf Zope-Seiten} \newline
+PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden. 
+\begin{enumerate}
+    \item Sie müssen auf eine PUMA-Seite aus Zope heraus zugreifen. Hierfür benötigen Sie das Produkt Kebas Data \footnote{\url{https://sourceforge.net/projects/kebasdata/}}.
+    \item Für jede Tag-Wolke, die Sie anzeigen lassen wollen, benötigen Sie ein KebasData-Objekt. Bitte konfigurieren Sie es wie folgt (Benutzername etc. muss entsprechend ersetzt werden):%screenshot schon gemacht
+
+    Es werden nun alle Tags in Ihrer Tag-Wolke angezeigt, die sich zwischen den Start- <ul ...> und den Ende- </ul> Schemata bewegen.
+    \item Sie müssen jedoch die von PUMA ausgegebenen URLs überarbeiten, da diese sich auf das PUMA-Hauptverzeichnis und nicht auf Ihre Seite beziehen. Hierfür fügen Sie bitte ein \enquote{Script (Python)}-Objekt namens \textit{render\_fixbaseurl} in Zope an beliebiger Stelle oberhalb des Ordners ein, der Ihre Tag-Wolke enthält. Lassen Sie es zwei Parameter haben und folgendermaßen aussehen: 
+
+    ul = context.match[0]\newline
+    ul = ul.replace('href="/', 'href="https://puma.ub.uni-stuttgart.de/')\newline
+    print ul\newline
+    return printed\newline
+    some code block
+
+    \item Für die Anzeige Ihrer Tag-Wolke von \textit{DTML} aus müssen Sie diesen Befehl eingeben: 
+
+    <ul class="tagbox">\newline
+        <dtml-var tagcloud>\newline
+    </ul> \newline
+
+    \item Für die Anzeige Ihrer Tag-Wolke von einem \textit{Page Template} aus können Sie diesen Befehl benutzen: 
+
+    <ul class="tagbox">\newline
+        <div tal:replace="structure here/tagcloud"/>\newline
+    </ul>\newline
+
+    \item Nutzen Sie CSS zur Formatierung der Tag-Wolke nach Ihrem Geschmack. Hier sehen Sie, was wir benutzen; bitte beachten Sie, dass dies die selten vorkommenden Tags verbirgt. Sie können \textit{display: none} durch \textit{display: inline} ersetzen, um deren Anzeige zu aktivieren: 
+
+    ul.tagbox \{ list-style: none; text-align: justify; \}\newline
+    ul.tagbox li \{ display: inline; \}\newline
+    ul.tagbox li a \{ display: none; text-decoration: none; color: \#e05698; font-size: 60\% \} \newline
+    ul.tagbox li.tagone a \{  display: none; text-decoration: none; color: \#a3004e; font-size: 80\% \} \newline
+    ul.tagbox li.tagten a \{  display: inline; text-decoration: none; color: \#830030; font-size: 100\% \} \newline
+\end{enumerate}
+
+ 
+\end{document}
