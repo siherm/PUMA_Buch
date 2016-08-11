@@ -1,0 +1,1 @@
+Um den Index zu erstellen, muss in TEXmaker erst mit "MakeIndex" compiliert und danach mit "schnelles Übersetzten" oder "PdfLaTex"
