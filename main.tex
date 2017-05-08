@@ -11,19 +11,23 @@
    colorlinks=true,         % farbige Links in der Bildschirm-Version?
    linkcolor=blue,          % Farbe für Querverweise
    citecolor=black,         % Farbe für Zitierungen
-   urlcolor=red,           % Farbe für Links
+   urlcolor=blue,           % Farbe für Links
    bookmarks=true
    ]{hyperref}              % Paket für Links im PDF
-%\usepackage{breakurl}
 \usepackage{listings,makeidx} \makeindex
 \usepackage{array,longtable} 
 \usepackage{framed,xcolor} \colorlet[named]{shadecolor}{black!15}
 \usepackage{makecell}
-        
- 
-
-
-
+%\usepackage[nonumberlist]{glossaries} \makeglossaries
+%\loadglsentries{Glossar.tex} 
+\usepackage{microtype}
+\usepackage{mdframed}
+\mdtheorem[linecolor=blue]{thmbox}{Definition}
+\mdfdefinestyle{mdfexample1}{outerlinewidth=5pt, innerlinewidth=0pt, outerlinecolor=black, roundcorner=5pt}
+\usepackage{hyperref}
+\usepackage[anythingbreaks]{breakurl}
+\usepackage{wrapfig,graphicx}
+\usepackage{tabu}
 \makeatletter 
 \renewcommand*\thesection{\@arabic\c@section.}
 \renewcommand*\thesubsection{\thesection\@arabic\c@subsection.}
@@ -31,8 +35,8 @@
 \renewcommand*\theparagraph{\thesubsubsection\@arabic\c@paragraph.}
 \renewcommand*\thesubparagraph{\theparagraph\@arabic\c@subparagraph.}
 \makeatother   
-
-\begin{document}
+\sloppy
+\begin{document} 
 %\begin{center}
     %\vspace*{1cm}
     \title{\Huge Literaturverwaltung mit PUMA}
@@ -50,17 +54,25 @@
 
 \maketitle
 %\setcounter{tocdepth}{6}
-%\newpage
+\newpage
+%\center{
+\textit{Mein größter Dank gilt Sibylle Hermann und Stefan Drößler, ohne sie wären einige Latex-Error-Meldungen nie gelöst worden.}\newline
+\textit{Dieses Buch ist dem Entwickler von KOMA-Script, Markus Kohm, gewidmet.}%}
 \pagenumbering{Roman} 
+\clearpage
 \tableofcontents 
+\setcounter{secnumdepth}{3} 
+\setcounter{tocdepth}{3} 
 \newpage
 \pagenumbering{arabic} 
-\include{PUMA-_der_digitale_Zettelkasten}
+\include{PUMA_-_der_digitale_Zettelkasten}
 \include{Schnelleinstieg}
+\include{Haeufige_Anwendungsbeispiele}
 \include{Aufbau}
 \include{Basics}
 \include{Erweiterte_Funktionen}
 \include{Export_und_Import}
+\include{Zusammenarbeit_Soziale_Funktion}
 \include{Fuer_Nerds} 
 \include{PUMA_als_Forschungsprojekt}
 \include{Glossar}
