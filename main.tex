@@ -1,4 +1,4 @@
-\documentclass[b5paper,11pt,twoside]{scrbook} %176x250mm
+mv main\documentclass[b5paper,11pt,twoside]{scrbook} %176x250mm
 \usepackage[utf8]{inputenc}  
 \usepackage[T1]{fontenc}      % Unterstützung für Europäische-Zeichen-Ausgabe
 %\usepackage{ae}               % verbesserte Unterstützung für Umlaute
@@ -28,13 +28,14 @@
 \usepackage[anythingbreaks]{breakurl}
 \usepackage{wrapfig,graphicx}
 \usepackage{tabu}
-\makeatletter 
-\renewcommand*\thesection{\@arabic\c@section.}
-\renewcommand*\thesubsection{\thesection\@arabic\c@subsection.}
-\renewcommand*\thesubsubsection{\thesubsection\@arabic\c@subsubsection.}
-\renewcommand*\theparagraph{\thesubsubsection\@arabic\c@paragraph.}
-\renewcommand*\thesubparagraph{\theparagraph\@arabic\c@subparagraph.}
-\makeatother   
+%\renewcommand{\arraystretch}{1.15}
+%\makeatletter 
+%\renewcommand*\thesection{\@arabic\c@section.}
+%\renewcommand*\thesubsection{\thesection\@arabic\c@subsection.}
+%\renewcommand*\thesubsubsection{\thesubsection\@arabic\c@subsubsection.}
+%\renewcommand*\theparagraph{\thesubsubsection\@arabic\c@paragraph.}
+%\renewcommand*\thesubparagraph{\theparagraph\@arabic\c@subparagraph.}
+%\makeatother   
 \sloppy
 \begin{document} 
 %\begin{center}
@@ -56,7 +57,7 @@
 %\setcounter{tocdepth}{6}
 \newpage
 %\center{
-\textit{Mein größter Dank gilt Sibylle Hermann und Stefan Drößler, ohne sie wären einige Latex-Error-Meldungen nie gelöst worden.}\newline
+\textit{Mit herzlichsten Dank an Sibylle Hermann und Stefan Drößler, ohne sie wären einige Latex-Error-Meldungen nie gelöst worden.}\newline\newline
 \textit{Dieses Buch ist dem Entwickler von KOMA-Script, Markus Kohm, gewidmet.}%}
 \pagenumbering{Roman} 
 \clearpage
@@ -64,7 +65,8 @@
 \setcounter{secnumdepth}{3} 
 \setcounter{tocdepth}{3} 
 \newpage
-\pagenumbering{arabic} 
+\pagenumbering{arabic}
+\pagestyle{headings}
 \include{PUMA_-_der_digitale_Zettelkasten}
 \include{Schnelleinstieg}
 \include{Haeufige_Anwendungsbeispiele}
