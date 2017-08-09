@@ -1,0 +1,107 @@
+\BOOKMARK [0][-]{chapter.1}{PUMA - der digitale Zettelkasten}{}% 1
+\BOOKMARK [1][-]{section.1.1}{F\374r wen ist dieses Buch?}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Typische Anwendungsbeispiele f\374r PUMA}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Anmelden bei PUMA}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Der PUMA-Blog}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{BibSonomy}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Schnelleinstieg}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Die ersten Schritte}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Sammeln}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{Verwalten}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Teilen}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.5}{Plugin f\374r OpenCms der Universit\344t Stuttgart}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Typische Anwendungsbeispiele}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Institutspublikationsliste}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Eigene Publikationslisten verwalten und ver\366ffentlichen}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Materialsammlung f\374r die Bachelorarbeit}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Aufbau}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Suchleiste}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Spracheinstellung}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Linkes Hauptmen\374}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.3.1}{Home}{section.4.3}% 21
+\BOOKMARK [2][-]{subsection.4.3.2}{Mein PUMA}{section.4.3}% 22
+\BOOKMARK [2][-]{subsection.4.3.3}{Eintragen}{section.4.3}% 23
+\BOOKMARK [2][-]{subsection.4.3.4}{Gruppen}{section.4.3}% 24
+\BOOKMARK [2][-]{subsection.4.3.5}{Beliebt}{section.4.3}% 25
+\BOOKMARK [2][-]{subsection.4.3.6}{Genealogie}{section.4.3}% 26
+\BOOKMARK [1][-]{section.4.4}{Rechtes Hauptmen\374}{chapter.4}% 27
+\BOOKMARK [2][-]{subsection.4.4.1}{@username}{section.4.4}% 28
+\BOOKMARK [2][-]{subsection.4.4.2}{Das Personensymbol}{section.4.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Inhaltsbereich}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Beliebte Tags}{chapter.4}% 31
+\BOOKMARK [0][-]{chapter.5}{Basics}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Einstellungen}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{CV/Lebenslauf}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Publikationen}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.4}{Lesezeichen}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.5}{Versionierung der Publikationen und Lesezeichen}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.6}{Lesezeichen importieren}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.6.1}{Browser}{section.5.6}% 39
+\BOOKMARK [2][-]{subsection.5.6.2}{HTML-Datei in PUMA importieren}{section.5.6}% 40
+\BOOKMARK [2][-]{subsection.5.6.3}{Delicious}{section.5.6}% 41
+\BOOKMARK [1][-]{section.5.7}{Publikationen importieren}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.8}{Bookmarklet-Buttons f\374r Ihre Lesezeichen-Leiste}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.9}{PUMA-Browser-Add-ons}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.10}{Ablage}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.11}{Freischalten erweiterter Funktionen}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.12}{Konto aufl\366sen}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.12.1}{Konto l\366schen}{section.5.12}% 48
+\BOOKMARK [2][-]{subsection.5.12.2}{Ausscheiden aus der Uni}{section.5.12}% 49
+\BOOKMARK [0][-]{chapter.6}{Erweiterte Funktionen}{}% 50
+\BOOKMARK [1][-]{section.6.1}{Richtig verwalten}{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.1.1}{Tags/ Schlagwortsystem}{section.6.1}% 52
+\BOOKMARK [2][-]{subsection.6.1.2}{Konzepte}{section.6.1}% 53
+\BOOKMARK [2][-]{subsection.6.1.3}{Duplikate}{section.6.1}% 54
+\BOOKMARK [2][-]{subsection.6.1.4}{Private Dateien anh\344ngen}{section.6.1}% 55
+\BOOKMARK [2][-]{subsection.6.1.5}{Publikationen durchst\366bern}{section.6.1}% 56
+\BOOKMARK [2][-]{subsection.6.1.6}{Eigene Eintr\344ge bearbeiten}{section.6.1}% 57
+\BOOKMARK [2][-]{subsection.6.1.7}{Open-URL Resolver/Bestandsanfrage}{section.6.1}% 58
+\BOOKMARK [2][-]{subsection.6.1.8}{Open Access-Zugriff auf Publikationsdienste}{section.6.1}% 59
+\BOOKMARK [2][-]{subsection.6.1.9}{Eingang}{section.6.1}% 60
+\BOOKMARK [1][-]{section.6.2}{Literaturlisten erstellen}{chapter.6}% 61
+\BOOKMARK [2][-]{subsection.6.2.1}{Eigene Literaturlisten erstellen}{section.6.2}% 62
+\BOOKMARK [2][-]{subsection.6.2.2}{JabRef-Layouts}{section.6.2}% 63
+\BOOKMARK [0][-]{chapter.7}{Export und Import}{}% 64
+\BOOKMARK [1][-]{section.7.1}{Literaturlisten exportieren}{chapter.7}% 65
+\BOOKMARK [2][-]{subsection.7.1.1}{Literaturverzeichnis zusammenstellen}{section.7.1}% 66
+\BOOKMARK [2][-]{subsection.7.1.2}{Literaturverzeichnis exportieren}{section.7.1}% 67
+\BOOKMARK [2][-]{subsection.7.1.3}{Literaturverzeichnis exportieren- Programmspezifisch}{section.7.1}% 68
+\BOOKMARK [1][-]{section.7.2}{Literaturlisten importieren}{chapter.7}% 69
+\BOOKMARK [2][-]{subsection.7.2.1}{BibTex-Export aus verwendeten Literaturverwaltungsprogrammen}{section.7.2}% 70
+\BOOKMARK [2][-]{subsection.7.2.2}{BibTex/ EndNote aus der Zwischenablage importieren}{section.7.2}% 71
+\BOOKMARK [1][-]{section.7.3}{RSS-Feed abonnieren}{chapter.7}% 72
+\BOOKMARK [1][-]{section.7.4}{Universit\344tsbibliografie}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.5}{OPUS}{chapter.7}% 74
+\BOOKMARK [2][-]{subsection.7.5.1}{\334ber OPUS}{section.7.5}% 75
+\BOOKMARK [1][-]{section.7.6}{DBLP}{chapter.7}% 76
+\BOOKMARK [0][-]{chapter.8}{Zusammenarbeit und soziale Funktion}{}% 77
+\BOOKMARK [1][-]{section.8.1}{Freunde}{chapter.8}% 78
+\BOOKMARK [1][-]{section.8.2}{Gruppen}{chapter.8}% 79
+\BOOKMARK [2][-]{subsection.8.2.1}{Gruppen suchen und beitreten}{section.8.2}% 80
+\BOOKMARK [2][-]{subsection.8.2.2}{Gruppen erstellen}{section.8.2}% 81
+\BOOKMARK [2][-]{subsection.8.2.3}{Die Gruppenseite}{section.8.2}% 82
+\BOOKMARK [2][-]{subsection.8.2.4}{Rollen in einer Gruppe}{section.8.2}% 83
+\BOOKMARK [2][-]{subsection.8.2.5}{Eintr\344ge f\374r eine Gruppe}{section.8.2}% 84
+\BOOKMARK [1][-]{section.8.3}{Community Post}{chapter.8}% 85
+\BOOKMARK [1][-]{section.8.4}{Nutzern folgen}{chapter.8}% 86
+\BOOKMARK [1][-]{section.8.5}{Kommentare, Rezensionen und Bewertungen}{chapter.8}% 87
+\BOOKMARK [0][-]{chapter.9}{F\374r Nerds}{}% 88
+\BOOKMARK [1][-]{section.9.1}{URL-Syntax}{chapter.9}% 89
+\BOOKMARK [2][-]{subsection.9.1.1}{Suchen mit der URL-Syntax}{section.9.1}% 90
+\BOOKMARK [1][-]{section.9.2}{Duplikatserkennung}{chapter.9}% 91
+\BOOKMARK [1][-]{section.9.3}{Rest-API}{chapter.9}% 92
+\BOOKMARK [1][-]{section.9.4}{OAuth}{chapter.9}% 93
+\BOOKMARK [1][-]{section.9.5}{JavaScript-Codeschnipsel}{chapter.9}% 94
+\BOOKMARK [1][-]{section.9.6}{Eigenen Webseiten}{chapter.9}% 95
+\BOOKMARK [2][-]{subsection.9.6.1}{Bookmarklinks}{section.9.6}% 96
+\BOOKMARK [2][-]{subsection.9.6.2}{Publikationslisten}{section.9.6}% 97
+\BOOKMARK [2][-]{subsection.9.6.3}{JSON-Feed}{section.9.6}% 98
+\BOOKMARK [2][-]{subsection.9.6.4}{Zope}{section.9.6}% 99
+\BOOKMARK [1][-]{section.9.7}{Plugins}{chapter.9}% 100
+\BOOKMARK [2][-]{subsection.9.7.1}{OpenCms}{section.9.7}% 101
+\BOOKMARK [2][-]{subsection.9.7.2}{Typo3}{section.9.7}% 102
+\BOOKMARK [2][-]{subsection.9.7.3}{WordPress}{section.9.7}% 103
+\BOOKMARK [1][-]{section.9.8}{Bitbucket}{chapter.9}% 104
+\BOOKMARK [0][-]{chapter.10}{PUMA als Forschungsprojekt}{}% 105
+\BOOKMARK [1][-]{section.10.1}{Glossar}{chapter.10}% 106
+\BOOKMARK [1][-]{table.10.1}{Stichwortverzeichnis}{chapter.10}% 107
