@@ -3,6 +3,7 @@
 \section{Richtig verwalten}
 
 \subsection{Tags/ Schlagwortsystem}
+\label{subsec:tags}
 Tags\index{Tags} (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Einem Literatureintrag können so viele Tags zu geordnet werden, wie Sie wollen. Durch den Gebrauch von Tags wird die Suche zu einem bestimmten Thema erleichtert, da Sie in die Such-Leiste nur den entsprechenden Tag eingeben müssen und Ihnen werden alle Einträge mit diesem Tag vorgelegt. Ein weiterer Vorteil des Tag-Systems ist, dass Sie bei der Literatursuche Tags kombinieren können und so spezifische Ergebnisse erhalten. So können Sie beispielsweise, wenn Sie Literatur zu dem Thema \enquote{Politik in Deutschland} suchen, die Tags \enquote{Politik} und \enquote{Deutschland} eingeben und erhalten die gesamte Literatur, die sich mit den Themen befasst. 
 \begin{figure}[h!]
  \centering
@@ -46,24 +47,24 @@ PUMA ermöglicht, dass Sie mit Hilfe der Tags Lesezeichen und Publikationen find
 \underline{Möglichkeit 2:} Wenn Sie bei einem Eintrag auf einen Tag klicken, öffnet sich eine Seite mit allen Einträgen des Nutzer mit diesem bestimmten Tag. Auf der rechten Seite sehen Sie Informationen zu diesen Tag: Der Tag als Tag von allen Nutzern, verwandte Tags, die Konzepte des Nutzers und die verwendeten Tags des Nutzers. 
 \newline
 \newline
-\textbf{Systemtags\index{Systemtags}}
-\newline
-Systemtags\index{Tags!Systemtags} \label{systemtag} sind spezielle Tags, die eine feste Bedeutung haben. Derzeit bietet PUMA drei Typen von Systemtags an: \newline\newline
-- \textbf{Ausführbare Systemtags}\newline
+\subsubsection*{Systemtags\index{Systemtags}}
+Systemtags\index{Tags!Systemtags} \label{systemtag} sind spezielle Tags, die eine feste Bedeutung haben. Derzeit bietet PUMA drei Typen von Systemtags an:
+\begin{description}
+\item[Ausführbare Systemtags:]
 Ausführbare Systemtags werden zu einem Eintrag hinzugefügt, um eine spezielle Aktion mit diesem Eintrag auszuführen. Sie tragen ausführende Systemtags, wie die anderen Tags, in das Feld \enquote{Tags} ein. 
 \begin{enumerate}
     \item \textit{for:<Gruppenname>} : Mit diesem Systemtag kopieren Sie den Eintrag in die Sammlung der Gruppe. In der Gruppe wird der Tag durch \textit{from:<IhrBenutzername>} ersetzt. Wenn Sie ihren Eintrag löschen oder bearbeiten, so bleibt der in die Gruppe kopierte Eintrag unverändert. Nur Mitglieder der Gruppe können Einträge für die Gruppe kopieren.
     \item \textit{send:<Benutzername>} : Damit senden Sie den Eintrag in den Eingang eines anderen Benutzers. Damit dies funktioniert, muss der Empfänger Sie als Freund eingetragen haben oder Sie müssen Mitglied in der gleichen Gruppe sein. Sobald der Eintrag bei dem Nutzer angekommen ist wird der Tag durch \textit{sent:<Benutzername>} ersetzt.
 \end{enumerate}
-- \textbf{Meta-Systemtags}
-\newline   
+\item[Meta-Systemtags:]  
 Mit Meta-Systemtags markieren Sie Einträge. Derzeit werden folgende Meta-Systemtags unterstützt:
 \begin{enumerate}
     \item \textit{myown:} Ein Eintrag, der mit dem Tag myown\index{myown} versehen wurde, erscheint auf Ihrer CV-Seite. Durch den Tag geben Sie an, dass Sie der Verfasser des Lesezeichen/der Publikation sind.
     \item \textit{sys:relevantFor:<Gruppenname>} : Einträge mit dem Tag sys:relevantFor:xy werden auf der \enquote{Interessant für\index{Interessant für}}-Seite der Gruppe xy angezeigt. Damit hat dieser Tag den gleichen Effekt, wie das  Auswählen der Gruppe xy in der \enquote{Interessant für}-Box beim Bearbeiten eines Eintrages. Der Tag wird durch eine blaue Blume am Anfang der Tag-Reihe dargestellt. 
     \item \textit{sys:hidden:<tag>} : Der Tag ist nur für Sie selbst sichtbar. Man findet diesen Tag bei einer Publikation, die im Inhaltsbereich abgebildet wird, nicht sichtbar in der Reihe der anderen Tags. Der Tag wird durch eine blaue Blume am Anfang der Tag-Reihe dargestellt. Wenn Sie auf die Detailansicht der Publikation klicken, taucht er sichtbar in der Tag-Reihe auf.
 \end{enumerate}
-- \textbf{Such-Systemtags}\newline
+\item[Such-Systemtags:] 
+\label{itm:suchSystemtag}
 Such-Systemtags sind nicht dazu da, um in einen Eintrag geschrieben zu werden, sondern um Einträge nach Suchanfragen zu filtern. Alle Such-Systemtags haben die gleiche Syntax: \textit{sys:<Feldname>:<Feldwert>}. Beispielsweise werden  bei der Suchanfrage \textit{sys:author:xyz} nur die Einträge angezeigt, welche von dem Autor \textit{xyz} stammen.\newline
 Die Syntax kann entweder in die Suchleiste oder mit der URL eingeben werden. Folgende Filter unterstützt PUMA (Suche beschränkt sich auf die Publikationseinträge):\newline
 \newline

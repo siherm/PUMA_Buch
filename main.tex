@@ -17,6 +17,19 @@
 \usepackage{listings,makeidx} \makeindex
 \usepackage{array,longtable} 
 \usepackage{framed,xcolor} \colorlet[named]{shadecolor}{black!15}
+\newsavebox\MBox
+\newenvironment{tipp}{\par\begin{lrbox}{\MBox}
+%\newcommand*{}{}
+%\begin{minipage}[t][][b]{0.2\textwidth}}
+%T
+%I
+%P
+%P
+%\end{minipage}
+\begin{minipage}[t][][b]{0.8\textwidth}}
+{\end{minipage}\end{lrbox}%
+%\vline width \dimexpr\fboxsep\relax
+\colorbox{pumablue!40}{\usebox\MBox}\par}
 \usepackage{makecell}
 %\usepackage[nonumberlist]{glossaries} \makeglossaries
 %\loadglsentries{Glossar.tex} 
@@ -24,6 +37,7 @@
 \usepackage[framemethod]{mdframed}
 \mdtheorem[linecolor=blue]{thmbox}{Definition}
 \mdfdefinestyle{tipp}{frametitle={\texttt{\textbf{TIPP}}}, backgroundcolor=pumablue!60, roundcorner=8pt, linecolor=black, frametitlerule=true}%{outerlinewidth=5pt, innerlinewidth=0pt, outerlinecolor=black, roundcorner=5pt, frametitle={\texttt{\textbf{TIPP}}}, backgroundcolor=pumablue!40}
+
 \usepackage{hyperref}
 \usepackage[anythingbreaks]{breakurl}
 \usepackage{wrapfig,graphicx}
@@ -38,6 +52,8 @@
 %\makeatother   
 \definecolor{pumablue}{RGB}{0,81,158}
 \sloppy
+\newcommand{\tag}{$\langle$Tag $\rangle$}
+\newcommand{\tags}{$\langle$Tags $\rangle$}
 \begin{document} 
 %\begin{center}
     %\vspace*{1cm}
