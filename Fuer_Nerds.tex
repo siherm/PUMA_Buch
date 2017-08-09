@@ -1,6 +1,8 @@
 \chapter{Für Nerds}
+\label{ch:fuerNerds}
 \textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Pugins, für OpenCms,  und dem JavaScript-Codeschnipsel kein Problem für PUMA.}
-\section{URL-Sytax\index{URL-Syntax}}
+\section{URL-Syntax\index{URL-Syntax}}
+\label{sec:urlSyntax}
 \textbf{Parameter zum Sortieren} \newline
 Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/~Publikationsliste haben, können Sie diese sortieren, indem Sie an die URL einen/~mehrere der folgenden Parameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
 \begin{enumerate}
@@ -66,6 +68,7 @@ Sortiere nach Erscheinungsjahr (sortPage=~year) aufsteigend (sortPageOrder=~asc)
     Zeigt Ihre eigenen Duplikaten, die sich in Ihrer Sammlung befinden.
 \end{enumerate}    
 \subsection{Suchen mit der URL-Syntax}
+\label{subsec:suchenMitUrlSyntax}
 PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL-Syntax nach bestimmten Seiten zu suchen. Es gibt verschiedene Wege, diese Suchergebnisse zu filtern. Gegenwärtig beinhalten die Filter: Die Tags, den Autor, das Publikationsjahr, den Benutzernamen der Person, die den Eintrag gespeichert hat sowie Freunde- und Gruppennamen. \newline
 \newline
 \textbf{Tag\index{Tags}-/Schlagwortseiten}
@@ -245,10 +248,12 @@ Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \text
     Sie können die BibTex-Semantik benutzen, um auf Einträge zu verweisen, die wir von DBLP spiegeln  %, sobald Sie gelernt haben, wie DBLP seine BibTeX-Schlüssel erzeugt. noch nachschauen
 \end{enumerate}
 \section{Duplikatserkennung\index{Duplikat}} 
+\label{sec:duplikat}
 Die Dupliktaserkennung von PUMA basiert auf Hashkeys. Durch das Ausfüllen der Pflichtfelder Titel, Autor und Jahr wird an Hand dieser drei Felder ein Hashkey für die Publikation erzeugt. Wird nun eine Publikation zum zweiten mal in die Sammlung eingetragen, vergibt PUMA an diese Publikation den gleichen, schon vorhandenen Hashkey. Das System bemerkt die doppelte Vergabe und kennzeichnet die Publikationseinträge als Duplikate. 
 
 
 \section{Rest-API\index{Rest-API}}
+\label{sec:restApi}
 PUMA bietet Ihnen einen Webservice auf Basis des Representational State Transfer (REST) an. \newline
 REST ist ein Architekturstil für verteilte Softwaresysteme, bei dem eine einheitliche Schnittstelle die Interaktion erleichtert. Die standardisierte Schnittstelle basiert auf dem HTTP-Protokoll und kann über unterschiedliche Programmiersprachen, die HTTP versteht, angesprochen werden.\newline\newline
 \textbf{Mögliche Programmiersprachen:}\newline\newline
@@ -275,39 +280,45 @@ Um auf die API zugreifen zu können benötigen Sie den API-Key. Diesen finden Si
 
 
 \section{OAuth}
+\label{sec:oAuth}
 OAuth\index{OAuth} ist ein etabliertes Protokoll für sichere API-Autorisierung, die es Nutzern ermöglicht, einer dritten Anwendung den Zugriff auf ihre Daten zu erlauben, ohne, dass sie ihre Anmeldeinformationen außerhalb von PUMA angeben müssen. Mit OAuth erhalten sie Zugriff auf PUMA, hierfür müssen sie einen OAuth Consumer Key sowie ein Consumer Secret beantragen. Wie Sie dabei genau vorgehen erfahren Sie in der Onlinehilfe von PUMA.\footnote{\url{https://puma.ub.uni-stuttgart.de/help_de/OAuth}}
 
 
 
 \section{JavaScript-Codeschnipsel}
+\label{sec:javaScriptCode}
 Durch die Verwendung von JavaScript-Codeschnipseln\index{JavaScript-Code} erleichtern Sie Ihren Webseitenbesuchern das Vermerken und Arbeiten mit PUMA, und Sie vergrößern Ihre eigene Reichweite. PUMA macht dies mit ein paar Zeilen JavaScript möglich. Fügen Sie den folgenden Code in Ihre Webseite ein und schon gelangen Besucher mit einem Klick zu PUMA und können dort ganz einfach Lesezeichen und Kommentare hinterlegen.
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/JavaScript_Codeschnipsel}
  \caption{JavaScript-Codesschnipsel}
- \label{figure068}
+ \label{fig:javascriptCode}
 \end{figure}
 
 \section{Eigenen Webseiten}
+\label{sec:eigeneWebseiten}
 Es gibt mehrere Möglichkeiten, Inhalte aus PUMA oder Links zu PUMA auf Ihrer eigenen Webseite zu integrieren.
 
 \subsection{Bookmarklinks\index{Bookmarklinks}}
+\label{subsec:bookmarklinks}
 Einige Webseiten bieten  auf Ihrer Seite einen Bookmarklink an, damit der Benutzer ganz einfach Artikel der Seite in sozialen Netzwerken teilen oder in einem Lesezeichensystem speichern kann. 
 \newline Auch PUMA verfügt über einen Bookmarklink, den Sie auf Ihrer eigenen Webseite oder Blog hinzufügen können. Fügen Sie dafür einen kurzen JavaScript-Code\index{JavaScript-Code} ein (dieser befindet sich auf der \enquote{Browser Add-ons \& Bookmarklets Seite}\footnote{\url{https://puma.ub.uni-stuttgart.de/buttons}}) und schon können Ihre Besucher zu Ihren Publikationen und Lesezeichen bei PUMA gelangen.
 
 \subsection{Publikationslisten\index{Publikationslisten}}
+\label{subsec:publikationslisten}
 Integrieren Sie Publikationslisten\index{Publikationslisten!Eigene Publikationslisten} (z.~B. Ihre eigenen Publikationen), die das gleiche Format haben wie in PUMA, auf Ihrer Webseite. Dazu müssen Sie ein iframe in Ihren HTML-Code\index{HTML} einfügen, das folgendermaßen aussieht:\newline %Screenshot
 Die URL kann jede beliebige Seite aus PUMA sein, z.B. Ihre Benutzerseite oder die Seite einer Ihrer Gruppen. 
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/HTML-Code}
  \caption{HTML-Code}
- \label{figure069}
+ \label{fig:htmlCode}
 \end{figure}
 \begin{mdframed}[style=mdfexample1,frametitle={WICHTIG},backgroundcolor=gray!40]Am Ende der URL muss der Parameter \textit{format=embed} steht. Beispielsweise zeigt die URL \url{https://puma.ub.uni-stuttgart.de/user/droessler/myown?items=1000&resourcetype=publication&sortPage=year&sortPageOrder=desc&format=embed}
  alle (bis zu 1000) Publikationen des Nutzers \textit{droessler} an, denen das Schlagwort \enquote{myown} zugeordnet wurde, absteigend nach Jahr sortiert.
 \end{mdframed}
 \subsection{JSON-Feed\index{JSON-Feed}}
+\label{subsec:jsonFeed}
 Sie können für jede PUMA-Seite einen JSON-Feed\footnote{\url{http://www.json.org/}} generieren, indem Sie \textit{json/} vor den Pfadteil der URL stellen. Um beispielsweise den JSON-Feed für \textit{/tag/json} zu bekommen, geben Sie \textit{/json/tag/json} ein.
 
 Sie erhalten einen JSON-Feed, der mit Exhibit\footnote{\url{http://www.simile-widgets.org/exhibit/}} kompatibel ist und alle Lesezeichen und Publikationen der entsprechenden Seite enthält. Um den JSON-Feed in Ihr Exhibit einzugeben, fügen Sie einen Link dazu in den Header Ihres Exhibit HTML Codes:\newline
@@ -317,6 +328,7 @@ Sie erhalten einen JSON-Feed, der mit Exhibit\footnote{\url{http://www.simile-wi
 %  Ist von kassel :  Schauen Sie sich diese Liste von Publikationen\footnote{\url{http://www.kde.cs.uni-kassel.de/hotho/publication_json.html}} an, um zu sehen, welche Möglichkeiten Sie mit JSON und Exhibit haben.
 
 \subsection{Zope\index{Zope}}
+\label{subsec:zope}
 Sie können Inhalte aus PUMA dem Content Management System von Zope\footnote{\url{http://www.zope.org/}} hinzufügen.
 \begin{enumerate}
     \item Publikationen\newline
@@ -334,7 +346,7 @@ PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden.
  \centering
  \includegraphics[width=11cm]{Bilder/tag_wolken}
  \caption{KebayData-Objekt für Tag-Wolken}
- \label{figure116}
+ \label{fig:kebayDataObjekt}
 \end{figure}
 
     Es werden nun alle Tags in Ihrer Tag-Wolke angezeigt, die sich zwischen den Start- <ul ...> und den Ende- </ul> Schemata bewegen.
@@ -368,7 +380,9 @@ PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden.
 \end{enumerate}
 
 \section{Plugins} 
+\label{sec:plugins}
 \subsection{OpenCms\index{OpenCms}}
+\label{subsec:opencms}
 Mit dem OpenCms\index{Plugins!OpenCms} Plugin bei PUMA lassen sich Publikationslisten pflegen und die bibliografischen Daten in anderen Systemen nach nutzen. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Institutspublikationsliste. Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Institutspublikationsliste ausgegeben und auf der Institutswebsite veröffentlicht werden. Hierbei kann zwischen mehreren Zitatiosstil ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationsliste machen.\newline\newline
 \textbf{Die Umsetzung bei PUMA:}\newline
 \begin{enumerate}
@@ -401,6 +415,7 @@ CSL-Stil &	Im Feld CSL-Stil (Citation Style Language) wird der Zitationsstil aus
 Zeige Zusammenfassung& 	Das Abstract, falls vorhanden, wird als Link mit ausgegeben.\\ \hline
 Zeige BibTex-Code &	Der BibTex-Code kann als Link mit angezeigt werden.\\ \hline
 Zeige Link & Der Link zum Volltext wird, falls vorhanden, angezeigt.\\ \hline
+\label{tab:eingabefelder}
 \end{longtabu}
 %\normalsize
 Der Inhalt der Eingabefelder für eine Mitarbeiterpublikationsliste und eine Institutspublikationsliste unterscheiden sich. Bei dem folgenden Beispiel beziehen beide Listen die Publikationen aus der Institutsgruppe in PUMA.\newline\newline
@@ -409,53 +424,54 @@ Der Inhalt der Eingabefelder für eine Mitarbeiterpublikationsliste und eine Ins
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Institutsliste1}
  \caption{Allgemeine Einstellungen}
- \label{figure070}
+ \label{fig:iplAllgemeineEinstellungen}
 \end{figure}\begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Institutsliste2}
  \caption{Sortierung und Gruppierung}
- \label{figure071}
+ \label{fig:iplSortierungGruppierung}
 \end{figure}\begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Institutsliste3}
  \caption{Server- und Anmeldedaten}
- \label{figure072}
+ \label{fig:iplServerAnmeldedaten}
 \end{figure}
 \textbf {Muster-Abfrage einer Mitarbeiterpublikationsliste:}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Mitarbeiterliste1}
  \caption{Allgemeine Einstellungen}
- \label{figure073}
+ \label{fig:mplAllgemeineEinstellungen}
 \end{figure}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Mitarbeiterliste2}
  \caption{Sortierung und Gruppierung}
- \label{figure074}
+ \label{fig:mplSortierungGruppierung}
 \end{figure}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Mitarbeiterliste3}
  \caption{Server- und Anmeldedaten}
- \label{figure075}
+ \label{fig:mplServerAnmeldedaten}
 \end{figure}
 Wenn die gewünschten Einstellungen veröffentlicht werden, importiert das Plugin die Literatureinträge im ausgewählten Zitationsstil auf die entsprechenden OpenCms-Seite. Veränderungen, die bei PUMA vorgenommen werden, Korrekturen oder weitere Einträge, werden automatisch auf der OpenCms-Seite aktualisiert. OpenCms-Caching-Einstellungen wirken zusätzlich, Änderungen im PUMA-System werden zeitverzögert im OpenCms sichtbar.
 \subsection{Typo3\index{Typo3}}
+\label{subsec:typo3}
 \textbf{Installation}\newline\newline
 Um PUMA CSL zu installieren, melden Sie sich bei Ihrer TYPO3-Instanz\index{Plugins!Typo3} als Administrator an. Gehen Sie im Extension Manager zu den Extensions Import results. Suchen Sie nach der Extension ext\_bibsonomy\_csl und importieren Sie diese.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/extension_manager}}
  \caption{Extension Manager}
- \label{figure333}
+ \label{fig:extensionManager}
 \end{figure}
 Nach erfolgreichem Import wird die Extension unter \enquote{Available Extensions} angezeigt. Klicken Sie auf das +-Symbol, um es zu aktivieren.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/available_extensions}}
  \caption{Available Extensions}
- \label{figure222}
+ \label{fig:availableExtensions}
 \end{figure}
 \newline\newline
 \textbf{Publikationslisten hinzufügen mit dem Frontend Plugin}\newline\newline
@@ -466,7 +482,7 @@ Im Reiter \enquote{General} tragen Sie den Titel für die Publikationsliste ein.
  \centering
  \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/reiter_general}}
  \caption{Reiter General}
- \label{figure130}
+ \label{fig:reiterGeneral}
 \end{figure}
 \newline \newline
 Gehen Sie auf den Reiter \enquote{Plugin} und nehmen Sie die gewünschten Einstellungen vor. Sie können zwischen \textit{user}, \textit{group} oder \textit{viewable} wählen, um den entsprechenden Inhalt aus PUMA zu definieren, den Sie in der Publikationsliste haben möchten.\newline
@@ -476,7 +492,7 @@ Beispiel: Sie möchten Ihre eigene Publikationsliste einbinden. Dazu wählen Sie
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel9/reiter_plugin}}
  \caption{Reiter Plugin}
- \label{figure123}
+ \label{fig:reiterPlugin}
 \end{figure}\newline
 \begin{mdframed}[style=mdfexample1,frametitle={ACHTUNG},backgroundcolor=gray!40]Bitte beachten Sie, dass die Extension Ihre gesamte Publikationsliste darstellt, wie Sie sie in PUMA sehen \textbf{(auch private Publikationen)}. Wenn Sie z.B. an eine Publikation ein Dokument angehängt haben, dann wird dieses auch in der Publikationsliste angezeigt. Dadurch können für Sie \textbf{urheberrechtliche Konsequenzen} entstehen. Wir empfehlen Ihnen daher für die Nutzung einen zusätzlichen Account anzulegen, mit dem Sie in PUMA nur die TYPO3-Publikationen verwalten.
 \end{mdframed} 
@@ -485,7 +501,7 @@ In der Rubrik \enquote{Layout} können Sie die Gestaltung der Publikationsliste 
  \centering
  \fbox{\includegraphics[width=7cm]{Bilder/Kapitel9/csl_typo}}
  \caption{Citation Style Language(CSL)}
- \label{figure444}
+ \label{fig:csl}
 \end{figure}
 \newline
 \newline
@@ -508,7 +524,7 @@ Um ein neue Stylesheets hinzuzufügen gibt es drei unterschiedliche Möglichkeit
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/stylesheets}}
  \caption{Neue Stylesheets hinzuzufügen}
- \label{figure555}
+ \label{fig:neueStylesheets}
 \end{figure}
 Um eine Vorschau zu erhalten, klicken Sie auf \enquote{Show Styles}.\newline
 Um eine CSL-Stylesheet zu löschen klicken Sie wie gewohnt auf das Mülleimersymbol in Typo3. 
@@ -516,9 +532,10 @@ Um eine CSL-Stylesheet zu löschen klicken Sie wie gewohnt auf das Mülleimersym
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/csl_stylesheet}}
  \caption{CSL-Stylesheet löschen}
- \label{figure666}
+ \label{fig:cslLoeschen}
 \end{figure}
 \subsection{WordPress\index{WordPress}}
+\label{subsec:wordpress}
 Das WordPress-Plugin\index{Plugins!WordPress} ermöglicht Ihnen verschiedene PUMA-Funktionen für Ihren eigene WordPress-Blog zu nutzen.\newline\newline
 \textbf{Die Funktionen:}
 \begin{enumerate}
@@ -535,7 +552,9 @@ Das WordPress-Plugin\index{Plugins!WordPress} ermöglicht Ihnen verschiedene PUM
 \end{enumerate} 
 Um Publikationslisten basierend auf der Citation Style Language zu erstellen wird das WordPress-Plugin benötigt. Unter folgender Website kann das Plugin installiert werden: \url{https://wordpress.org/plugins/bibsonomy-csl/}. Eine Anleitung zur Installation finden Sie im BibSonomy Blog \footnote{\url{http://blog.bibsonomy.org/2012/12/feature-of-week-add-publication-lists.html}}
 %\subsection{Ilias}
+%\label{subsec:ilias}
 %\subsection{Moodle}
+%\label{subsec:moodle}
 %Das PUMA/BibSonomy Module (PBM) ist das PUMA/BibSonomy Plugin für Moodle. Es ermöglicht das Veröffentlichen von Publikationslisten aus PUMA heraus in einen Moodlekurs. Der Zitationsstil, in welchem die Publikationen in Moodle angezeigt werden sollen, kann mit Hilfe des CSL\footnote{\url{http://citationstyles.org/}} festgelegt werden.\newline\newline
 %\textbf{ Der Administrator}\newline
 %Die folgenden Schritte sind wichtig für die Installation des PBM Plugins: 
@@ -554,6 +573,7 @@ Um Publikationslisten basierend auf der Citation Style Language zu erstellen wir
 %\newline\newline
 %\textbf{Nutzer}\newline
 \section{Bitbucket\index{Bitbucket}}
+\label{sec:bitbucket}
 Bitbucket ist ein auf Git basierendes Versionskontrollsystem, das die Zusammenarbeit mit Teams erleichtert.  
 \newline
 Bei Problemen oder Fehlern können die Nutzer diese in Bitbucket melden und die Entwickler kümmern sich sofort darum. Hier benötigen die Nutzer ein eigens Bitbucket-Nutzerkonto. Mit diesem melden Sie sich bei Bitbucket an und gehen auf die Bibsonomy/~Puma-Seite\footnote{\url{https://bitbucket.org/bibsonomy/puma}}. Unter dem Reiter \enquote{Issues} können neue Problemmeldungen verfasst werden.
