@@ -1,11 +1,14 @@
 \chapter{Für Nerds}
 \label{ch:fuerNerds}
-\textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Pugins, für OpenCms,  und dem JavaScript-Codeschnipsel kein Problem für PUMA.}
+\textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Plugins für OpenCms kein Problem für PUMA.}
 \section{URL-Syntax\index{URL-Syntax}}
+Sie können die Funktionen von PUMA nicht nur über das Menü (\autoref{sec:hauptmenue}) erreichen, sondern auch direkt über die URL ansteuern. Mit URL ist die Adresse der Seite gemeint, die im Adressfeld des Browsers eingegeben, bzw. angezeigt wird. Die Seite mit der Adresse https://puma.ub.uni-stuttgart.de/user/mueller/forschungsdaten liefert beispielsweise alle Einträge des Benutzers \textit{mueller} zurück, die mit dem Tag \textit{forschungsdaten} gekennzeichnet sind.
+Der Teil https://puma.ub.uni-stuttgart.de bezeichnet dabei den Ort der PUMA-Installation, der Rest der URL steuert, welche Seiten oder Inhalte von PUMA zurückgegeben werden.
+ 
 \label{sec:urlSyntax}
 \subsection{Parameter zum Sortieren}
 \label{subsec:sortierparameter}
-Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/~Publikationsliste haben, können Sie diese sortieren, indem Sie an die URL einen/~mehrere der folgenden Parameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
+Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/~Publikationsliste haben, können Sie diese sortieren, indem Sie an die URL einen oder mehrere der folgenden Parameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
 \begin{enumerate}
     \item \textbf{sortPage - Wonach wird sortiert?}
     \begin{enumerate}
@@ -30,6 +33,7 @@ Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/~Publikationsliste haben, k�
     \end{enumerate}
 \end{enumerate}
 %Beispiel: \url{?sortPage=year%\&sortPageOrder=asc\&duplicates=no} \newline
+%Beispielkasten einfuegen
 Sortiere nach Erscheinungsjahr (sortPage=~year) aufsteigend (sortPageOrder=~asc) und entferne alle Duplikate (duplicates=~no). \newline
 \newline
 \subsection{Allgemeine Seiten}
