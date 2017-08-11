@@ -1,140 +1,227 @@
 \chapter{Für Nerds}
 \label{ch:fuerNerds}
-\textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Pugins, für OpenCms,  und dem JavaScript-Codeschnipsel kein Problem für PUMA.}
+\textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Plugins für OpenCms kein Problem für PUMA.}
 \section{URL-Syntax\index{URL-Syntax}}
 \label{sec:urlSyntax}
-\textbf{Parameter zum Sortieren} \newline
-Immer wenn Sie in PUMA Zugriff auf eine Lesezeichen/~Publikationsliste haben, können Sie diese sortieren, indem Sie an die URL einen/~mehrere der folgenden Parameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
-\begin{enumerate}
-    \item \textbf{sortPage - Wonach wird sortiert?}
-    \begin{enumerate}
-        \item author - Autorenname
-        \item editor - Herausgebername
-        \item year - Erscheinungsjahr
-        \item entrytype - Publikationstyp
-        \item title - Titel
-        \item booktitle - Buchtitel (insb. bei Artikel in Sammelbänden)
-        \item journal - Journalname
-        \item school - Universitätsname 
-    \end{enumerate}
-    \item \textbf{sortPageOrder - Reihenfolge der Sortierung}
-    \begin{enumerate}
-        \item asc - aufsteigend
-        \item desc - absteigend 
-    \end{enumerate}
-    \item \textbf{duplicates- Duplikate\index{Duplikate}}
-    \begin{enumerate}
-        \item yes - Erlaubt Duplikate in der Lesezeichen/- Publikationsliste
-        \item no - Entfernt Duplikate aus der Ergebnisliste
-    \end{enumerate}
-\end{enumerate}
+Sie können die Funktionen von PUMA nicht nur über das Menü (\autoref{sec:hauptmenue}) erreichen, sondern auch direkt über die URL ansteuern. Die URL ist die Adresse einer Seite, die im Adressfeld des Browsers eingegeben, bzw. angezeigt wird. Die Seite mit der Adresse \texttt{\begin{small}https://puma.ub.uni-stuttgart.de/user/mueller/forschungsdaten\end{small}} liefert beispielsweise alle Einträge des Benutzers \textit{mueller} zurück, die mit dem Tag \textit{forschungsdaten} gekennzeichnet sind.
+Der Teil \texttt{https://puma.ub.uni-stuttgart.de} bezeichnet den Ort der PUMA-Installation, der Rest der URL steuert, welche Seiten oder Inhalte von PUMA zurückgegeben werden. 
+ 
+%nach hinten verschieben
+\subsection{Parameter}
+\label{subsec:parameter}
+Mit einem Fragezeichen können an eine URL noch Parameter angehängt werden, die die Ausgabe steuern (Sortierung, Anzahl angezeigter Einträge). Mehrere Parameter werden durch ein \& getrennt. Die URL \texttt{\begin{small} /user/mueller?items=25\&sortPage=author\&sortPageOrder=desc\end{small}} liefert zum Beispiel die ersten 25 Einträge des Benutzers \textit{mueller} sortiert absteigend nach dem Autor. 
+
+Immer wenn Sie in PUMA eine Liste von Lesezeichen oder Publikationen ausgeben, können Sie diese sortieren, indem Sie an die URL einen oder mehrere der folgenden Suchparameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
+\begin{description}
+    \item [sortPage] Wonach wird sortiert?
+    \begin{description}
+        \item [author] Autorenname
+        \item [editor] Herausgebername
+        \item [year] Erscheinungsjahr
+        \item [entrytype] Publikationstyp
+        \item [title] Titel
+        \item [booktitle] Buchtitel (insb. bei Artikel in Sammelbänden)
+        \item [journal] Journalname
+        \item [school] Universitätsname 
+    \end{description}
+    \item [sortPageOrder] Reihenfolge der Sortierung
+    \begin{description}
+        \item [asc] aufsteigend
+        \item [desc] absteigend 
+    \end{description}
+\end{description}
+
+Die Parameter \texttt{items} und \texttt{duplicates} steuern wieviele Einträge mit oder ohne Duplikate angezeigt werden:
+
+\begin{description}		
+    \item [items] Wieviele Einträge werden angezeigt\hfill \\
+		 Wenn dieser Parameter nicht angegeben ist, werden standardmäßig 20 Einträge angezeigt.
+    \item [duplicates] Duplikate\index{Duplikate}
+    \begin{description}
+        \item [yes] Erlaubt Duplikate in der Lesezeichen/- Publikationsliste
+        \item [no] Entfernt Duplikate aus der Ergebnisliste
+    \end{description}
+\end{description}
 %Beispiel: \url{?sortPage=year%\&sortPageOrder=asc\&duplicates=no} \newline
-Sortiere nach Erscheinungsjahr (sortPage=~year) aufsteigend (sortPageOrder=~asc) und entferne alle Duplikate (duplicates=~no). \newline
-\newline
-\textbf{Allgemeine Seiten}
+%Beispielkasten einfuegen
+%Sortiere nach Erscheinungsjahr (sortPage=~year) aufsteigend (sortPageOrder=~asc) und entferne alle Duplikate (duplicates=~no). \newline
+\subsection{Allgemeine Seiten}
+\label{subsec:allgemeineSeiten}
 \begin{enumerate}
     \item \textbf{/} \newline
     Homepage von PUMA, zeigt die aktuellsten 50 öffentlichen Einträge.
     \item \textbf{/popular} \newline
     Zeigt die 100 häufigsten Einträge der letzten 100.000 öffentlichen Einträge.
     \item \textbf{/IhrBenutzername} \newline
-    Sie gelangen zu Ihrer persönlichen Sammlung.
+    Ihre persönliche Sammlung.
+    \item \textbf{/help\_de} \newline
+    Hilfeseite.
+     \item \textbf{/myBibTeX} \newline
+    Zeigt Ihre gesamte Sammlung im BibTex-Format.
+    \item \textbf{/myRelations} \newline
+    Zeigt Ihre Konzepte/Relationen.
+    \item \textbf{/myDuplicates} \newline
+    Zeigt die Duplikaten, die sich in Ihrer eigenen Sammlung befinden.
+\end{enumerate}    
+
+\subsection{Administrative Seiten}
+\label{subsec:adminSeiten}
+\begin{description}
     \item \textbf{/settings} \newline
-    Auf dieser Seite können Sie:
-    \begin{enumerate}
+    Einstellungsseite. Auf dieser Seite können Sie:
+    \begin{itemize}
         \item Ihr Profil bearbeiten und Kontoeinstellungen ändern,
         \item einen Benutzer zu Ihrer Gruppe hinzufügen,
         \item Ihren API-Schlüssel finden und einen neuen erzeugen,
         \item Ihr Passwort ändern und
         \item Ihre Daten zwischen BibSonomy und PUMA synchronisieren.
-    \end{enumerate}
-    \item \textbf{/help\_de} \newline
-    Sie gelangen zu der Hilfeseite.
+    \end{itemize}
     \item \textbf{/postBookmark} \newline
-    Hier können Sie über die Eingabe der URL eines Lesezeichen überprüfen, ob sich dieses Lesezeichen schon in Ihrer Sammlung befindet. Durch die Überprüfung können Sie Duplikate vermeiden. Wenn sich das Lesezeichen noch nicht in Ihrer Sammlung befindet, haben Sie im Anschluss an die Überprüfung die Möglichkeit die Metadaten des Lesezeichens einzutragen, um es in Ihre Sammlung auf zu nehmen.
+    Neues Lesezeichen einfügen. Überprüft vorab, ob sich die URL der Seite bereits in der Sammlung befindet.
     \item \textbf{/postPublication} \newline
-    Auf dieser Seite können Sie neue Publikationen eintragen. 
-    \item \textbf{/user/eckert} \newline
+    Neue Publikation einfügen. 
+\end{description}
+
+\subsection{Publikations- und Lesezeichenlisten nach verschiedenen Kriterien erstellen}
+\label{subsec:suchenMitUrlSyntax}
+PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL ihre Publikationslisten nach verschiedenen Kriterien zusammenzustellen und zu filtern. Möglichke Kriterien sind: Tags, Autor, Publikationsjahr, Benutzername der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. \newline
+\newline
+
+\subsubsection{Einträge nach Benutzer}
+\label{sss:nachBenutzer}
+
+Um die Einträge eines bestimmten Benutzers aufzulisten, verwenden Sie die Syntax \texttt{/user/<benutzername>}, wobei \texttt{<benutzername>} für den PUMA-Benutzername des gewünschten Nutzers steht. Das Ergebnis kann zusätzlich noch nach Tag gefiltert werden: \texttt{/user/<benutzername>/<tag>}. Mehrere Tags können durch ein + verknüpft werden.
+
+Beispiele:
+\begin{itemize}
+    \item \textbf{/user/eckert} \newline 
     Zeigt alle öffentlichen Einträge des Benutzers \textit{eckert}.
     \item \textbf{/user/eckert/politik} \newline
     Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} des Benutzers \textit{eckert}.
     \item \textbf{/user/eckert/politik+menschenrechte} \newline
-    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} des Benutzers \textit{eckert}.
-     \item \textbf{/myBibTeX} \newline
-    Ihnen wird Ihre gesamte Sammlung im BibTex-Format angezeigt.
-    \item \textbf{/myRelations} \newline
-    Ihnen werden Ihre Konzepte/Relationen angezeigt.
-    \item \textbf{/myDuplicates} \newline
-    Zeigt Ihre eigenen Duplikaten, die sich in Ihrer Sammlung befinden.
-\end{enumerate}    
-\subsection{Suchen mit der URL-Syntax}
-\label{subsec:suchenMitUrlSyntax}
-PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL-Syntax nach bestimmten Seiten zu suchen. Es gibt verschiedene Wege, diese Suchergebnisse zu filtern. Gegenwärtig beinhalten die Filter: Die Tags, den Autor, das Publikationsjahr, den Benutzernamen der Person, die den Eintrag gespeichert hat sowie Freunde- und Gruppennamen. \newline
-\newline
-\textbf{Tag\index{Tags}-/Schlagwortseiten}
+    Zeigt alle öffentlichen Einträge des Benutzers \textit {eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
+\end{itemize}
+
+\subsubsection{Einträge nach Tag\index{Tags}/Schlagwort}
+\label{sss:nachTag}
+Um alle Einträge aufzulisten, die mit einem bestimmten Tag verschlagwortet sind, verwenden Sie die Syntax \texttt{/tag/<tag>}, wobei <tag> durch das gewünschte Tag ersetzt wird. Mehrere Tags können mit einem + verknüpft werden. 
+
+Beispiele:
 \begin{enumerate}
     \item \textbf{/tag/politik} \newline
     Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} an.
     \item \textbf{/tag/politik+menschenrechte}\newline
-    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an.
+    Zeigt alle öffentlichen Einträge an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
 \end{enumerate}
-\textbf{Autorenseiten\index{Autoren}}
+
+\subsubsection{Einträge nach Autor\index{Autoren}}
+\label{sss:nachAutor}
+
+Um alle Publikationen eines bestimmten Autors aufzulisten, verwenden Sie die Syntax \texttt{/autor/<name>}, wobei <name> durch den Nachnamen des Autors ersetzt wird. Die Liste lässt sich mit Hilfe der Syntax \texttt{/autor/<name>/<tag>} auf bestimmte Tags eingrenzen oder durch \texttt{/autor/<name>/sys:<systemtag>:<wert>} mit verschiedenen Systemtags (siehe auch \autoref{sss:systemtags}) weiter einschränken.
+
+Beispiele:
 \begin{enumerate}
     \item \textbf{/author/müller} \newline
-    Zeigt alle Einträge mit dem Autornamen \textit{Müller} an.
+    Zeigt alle Publikationen des Autors mit dem Namen \textit{Müller} an.
     \item \textbf{/author/müller/dblp} \newline
-    Zeigt alle Einträge mit dem Tag \textit{dblp} und dem Autor \textit{Müller}.
+    Zeigt alle Einträge des Autors \textit{Müller} an, die mit dem Tag \textit{dblp} versch
     \item \textbf{/author/müller/sys:user:eckert}\newline
     Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung von \textit{Eckert} an.
     \item \textbf{/author/müller/sys:group:puma} \newline
     Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung aller Gruppenmitglieder der Gruppe \textit{puma} an. 
 \end{enumerate}
 \end{description}
-Ein Systemtag (System-Schlagwort) kann das Ergebnis Ihrer Autoren-Suche auf ein bestimmtes Erscheinungsjahr oder einen bestimmten Zeitraum beschränken. Es sind vier Formate möglich:%muss rausrücken
+
+Mit dem Systemtag \textit{year} lässt sich das Ergebnis auf ein bestimmtes Erscheinungsjahr oder einen bestimmten Zeitraum beschränken:%muss rausrücken
+
+Beispiele:
 \begin{enumerate}
-    \item \textbf{/author/hotho+sys:year:2007} \newline
+    \item \textbf{/author/hotho/sys:year:2007} \newline
     Zeigt alle Publikationen des Autors \textit{Hotho} aus dem Jahre 2007.
-    \item \textbf{/author/hotho+sys:year:2003-2007} \newline
+    \item \textbf{/author/hotho/sys:year:2003-2007} \newline
     Zeigt alle Publikationen des Autors \textit{Hotho} zwischen 2003 und 2007.
-    \item \textbf{/author/hotho+sys:year:-2005} \newline
+    \item \textbf{/author/hotho/sys:year:-2005} \newline
     Zeigt alle Publikationen des Autors \textit{Hotho} bis zum Jahr 2005 an.
     \item \textbf{/author/hotho+sys:year:1997-} \newline
     Zeigt alle Publikationen des Autors \textit{Hotho} seit 1997 an.
 \end{enumerate}
-\textbf{Freundeseiten} 
+
+\subsubsection{Einträge von Freunden} 
+\label{sss:vonFreunden}
+Um die Einträge Ihrer Freunde (\autoref{sec:freunde}) zu sehen, verwenden Sie die Syntax \texttt{/friends}, für alle Freunde oder \texttt{/friend/<name>} für die Einträge eines bestimmten Freundes. Sie können die Ergebnisse wie gewohnt durch die Angabe von Tags weiter einschränken. 
+
+Sie sehen nur die Einträge, die von Benutzern stammen, auf deren Freundesliste Sie stehen und die von diesen Benutzern für Freunde freigegeben wurden (für Freunde sichtbar).
+
+Beispiele:
 \begin{enumerate}
     \item \textbf{/friends} \newline
-    Hier werden die Einträge angezeigt, die nur für Freunde\index{Freunde} sichtbar sind und von Benutzern stammen auf deren Freundesliste Sie stehen.
+    Zeigt die für Freunde gekennzeichneten Einträge aller ihrer Freunde.
     \item \textbf{/friend/eckert} \newline
-    Hier werden alle Beiträge angezeigt, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert}. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
     \item \textbf{/friend/eckert/politik} \newline
-    Zeigt alle Beiträge mit dem Tag \textit{politik} an, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können sie nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    Zeit die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die mit dem Tag \textit{politik} verschlagwortet wurden. 
     \item \textbf{/friend/eckert/politik+menschenrechte} \newline
-    Zeigt alle Beiträge mit den Tags \textit{politik} und \textit{menschenrechte} an, welche für Freunde des Benutzers \textit{eckert} sichtbar gesetzt sind. Sie können sie nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind. 
 \end{enumerate}
-\textbf{Gruppenseiten\index{Gruppen}}
+
+\subsubsection{Einträge nach Sichtbarkeit}
+\label{sss:nachSichtbarkeit}
+Um zu sehen, welche ihrer Einträge für wen sichtbar sind, können Sie die Syntax \texttt{/viewable/<sichtbarkeit>} verwenden. Als \texttt{<sichtbarkeit>} sind folgende Ausprägungen möglich:
+\begin{description}
+  \item[public] Einträge, die öffentlich sichtbar sind
+	\item[private] Einträge, die nur für Sie selber sichtbar sind
+	\item[friends] Einträge, die für die Benutzer sichtbar sind, die auf ihrer Freundeliste stehen
+	\item[<gruppenname>] Einträge, die für die Mitglieder der Gruppe <gruppenname> sichtbar sind
+\end{description}  
+
+Die Ergebnisse können mit Hilfe der Syntax \texttt{/viewable/<sichtbarkeit>/<tags>} zusätzlich durch Tags eingeschränkt werden. 
+
+Beispiele:
+\begin{itemize}
+    \item \textbf{/viewable/public} \newline
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt haben.
+    \item \textbf{/viewable/public/politik} \newline
+    Zeigt alle Ihre öffentlich sichtbaren Einträge, die mit dem Tag \textit{politik} verschlagwortet wurden.
+    \item \textbf{/viewable/private} \newline
+    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt haben.
+    \item \textbf{/viewable/private/politik+menschenrechte} \newline
+    Zeigt alle Ihre Einträge an, die nur für Sie sichtbar sind und sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet wurden. 
+    \item \textbf{/viewable/friends} \newline
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt haben.
+    \item \textbf{/viewable/puma} \newline
+    Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
+    \item \textbf{/viewable/puma/politik} \newline
+    Zeigt alle Einträge an, die für die Gruppe \textit{puma} sichtbar sind und mit dem Tag \textit{politik} verschlagwortet wurden.
+\end{enumerate}
+
+
+\subsection{Gruppenseiten\index{Gruppen}}
+
+\label{subsec:gruppenseiten}
 \begin{enumerate}
     \item \textbf{/groups} \newline
-    Zeigt alle Gruppen, die es in PUMA gibt, an.
+    Zeigt eine Liste aller Gruppen, die es in PUMA gibt.
     \item \textbf{/group/puma} \newline
     Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
     \item \textbf{/group/puma/politik}\newline
     Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
-    \item \textbf{/group/puma/politik+menschnerechte}\newline
+    \item \textbf{/group/puma/politik+menschenrechte}\newline
     Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
     \item \textbf{/relevantfor/group/puma} \newline
     Zeigt Ihnen alle Einträge an,  die für die Teilnehmer der Gruppe relevant sind.
     \item \textbf{/followers} \newline
     Zeigt die neuesten Einträge aller Benutzer, denen Sie folgen. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für Sie relevantesten Einträge ganz oben stehen. 
 \end{enumerate}
-\textbf{Konzeptseiten}
+\subsection{Konzeptseiten}
+\label{subsec:konzeptseiten}
 \begin{enumerate}
     \item \textbf{/concepts/eckert} \newline
     Es werden Ihnen alle Konzepte\index{Konzepte} des Benutzers \textit{eckert} angezeigt.
     \item \textbf{/concept/user/eckert/psychologie} \newline
     Zeigt alle Lesezeichen und Publikationen des Benutzers \textit{eckert} an, denen das Tag \textit{psychologie} oder eines der Unterschlagwörter des Konzeptes als Tag zugeordnet ist. 
 \end{enumerate}
-\textbf{Suchseiten}\newline
+\subsection{Suchseiten}
+\label{subsec:suchseiten}
 Mit der URL-Syntax \textit{/search...} suchen Sie im Volltext nach einem bestimmten Wort. Es handelt sich dabei nicht um Schlagwörter/Tags. Bei Lesezeichen enthält der Volltext die URL, den Titel und die Beschreibung. Bei Publikationen sind der Titel, die Beschreibung und alle BibTex-Felder enthalten.
 \begin{enumerate}
     \item \textbf{/search/politik} \newline
@@ -152,34 +239,8 @@ Mit der URL-Syntax \textit{/search...} suchen Sie im Volltext nach einem bestimm
     \item \textbf{/mySearch} \newline
     Diese Seite bietet eine Schnellsuche in Ihrer eigenen Sammlung.
 \end{enumerate}
-\textbf{Sichtbare Seiten\index{Sichtbarkeit}}
-\begin{enumerate}
-    \item \textbf{/viewable/public} \newline
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt haben.
-    \item \textbf{/viewable/public/politik} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{öffentlich sichtbar} eingestellt haben.
-    \item \textbf{/viewable/public/politik+menschenrechte} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte}, die Sie als \enquote{öffentlich sichtbar} eingestellt haben.
-    \item \textbf{/viewable/private} \newline
-    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt haben.
-    \item \textbf{/viewable/private/politik} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{privat sichtbar} eingestellt haben.
-    \item \textbf{/viewable/private/politik+menschenrechte} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an, die Sie als \enquote{privat sichtbar} eingestellt haben.
-    \item \textbf{/viewable/friends} \newline
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt haben.
-    \item \textbf{/viewable/friends/politik} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} an, die Sie als \enquote{für Freunde sichtbar} eingestellt haben.
-    \item \textbf{/viewable/friends/politik+menschenrechte} \newline
-    Zeigt alle Ihre Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} an, die Sie als \enquote{für Freunde sichtbar} eingestellt haben.
-    \item \textbf{/viewable/puma} \newline
-    Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
-    \item \textbf{/viewable/puma/politik} \newline
-    Zeigt alle Einträge mit dem Tag \textit{politik} an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
-    \item \textbf{/viewable/puma/politik+menschenrechte} \newline
-    Zeigt alle Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte}, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
-\end{enumerate}
-\textbf{Umgang mit Duplikaten\index{Duplikate}}\newline
+\subsection{Umgang mit Duplikaten\index{Duplikate}}
+\label{subsec:duplikate}
 Auf Gruppenseiten kann es häufig vorkommen, dass Einträge (Publikationen) mehrfach angezeigt werden, wenn innerhalb einer Gruppe zwei oder mehr Benutzer denselben Eintrag in ihrer Sammlung haben.\newline
 Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \textit{duplicates} wie folgt angepasst werden:
 \begin{enumerate}
@@ -192,7 +253,8 @@ Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \text
 \end{enumerate}
 
 
-\textbf{Export von Seiten}
+\subsection{Export von Seiten}
+\label{exportSeite}
 \begin{enumerate}
     \item RSS Feeds\index{RSS}
     \begin{enumerate}
@@ -229,7 +291,8 @@ Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \text
     
 \end{enumerate}
 
-\textbf{URL- \index{URL}oder BibTex-Seiten\index{BibTex}}
+\subsection{URL- \index{URL}oder BibTex-Seiten\index{BibTex}}
+\label{subsec:hashSeiten}
 \begin{enumerate}
     \item \textbf{/url/398aa54c3aea66c147ad74d3089c0612}\newline
     Zeigt Ihnen alle öffentlichen PUMA-Lesezeicheneinträge der URL mit dem MD5-Hash \textit{398aa54c3aea66c147ad74d3089c0612} an.
@@ -337,7 +400,7 @@ Sie können Inhalte aus PUMA dem Content Management System von Zope\footnote{\ur
     \item Tagwolken\newline
     Sie haben die Möglichkeit Tagwolken auf Ihren Zope-Seiten zu  erstellen. Eine Anleitung zum Vorgang wird im Folgenden erklärt.
 \end{enumerate}
-\textbf{Tag-Wolken auf Zope-Seiten} \newline\newline
+\subsubsection*{Tag-Wolken auf Zope-Seiten} \label{sss:zopeTagwolken}
 PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden. 
 \begin{enumerate}
     \item Sie müssen auf eine PUMA-Seite aus Zope heraus zugreifen. Hierfür benötigen Sie das Produkt Kebas Data \footnote{\url{https://sourceforge.net/projects/kebasdata/}}.
@@ -384,8 +447,8 @@ PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden.
 \label{sec:plugins}
 \subsection{OpenCms\index{OpenCms}}
 \label{subsec:opencms}
-Mit dem OpenCms\index{Plugins!OpenCms} Plugin bei PUMA lassen sich Publikationslisten pflegen und die bibliografischen Daten in anderen Systemen nach nutzen. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Institutspublikationsliste. Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Institutspublikationsliste ausgegeben und auf der Institutswebsite veröffentlicht werden. Hierbei kann zwischen mehreren Zitatiosstil ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationsliste machen.\newline\newline
-\textbf{Die Umsetzung bei PUMA:}\newline
+Mit dem OpenCms\index{Plugins!OpenCms} Plugin bei PUMA lassen sich Publikationslisten pflegen und die bibliografischen Daten in anderen Systemen nach nutzen. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Institutspublikationsliste. Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Institutspublikationsliste ausgegeben und auf der Institutswebsite veröffentlicht werden. Hierbei kann zwischen mehreren Zitatiosstil ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationsliste machen.
+\subsubsection*{Die Umsetzung bei PUMA:}\label{sss:iplPuma}
 \begin{enumerate}
 \item  Anmeldung auf \url{https://puma.ub.uni-stuttgart.de.}
 \item Legen Sie eine Gruppe an.
@@ -420,7 +483,7 @@ Zeige Link & Der Link zum Volltext wird, falls vorhanden, angezeigt.\\ \hline
 \end{longtabu}
 %\normalsize
 Der Inhalt der Eingabefelder für eine Mitarbeiterpublikationsliste und eine Institutspublikationsliste unterscheiden sich. Bei dem folgenden Beispiel beziehen beide Listen die Publikationen aus der Institutsgruppe in PUMA.\newline\newline
-\textbf{Muster-Abfrage einer Institutspublikationsliste:\index{Publikationslisten!Institutspublikationslisten}}
+\subsubsection*{Beispiel Institutspublikationsliste:\index{Publikationslisten!Institutspublikationslisten}}\label{sss:ipl}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Institutsliste1.JPG}
@@ -437,7 +500,7 @@ Der Inhalt der Eingabefelder für eine Mitarbeiterpublikationsliste und eine Ins
  \caption{Server- und Anmeldedaten}
  \label{fig:iplServerAnmeldedaten}
 \end{figure}
-\textbf {Muster-Abfrage einer Mitarbeiterpublikationsliste:}
+\subsubsection*{Beipiel Mitarbeiterpublikationsliste}\label{sss:mpl}
 \begin{figure}[h!]
  \centering
  \includegraphics[width=9cm]{Bilder/Kapitel9/Mitarbeiterliste1.jpeg}
@@ -459,7 +522,7 @@ Der Inhalt der Eingabefelder für eine Mitarbeiterpublikationsliste und eine Ins
 Wenn die gewünschten Einstellungen veröffentlicht werden, importiert das Plugin die Literatureinträge im ausgewählten Zitationsstil auf die entsprechenden OpenCms-Seite. Veränderungen, die bei PUMA vorgenommen werden, Korrekturen oder weitere Einträge, werden automatisch auf der OpenCms-Seite aktualisiert. OpenCms-Caching-Einstellungen wirken zusätzlich, Änderungen im PUMA-System werden zeitverzögert im OpenCms sichtbar.
 \subsection{Typo3\index{Typo3}}
 \label{subsec:typo3}
-\textbf{Installation}\newline\newline
+\subsubsection*{Installation}\label{sss:installation}
 Um PUMA CSL zu installieren, melden Sie sich bei Ihrer TYPO3-Instanz\index{Plugins!Typo3} als Administrator an. Gehen Sie im Extension Manager zu den Extensions Import results. Suchen Sie nach der Extension ext\_bibsonomy\_csl und importieren Sie diese.
 \begin{figure}[h!]
  \centering
@@ -475,7 +538,7 @@ Nach erfolgreichem Import wird die Extension unter \enquote{Available Extensions
  \label{fig:availableExtensions}
 \end{figure}
 \newline\newline
-\textbf{Publikationslisten hinzufügen mit dem Frontend Plugin}\newline\newline
+\subsubsection*{Publikationslisten hinzufügen mit dem Frontend Plugin}\label{sss:typo3Publikationslisten}
 Nachdem Sie die Extension importiert und aktiviert haben, können Sie Publikationslisten erstellen. Fügen Sie dazu der Seite, auf der die Publikationsliste erscheinen soll, ein neues Plugin hinzu. Wählen Sie hierfür aus der Liste \enquote{PUMA Publication List} aus.\newline
 \newline
 Im Reiter \enquote{General} tragen Sie den Titel für die Publikationsliste ein.
@@ -494,7 +557,8 @@ Beispiel: Sie möchten Ihre eigene Publikationsliste einbinden. Dazu wählen Sie
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel9/reiter_plugin.jpg}}
  \caption{Reiter Plugin}
  \label{fig:reiterPlugin}
-\end{figure}\newline
+\end{figure}
+
 \begin{mdframed}[style=mdfexample1,frametitle={ACHTUNG},backgroundcolor=gray!40]Bitte beachten Sie, dass die Extension Ihre gesamte Publikationsliste darstellt, wie Sie sie in PUMA sehen \textbf{(auch private Publikationen)}. Wenn Sie z.B. an eine Publikation ein Dokument angehängt haben, dann wird dieses auch in der Publikationsliste angezeigt. Dadurch können für Sie \textbf{urheberrechtliche Konsequenzen} entstehen. Wir empfehlen Ihnen daher für die Nutzung einen zusätzlichen Account anzulegen, mit dem Sie in PUMA nur die TYPO3-Publikationen verwalten.
 \end{mdframed} 
 In der Rubrik \enquote{Layout} können Sie die Gestaltung der Publikationsliste anpassen. Dies geschieht durch Citation Style Language (CSL\index{CSL}), das ist eine frei verfügbare XML-basierte Auszeichnungssprache. Eine große Liste an frei verfügbaren CSL-Vorlagen finden Sie hier: \url{http://www.zotero.org/styles/}.
@@ -504,14 +568,12 @@ In der Rubrik \enquote{Layout} können Sie die Gestaltung der Publikationsliste 
  \caption{Citation Style Language(CSL)}
  \label{fig:csl}
 \end{figure}
-\newline
-\newline
-In der letzten Rubrik \enquote{Login} müssen Sie Ihre PUMA API-Daten\index{API} hinterlegen. Nur so kann sich die TYPO3 Extension bei PUMA anmelden und Ihre Daten abrufen. Ihre API-Daten finden Sie, wenn Sie über das Personensymbol in die Einstellungen gehen und im Reiter \enquote{Einstellungen} nach unten scrollen. \newline
-\newline
-\textbf{Tag-Wolken hinzufügen mit dem Frontend Plugin}\newline\newline
+
+In der letzten Rubrik \enquote{Login} müssen Sie Ihre PUMA API-Daten\index{API} hinterlegen. Nur so kann sich die TYPO3 Extension bei PUMA anmelden und Ihre Daten abrufen. Ihre API-Daten finden Sie, wenn Sie über das Personensymbol in die Einstellungen gehen und im Reiter \enquote{Einstellungen} nach unten scrollen. 
+\subsubsection*{Tag-Wolken hinzufügen mit dem Frontend Plugin}\label{sss:typo3Tagwolken}
 Sie können Ihren Webseiten nicht nur Publikationslisten hinzufügen, sondern auch Ihre PUMA  Tag-Wolke(Tagcloud). Fügen Sie dazu der Seite, auf der die Tag-Wolke\index{Tag!Wolke} erscheinen soll, ein neues Plugin hinzu. Wählen Sie aus der Liste \enquote{Bibsonomy Tag Cloud}.\newline \newline 
 Wie bei \enquote{Publikationsliste hinzufügen} können Sie auch hier zwischen verschiedenen Modi wählen.\newline \newline 
-\textbf{CSL Styles mit dem Backend-Module verwalten}\newline
+\subsubsection*{CSL Styles mit dem Backend-Module verwalten}\label{typo3CslBackend}
 \newline
 TYPO3-Extensions werden klassisch in zwei Module unterteilt, dem Frontend- und Backend-Module. Die Frontend-Module \enquote{Publikationsliste hinzufügen} und \enquote{Tag-Wolke hinzufügen} wurden bereits erklärt. In diesem Abschnitt soll es um das Backend-Modul gehen, mit dem Sie die CSL-Stylesheets verändern können.\newline \newline
 Bereits mit der Extension-Installation werden Ihnen eine Reihe von CSL-Stylesheets ausgeliefert. Um weitere Stylesheets hinzuzufügen, erstellen Sie einen neuen Ordner im Seitenbaum und nennen diesen \textit{CSL Styles}. Wählen Sie anschließend diesen Ordner aus. Klicken Sie auf \enquote{Neu} und wählen \enquote{Add a custom style}.\newline \newline
