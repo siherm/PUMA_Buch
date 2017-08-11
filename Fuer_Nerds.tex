@@ -6,6 +6,277 @@
 Sie können die Funktionen von PUMA nicht nur über das Menü (\autoref{sec:hauptmenue}) erreichen, sondern auch direkt über die URL ansteuern. Die URL ist die Adresse einer Seite, die im Adressfeld des Browsers eingegeben, bzw. angezeigt wird. Die Seite mit der Adresse \texttt{\begin{small}https://puma.ub.uni-stuttgart.de/user/mueller/forschungsdaten\end{small}} liefert beispielsweise alle Einträge des Benutzers \textit{mueller} zurück, die mit dem Tag \textit{forschungsdaten} gekennzeichnet sind.
 Der Teil \texttt{https://puma.ub.uni-stuttgart.de} bezeichnet den Ort der PUMA-Installation, der Rest der URL steuert, welche Seiten oder Inhalte von PUMA zurückgegeben werden. 
  
+\subsection{Allgemeine Seiten}
+\label{subsec:allgemeineSeiten}
+\begin{description}
+    \item [/] Homepage von PUMA, zeigt die aktuellsten 50 öffentlichen Einträge.
+    \item [/popular] Zeigt die 100 häufigsten Einträge der letzten 100.000 öffentlichen Einträge.
+    \item [/IhrBenutzername]    Ihre persönliche Sammlung.
+    \item [/help\_de]    Hilfeseite.
+     \item [/myBibTeX]    Zeigt Ihre gesamte Sammlung im BibTex-Format.
+    \item [/myRelations]    Zeigt Ihre Konzepte/Relationen.
+    \item [/myDuplicates]    Zeigt die Duplikaten, die sich in Ihrer eigenen Sammlung befinden.
+    \item [/groups]   Zeigt eine Liste aller Gruppen, die es in PUMA gibt.
+    \item [/mySearch] Bietet eine Schnellsuche in Ihrer eigenen Sammlung.
+
+\end{description}    
+
+\subsection{Administrative Seiten}
+\label{subsec:adminSeiten}
+\begin{description}
+\item [/settings]  Einstellungsseite. Auf dieser Seite können Sie:
+    \begin{itemize}
+        \item Ihr Profil bearbeiten und Kontoeinstellungen ändern,
+        \item einen Benutzer zu Ihrer Gruppe hinzufügen,
+        \item Ihren API-Schlüssel finden und einen neuen erzeugen,
+        \item Ihr Passwort ändern und
+        \item Ihre Daten zwischen BibSonomy und PUMA synchronisieren.
+    \end{itemize}
+    \item [/postBookmark]    Neues Lesezeichen einfügen. \hfill \\Überprüft vorab, ob sich die URL der Seite bereits in der Sammlung befindet.
+    \item [/postPublication]    Neue Publikation einfügen. 
+\end{description}
+
+\subsection{Publikations- und Lesezeichenlisten nach verschiedenen Kriterien erstellen}
+\label{subsec:suchenMitUrlSyntax}
+PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL ihre Publikationslisten nach verschiedenen Kriterien zusammenzustellen und zu filtern. Möglichke Kriterien sind: Tags, Autor, Publikationsjahr, Benutzername der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. \newline
+\newline
+
+\subsubsection{Einträge nach Benutzer}
+\label{sss:nachBenutzer}
+
+Um die Einträge eines bestimmten Benutzers aufzulisten, verwenden Sie die Syntax \texttt{/user/<benutzername>}, wobei \texttt{<benutzername>} für den PUMA-Benutzername des gewünschten Nutzers steht. Das Ergebnis kann zusätzlich noch nach Tag gefiltert werden: \texttt{/user/<benutzername>/<tag>}. Mehrere Tags können durch ein + verknüpft werden.
+
+Beispiele:
+\begin{description}
+    \item [/user/eckert] \hfill \\ 
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{eckert}.
+    \item [/user/eckert/politik] \hfill \\
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} des Benutzers \textit{eckert}.
+    \item [/user/eckert/politik+menschenrechte] \hfill \\
+    Zeigt alle öffentlichen Einträge des Benutzers \textit {eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
+\end{description}
+
+\subsubsection{Einträge nach Tag\index{Tags}}
+\label{sss:nachTag}
+Um alle Einträge aufzulisten, die mit einem bestimmten Tag verschlagwortet sind, verwenden Sie die Syntax \texttt{/tag/<tag>}, wobei <tag> durch das gewünschte Tag ersetzt wird. Mehrere Tags können mit einem + verknüpft werden.
+
+Beispiele:
+\begin{description}
+    \item [/tag/politik] \hfill \\
+    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} an.
+    \item [/tag/politik+menschenrechte] \hfill \\
+    Zeigt alle öffentlichen Einträge an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
+\end{description}
+
+\subsubsection{Einträge nach Autor\index{Autoren}}
+\label{sss:nachAutor}
+
+Um alle Publikationen eines bestimmten Autors aufzulisten, verwenden Sie die Syntax \texttt{/autor/<name>}, wobei <name> durch den Nachnamen des Autors ersetzt wird. Die Liste lässt sich mit Hilfe der Syntax \texttt{/autor/<name>/<tag>} auf bestimmte Tags eingrenzen oder durch \texttt{/autor/<name>/sys:<systemtag>:<wert>} mit verschiedenen Systemtags (siehe auch \autoref{sss:systemtags}) weiter einschränken.
+
+Beispiele:
+\begin{description}
+    \item [/author/müller] \hfill \\
+    Zeigt alle Publikationen des Autors mit dem Namen \textit{Müller} an.
+    \item [/author/müller/dblp] \hfill \\
+    Zeigt alle Einträge des Autors \textit{Müller} an, die mit dem Tag \textit{dblp} versch
+    \item [/author/müller/sys:user:eckert] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung von \textit{Eckert} an.
+    \item [/author/müller/sys:group:puma] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung aller Gruppenmitglieder der Gruppe \textit{puma} an. 
+\end{description}
+
+Mit dem Systemtag \textit{year} lässt sich das Ergebnis auf ein bestimmtes Erscheinungsjahr oder einen bestimmten Zeitraum beschränken:%muss rausrücken
+
+Beispiele:
+\begin{description}
+    \item [/author/hotho/sys:year:2007] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Hotho} aus dem Jahre 2007.
+    \item [/author/hotho/sys:year:2003-2007] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Hotho} zwischen 2003 und 2007.
+    \item [/author/hotho/sys:year:-2005] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Hotho} bis zum Jahr 2005 an.
+    \item [/author/hotho+sys:year:1997-] \hfill \\
+    Zeigt alle Publikationen des Autors \textit{Hotho} seit 1997 an.
+\end{description}
+
+\subsubsection{Einträge von Freunden} 
+\label{sss:vonFreunden}
+Um die Einträge Ihrer Freunde (\autoref{sec:freunde}) zu sehen, verwenden Sie die Syntax \texttt{/friends}, für alle Freunde oder \texttt{/friend/<name>} für die Einträge eines bestimmten Freundes. Sie können die Ergebnisse wie gewohnt durch die Angabe von Tags weiter einschränken. 
+
+Sie sehen nur die Einträge, die von Benutzern stammen, auf deren Freundesliste Sie stehen und die von diesen Benutzern für Freunde freigegeben wurden (für Freunde sichtbar).
+
+Beispiele:
+\begin{description}
+    \item [/friends] \hfill \\
+    Zeigt die für Freunde gekennzeichneten Einträge aller ihrer Freunde.
+    \item [/friend/eckert] \hfill \\
+    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert}. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    \item [/friend/eckert/politik] \hfill \\
+    Zeit die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die mit dem Tag \textit{politik} verschlagwortet wurden. 
+    \item [/friend/eckert/politik+menschenrechte] \hfill \\
+    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind. 
+\end{description}
+
+\subsubsection{Einträge nach Sichtbarkeit}
+\label{sss:nachSichtbarkeit}
+Um zu sehen, welche ihrer Einträge für wen sichtbar sind, können Sie die Syntax \texttt{/viewable/<sichtbarkeit>} verwenden. Als \texttt{<sichtbarkeit>} sind folgende Ausprägungen möglich:
+\begin{description}
+  \item[public] Einträge, die öffentlich sichtbar sind
+	\item[private] Einträge, die nur für Sie selber sichtbar sind
+	\item[friends] Einträge, die für die Benutzer sichtbar sind, die auf ihrer Freundeliste stehen
+	\item[<gruppenname>] Einträge, die für die Mitglieder der Gruppe <gruppenname> sichtbar sind
+\end{description}  
+
+Die Ergebnisse können mit Hilfe der Syntax \texttt{/viewable/<sichtbarkeit>/<tags>} zusätzlich durch Tags eingeschränkt werden. 
+
+Beispiele:
+\begin{description}
+    \item [/viewable/public] \hfill \\
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt haben.
+    \item [/viewable/public/politik] \hfill \\
+    Zeigt alle Ihre öffentlich sichtbaren Einträge, die mit dem Tag \textit{politik} verschlagwortet wurden.
+    \item [/viewable/private] \hfill \\
+    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt haben.
+    \item [/viewable/private/politik+menschenrechte] \hfill \\
+    Zeigt alle Ihre Einträge an, die nur für Sie sichtbar sind und sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet wurden. 
+    \item [/viewable/friends] \hfill \\
+    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt haben.
+    \item [/viewable/puma] \hfill \\
+    Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
+    \item [/viewable/puma/politik] \hfill \\
+    Zeigt alle Einträge an, die für die Gruppe \textit{puma} sichtbar sind und mit dem Tag \textit{politik} verschlagwortet wurden.
+\end{description}
+
+\subsubsection{Einträge nach Gruppe\index{Gruppen}}
+\label{sss:nachGruppe}
+Wenn Sie Mitglied einer Gruppe (\autoref{sec:gruppen}) sind, können Sie mit Hilfe der Syntax \texttt{/group/<gruppenname>} die Einträge aller Gruppenmitglieder auflisten. Die Ergebnisse können mit \texttt{/group/<gruppenname>/<tags>} nach Tags gefiltert werden.
+
+Beispiele:
+\begin{description}
+    \item [/group/puma] \hfill \\
+    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
+    \item [/group/puma/politik] \hfill \\
+    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} verschlagwortet sind. 
+    \item [/group/puma/politik+menschenrechte] \hfill \\
+    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} verschlagwortet sind. 
+    \item [/relevantfor/group/puma] \hfill \\
+    Zeigt Ihnen alle Einträge an, die ein Gruppenmitglied der Gruppe \textit{puma} als relevant für diese Gruppe gekennzeichnet hat.
+    \item [/followers] \hfill \\
+    Zeigt die neuesten Einträge aller Benutzer, denen Sie folgen. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für Sie relevantesten Einträge ganz oben stehen. 
+\end{description}
+
+
+
+\paragraph*{Umgang mit Duplikaten\index{Duplikate}}
+\label{subsec:duplikate}
+Wenn innerhalb einer Gruppe zwei oder mehr Benutzer denselben Eintrag in ihrer Sammlung haben, kommt es vor, dass Einträge (Publikationen) mehrfach auf einer Gruppenseite angezeigt werden. Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \textit{duplicates} angepasst werden. Der Parameter kann folgende Ausprägungen haben:
+\begin{description}
+\item [yes] Jeder Eintrag wird angezeigt, auch wenn er ein Duplikat darstellt (Standard).
+  \item[no] Bei Duplikaten wird jeweils nur der erste Eintrag angezeigt.
+  \item [merged] Die Tags aller Duplikate werden gesammelt an einem einzelnen Eintrag angezeigt.
+  \end{description}
+
+Beispiele:
+\begin{description}
+    \item [/group/puma?duplicates=no] \hfill \\
+    Zeigt alle Einträge der Gruppe \textit{puma} an. Für jedes Duplikat wird nur der erste Eintrag angezeigt.
+    \item [/group/puma?duplicates=merged] \hfill \\
+    Zeigt alle Einträge der Gruppe \textit{puma} an. Für jedes Duplikat werden alle Tags \enquote{aufgesammelt} und aggregiert an einem einzelnen Eintrag angezeigt.
+\end{description}
+
+\subsubsection{Weitere Filterkriterien}
+\label{sss:weitereKriterien}
+
+PUMA bietet noch weitere Kriterien, nach denen Ergebnislisten zusammengestellt und gefiltert werden können. Mit der Syntax \texttt{/url/<hashkey>} werden alle Lesezeichen angezeigt, deren URL den Hash <hashkey> haben. Veröffentlichnungen mit einem bestimmten Intra-Hash (siehe \autoref{sec:duplikat}) erreichen Sie mit der Syntax \texttt{/bibtex/<intrahas>}. Mit der Syntax \texttt{/bibtexkey/<bibtexkey>} können Sie Veröffentlichungen mit einem bestimmten BibTeX-Key anzeigen.
+
+
+
+\subsection{Konzeptseiten}
+\label{subsec:konzeptseiten}
+Konzepte (\autoref{subsec:konzepte}) sind Überbegriffe, mit denen Sie Ihre Tags strukturiert können. Um die Konzepte eines Benutzers anzuzeigen, verwenden Sie die Syntax \texttt{/concepts/<benutzername>}. Um die Lesezeichen oder Publikationen zu erhalten, die mit einem Konzept oder eines seiner Untertags verschlagwortet wurden, verwenden Sie die Syntax \texttt{/concept/user/<benutzername>/<konzept>}.
+
+Beispiele:
+\begin{description}
+    \item [/concepts/eckert] \hfill \\
+    Zeigt alle Konzepte\index{Konzepte} des Benutzers \textit{eckert} angezeigt.
+    \item [/concept/user/eckert/psychologie] \hfill \\
+    Zeigt alle Lesezeichen und Publikationen des Benutzers \textit{eckert} an, denen das Konzept \textit{psychologie} oder eines seiner Unterschlagwörter als Tag zugeordnet ist. 
+\end{description}
+
+\subsection{Volltextsuche}
+\label{subsec:volltext}
+Die Volltextsuche von PUMA wird über die URL-Syntax \texttt{/search/<suchbegriff>} gesteuert. Mehrere Suchbegriffe können mit einem \texttt{+} verknüpft werden. Ein \texttt{-} vor einem Suchbegriff bewirkt, dass nur Einträge zurückgeliefert werden, die den entsprechenden Suchbegriff \textbf{nicht} enthalten. Ein Suchbegriff kann mit der Syntax \texttt{user:<benutzername>} auch den Benutzer festlegen, in dessen Einträgen gesucht werden soll.
+
+Die Volltextsuche sucht in den Feldern Titel und Beschreibung (bei Lesezeichen auch noch in der URL) nach allen Einträgen, die den Suchbegriff oder die Suchbegriffe enthalten.
+
+Beispiele:
+\label{subsec:volltextsuche}
+\begin{description}
+    \item [/search/politik] \hfill \\
+    Zeigt alle öffentlichen Einträge an, die das Wort \textit{politik} enthalten. 
+    \item [/search/politik+menschenrechte] \hfill \\
+    Zeigt alle öffentlichen Einträge, die das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
+    \item [/search/politik+-menschenrechte] \hfill \\
+    Zeigt alle öffentlichen Einträge, die das Wort \textit{politik}, aber nicht das Wort \textit{menschenrechte} enthalten. 
+    \item [/search/politik+user:droessler] \hfill \\
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler}, die das Wort \textit{politik} enthalten. 
+    \item [/search/politik+menschenrechte+user:droessler] \hfill \\
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
+    \item [/search/politik+-menschenrechte+user:droessler] \hfill \\
+    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die das Wort \textit{politik}, aber nicht das Wort \textit{menschnerechte} enthalten. 
+\end{description}
+
+
+\subsection{Export von Einträgen}
+\label{export}
+PUMA bietet Ihnen die Möglichkeit, Ihre Lesezeichen und Publikationen in viele verschiedene Formate zu exportieren.
+Die Exportfunktion von PUMA steuern Sie mit der Syntax \texttt{/<exportformat>}. Als Exportformat können Sie aus den folgenden Möglichkeiten wählen.
+
+\begin{itemize}
+    \item RSS Feeds\index{RSS}
+    \begin{description}
+        \item [/publrss/] Liefert einen RSS-Feed zurück.
+        \item [/burst/]  Liefert einen BuRST-Feed zurück.
+        \item [/aparss/] Liefert einen RSS-Feed im APA-Format zurück.
+    \end{description}
+    \item Strukturierte Daten
+    \begin{description}
+        \item [/bib/] Gibt die Einträge im BibTeX-Format\index{BibTex} zurück.
+        \item [/endnote/] Gibt die Einträge im EndNote-Format\index{EndNote} zurück.
+        \item[/json/] Gibt die Einträge im JSON-Format zurück.
+        \item[/swrc/] Gibt die Einträge im  RDF-Format gemäß der SWRC-Ontologie für das Semantic Web zurück.
+    \end{description}
+    \item HTML\index{HTML}
+    \begin{description}
+        \item [/publ/] Gibt die Einträge als HTML-Tabelle zurück.
+        \item [/publ/?notags=1] Gibt die Einträge ohne Tags als HTML-Tabelle zurück.
+    \end{description}
+  \item JabRef-Layouts
+    \begin{description}
+  \item[/layout/simplehtml/] Gibt die Einträge im HTML-Format als einfache Auflistung zurück.
+  \item[/layout/html/] Gibt die Einträge im HTML-Format als formatierte Aufzählung zurück.
+  \item[/layout/tablerefs/] Gibt die Einträge im HTML-Format als durchsuchbare Tabelle zurück.
+  \item[/layout/tablerefsabsbib/] Gibt die Einträge im HTML-Format als durchsuchbare Tabelle zusätzlich mit aufklappbarem Abstract und BibTeX-Eintrag zurück.
+  \item[/layout/docbook/] Gibt eine XML-Datei im Docbook-Format zurück.
+  \item[/layout/dblp/] Gibt eine XML-Datei im DBLP-Format zurück.
+  \item[/layout/endnote/] Gibt eine Text-Datei zurück, die vom Literaturverwaltungsprogramm EndNote verarbeitet werden kann
+  \item[/layout/text/] Gibt eine Text-Datei im BibTeX-Format zurück.
+    \end{description}
+\end{itemize}
+
+Die zu exportierenden Einträge können Sie dann über die Syntax \texttt{/<exportformat>/user/<benutzername>/<tags>} nach Benutzer filtern und auch zusätzlich noch auf bestimmte Tags einschränken. Möchten Sie nur nach Tag und nicht nach Benutzer filtern, verwenden Sie die Syntax \texttt{/<exportformat>/tag/<tags>}. Analog können Sie auch die anderen Kriterien zur Filterung der Ausgabe verwenden die im \autoref{subsec:suchenMitUrlSyntax} beschrieben sind.
+
+Beispiele:
+\label{subsec:volltextsuche}
+\begin{description}
+    \item [/bib/user/droessler] \hfill \\
+    Gibt alle Einträge des Benutzers \textit{droessler} im BibTeX-Format aus.
+    \item [/publrss/group/testgroup] \hfill \\
+      Liedert einen RSS-Feed zurück, der die Einträge der Gruppe \textit{testgroup} enthält.
+    \item [/layout/tablerefs/tag/fdm] \hfill \\
+      Gibt eine durchsuchbare Tabelle im HTML-Format zurück, die alle Einträge mit dem Tag \textit{fdm} enthält. 
+\end{description}
+
 %nach hinten verschieben
 \subsection{Parameter}
 \label{subsec:parameter}
@@ -45,319 +316,47 @@ Die Parameter \texttt{items} und \texttt{duplicates} steuern wieviele Einträge 
 %Beispiel: \url{?sortPage=year%\&sortPageOrder=asc\&duplicates=no} \newline
 %Beispielkasten einfuegen
 %Sortiere nach Erscheinungsjahr (sortPage=~year) aufsteigend (sortPageOrder=~asc) und entferne alle Duplikate (duplicates=~no). \newline
-\subsection{Allgemeine Seiten}
-\label{subsec:allgemeineSeiten}
-\begin{enumerate}
-    \item \textbf{/} \newline
-    Homepage von PUMA, zeigt die aktuellsten 50 öffentlichen Einträge.
-    \item \textbf{/popular} \newline
-    Zeigt die 100 häufigsten Einträge der letzten 100.000 öffentlichen Einträge.
-    \item \textbf{/IhrBenutzername} \newline
-    Ihre persönliche Sammlung.
-    \item \textbf{/help\_de} \newline
-    Hilfeseite.
-     \item \textbf{/myBibTeX} \newline
-    Zeigt Ihre gesamte Sammlung im BibTex-Format.
-    \item \textbf{/myRelations} \newline
-    Zeigt Ihre Konzepte/Relationen.
-    \item \textbf{/myDuplicates} \newline
-    Zeigt die Duplikaten, die sich in Ihrer eigenen Sammlung befinden.
-\end{enumerate}    
-
-\subsection{Administrative Seiten}
-\label{subsec:adminSeiten}
-\begin{description}
-    \item \textbf{/settings} \newline
-    Einstellungsseite. Auf dieser Seite können Sie:
-    \begin{itemize}
-        \item Ihr Profil bearbeiten und Kontoeinstellungen ändern,
-        \item einen Benutzer zu Ihrer Gruppe hinzufügen,
-        \item Ihren API-Schlüssel finden und einen neuen erzeugen,
-        \item Ihr Passwort ändern und
-        \item Ihre Daten zwischen BibSonomy und PUMA synchronisieren.
-    \end{itemize}
-    \item \textbf{/postBookmark} \newline
-    Neues Lesezeichen einfügen. Überprüft vorab, ob sich die URL der Seite bereits in der Sammlung befindet.
-    \item \textbf{/postPublication} \newline
-    Neue Publikation einfügen. 
-\end{description}
-
-\subsection{Publikations- und Lesezeichenlisten nach verschiedenen Kriterien erstellen}
-\label{subsec:suchenMitUrlSyntax}
-PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL ihre Publikationslisten nach verschiedenen Kriterien zusammenzustellen und zu filtern. Möglichke Kriterien sind: Tags, Autor, Publikationsjahr, Benutzername der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. \newline
-\newline
-
-\subsubsection{Einträge nach Benutzer}
-\label{sss:nachBenutzer}
-
-Um die Einträge eines bestimmten Benutzers aufzulisten, verwenden Sie die Syntax \texttt{/user/<benutzername>}, wobei \texttt{<benutzername>} für den PUMA-Benutzername des gewünschten Nutzers steht. Das Ergebnis kann zusätzlich noch nach Tag gefiltert werden: \texttt{/user/<benutzername>/<tag>}. Mehrere Tags können durch ein + verknüpft werden.
-
-Beispiele:
-\begin{itemize}
-    \item \textbf{/user/eckert} \newline 
-    Zeigt alle öffentlichen Einträge des Benutzers \textit{eckert}.
-    \item \textbf{/user/eckert/politik} \newline
-    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} des Benutzers \textit{eckert}.
-    \item \textbf{/user/eckert/politik+menschenrechte} \newline
-    Zeigt alle öffentlichen Einträge des Benutzers \textit {eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
-\end{itemize}
-
-\subsubsection{Einträge nach Tag\index{Tags}/Schlagwort}
-\label{sss:nachTag}
-Um alle Einträge aufzulisten, die mit einem bestimmten Tag verschlagwortet sind, verwenden Sie die Syntax \texttt{/tag/<tag>}, wobei <tag> durch das gewünschte Tag ersetzt wird. Mehrere Tags können mit einem + verknüpft werden. 
-
-Beispiele:
-\begin{enumerate}
-    \item \textbf{/tag/politik} \newline
-    Zeigt alle öffentlichen Einträge mit dem Tag \textit{politik} an.
-    \item \textbf{/tag/politik+menschenrechte}\newline
-    Zeigt alle öffentlichen Einträge an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind.
-\end{enumerate}
-
-\subsubsection{Einträge nach Autor\index{Autoren}}
-\label{sss:nachAutor}
-
-Um alle Publikationen eines bestimmten Autors aufzulisten, verwenden Sie die Syntax \texttt{/autor/<name>}, wobei <name> durch den Nachnamen des Autors ersetzt wird. Die Liste lässt sich mit Hilfe der Syntax \texttt{/autor/<name>/<tag>} auf bestimmte Tags eingrenzen oder durch \texttt{/autor/<name>/sys:<systemtag>:<wert>} mit verschiedenen Systemtags (siehe auch \autoref{sss:systemtags}) weiter einschränken.
-
-Beispiele:
-\begin{enumerate}
-    \item \textbf{/author/müller} \newline
-    Zeigt alle Publikationen des Autors mit dem Namen \textit{Müller} an.
-    \item \textbf{/author/müller/dblp} \newline
-    Zeigt alle Einträge des Autors \textit{Müller} an, die mit dem Tag \textit{dblp} versch
-    \item \textbf{/author/müller/sys:user:eckert}\newline
-    Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung von \textit{Eckert} an.
-    \item \textbf{/author/müller/sys:group:puma} \newline
-    Zeigt alle Publikationen des Autors \textit{Müller} in der Sammlung aller Gruppenmitglieder der Gruppe \textit{puma} an. 
-\end{enumerate}
-\end{description}
-
-Mit dem Systemtag \textit{year} lässt sich das Ergebnis auf ein bestimmtes Erscheinungsjahr oder einen bestimmten Zeitraum beschränken:%muss rausrücken
-
-Beispiele:
-\begin{enumerate}
-    \item \textbf{/author/hotho/sys:year:2007} \newline
-    Zeigt alle Publikationen des Autors \textit{Hotho} aus dem Jahre 2007.
-    \item \textbf{/author/hotho/sys:year:2003-2007} \newline
-    Zeigt alle Publikationen des Autors \textit{Hotho} zwischen 2003 und 2007.
-    \item \textbf{/author/hotho/sys:year:-2005} \newline
-    Zeigt alle Publikationen des Autors \textit{Hotho} bis zum Jahr 2005 an.
-    \item \textbf{/author/hotho+sys:year:1997-} \newline
-    Zeigt alle Publikationen des Autors \textit{Hotho} seit 1997 an.
-\end{enumerate}
-
-\subsubsection{Einträge von Freunden} 
-\label{sss:vonFreunden}
-Um die Einträge Ihrer Freunde (\autoref{sec:freunde}) zu sehen, verwenden Sie die Syntax \texttt{/friends}, für alle Freunde oder \texttt{/friend/<name>} für die Einträge eines bestimmten Freundes. Sie können die Ergebnisse wie gewohnt durch die Angabe von Tags weiter einschränken. 
-
-Sie sehen nur die Einträge, die von Benutzern stammen, auf deren Freundesliste Sie stehen und die von diesen Benutzern für Freunde freigegeben wurden (für Freunde sichtbar).
-
-Beispiele:
-\begin{enumerate}
-    \item \textbf{/friends} \newline
-    Zeigt die für Freunde gekennzeichneten Einträge aller ihrer Freunde.
-    \item \textbf{/friend/eckert} \newline
-    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert}. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
-    \item \textbf{/friend/eckert/politik} \newline
-    Zeit die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die mit dem Tag \textit{politik} verschlagwortet wurden. 
-    \item \textbf{/friend/eckert/politik+menschenrechte} \newline
-    Zeigt die für Freunde gekennzeichneten Einträge des Benutzers \textit{eckert} an, die sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet sind. 
-\end{enumerate}
-
-\subsubsection{Einträge nach Sichtbarkeit}
-\label{sss:nachSichtbarkeit}
-Um zu sehen, welche ihrer Einträge für wen sichtbar sind, können Sie die Syntax \texttt{/viewable/<sichtbarkeit>} verwenden. Als \texttt{<sichtbarkeit>} sind folgende Ausprägungen möglich:
-\begin{description}
-  \item[public] Einträge, die öffentlich sichtbar sind
-	\item[private] Einträge, die nur für Sie selber sichtbar sind
-	\item[friends] Einträge, die für die Benutzer sichtbar sind, die auf ihrer Freundeliste stehen
-	\item[<gruppenname>] Einträge, die für die Mitglieder der Gruppe <gruppenname> sichtbar sind
-\end{description}  
-
-Die Ergebnisse können mit Hilfe der Syntax \texttt{/viewable/<sichtbarkeit>/<tags>} zusätzlich durch Tags eingeschränkt werden. 
-
-Beispiele:
-\begin{itemize}
-    \item \textbf{/viewable/public} \newline
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt haben.
-    \item \textbf{/viewable/public/politik} \newline
-    Zeigt alle Ihre öffentlich sichtbaren Einträge, die mit dem Tag \textit{politik} verschlagwortet wurden.
-    \item \textbf{/viewable/private} \newline
-    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt haben.
-    \item \textbf{/viewable/private/politik+menschenrechte} \newline
-    Zeigt alle Ihre Einträge an, die nur für Sie sichtbar sind und sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} verschlagwortet wurden. 
-    \item \textbf{/viewable/friends} \newline
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt haben.
-    \item \textbf{/viewable/puma} \newline
-    Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
-    \item \textbf{/viewable/puma/politik} \newline
-    Zeigt alle Einträge an, die für die Gruppe \textit{puma} sichtbar sind und mit dem Tag \textit{politik} verschlagwortet wurden.
-\end{enumerate}
 
 
-\subsection{Gruppenseiten\index{Gruppen}}
-
-\label{subsec:gruppenseiten}
-\begin{enumerate}
-    \item \textbf{/groups} \newline
-    Zeigt eine Liste aller Gruppen, die es in PUMA gibt.
-    \item \textbf{/group/puma} \newline
-    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
-    \item \textbf{/group/puma/politik}\newline
-    Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
-    \item \textbf{/group/puma/politik+menschenrechte}\newline
-    Zeigt Ihnen alle Einträge mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} von Mitgliedern der Gruppe \textit{puma} an, wenn Sie Gruppenmitglied sind.
-    \item \textbf{/relevantfor/group/puma} \newline
-    Zeigt Ihnen alle Einträge an,  die für die Teilnehmer der Gruppe relevant sind.
-    \item \textbf{/followers} \newline
-    Zeigt die neuesten Einträge aller Benutzer, denen Sie folgen. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für Sie relevantesten Einträge ganz oben stehen. 
-\end{enumerate}
-\subsection{Konzeptseiten}
-\label{subsec:konzeptseiten}
-\begin{enumerate}
-    \item \textbf{/concepts/eckert} \newline
-    Es werden Ihnen alle Konzepte\index{Konzepte} des Benutzers \textit{eckert} angezeigt.
-    \item \textbf{/concept/user/eckert/psychologie} \newline
-    Zeigt alle Lesezeichen und Publikationen des Benutzers \textit{eckert} an, denen das Tag \textit{psychologie} oder eines der Unterschlagwörter des Konzeptes als Tag zugeordnet ist. 
-\end{enumerate}
-\subsection{Suchseiten}
-\label{subsec:suchseiten}
-Mit der URL-Syntax \textit{/search...} suchen Sie im Volltext nach einem bestimmten Wort. Es handelt sich dabei nicht um Schlagwörter/Tags. Bei Lesezeichen enthält der Volltext die URL, den Titel und die Beschreibung. Bei Publikationen sind der Titel, die Beschreibung und alle BibTex-Felder enthalten.
-\begin{enumerate}
-    \item \textbf{/search/politik} \newline
-    Zeigt Ihnen alle öffentlichen Einträge an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} enthalten. 
-    \item \textbf{/search/politik+menschenrechte}\newline
-    Zeigt alle öffentlichen Einträge, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
-    \item \textbf{/search/politik+-menschenrechte} \newline
-    Zeigt alle öffentlichen Einträge an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik}, aber nicht das Wort \textit{menschenrechte} enthalten. 
-    \item \textbf{/search/politik+user:droessler} \newline
-    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler}, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} enthalten. 
-    \item \textbf{/search/politik+menschenrechte+user:droessler}\newline
-    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik} und das Wort \textit{menschenrechte} enthalten. 
-    \item \textbf{/search/politik+-menschenrechte+user:droessler} \newline
-    Zeigt alle öffentlichen Einträge des Benutzers \textit{droessler} an, die im Volltext (nicht in den Schlagwörtern!) das Wort \textit{politik}, aber nicht das Wort \textit{menschnerechte} enthalten. 
-    \item \textbf{/mySearch} \newline
-    Diese Seite bietet eine Schnellsuche in Ihrer eigenen Sammlung.
-\end{enumerate}
-\subsection{Umgang mit Duplikaten\index{Duplikate}}
-\label{subsec:duplikate}
-Auf Gruppenseiten kann es häufig vorkommen, dass Einträge (Publikationen) mehrfach angezeigt werden, wenn innerhalb einer Gruppe zwei oder mehr Benutzer denselben Eintrag in ihrer Sammlung haben.\newline
-Falls dies nicht gewünscht ist, kann das Verhalten mittels des Parameters \textit{duplicates} wie folgt angepasst werden:
-\begin{enumerate}
-    \item \textbf{/group/puma/myown} \newline
-    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind (auch Duplikate).
-    \item \textbf{/group/puma/myown?duplicates=no} \newline
-    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind. Für jedes Duplikat wird nur der erste Eintrag angezeigt.
-    \item \textbf{/group/puma/myown?duplicates=merged} \newline
-    Zeigt alle Einträge der Gruppe \textit{puma} an, die mit dem Tag \textit{myown} annotiert sind. Für jedes Duplikat werden alle Tags \enquote{aufgesammelt} und aggregiert an einem einzelnen Eintrag angezeigt.
-\end{enumerate}
-
-
-\subsection{Export von Seiten}
-\label{exportSeite}
-\begin{enumerate}
-    \item RSS Feeds\index{RSS}
-    \begin{enumerate}
-        \item \textbf{/publrss/} \newline
-        Zeigt einen RSS-Feed der Publikationen aus dem Inhaltsbereich an.
-        \item \textbf{/burst/} \newline
-        Zeigt ein BuRST-Feed für die Publikationen aus dem Inhaltsbereich an.
-        \item \textbf{/aparss/} \newline
-        Zeigt ein RSS-Feed im APA-Format für die Publikationen aus dem Inhaltsbereich an.
-    \end{enumerate}
-    \item Referenz-Metadaten und Formatierung
-    \begin{enumerate}
-        \item \textbf{/bib/} \newline
-        Zeigt alle Publikationen aus dem Inhaltsbereich im BibTeX-Format\index{BibTex} an.
-        \item \textbf{/bib/user/eckert} \newline
-        Zeigt alle öffentlichen Publikationseinträge des Nutzers \textit{eckert} im BibTeX-Format an.
-        \item \textbf{/endnote/} \newline
-        Zeigt alle Publikationen aus dem Inhaltsbereich im EndNote-Format an.
-    \end{enumerate}
-    \item HTML-Formatierung\index{HTML}
-    \begin{enumerate}
-        \item \textbf{ /publ/} \newline
-        Es wird eine einfache Übersicht angezeigt, in der jeder Eintrag als Zeile in einer Tabelle dargestellt ist.
-        \item \textbf{/publ/?notags=1} \newline
-        In der einfachen Tabellenübersicht werden die PUMA-Schlagwörter in der HTML-Ausgabe unterdrückt.
-        \item \textbf{/publ/user/eckert} \newline
-        Es werden die Publikationen des Nutzers \textit{eckert} in Tabellenform dargestellt.
-        \item \textbf{ /publ/user/eckert/myown} \newline
-        Es werden die Publikationen des Nutzers \textit{eckert}, die unter dem Tag \textit{myown} abgespeichert wurden, in der Tabellenübersicht angezeigt. 
-    \end{enumerate}
-    \item Semantic Web-Formatierung
-    \newline \newline \textbf{/swrc/} \newline
-        RDF-Ausgabe gemäß der SWRC-Ontologie.
-    
-\end{enumerate}
-
-\subsection{URL- \index{URL}oder BibTex-Seiten\index{BibTex}}
-\label{subsec:hashSeiten}
-\begin{enumerate}
-    \item \textbf{/url/398aa54c3aea66c147ad74d3089c0612}\newline
-    Zeigt Ihnen alle öffentlichen PUMA-Lesezeicheneinträge der URL mit dem MD5-Hash \textit{398aa54c3aea66c147ad74d3089c0612} an.
-    \item \textbf{/url/0fa29f649ff82603a98854e0fbbd2cd1/eckert}\newline Zeigt Ihnen die PUMA-Lesezeicheneinträge des Benutzers \textit{eckert} mit dem MD5-Hash \textit{0fa29f649ff82603a98854e0fbbd2cd1} an.
-	\item \textbf{/bibtex/1edc3d2bbf4673d84363a675ee64b49bd}\newline Zeigt alle öffentlichen PUMA-Publikationseinträge mit dem Hashkey\index{Hashkey}\newline \textit{1edc3d2bbf4673d84363a675ee64b49bd} an. Der benutzte Hash ist der Inter-Hash.
-    \item \textbf{/bibtex/253aa20e7f5e790b745e604039667c47b/eckert}\newline
-    Zeigt den PUMA-Publikationseintrag des Benutzers \textit{eckert} mit dem\newline Hashkey 253aa20e7f5e790b745e604039667c47b an. Der benutzte Hash ist der Intra-Hash. PUMA liefert einen Tag-JSON-Feed, der zu einem BibTeX-Eintrag gehört.
-    \item \textbf{/json/tags/bibtex/218a34049610d50537e6e09ce71b65605}\newline Diese URL liefert eine JSON-Ausgabe. Sie enthält alle Schlagwörter, welche in Beziehung mit der Publikation stehen, die dem Inter-Hash \textit{218a34049610d50537e6e09ce71b65605} entsprechen. PUMA bietet die Möglichkeit, eine Publikation anhand ihres BibTex-Schlüssels abzurufen.
-    \item \textbf{/bibtexkey/Martin\_2014} \newline
-    Liefert Publikationen mit dem BibTex-Schlüssel \textit{Martin\_2014}.
-    \item \textbf{/bibtexkey/Martin\_2014/droessler} 
-    oder \newline \textbf{/bibtexkey/Martin\_2014+sys:user:droessler}\newline
-    Liefert Publikationen mit dem BibTex-Schlüssel \textit{Martin\_2014} des Nutzers \textit{droessler}.
-    \item \textbf{/bibtexkey/Martin\_2014+sys\%3Auser\%3Adroessler} \newline
-    Zeigt alle Einträge mit dem vorgegebenen BibTex-Schlüssel \textit{Martin\_2014} des Benutzers \textit{droessler} an. Haben Sie mehr als einen Eintrag mit dem gleichen BibTeX-Schlüssel, so erhalten Sie eine Liste aller Treffer.
-    \item \textbf{/bibtexkey/journals/jacm/HopcroftU69/dblp} \newline
-    Sie können die BibTex-Semantik benutzen, um auf Einträge zu verweisen, die wir von DBLP spiegeln  %, sobald Sie gelernt haben, wie DBLP seine BibTeX-Schlüssel erzeugt. noch nachschauen
-\end{enumerate}
 \section{Duplikatserkennung\index{Duplikat}} 
 \label{sec:duplikat}
-Die Dupliktaserkennung von PUMA basiert auf Hashkeys. Durch das Ausfüllen der Pflichtfelder Titel, Autor und Jahr wird an Hand dieser drei Felder ein Hashkey für die Publikation erzeugt. Wird nun eine Publikation zum zweiten mal in die Sammlung eingetragen, vergibt PUMA an diese Publikation den gleichen, schon vorhandenen Hashkey. Das System bemerkt die doppelte Vergabe und kennzeichnet die Publikationseinträge als Duplikate. 
+Die Duplikatserkennung von PUMA basiert auf Hashkeys. PUMA berechnet für jede Publikation zwei Hash Keys, den intrahash (zur Duplikatserkennung innerhalb der Sammlung eines Benutzers) und den interhash (zur Duplikatserkannung zwischen den Sammlungen verschiedener Benutzer). Zur Berechnung der Keys werden Titel, Autor und Jahr (beim intrahash zusätzlich noch Typ, Zeitschriften- oder Buchtitel, Band und Nummer) aneinander gefügt und ein Hash-Wert über dieser Zeichenfolge berechnet. Wird nun eine Publikation zum zweiten Mal in die Sammlung eingetragen, vergibt PUMA an diese Publikation den gleichen, schon vorhandenen Hashkey. Das System bemerkt die doppelte Vergabe und kennzeichnet die Publikationseinträge als Duplikate. 
 
 
-\section{Rest-API\index{Rest-API}}
+\section{REST-API\index{REST-API}}
 \label{sec:restApi}
-PUMA bietet Ihnen einen Webservice auf Basis des Representational State Transfer (REST) an. \newline
-REST ist ein Architekturstil für verteilte Softwaresysteme, bei dem eine einheitliche Schnittstelle die Interaktion erleichtert. Die standardisierte Schnittstelle basiert auf dem HTTP-Protokoll und kann über unterschiedliche Programmiersprachen, die HTTP versteht, angesprochen werden.\newline\newline
-\textbf{Mögliche Programmiersprachen:}\newline\newline
-\underline{1. Java\index{Java}:}   \newline\newline 
-\underline{2. PHP\index{PHP}:}\newline
-PUMA-API ist ein Paket aus PHP-Skripten, das einen REST-Client enthält sowie einige Utilities, die hilfreich sind für die Entwicklung einer PHP-Applikation, die mit der PUMA-REST-API interagieren soll. Der REST-Client verwaltet Funktionen, die von der PUMA REST-API angeboten werden.
-\newline
-Weitere Informationen und Sources finden Sie in dem BitBucket-Repository\footnote{\url{https://bitbucket.org/bibsonomy/restclient-php}}.  
-\newline\newline
-\underline{3. Python\index{Python}:}\newline
-Es gibt einen API Client, um mit Hilfe der Programmiersprache Python\footnote{\url{https://www.python.org/}} Einträge aus PUMA abzurufen. Der folgende Codeabschnitt beispielsweise erstellt eine Liste aus Ihren Publikationen:\newline\newline
-%bibsonomy = BibSonomy('YOUR_USERNAME', 'YOUR_APIKEY')
-%posts = bibsonomy.getPosts('bibtex')
-%# do something with the posts...
-%for post in posts:
-%print post.resource.title %für bibsonomy für PUMA?
-Das REST-API-Repository\footnote{\url{http://dev.bibsonomy.org/maven2/org/bibsonomy/bibsonomy-rest-client/}} und die Benutzung der REST-API\footnote{\url{https://bitbucket.org/bibsonomy/bibsonomy/wiki/documentation/api/REST API}} können Sie unter den Links nachlesen.
-\newline
-Um auf die API zugreifen zu können benötigen Sie den API-Key. Diesen finden Sie auf der Einstellungsseite unter dem Reiter \enquote{Einstellungen}. 
+PUMA bietet einen Webservice auf REST-Basis (Representational State Transfer) an. REST-Schnittstellen basieren auf dem HTTP-Protokoll und bedienen sich der Befehle GET (Informationen abrufen), POST (neue Einträge anlegen), PUT (bestehende Einträge aktualisieren) und DELETE (Einträge löschen). Die REST-Schnittstelle von PUMA dient dazu, anderen Programmen oder Skripten Zugriff auf die Daten und Funktionalitäten von PUMA zu geben. Damit wird eine automatisierte Verarbeitung der in PUMA gespeicherten Sammlungen möglich.
+
+\subsection{API-Clients für verschiedene Programmiersprachen}
+\label{subsec:apiClients}
+Um die Ansprache der API zu erleichtert, gibt es für verschiedene Programmiersprachen Pakete oder Bibliotheken, die bereits einen Client implementiert haben, der die Kommunikation mit der REST-API regelt.
+
+\begin{description}
+\item [Java] \hfill \\
+  Der bibsonomy-rest-client \footnote{\url{https://bitbucket.org/bibsonomy/bibsonomy/src/tip/bibsonomy-rest-client/}} ist ein Java-Modul, das einen das die Kommunikation mit der REST-API von PUMA erleichtert. Zur API gibt es eine ausführliche Dokumentation mit Beispielen\footnote{\url{https://bitbucket.org/bibsonomy/bibsonomy/wiki/documentation/api/Java\%20API\%20Examples}}. Als PUMA-Nutzer muss die URL (endpoint) auf https://puma.ub.uni-stuttgart.de/ gesetzt werden.
+\item [PHP] \hfill \\
+  Die restclientp-php Bibliothek\footnote{\url{https://bitbucket.org/bibsonomy/restclient-php/}} bietet einen API-Client für PUMA und Bibsonomy. 
+\item [Python] \hfill \\
+ Für Python gibt es eine Bibsonomy-Klasse\footnote{\url{https://bitbucket.org/bibsonomy/bibsonomy-python/]}, die die Anfragen auf die REST-Schnittstelle implementiert. 
+  \end{description}
+
+\subsection{Authentifizierung zum Zugriff auf die API}
+\label{subsec:apiAuth}
+
+Um per API-Schnittstelle auf Ihre Inhalte in PUMA zugreifen zu können, müssen Sie sich gegenüber PUMA authentifizieren. Das geht entweder mit einem individuellen API-Key oder über das Protokoll OAuth.
+
+\subsubsection{Authentifizierung per API-Key}
+\label{sss:apiKey}
+
+Ihren individuellen API-Key finden Sie in den Einstellungen (\autoref{sec:einstellungen}) im Reiter \textit{Einstellungen} unter \textit{API}. An dieser Stelle haben Sie auch die Möglichkeit, einen neuen Key zu erzeugen. Diesen Key übergeben Sie beim Aufruf der Schnittstelle als \textit{USERNAME}. 
 
 
+\subsubsection{Authentifizierung über OAuth}
+\label{sss:oAuth}
+OAuth\index{OAuth} ist ein etabliertes Protokoll für sichere API-Authorisierung, die es Ihnen ermöglicht, einer weiteren Anwendung den Zugriff auf ihre Daten zu erlauben. Hierfür müssen sie einen OAuth Consumer Key sowie ein Consumer Secret beantragen. Wie Sie dabei genau vorgehen erfahren Sie in der Onlinehilfe von PUMA.\footnote{\url{https://puma.ub.uni-stuttgart.de/help_de/OAuth}}
 
+%bis hier überarbeitet
 
-
-
-\section{OAuth}
-\label{sec:oAuth}
-OAuth\index{OAuth} ist ein etabliertes Protokoll für sichere API-Autorisierung, die es Nutzern ermöglicht, einer dritten Anwendung den Zugriff auf ihre Daten zu erlauben, ohne, dass sie ihre Anmeldeinformationen außerhalb von PUMA angeben müssen. Mit OAuth erhalten sie Zugriff auf PUMA, hierfür müssen sie einen OAuth Consumer Key sowie ein Consumer Secret beantragen. Wie Sie dabei genau vorgehen erfahren Sie in der Onlinehilfe von PUMA.\footnote{\url{https://puma.ub.uni-stuttgart.de/help_de/OAuth}}
-
-
-
-\section{JavaScript-Codeschnipsel}
-\label{sec:javaScriptCode}
-Durch die Verwendung von JavaScript-Codeschnipseln\index{JavaScript-Code} erleichtern Sie Ihren Webseitenbesuchern das Vermerken und Arbeiten mit PUMA, und Sie vergrößern Ihre eigene Reichweite. PUMA macht dies mit ein paar Zeilen JavaScript möglich. Fügen Sie den folgenden Code in Ihre Webseite ein und schon gelangen Besucher mit einem Klick zu PUMA und können dort ganz einfach Lesezeichen und Kommentare hinterlegen.
-\begin{figure}[h!]
- \centering
- \includegraphics[width=9cm]{Bilder/Kapitel9/JavaScript_Codeschnipsel.PNG}
- \caption{JavaScript-Codesschnipsel}
- \label{fig:javascriptCode}
-\end{figure}
 
 \section{Eigenen Webseiten}
 \label{sec:eigeneWebseiten}
