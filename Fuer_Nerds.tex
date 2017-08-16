@@ -344,21 +344,11 @@ Um die Ansprache der API zu erleichtert, gibt es für verschiedene Programmiersp
 \end{description}
 
 \subsection{Authentifizierung zum Zugriff auf die API}
-\label{subsec:apiAuth}
+\label{subsec:apiAuth}\label{sss:apiKey}
 
-Um per API-Schnittstelle auf Ihre Inhalte in PUMA zugreifen zu können, müssen Sie sich gegenüber PUMA authentifizieren. Das geht entweder mit einem individuellen API-Key oder über das Protokoll OAuth.
-
-\subsubsection*{Authentifizierung per API-Key}
-\label{sss:apiKey}
+Um per API-Schnittstelle auf Ihre Inhalte in PUMA zugreifen zu können, müssen Sie sich  mit einem individuellen API-Key gegenüber PUMA authentifizieren. Eine Authentifizierung über OAuth wird nicht unterstützt.
 
 Ihren individuellen API-Key finden Sie in den Einstellungen (\autoref{sec:einstellungen}) im Reiter \textit{Einstellungen} unter \textit{API}. An dieser Stelle haben Sie auch die Möglichkeit, einen neuen Key zu erzeugen. 
-
-
-\subsubsection*{Authentifizierung über OAuth}
-\label{sss:oAuth}
-OAuth\index{OAuth} ist ein etabliertes Protokoll für sichere API-Authorisierung, die es Ihnen ermöglicht, einer weiteren Anwendung den Zugriff auf ihre Daten zu erlauben. Hierfür müssen sie einen OAuth Consumer Key sowie ein Consumer Secret beantragen. Wie Sie dabei genau vorgehen erfahren Sie in der Onlinehilfe von PUMA.\footnote{\url{https://puma.ub.uni-stuttgart.de/help_de/OAuth}}
-
-
 
 \section{Integration von PUMA-Inhalten auf eigenen Webseiten}
 \label{sec:eigeneWebseiten}
@@ -677,6 +667,7 @@ Sie können Inhalte aus PUMA in das Content Management System Zope\footnote{\url
 %\label{subsec:ilias}
 %\subsection{Moodle}
 %\label{subsec:moodle}
+%https://moodle.org/plugins/pluginversion.php?id=12514
 %Das PUMA/BibSonomy Module (PBM) ist das PUMA/BibSonomy Plugin für Moodle. Es ermöglicht das Veröffentlichen von Publikationslisten aus PUMA heraus in einen Moodlekurs. Der Zitationsstil, in welchem die Publikationen in Moodle angezeigt werden sollen, kann mit Hilfe des CSL\footnote{\url{http://citationstyles.org/}} festgelegt werden.\newline\newline
 %\textbf{ Der Administrator}\newline
 %Die folgenden Schritte sind wichtig für die Installation des PBM Plugins: 
