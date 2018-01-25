@@ -2,162 +2,129 @@
 \label{ch:basics}
 \section{Einstellungen}
 \label{sec:einstellungen}
-Über das Personensymbol ~\autoref{subsec:Personensymbol} gelangt man zu den Einstellungen\index{Einstellungen} indem im Dropdown-Menü der entsprechende Reiter ausgewählt wird. In den Einstellungen kann zwischen unterschiedlichen Reitern gewählt werden:
+Über das Personensymbol (~\autoref{subsec:Personensymbol}) gelangt man zu den Einstellungen\index{Einstellungen} indem im Dropdown-Menü der entsprechende Reiter ausgewählt wird. In den Einstellungen kann zwischen unterschiedlichen Reitern gewählt werden:
+\todo{Funktionen hier noch näher erklären oder auf entsprechende Kapitel verweisen.}
 \begin{description}
 \item[Mein Profil:]\index{Mein Profil}
-Hier können persönliche Informationen ergänzt werden, die auf der Seite \enquote{meinLebenslauf} dargestellt werden. Im Auswahlmenü \enquote{Profil einsehbar für} wird eingestellt, wer diese Informationen einsehen kann (privat, Freunde, öffentlich).
-\item[Einstellungen:]
+Hier können persönliche Informationen ergänzt werden, die auf der Seite \enquote{meinLebenslauf} dargestellt werden. Im Auswahlmenü \enquote{Profil einsehbar für} wird eingestellt, wer diese Informationen einsehen kann (privat, Freunde, öffentlich). Hier kann auch der Link für die OpenUrl (~\autoref{subsec:OpenURL}) hinterlegt werden. \index{OpenURL}
+\item[Einstellungen:] 
 \begin{itemize}
-\item Layout der \tag-Wolken ändern
-\item Passwort ändern
-\item PUMA-Konto löschen
+\item[]
+\item Anzeige der \tag-Auswahl ändern (Liste oder Wolke, Alphabet oder Häufigkeit, ...)
 \item \enquote{Bevorzugte Exportformate}: Auswahl von Zitationsstilen
 \item Erscheinungsbild: erweitert oder einfach
 \item API-Schlüssel\index{API-Schlüssel}
+\item Logging und Löschen \todo{was bedeutet KLick-Aufzeichnungen erlauben?}
+\item PUMA-Konto löschen
 \end{itemize}
-\item[JabRef Layout-Datei:]\index{JabRef! Layout-Datei}
-In diesem Reiter können Sie Ihre JabRef Layout-Dateien hochladen, um Ihre Publikationsliste nach Ihren eigenen Wünschen darzustellen.
+\item[JabRef Layout-Datei:]\index{JabRef! Layout-Datei} \todo{näher erklären}
+In diesem Reiter können JabRef Layout-Dateien hochgeladen werden, um Publikationslisten nach eigenen Wünschen darzustellen.
 \item[Lebenslauf\index{Lebenslauf}]
-Dieser Reiter ermöglicht Ihnen Ihren Lebenslauf zu bearbeiten. \newline \newline
+Daten aus dem persönlichen Profil werden anderen Nutzern in dem hier eingestellten Layout dargestellt. Es kann zwischen unterschiedlichen Layouts ausgewählt werden oder ein eigenes mit Hilfe der MediaWiki-Syntax\footnote{\url{https://en.wikipedia.org/wiki/Help:Wiki_markup}}erstellt werden. (~\autoref{sec:cv})
 \item[Gruppen:\index{Gruppen}]
-Sie erhalten einen Überblick über alle Gruppen, in denen Sie Mitglied sind. Sie können auch eine neue Gruppe anlegen.
+Überblick über alle Gruppen, in denen man Mitglied ist. Wenn in den Gruppeneinstellungen das Teilen von Dokumenten erlaubt ist, kann eingestellt werden, ob eigene Volltexte in der Gruppe geteilt werden \enquote{Teilen}. Gruppenadministrationen können über \enquote{Einstellungen bearbeiten} auf die Gruppeneinstellungen zugreifen und z.B. die Dokumentenfreigabe steuern. Auch Einladungen an andere PUMA-Nutzer für einen Gruppe können hier versendet werden.  \todo{Verweis oder noch näher beschreiben (Einstellungen, Mitgliederliste, Lebenslauf, Gruppe löschen)}
 \item[Synchronisation:]
-Mit Hilfe der Synchronisation können Sie Ihre Lesezeichen und Publikationen zwischen zwei Systemen synchron halten.
+\todo[inline]{Es sind keine Synchronisationsclients oder Server für dieses System konfiguriert. $\to$ bei Mario nachfragen}
 \end{description}
-\section{CV/Lebenslauf}
+\section{Lebenslauf}
 \label{sec:cv}
-Ihr Lebenslauf ermöglicht anderen Benutzern Sie und Ihre Arbeiten kennen zu lernen. Die Daten, die Sie in Ihr Profil schreiben sind für alle PUMA-Nutzer sichtbar. Für Ihr Profil können Sie entweder vordefinierte Layouts benutzen oder selbst ein Layout mit Hilfe der MediaWiki-Syntax\footnote{\url{https://en.wikipedia.org/wiki/Help:Wiki_markup}} definieren. 
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/CV_Benutzerkonto}}
- \caption{Das Benutzerkonto}
- \label{fig:benutzerkonto}
-\end{figure}  
-Lebenslauf bearbeiten\index{Lebenslauf!bearbeiten}: 
-\begin{enumerate}
-    \item Klicken Sie auf Ihren Benutzernamen (@username).
-    \item Klicken Sie rechts neben Ihrem Profilbild auf den CV-Button.
-    \item Ihr Lebenslauf öffnet sich (Ansicht: So wie ihn andere Nutzer sehen).
-    \item Um den Lebenslauf zu bearbeiten klicken Sie auf das schwarze Zahnrad neben \enquote{Curriculum Vitae}.
-    \item Klicken Sie anschließend im Untermenü auf \enquote{Lebenslauf bearbeiten}. Sie können nun ein vordefiniertes Layout auswählen oder selbst ein Layout mit der MediaWiki-Syntax definieren.
-\end{enumerate}
-\textbf{Alternativer Weg:} 
-\begin{enumerate}
-    \item Klicken Sie auf das Personensymbol. Es öffnet sich ein Untermenü.
-    \item Klicken Sie im Untermenü auf \enquote{Einstellungen}.
-    \item Eine neue Seite öffnet sich. Klicken Sie auf den Reiter \enquote{Lebenslauf}. Sie können nun ein vordefiniertes Layout auswählen oder selber ein Layout mit der MediaWiki-Syntax definieren.
-\end{enumerate}
+Über \enquote{meinPuma} $\to$ \enquote{Lebenslauf} kann über das Zahnradsymbol sowohl auf das eigene Profil als auch auf die Einstellungen des Layouts (~\hyperref{subseceigenesLayout}) des Lebenslaufs zugegriffen werden. Das eigene Profil kann mit persönlichen Informationen über den Ort, das Geburtsdatum, Beruf und Institution erweitert werden. Darüber hinaus können die wissenschaftlichen Interessen und Hobbies eingetragen werden. Publikationen und Lesezeichen, die mit \tag \textit{<myown />} getaggt werden, erscheinen ebenfalls auf dieser Seite. In den Profileinstellungen kann die Sichtbarkeit dieser Informationen auf privat, für Freunde oder öffentlich sichtbar eingestellt werden. Bei privat sehen andere Nutzer nur den Nutzernamen.
+%\begin{figure}[h!]
+ %\centering
+ %\fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/CV_Benutzerkonto}}
+ %\caption{Das Benutzerkonto}
+ %\label{fig:benutzerkonto}
+%\end{figure}  
+%Lebenslauf bearbeiten\index{Lebenslauf!bearbeiten}: 
+%\begin{enumerate}
+    %\item Klicken Sie auf Ihren Benutzernamen (@username).
+    %\item Klicken Sie rechts neben Ihrem Profilbild auf den CV-Button.
+    %\item Ihr Lebenslauf öffnet sich (Ansicht: So wie ihn andere Nutzer sehen).
+    %\item Um den Lebenslauf zu bearbeiten klicken Sie auf das schwarze Zahnrad neben \enquote{Curriculum Vitae}.
+    %\item Klicken Sie anschließend im Untermenü auf \enquote{Lebenslauf bearbeiten}. Sie können nun ein vordefiniertes Layout auswählen oder selbst ein Layout mit der MediaWiki-Syntax definieren.
+%\end{enumerate}
+%\textbf{Alternativer Weg:} 
+%\begin{enumerate}
+    %\item Klicken Sie auf das Personensymbol. Es öffnet sich ein Untermenü.
+    %\item Klicken Sie im Untermenü auf \enquote{Einstellungen}.
+    %\item Eine neue Seite öffnet sich. Klicken Sie auf den Reiter \enquote{Lebenslauf}. Sie können nun ein vordefiniertes Layout auswählen oder selber ein Layout mit der MediaWiki-Syntax definieren.
+%\end{enumerate}
 %\begin{wrapfigure}{l}{5cm}
-\begin{mdframed}[style=tipp]\texttt{Wenn Sie zwischen den vordefinierten Layouts wechseln, geht Ihr selbst definiertes Layout verloren.} 
+\begin{mdframed}[style=tipp]\texttt{Wenn Sie zwischen den vordefinierten Layouts wechseln, geht Ihr selbst definiertes Layout verloren.} \
 \end{mdframed}
+\todo{vielleicht zwei Styles Achtung und Tipp: Bin insgesamt mit dem Layout dieser Kästen nicht zufrieden}
 %\end{wrapfigure}
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/CV_Seite}}
  \caption{Curriculum Vitae-Seite}
  \label{fig:curriculumVitaeSeite}
-\end{figure}  
-\hypertarget{Eigenes Layout}{Eigenes Layout\index{Lebenslauf!Eigenes Layout}:}
-\newline
-Um sich selbst ein Layout zu definieren, müssen Sie die MediaWiki-Sytax verwenden. Um Zeit zu sparen bieten wir Ihnen einige XHTML-Tags an: % Tabelle % ist XHTML bei wiki???
-\newline
-Für die Tags \textit{<publications />} und \textit{<bookmarks />} können Sie außerdem eigene Tags als Ressourcenselektoren benutzen, wenn Sie tags=\enquote{tag1 tag2 (...)} als Attribute anfügen. Beispielsweise liefert \textit{<publications tags=\enquote{data mining} />} alle Ihre Publikationen, die Sie sowohl mit data als auch mit mining getagged haben. 
+\end{figure}
+\todo[inline]{Bild ist veraltet, neuen Screenshot}
+\subsection{Eigenes Layout\index{Lebenslauf!Eigenes Layout}:}
+\label{subsec:eigenesLayout}
+Um sich selbst ein Layout zu definieren, wird die MediaWiki-Syntax verwendet. Dazu gibt es einige XHTML-Tags:
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/xhtml_tags}}
  \caption{XHTML-Tags}
  \label{fig:xhtmlTags}
-\end{figure}  
-\section{Publikationen}
-\label{sec:publikationen}
-Grundlagen:
+\end{figure} % Tabelle % ist XHTML bei wiki???
 \newline
-Unter Publikationen\index{Publikationen} versteht man in PUMA alle Arten von Dokumenten (Artikel, Monografie, usw.). Sie können eigene oder fremde Publikationen (z.B. als Basis für eine Literaturrecherche) mit PUMA erstellen/~verwalten/~recherchieren. 
-\begin{figure}[h!]
+Für die Publikations- und Lesezeichenanzeige können außerdem zusätzliche Tags angegeben werden, um diese aus der eigenen Sammlung im Lebenslauf anzeigen zu lassen. Beispielsweise liefert \textit{<publications tags=\enquote{data mining} />} alle Publikationen, die sowohl mit data als auch mit mining getaggt wurden.  
+\section{Publikationen und Lesezeichen verwalten}
+\label{sec:publikationen}
+ Mit PUMA können sowohl Publikationen als auch Lesezeichen verwaltet werden. Es gibt verschiedene Wege Publikationen und Lesezeichen in PUMA einzutragen. Jede Publikation bzw. Lesezeichen benötigt mindestens ein \tag. Mit Hilfe dieser \tags werden die Einträge 
+\subsection{Publikationen}
+\begin{figure}[htb]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Publikation_eintragen}}
  \caption{Publikationen eintragen}
  \label{fig:publikationenEintragen}
 \end{figure}  
-Publikationen hinzufügen\index{Publikationen!hinzufügen}:
-\begin{enumerate}
-    \item Klicken Sie auf den Menüpunkt \enquote{Eintragen} im Hauptmenü. Ein Untermenü klappt auf.
-    \item Klicken Sie im Untermenü auf \enquote{Publikation hinzufügen}.
-    \item Sie können nun direkt in das Textfeld den Titel oder die ISBN/~ISSN/~DOI der Publikationen eingeben und PUMA zeigt Ihnen die entsprechenden Metainformationen der Publikation an. Neben dieser Weg bietet PUMA Ihnen vier weitere Möglichkeiten Ihre Publikationen einzutragen:
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Eintragsmoeglichkeiten}}
- \caption{Eintragsmöglichkeiten}
- \label{fig:eintragungsmoeglichkeiten}
-\end{figure}  
+Unter dem Menü \enquote{Eintragen} $\to$ \enquote{Publikation hinzufügen}\index{Publikationen!hinzufügen} kann direkt in das Textfeld der Titel oder die ISBN/~ISSN/~DOI der Publikationen eingeben werden. Des Weiteren gibt es zusätzliche Möglichkeiten Publikationen einzutragen:
+%\begin{figure}[h!]
+ %\centering
+ %\fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Eintragsmoeglichkeiten}}
+ %\caption{Eintragsmöglichkeiten}
+ %\label{fig:eintragungsmoeglichkeiten}
+%\end{figure}  
     \begin{itemize}
     	\item Dokument hochladen:\newline
-        Voraussetzung ist, dass es sich um eine BibTex- oder EndNote-Datei handelt.
-        \begin{enumerate}
-            \item Klicken Sie auf \enquote{Datei hochladen}.
-            \item Über den \enquote{Durchsuchen} Button haben Sie die Möglichkeit die gewünschte Datei auszuwählen.
-            \item Der Dateiname, der ausgewählten Datei, erscheint hinter dem Durchsuchen-Button. Sie können anschließend die Sichtbarkeit des Eintrags festlegen. Durch das Klicken auf \enquote{Speichern} erhalten Sie die Detailansicht der Publikation und können diese nochmals überarbeiten und auf ihre Richtigkeit überprüfen.
-            \item Klicken Sie anschließend nochmals auf \enquote{Speichern} um die Publikation in Ihre Sammlung einzutragen.
-        \end{enumerate}
-        \item BibTex\index{BibTex}/EndNote\index{EndNote}-Schnipsel:
-        \newline
-        Voraussetzung ist, dass Sie Ihre Literaturliste aus Ihrem bisherigen Literaturverwaltungsprogramm in die Zwischenablage exportieren.
-        \begin{enumerate}
-            \item Klicken Sie auf den Reiter \enquote{BibTex/EndNote-Schnipsel}.
-            \item Fügen Sie den Text aus der Zwischenablage in das Textfeld \enquote{Auswahl} ein. Dies können Sie so erreichen, indem Sie auf das Textfeld Auswahl gehen und mit der rechte Maustaste das Menü öffnen und auf \enquote{Einfügen} klicken. Erscheint das Wort \enquote{Einfügen} grau, dann haben Sie keine Daten in die Zwischenablage exportiert und Sie müssen den Text erneut in die Zwischenablage einfügen.
-            \item Klicken Sie auf \enquote{Weiter}.
-            \item PUMA zeigt Ihnen nun eine Übersicht über alle Daten an. Überprüfen Sie diese auf ihre Richtigkeit.
-            \item Klicken Sie \enquote{Speichern}.
-        \end{enumerate}
-        \item Code scannen\index{Code Scannen}: 
-        \newline
-        Voraussetzung ist, dass Sie über eine eingebaute Webcam verfügen oder eine externe Webcam anschließen, bevor Sie mit der Aufnahme beginnen können.
-        \begin{enumerate}
-            \item Klicken Sie auf den Reiter \enquote{Code scannen}. Es kann passieren, dass Ihr Webbrowser eine Warnmeldung anzeigt, dass die Webseite (PUMA) versucht auf Ihre Webcam zuzugreifen. Falls dies der Fall sein sollte, erlauben Sie den Zugriff.
-            \item Das Bild der Webcam erscheint auf Ihrem Bildschirm. Halten Sie den Strichcode ruhig und gut sichtbar vor Ihre Webcam. Sobald PUMA den ISBN-Strichcode erkennt, ertönt ein Kamerageräusch.
-            \item Wenn der Strichcode erkannt wurde, werden die Daten automatisch angezeigt. Überprüfen Sie diese auf ihre Richtigkeit und klicken Sie anschließend auf \enquote{Speichern}.
-        \end{enumerate}
+        Der Volltext einer Publikation kann hier hochgeladen werden. Das übliche Formular zum Eintragen (mit dem hoch geladenen Volltext) der Publikationen öffnet sich.Je nachdem wie gut die Metadaten im Volltext hinterlegt wurden, werden diese Felder bereits ausgefüllt und können ergänzt werden.
+			\item BibTex\index{BibTex}/EndNote\index{EndNote}-Schnipsel:\newline
+			Kopierte Zitationen können hier eingefügt werden. Diese Informationen werden dann übernommen und können ergänzt werden.
+        \item Code scannen\index{Code Scannen}: \newline
+Über eine Webcam kann der Barcode gescannt werden. Ggf. muss der Zugriff von PUMA auf die Webcam erlaubt werden. Sobald der Barcode erkannt wurde, werden die Daten angezeigt und können ergänzt werden
+        \item Per Hand:
+				Hier kann der Eintragstyp, Titel, Autor. Herausgeber und Jahr der Publikation eingetragen werden. Mit \enquote{Weiter} erscheinen alle Felder der Eingabemaske.
+    \end{itemize}
+\begin{mdframed}[style=tipp]\texttt{Über die Url \url{https://puma.ub.uni-stuttgart.de/postPublication} kann direkt auf die erweiterte Eingabemaske zugegriffen werden} \
+\end{mdframed}		
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Code_scannen}}
  \caption{Code scannen}
  \label{fig:codeScannen}
-\end{figure}  
-        \item Per Hand:
-        \begin{enumerate}
-            \item Klicken Sie auf den Reiter \enquote{Per Hand}.
-            \item Geben Sie alle geforderten Daten in die entsprechenden Felder ein und klicken Sie anschließend auf \enquote{Weiter}. 
-            \item Im nächsten Schritt können Sie weiterführende Informationen angeben. Sie können aber auch gleich auf \enquote{Speichern} klicken, um die Publikation einzutragen.
-        \end{enumerate}        
-    \end{itemize}
-\end{enumerate}
-\section{Lesezeichen} % 2Screenshots: Anfang+Möglichkeiten
-\label{sec:lesezeichen}
-Grundlagen:
-\newline
-Lesezeichen\index{Lesezeichen} (engl. Bookmark) ermöglichen es, das Internet wie ein Buch zu verwenden. Mit einem Lesezeichen merken Sie sich die genaue Adresse eines Internet-Dokuments. PUMA gibt Ihnen die Möglichkeit Lesezeichen zentral zu speichern, zu verwalten und auf sie zuzugreifen. 
-\newline
-\newline
-Lesezeichen hinzufügen\index{Lesezeichen!hinzufügen}: 
+\end{figure}
+Über \enquote{Eintragen} $\to$ \enquote{Publikation importieren} kann eine bestehende BibTeX- ris oder EndNote-Datei hochgeladen werden. Folgende Aktionen können bei den Einträgen der Datei in PUMA ausgewählt werden:
+\begin{itemize}
+\item Tags zu allen ausgewählten Einträgen hinzufügen
+\item Die Tags aller ausgewählten Einträge separat bearbeiten
+\item BibTeX-Schlüssel normalisieren: BibTex-Schlüssel werden nach dem Schema NameJahrTitel normalisiert, wobei Name der Nachname des primären Autors , Jahr das Jahr der Veröffentlichung und Titel das erste Wort des Titels der Publikation ist, das mehr als fünf Buchstaben enthält. Beispiel: knuth1998programming.
+\item Sichtbarkeit einstellen
+\begin{mdframed}[style=achtung]\texttt{Einträge, die bereits in der eigenen Sammlung vorhanden sind, werden als Fehler angezeigt. Wenn alte Einträge überschrieben werden sollen, kann dies vor dem hochladen der Datei ausgewählt werden.} \
+\end{mdframed}
+\subsection{Lesezeichen} % 2Screenshots: Anfang+Möglichkeiten
+\label{subsec:lesezeichen}
+Die URL eines Lesezeichen \index{Lesezeichen!hinzufügen} kann über den Menüpunkt \enquote{Eintragen} $to$ \enquote{Lesezeichen hinzufügen} eingetragen werden. 
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Lesezeichen_hinzufuegen}}
  \caption{Lesezeichen hinzufügen}
  \label{fig:lesezeichenHinzufuegen}
 \end{figure} 
-\begin{enumerate}
-    \item Klicken Sie auf den Menüpunkt \enquote{Eintragen}\index{Lesezeichen!eintragen} im Hauptmenü. Ein Untermenü klappt auf.
-    \item Klicken Sie im Untermenü auf \enquote{Lesezeichen hinzufügen}.
-    \item Tragen Sie in das Feld \enquote{URL} die Adresse (URL) der Webseite ein, die Sie als Lesezeichen hinzufügen möchten. Anschließend klicken Sie auf \enquote{Weiter}. 
-    \item Im Folgenden werden Sie aufgefordert einige Zusatzdaten einzugeben:
-    \begin{itemize}
-        \item URL: Wird automatisch aus dem Schritt davor übernommen.
-        \item Titel: Tragen Sie den Titel der Seite ein. 
-        \item Beschreibung/~Kommentar: Hier können Sie eigene Kommentare zum Lesezeichen hinterlegen. 
-			%\begin{wrapfigure}{r}{5cm}
-			\begin{mdframed}[style=tipp]\texttt{In diesem Feld können Sie z. B. auch ein kleines Abstract hinterlegen.} 
-			\end{mdframed}
-			%\end{wrapfigure}
+
         \item Tags: Tags\index{Tags} (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Sie können so viele Tags verwenden, wie Sie wollen. Die einzelnen Tags werden durch Leerzeichen von einander getrennt. \newline 
         	%\begin{wrapfigure}{r}{5cm}
         	\begin{mdframed}[style=tipp]
