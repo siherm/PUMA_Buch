@@ -13,44 +13,45 @@
    citecolor=black,         % Farbe für Zitierungen
    urlcolor=blue,           % Farbe für Links
    bookmarks=true
-   ]{hyperref}              % Paket für Links im PDF
+   ]{hyperref}             % Paket für Links im PDF
+\usepackage[backend=biber, %% Hilfsprogramm "biber" (statt "biblatex" oder "bibtex")
+style=verbose-inote, %% Zitierstil (siehe Dokumentation)
+natbib=true, %% Bereitstellen von natbib-kompatiblen Zitierkommandos
+hyperref=true, %% hyperref-Paket verwenden, um Links zu erstellen
+]{biblatex}
+\addbibresource{literatur.bib}
 \usepackage{listings,makeidx} \makeindex
 \usepackage{array,longtable} 
-\usepackage{framed,xcolor} \colorlet[named]{shadecolor}{black!15}
-\usepackage{todonotes}
-\newsavebox\MBox
-\newenvironment{tipp}{\par\begin{lrbox}{\MBox}
-%\newcommand*{}{}
-%\begin{minipage}[t][][b]{0.2\textwidth}}
-%T
-%I
-%P
-%P
-%\end{minipage}
-\begin{minipage}[t][][b]{0.8\textwidth}}
-{\end{minipage}\end{lrbox}%
-%\vline width \dimexpr\fboxsep\relax
-\colorbox{pumablue!40}{\usebox\MBox}\par}
-\usepackage{makecell}
-%\usepackage[nonumberlist]{glossaries} \makeglossaries
-%\loadglsentries{Glossar.tex} 
-\usepackage{microtype}
-\usepackage[framemethod]{mdframed}
-\mdtheorem[linecolor=blue]{thmbox}{Definition}
-\mdfdefinestyle{tipp}{frametitle={\texttt{\textbf{TIPP}}}, backgroundcolor=pumablue!60, roundcorner=8pt, linecolor=black, frametitlerule=true}%{outerlinewidth=5pt, innerlinewidth=0pt, outerlinecolor=black, roundcorner=5pt, frametitle={\texttt{\textbf{TIPP}}}, backgroundcolor=pumablue!40}
+\usepackage{mdframed}
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+%\newcounter{tip}[section]
+\newenvironment{tip}[1][]{%
+%\stepcounter{tip}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=1pt]
+\node[anchor=east,rectangle,fill=pumablue!40]
+{\strut Hinweis};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=1pt]
+\node[anchor=east,rectangle,fill=pumablue!40]
+{\strut Hinweis:#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=pumablue!40,%
+          linewidth=1pt,topline=true,
+          frametitleaboveskip=\dimexpr- \ht\strutbox\relax,}
+\begin{mdframed}[]\relax%
+}{\end{mdframed}}
 
+\usepackage{todonotes}
+\usepackage{microtype}
 \usepackage{hyperref}
 \usepackage[anythingbreaks]{breakurl}
 \usepackage{wrapfig,graphicx}
 \usepackage{tabu}
-%\renewcommand{\arraystretch}{1.15}
-%\makeatletter 
-%\renewcommand*\thesection{\@arabic\c@section.}
-%\renewcommand*\thesubsection{\thesection\@arabic\c@subsection.}
-%\renewcommand*\thesubsubsection{\thesubsection\@arabic\c@subsubsection.}
-%\renewcommand*\theparagraph{\thesubsubsection\@arabic\c@paragraph.}
-%\renewcommand*\thesubparagraph{\theparagraph\@arabic\c@subparagraph.}
-%\makeatother   
 \definecolor{pumablue}{RGB}{0,81,158}
 \sloppy
 \newcommand{\tag}{$\langle$Tag$\rangle$}
