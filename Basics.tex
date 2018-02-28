@@ -38,6 +38,12 @@ Daten aus dem persönlichen Profil werden anderen Nutzern (Personenkreis je nach
    \item[Synchronisation:]
 \todo[inline]{Es sind keine Synchronisationsclients oder Server für dieses System konfiguriert. $\to$ bei Mario nachfragen}
 \end{description}
+    \begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Erweiterte_Funktionen}}
+ \caption{Erweiterte Funktionen}
+ \label{fig:erweiterteFunktionen}
+\end{figure} 
 %\section{Lebenslauf}
 %\label{sec:cv}
 %Über \enquote{meinPuma} $\to$ \enquote{Lebenslauf} kann über das Zahnradsymbol sowohl auf das eigene Profil als auch auf die Einstellungen des Layouts (~\hyperref{subseceigenesLayout}) des Lebenslaufs zugegriffen werden. Das eigene Profil kann mit persönlichen Informationen über den Ort, das Geburtsdatum, Beruf und Institution erweitert werden. Darüber hinaus können die wissenschaftlichen Interessen und Hobbies eingetragen werden. Publikationen und Lesezeichen, die mit \tag \textit{<myown />} getaggt werden, erscheinen ebenfalls auf dieser Seite. In den Profileinstellungen kann die Sichtbarkeit dieser Informationen auf privat, für Freunde oder öffentlich sichtbar eingestellt werden. Bei privat sehen andere Nutzer nur den Nutzernamen.
@@ -136,6 +142,14 @@ Nach dem Hochladen stehen verschiedene Möglichkeiten zur Verfügung die Einträ
 \end{itemize}
 \begin{tip} Einträge, die bereits in der eigenen Sammlung vorhanden sind, werden als Fehler angezeigt. Wenn alte Einträge überschrieben werden sollen, kann dies vor dem hochladen der Datei ausgewählt werden.
 \end{tip}
+
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Publikationen_importieren}}
+ \caption{Publikationen importieren}
+ \label{fig:publikationenImportieren}
+\end{figure}
+
 \subsection{Lesezeichen} % 2Screenshots: Anfang+Möglichkeiten
 \label{subsec:lesezeichen}
 Die URL eines Lesezeichen \index{Lesezeichen!hinzufügen} kann über den Menüpunkt \enquote{Eintragen} $\to$ \enquote{Lesezeichen hinzufügen} hinzugefügt werden. 
@@ -147,28 +161,53 @@ Die URL eines Lesezeichen \index{Lesezeichen!hinzufügen} kann über den Menüpu
 \end{figure}  
 \underline{Wichtig bei der Recherche und Archivierung von Lesezeichen:}
 \begin{itemize}
-    \item Puma speichert nicht das eigentliche Dokument, sondern nur die Adresse des Internet-Dokuments. Es kann somit passieren, dass ein Dokument zu einem späteren Zeitpunkt nicht mehr abrufbar ist, da z.B. sich die Adresse geändert hat oder es gelöscht wurde.  
-    \item In der Literaturangabe zu einem Internet-Dokument sollte immer das Datum des letzten Abrufs mit angegeben werden. Folgende Möglichkeiten bieten sich an dies in der Literaturliste anzupassen: Die Lesezeicheneinträge werden beim BibTeX-Export als \enquote{electronic} exportiert. Entweder diese Liste für die Literaturangaben manuell im Dokument anpassen, im dem man das \enquote{added-on} Feld in das Bibtex-Feld \enquote{urldate} umbenennt\autocite[Vgl. das Benutzerhandbuch zum BibLaTeX Paket][S.10 (der Eingabetyp \enquote{online} wird synonym zu \enquote{electronic} verwendet. Damit der Zitationsstil das Abrufdatum hinzufügt muss das Feld urldate ausgefüllt sein.)]{lehmann2016biblatex}
+    \item Puma speichert nicht das eigentliche Dokument, sondern nur die Adresse des Internet-Dokuments. Eine gespeicherte Version der Seite, kann über das Kreis-Pfeilsymbol rechts unter dem Eintrag erreicht werden.
+    \item In der Literaturangabe zu einem Internet-Dokument sollte immer das Datum des letzten Abrufs mit angegeben werden. Folgende Möglichkeiten bieten sich an dies in der Literaturliste anzupassen: Die Lesezeicheneinträge werden beim BibTeX-Export als \enquote{electronic} exportiert. Entweder diese Liste für die Literaturangaben manuell im Dokument anpassen, im dem man das \enquote{added-on} Feld in das Bibtex-Feld \enquote{urldate} umbenennt und das Datum im Format xx.yy.zzzz eingibt. \autocite[Vgl. das Benutzerhandbuch zum BibLaTeX Paket][S.10 (der Eingabetyp \enquote{online} wird synonym zu \enquote{electronic} verwendet. Damit der Zitationsstil das Abrufdatum hinzufügt muss das Feld urldate ausgefüllt sein.)]{lehmann2016biblatex} Dann bei den Publikationen wieder exportieren. Man kann auch gleich beim Sammeln der Lesezeichen diese sowohl bei den Lesezeichen als auch bei den Publikationen eintragen. Bei PUMA muss immer ein Autor oder Herausgeber und das Jahr ausgefüllt werden. Die meisten Zitationsstile unterdrücken den Editor bei der Ausgabe (Vgl. \todo{Zitiertips schreiben und verweisen})
     \item PUMA unterstützt die RFC 7089\footnote{\url{http://tools.ietf.org/html/rfc7089}} Spezifikation\index{RFC 7089 Spezifikation}. Damit wird es möglich, Lesezeichen so zu betrachten, wie sie in PUMA gespeichert wurden, selbst wenn sich die Seite in der Zwischenzeit geändert hat. Um diese Funktion zu nutzen, müssen Sie das Memento-Plugin in ihrem Browser installieren. Das Plugin existiert für Mozilla Firefox\footnote{\url{https://addons.mozilla.org/de/firefox/addon/mementofox/}} und Google Chrome\footnote{\url{https://chrome.google.com/webstore/detail/memento-time-travel/jgbfpjledahoajcppakbgilmojkaghgm?hl=en&gl=US}}. \todo{auf Marios anwort warten}
 \end{itemize}
 \section{Versionierung der Publikationen und Lesezeichen}
 \label{sec:versionierung}
-Publikationen und Lesezeichen können jederzeit eingetragen und bearbeitet werden. Um sich einen Überblick über die vorgenommen Änderungen zu verschaffen, bietet PUMA eine Versionsgeschichte\index{Versionierung} zu jeder Publikation und jedem Lesezeichen an. Klicken Sie in Ihrer eigenen Sammlung auf den kleinen schwarzen Pfeil neben einer beliebigen Publikation. Es öffnet sich ein Dropdown-Menü, in dem Sie \enquote{Verlauf dieser Publikation} auswählen. Ihnen wird sofort die Versionsgeschichte der jeweiligen Publikation/~Lesezeichen angezeigt und Sie können jede Ihrer Änderungen nachverfolgen. 
+Publikationen und Lesezeichen können jederzeit eingetragen und bearbeitet werden. Um sich einen Überblick über die vorgenommen Änderungen zu verschaffen, bietet PUMA eine Versionsgeschichte\index{Versionierung} zu jeder Publikation und jedem Lesezeichen an. Dazu in der eigenen Sammlung auf den kleinen schwarzen Pfeil neben einer beliebigen Publikation klicken. Es öffnet sich ein Dropdown-Menü, in dem \enquote{Versionsverlauf dieses Eintrags} ausgewählt werden kann. Die verlaufsseite zeigt:
+\begin {itemize}
+\item das Bearbeitungsdatum
+\item die Anzahl der geänderten Felder in jeder Version
+\item hinzugefügte (grün) und gelöschte (rot) Textteile
+\end{itemize}
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel5/Versionsgeschichte}}
  \caption{Die Versionsgeschichte}
  \label{fig:versionsgeschichte}
 \end{figure} 
-\section{Lesezeichen importieren}
-\label{sec:lesezeichenImportieren}
-\subsection{Browser}
-\label{subsec:browser}
-PUMA ermöglicht es Ihnen HTML-Dateien in PUMA zu importieren. Hierfür exportieren Sie ihre Lesezeichen aus ihrem Browser als HTML-Datei und importieren diese anschließend. Je nach Browser unterscheidet sich das Exportieren der Lesezeichen.
-\newline
-\newline
+PUMA ermöglicht es HTML-Dateien zu importieren. Hierfür die Lesezeichen aus dem Browser als HTML-Datei exportieren. Über \enquote{Eintrage} $\to$ \enquote{Lesezeichen importieren} die HTML-Datei auswählen und die Sichtbarkeit auf öffentlich oder privat stellen. PUMA erkennt vorhandene Lesezeichen, es kann ausgewählt werden, ob diese überschrieben werden. Um den Import endgültig durchzuführen, mit \enquote{Importieren} bestätigen.Ein \tag wird automatisch vergeben. Weitere \tags müssen manuell hinzugefügt werden. \todo{Verweis ablage und Stapelverarbeitung}
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Firefox_Importieren_Speichern}}
+ \caption{Importieren und Sichern}
+ \label{fig:importierenSichern}
+\end{figure}
+\subsection{HTML-Datei\index{HTML-Datei} in PUMA importieren}
+\label{subsec:htmlDateiImportieren}
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/HTML-Datei_hochladen}}
+ \caption{HTML-Datei hochladen}
+ \label{fig:htmlDateiHochladen}
+\end{figure}
+
+\textbf{Delicious}
+\label{subsec:delicious}
+Lesezeichen von Delicious\index{Delicious} können direkt in PUMA importiert werden, dazu statt eine Datei anzugeben, die Delicious-Nutzerdaten im Bereich \enquote{Importieren Sie Ihre Delicious Daten} eingeben. \newline
+Es kann gewählt werden, ob Lesezeichen oder Tag-Bundles importieren werden sollen. Bei \enquote{Lesezeichen} werden zusammen mit den Lesezeichen auch die dazugehörigen Tags und Sichtbarkeitsbedingungen mit übernommen.
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Delicious_Daten}}
+ \caption{Delicious Daten}
+ \label{fig:deliciousDaten}
+\end{figure} 
+
 \textbf{Chrome}%Screenshots hab ich schon
-\newline Um ihre Lesezeichen in Chrome\index{Chrome} als HTML-Datei zu exportieren, klicken Sie im Menü oben rechts auf \enquote{Lesezeichen} und anschließend auf \enquote{Lesezeichen-Manager}. Es öffnet sich ein neues Fenster, in dem Sie auf \enquote{Organisieren} klicken und im Dropdown-Menü \enquote{Lesezeichen in HTML-Datei exportieren...} wählen. Speichern Sie die Datei ab und fahren mit Schritt 1 von HTML-Datei in PUMA importieren fort, um Ihre Lesezeichen endgültig nach PUMA zu importieren.  
+\newline Um die Lesezeichen in Chrome\index{Chrome} als HTML-Datei zu exportieren, im Menü oben rechts auf \enquote{Lesezeichen} und anschließend auf \enquote{Lesezeichen-Manager} klicken. Es öffnet sich ein neues Fenster, in dem über \enquote{Organisieren} im Dropdown-Menü \enquote{Lesezeichen in HTML-Datei exportieren...} ausgewählt werden kann.  
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Lesezeichen-Manager_Chrome}}
@@ -183,7 +222,7 @@ PUMA ermöglicht es Ihnen HTML-Dateien in PUMA zu importieren. Hierfür exportie
 \end{figure}
 
 \textbf{Firefox}
-\newline Um Ihre Lesezeichen in Firefox\index{Firefox} als HTML-Datei zu exportieren, klicken Sie auf das Lesezeichensymbol rechts neben der Suchleiste. Wählen Sie im Dropdown-Menü \enquote{Lesezeichen verwalten} aus.
+\newline Lesezeichen in Firefox\index{Firefox} können über das Lesezeichensymbol $\to$ \enquote{Lesezeichen verwalten} $\to$ \enquote{importieren und sichern} $\to$ \enquote{Lesezeichen nach HTML exportierem} rechts neben der Suchleiste als HTML-Datei zu exportieren werden.
 
 \begin{figure}[h!]
  \centering
@@ -191,127 +230,70 @@ PUMA ermöglicht es Ihnen HTML-Dateien in PUMA zu importieren. Hierfür exportie
  \caption{Lesezeichen verwalten}
  \label{fig:lesezeichenVerwalten}
 \end{figure}
-Anschließend klicken Sie auf \enquote{Importieren und Sichern} und wählen \enquote{Lesezeichen nach HTML exportieren} aus. Speichern Sie die Datei ab und fahren mit Schritt 1 von HTML-Datei in PUMA importieren fort, um Ihre Lesezeichen endgültig nach PUMA zu importieren.  
-
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Firefox_Importieren_Speichern}}
- \caption{Importieren und Sichern}
- \label{fig:importierenSichern}
-\end{figure}
-\subsection{HTML-Datei\index{HTML-Datei} in PUMA importieren}
-\label{subsec:htmlDateiImportieren}
-\begin{enumerate}
-    \item Klicken Sie auf \enquote{Eintragen} und wählen im Dropdown-Menü \enquote{Lesezeichen importieren} aus.
-    \item Es öffnet sich eine neue Seite. In dem Bereich \enquote{Importieren Sie Ihre Lesezeichen aus Ihrem Browser} können Sie nun die entsprechende Datei hochladen. 
-    \item Legen Sie die Sichtbarkeit der Lesezeichen fest und bestätigen Sie Ihren Import anschließend mit \enquote{Importieren}.
-\end{enumerate}
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/HTML-Datei_hochladen}}
- \caption{HTML-Datei hochladen}
- \label{fig:htmlDateiHochladen}
-\end{figure}
-\subsection{Delicious}
-\label{subsec:delicious}
-Sie möchten Ihre Lesezeichen von Delicious\index{Delicious} nach PUMA importieren. Klicken Sie auf \enquote{Eintragen} und wählen im Dropdown-Menü \enquote{Lesezeichen importieren} aus. Geben Sie unter dem Bereich \enquote{Importieren Sie Ihre Delicious Daten} Ihre Delicious-Nutzerdaten ein. \newline
-Legen Sie im darauffolgenden Schritt fest, ob Ihre Delicious Lesezeichen bereits vorhandene Lesezeichen in Ihrer Sammlung mit der selben URL überschreiben sollen.\newline
-Sie können im letzten Schritt festlegen, ob Sie Ihre Lesezeichen oder Tag-Bundles importieren möchten. Wenn Sie die Option \enquote{Lesezeichen} wählen, werden zusammen mit Ihren Lesezeichen die dazugehörigen Tags und Sichtbarkeitsdefinitionen mit übernommen.
-\newline Klicken Sie abschließend auf \enquote{Importieren} um den Import endgültig durchzuführen.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Delicious_Daten}}
- \caption{Delicious Daten}
- \label{fig:deliciousDaten}
-\end{figure} 
-\section{Publikationen importieren}
-\label{sec:publikationenImportieren}
-PUMA ermöglicht Ihnen bereits bestehende BibTeX- oder EndNote-Datei hochladen. Vergewissern Sie sich hierbei, dass Sie die korrekte Kodierung gewählt haben. Falls die Datei nur wenige Einträge enthält, können Sie diese auf der folgenden Seite bearbeiten. 
-\begin{enumerate}
-	\item Klicken Sie auf das Feld \enquote{Durchsuchen} und laden die entsprechende Datei hoch. 
-	\item Wählen Sie die Sichtbarkeit aus.
-	\item In den \enquote{Erweiterte Einstellungen} können Sie anschließend noch die Datei vor dem Import bearbeiten und festlegen, ob ein älterer Eintrag überschrieben werden soll, wenn der importierte Eintrag die gleiche Publikation referenziert wie ein bereits existierender Eintrag.
-	\item Klicken Sie anschließend auf \enquote{Weiter}, um den Eintrag zu vervollständigen und zu speichern.
-\end{enumerate}
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Publikationen_importieren}}
- \caption{Publikationen importieren}
- \label{fig:publikationenImportieren}
-\end{figure}  
-
-
-
-  
-\section{Bookmarklet-Buttons für Ihre Lesezeichen-Leiste}\label{sec:button}
-Die Bookmarklet-Buttons\index{Bookmarklet-Buttons} ermöglichen Ihnen ein schnelles Arbeiten mit PUMA, während Sie im Internet unterwegs sind. Sie vereinfachen Ihnen das Eintragen von Publikationen und Lesezeichen und gelangen mit dem PUMA-Home Bookmarklet-Button direkt zu PUMA. Ziehen Sie die Buttons\footnote{\url{https://puma.ub.uni-stuttgart.de/buttons}} einfach in Ihre Lesezeichen-Leiste und schon können Sie loslegen.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Bookmarklet-Buttons}}
- \caption{Bookmarklet-Buttons}
- \label{fig:bookmarkletButtons}
-\end{figure} 
-\section{PUMA-Browser-Add-ons\index{Add-ons}}\label{sec:addon}
-Erweitern Sie Ihren Browser mit diesem Add-on um drei nützliche PUMA-Schaltflächen: Mit einem Klick zu PUMA, eine Publikation oder ein Lesezeichen speichern.\newline
-\begin{enumerate}
-\item Klicken Sie rechts oben im Firefox-Browser auf das Menü.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Menue_Firefox}}
- \caption{Firefox-Browser}
- \label{fig:firefoxBrowser}
-\end{figure} 
-\item Es öffnet sich das Menü, wählen Sie den Reiter \enquote{Add-ons} aus. 
-\item Geben Sie in die Suchleiste oben rechts \enquote{puma} ein.
-\item Es erscheint das Add-on \enquote{PUMA Buttons}. Installieren Sie die Buttons (Version 1.6.2).
+ 
+\section{Browser-Add-ons\index{Add-ons}\label{sec:addon} und Bookmarklets}\label{sec:button}
+PUMA bietet für Firefox Add-ons für PUMA-Schaltflächen an: \enquote{Mein PUMA}, \enquote{Publikation speichern} oder \enquote{Lesezeichen speichern}. Da die Add-ons mit jeder Firefox-Erweiterung angepasst werden müssen, können diese auch über \todo{woher?} manuell installiert werden. Beim installieren der Add-ons kann über \enquote{Instanz wechseln} \enquote{UB Stuttgart} ausgewählt werden. Als Alternative bieten sich die Bookmarklets an.\newline
+%\begin{enumerate}
+%\item Klicken Sie rechts oben im Firefox-Browser auf das Menü.
+%\begin{figure}[h!]
+ %\centering
+ %\fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Menue_Firefox}}
+ %\caption{Firefox-Browser}
+ %\label{fig:firefoxBrowser}
+%\end{figure} 
+%\item Es öffnet sich das Menü, wählen Sie den Reiter \enquote{Add-ons} aus. 
+%\item Geben Sie in die Suchleiste oben rechts \enquote{puma} ein.
+%\item Es erscheint das Add-on \enquote{PUMA Buttons}. Installieren Sie die Buttons (Version 1.6.2).
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/PUMA_Buttons}}
  \caption{Puma Buttons}
  \label{fig:pumaButtons}
 \end{figure} 
-\item Klicken Sie anschließend auf \enquote{mehr} und scrollen auf der Seite runter bis zum Abschnitt \enquote{Instanz wechseln}. 
-\item Durch das Klicken auf \enquote{Instanz wechseln} öffnet sich eine Übersicht über alle verfügbaren PUMAs. Wählen Sie  \enquote{UB Stuttgart} aus und speichern Ihre Wahl.
-\item Falls die Buttons nicht sofort in der Taskleiste neben dem Menüsymbol  erscheinen, schließen Sie Firefox. Beim erneuten Öffnen des Firefox-Browsers wurden die Buttons eingerichtet.
-\end{enumerate}
+%\item Klicken Sie anschließend auf \enquote{mehr} und scrollen auf der Seite runter bis zum Abschnitt \enquote{Instanz wechseln}. 
+%\item Durch das Klicken auf \enquote{Instanz wechseln} öffnet sich eine Übersicht über alle verfügbaren PUMAs. Wählen Sie  \enquote{UB Stuttgart} aus und speichern Ihre Wahl.
+%\item Falls die Buttons nicht sofort in der Taskleiste neben dem Menüsymbol  erscheinen, schließen Sie Firefox. Beim erneuten Öffnen des Firefox-Browsers wurden die Buttons eingerichtet.
+%\end{enumerate}
+Die Bookmarklet-Buttons\index{Bookmarklet-Buttons} ermöglichen ein schnelles Arbeiten mit PUMA, während der Recherche im Internet. Es vereinfacht das Eintragen von Publikationen und Lesezeichen. Mit dem PUMA-Home Bookmarklet-Button gelangt man direkt zu PUMA. Dafür die Buttons\footnote{\url{https://puma.ub.uni-stuttgart.de/buttons}} einfach in die Lesezeichen-Leiste ziehen.
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Bookmarklet-Buttons}}
+ \caption{Bookmarklet-Buttons}
+ \label{fig:bookmarkletButtons}
+\end{figure} 
+
 \section{Ablage}
 \label{sec:ablage}
-Die Ablage\index{Ablage} ermöglicht es Ihnen eigene und fremde Publikationen vorzumerken. Sie können so in der Ablage aktuelle Literaturlisten zusammenstellen.
-\newline
-Publikationen in Ablage aufnehmen: %Screenshot
-\begin{enumerate}
-    \item Klicken Sie auf das Symbol \enquote{Diese Publikation zur Ablage hinzufügen}.
-    \item Die Publikationen gelangen direkt in die Ablage. Zur Ablage gelangen Sie über das Personensymbol.
-\end{enumerate}
+Die Ablage\index{Ablage} ermöglicht es eigene und fremde Publikationen zusammenzustellen und Aktionen für diese gesammelt durchzuführen (Stapelverarbeitung). So können zum Beispiel Literaturlisten für den Export zusammengestellt werden oder alle ausgewählten Publikationen mit dem gleichen \tag versehen werden. Dazu auf das Ordnersymbol \enquote{Diese Publikation zur Ablage hinzufügen} klicken. Die Publikationen gelangen direkt in die Ablage, die über das Personensymbol geöffnet werden kann. Am Personensymbol wird auch die Anzahl der abgelegten Publikationen angezeigt. \todo[inline]]{Eingang? Hinweis und link}
+Über das (graue) Stiftsymbol oberhalb der gesammelten Einträge können alle Einträge in der Ablage bearbeitet werden. Folgende Aktionen stehen zur Verfügung:
+\begin{itemize}
+\item BibTex-Schlüssel normalisieren
+\item Sichtbarkeit ändern
+\item Einträge löschen
+\item \tags an alle Einträge hinzufügen
+\item \tags einzelner Einträge bearbeiten
+\end{itemize}
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Ablage}}
  \caption{Die Ablage}
  \label{fig:ablage}
 \end{figure} 
-Falls Sie die vorgemerkten Publikationen nicht mehr in der Ablage haben möchten können Sie diese löschen, indem Sie auf das schwarze \enquote{X} (diese Publikation aus Ihrer Sammlung löschen) klicken.\newline
-%\begin{wrapfigure}{l}{5cm}
-\begin{tip}Wenn Sie die Publikation in der Ablage löschen ist diese gleichzeitig auch in Ihrer Sammlung gelöscht und kann nicht wiederhergestellt werden.
+Über das (graue) Ordnersymbol neben dem Stiftsymbol kann die gesamte Ablage geleert werden. Um einzelne Einträge zu entfernen, das Ordnersymbol neben dem Eintrag klicken. 
+\begin{tip}Über das schwarze \enquote{X} (diese Publikation aus Ihrer Sammlung löschen)) wird die Publiaktion auch in der eigenen Sammlung gelöscht und kann nicht wiederhergestellt werden.
 \end{tip}
+Teilweise können die beschriebenen Funktionen können auch über die rechte Menüleiste ausgewählt werden.
 %\end{wrapfigure}
+%\section{Frischalten erweiterter Funktionen}
+%\label{sec:freischaltenErweiterterFunktionen}
+%Bei PUMA gibt es die Unterscheidung zwischen einfachen\index{Funktionen!Einfache} und erweiterten Funktionen\index{Funktionen!Erweiterte}. In den Grundeinstellungen stehen jedem Nutzer, bei dessen Anmeldung bei PUMA, die einfachen Funktionen zur Verfügung. Durch das Freischalten der erweiterten Funktionen kommen weitere Funktionen hinzu, sodass Sie mehr Möglichkeiten haben, PUMA zu nutzen.  Wenn Sie die erweiterten Funktionen freischalten möchten, gehen Sie wie folgt vor:
+%\begin{enumerate}
+    %\item Klicken Sie auf das Personensymbol. Ein Dropdown-Menü öffnet sich, klicken Sie auf \enquote{Einstellungen}.
+    %\item Es öffnet sich die Einstellungs-Seite. Klicken Sie oben auf den Reiter \enquote{Einstellungen}.
+    %\item Unter dem Bereich \enquote{Layouts Ihrer Tagbox und Ihrer Eintragslisten} befindet sich das Feld \enquote{Erscheinungsbild}. Sie können nun zwischen den Standardeinstellungen \textit{Erweitert} (Alle Optionen werden stets angezeigt) oder \textit{Einfach} (Einige \enquote{Experten}-Optionen werden standardmäßig nicht angezeigt) wählen.
 
-Eine andere Möglichkeit ist das Leeren der Ablage. Dies erreichen Sie, indem Sie auf der rechten Seite auf das blaue Feld \enquote{Ablage leeren} klicken. In diesem Fall werden die Publikationen aus der Ablage entfernt, sind aber in Ihrer Sammlung noch vorhanden.
-\section{Freischalten erweiterter Funktionen}
-\label{sec:freischaltenErweiterterFunktionen}
-Bei PUMA gibt es die Unterscheidung zwischen einfachen\index{Funktionen!Einfache} und erweiterten Funktionen\index{Funktionen!Erweiterte}. In den Grundeinstellungen stehen jedem Nutzer, bei dessen Anmeldung bei PUMA, die einfachen Funktionen zur Verfügung. Durch das Freischalten der erweiterten Funktionen kommen weitere Funktionen hinzu, sodass Sie mehr Möglichkeiten haben, PUMA zu nutzen.  Wenn Sie die erweiterten Funktionen freischalten möchten, gehen Sie wie folgt vor:
-\begin{enumerate}
-    \item Klicken Sie auf das Personensymbol. Ein Dropdown-Menü öffnet sich, klicken Sie auf \enquote{Einstellungen}.
-    \item Es öffnet sich die Einstellungs-Seite. Klicken Sie oben auf den Reiter \enquote{Einstellungen}.
-    \item Unter dem Bereich \enquote{Layouts Ihrer Tagbox und Ihrer Eintragslisten} befindet sich das Feld \enquote{Erscheinungsbild}. Sie können nun zwischen den Standardeinstellungen \textit{Erweitert} (Alle Optionen werden stets angezeigt) oder \textit{Einfach} (Einige \enquote{Experten}-Optionen werden standardmäßig nicht angezeigt) wählen.
-    \begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel5/Erweiterte_Funktionen}}
- \caption{Erweiterte Funktionen}
- \label{fig:erweiterteFunktionen}
-\end{figure} 
-    \item Klicken Sie anschließend auf \enquote{Layout speichern}, um Ihre Änderung zu sichern.
-\end{enumerate}
 \section{Konto auflösen}
 \label{sec:kontoAufloesen} 
 \subsection{Konto löschen}\index{Konto!löschen} \label{subsec:kontoAufloesen}
 \subsection{Ausscheiden aus der Uni}\index{Konto!auflösen} \label{subsec:kontoLoeschen}
+\todo[inline]{braucht es dazu einen eigenen Abschnitt, oben kurz beschrieben}

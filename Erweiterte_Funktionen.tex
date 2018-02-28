@@ -1,18 +1,17 @@
 \chapter{Erweiterte Funktionen}
-\textit{Richtig verwalten ist das A\&O in PUMA. Es geht einfach und spart Zeit.}
-\section{Richtig verwalten}
+\section{Das \tag-Konzept von PUMA}
 
-\subsection{Tags/ Schlagwortsystem}
+\subsection{\tags}
 \label{subsec:tags}
-Tags\index{Tags} (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Einem Literatureintrag können so viele Tags zu geordnet werden, wie Sie wollen. Durch den Gebrauch von Tags wird die Suche zu einem bestimmten Thema erleichtert, da Sie in die Such-Leiste nur den entsprechenden Tag eingeben müssen und Ihnen werden alle Einträge mit diesem Tag vorgelegt. Ein weiterer Vorteil des Tag-Systems ist, dass Sie bei der Literatursuche Tags kombinieren können und so spezifische Ergebnisse erhalten. So können Sie beispielsweise, wenn Sie Literatur zu dem Thema \enquote{Politik in Deutschland} suchen, die Tags \enquote{Politik} und \enquote{Deutschland} eingeben und erhalten die gesamte Literatur, die sich mit den Themen befasst. 
+\tags\index{Tags} (dt. Schlagwörter) ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Einem Literatureintrag können beliebig viele \tags zugeordnet werden. Durch den Gebrauch von \tags wird die Suche zu einem bestimmten Thema erleichtert, da nach den \tags gezielt gesucht werden kann (\autoref{Suche}). \\
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel6/Tags}}
  \caption{Tags}
  \label{figure025}
 \end{figure}
-\textbf{Tags zu Lesezeichen/~Publikationen hinzufügen}\newline
-Tags ermöglichen ein übersichtliches Organisieren und Strukturieren der Lesezeichen. Sie können so viele Tags verwenden, wie Sie wollen. Die einzelnen Tags werden durch Leerzeichen voneinander getrennt.
+\textbf{\tags zu Lesezeichen/~Publikationen hinzufügen}\newline
+Jeder neue Eintrag braucht mindestens ein \tag. Es können beliebig viele \tags, durch Leerzeichen getrennt, hinzugefügt werden. Beim BiBTeX-Export werden nur bei den eigenen Einträgen die \tags im Feld keywords exportiert.\\
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel6/Tags_hinzufuegen}}
@@ -20,27 +19,23 @@ Tags ermöglichen ein übersichtliches Organisieren und Strukturieren der Leseze
  \label{figure026}
 \end{figure} 
 %\begin{wrapfigure}{l}{7cm}
-\begin{mdframed}
-[style=mdfexample1,frametitle={\texttt{TIPP}},backgroundcolor=gray!40]
-\texttt{Wenn Sie einen Tag verwenden möchten, der aus mehreren Worten besteht (z.~B. Fachbereich Architektur) dann verwenden Sie PascalCase\index{PascalCase} (z.~B. FachbereichArchitektur).} 
-\end{mdframed}
 %\end{wrapfigure}
-\textbf{Tags von Lesezeichen/~Publikationen bearbeiten} \newline
-PUMA bietet Ihnen die Möglichkeit bei Publikationen/~Lesezeichen, die schon Teil Ihrer Sammlung sind, die Tags zu bearbeiten. Es gibt drei Möglichkeiten die Tags\index{Tags!bearbeiten} zu bearbeiten:
-\begin{enumerate}
-    \item \underline{Tags bearbeiten über die \enquote{Schnellbearbeitung}}\newline
-    Klicken Sie neben der Publikation/~Lesezeichen auf den blauen Stift (Tags bearbeiten). Es öffnet sich ein Pop-Up-Fenster. Sie können nun alte Tags entfernen, indem Sie auf das \enquote{X-Symbol} klicken. Um neue Tags hinzuzufügen, klicken Sie in das Textfeld und geben die Tags getrennt durch Leerzeichen ein. Um die Änderungen zu speichern klicken Sie auf \enquote{Speichern} und anschließend auf das \enquote{X} um das PopUp-Fenster zu schließen. Wenn Sie die Änderung verwerfen möchten, klicken Sie auf \enquote{Schließen}.
-    \item \underline{Tags bearbeiten über \enquote{Eintrag bearbeiten}}\newline
-    Klicken Sie auf den schwarzen Stift (Dieses Lesezeichen/Diese Publikation bearbeiten) rechts neben einem Eintrag. Sie können nun die Informationen, die Tags und die Sichtbarkeit des Eintrages bearbeiten. Klicken Sie anschließend auf \enquote{Speichern}.
-    \item \underline{Tags bearbeiten über \enquote{Tags bearbeiten}}\newline
-    PUMA bietet nicht nur die Möglichkeit die Tags eines einzelnen Eintrags zu bearbeiten, sondern auch alle Tags, die Sie verwenden. Klicken Sie auf das Personensymbol und wählen \enquote{Tags bearbeiten}. Sie können auf dieser Seite Tags und Konzepte\index{Konzepte} bearbeiten:
+\textbf{\tags von Lesezeichen/~Publikationen bearbeiten} \newline
+PUMA bietet drei Möglichkeit bei Publikationen/~Lesezeichen, die schon Teil einer Sammlung sind, die \tags zu bearbeiten: \index{Tags!bearbeiten}
+\begin{itemize}
+    \item \underline{\enquote{Schnellbearbeitung}}\newline
+   Über das blaue Stiftsymbol (\enquote{\tags bearbeiten}) vor den vorhandenen \tags können diese gelöscht (\enquote{X-Symbol} im blau hinterlegten\tag oder neue hinzuzufügt werden. Dazu im Textfeld die \tags durch Leerzeichen getrennt eingeben.
+    \item \underline{über \enquote{Eintrag bearbeiten}}\newline
+    Über die Bearbeitungsfunktion der gesamten Publikation, können auch die \tags angepasst werden. \todo[inline]{Querverweis}
+    \item \underline{mehrere \tags bearbeiten}\newline
+    PUMA bietet die Möglichkeit alle verwendeten \tags zu bearbeiten. Dazu über das Personensymbol\enquote{Tags bearbeiten} auswählen und eine der folgenden Aktion durchführen:
     \begin{enumerate}
-        \item Umbenennen/~Ersetzten von Tags: \newline Hier können Sie alte Tags durch Neue ersetzen. Sie haben so die Möglichkeit, ähnliche Tags zu einem Tag zusammenzufügen.
+        \item Umbenennen/~Ersetzten von Tags: \newline Hier können \tags ersetzt werden. So z.B. ähnliche \tags zu einem \tag zusammengefügt werden.
         \item Subtags zu Konzepten hinzufügen: \newline
-        Um ein Subtag zu einem Konzept hinzuzufügen, geben Sie den Namen des Konzepts in das Feld \enquote{Supertag} ein und das Tag, das Sie hinzufügen möchten in das Feld \enquote{Subtag}. Anschließend klicken Sie auf \enquote{Einfügen}.
-        \item Subtags von Konzepten löschen:\newline Um ein Subtag von einem Konzept zu löschen, geben Sie den Namen des Konzepts in das Feld \enquote{Supertag} und das Tag, welches Sie löschen wollen, in das Feld \enquote{Subtag} ein. Anschließend klicken Sie auf \enquote{Löschen}.
+        Um ein Subtag zu einem Konzept hinzuzufügen, den Namen des Konzepts in das Feld \enquote{Supertag} eingeben und das \tag, das hinzufügt werden soll in das Feld \enquote{Subtag}. Anschließend auf \enquote{Einfügen} klicken (\autoref{subsec:Konzepte}).
+        \item Subtags von Konzepten löschen:\newline Um ein Subtag von einem Konzept zu löschen, den Namen des Konzepts in das Feld \enquote{Supertag} und das zu löschende \tag, in das Feld \enquote{Subtag} eingeben. Anschließend auf \enquote{Löschen} klicken.
     \end{enumerate}
-\end{enumerate}
+\end{itemize}
 \textbf{Suchen\index{Suche} via Tags}\newline
 PUMA ermöglicht, dass Sie mit Hilfe der Tags Lesezeichen und Publikationen finden können. \newline\newline
 \underline{Möglichkeit 1:} Um einen Eintrag mit einem bestimmten Tag zu finden klicken Sie in der Suchleiste neben \enquote{Suche} auf den blauen Pfeil und wählen im Dropdown-Menü \enquote{Tags} aus. Geben Sie den Tag in das Suchfeld ein und drücken auf das Lupensymbol oder die Enter-Taste.\newline \newline
@@ -131,7 +126,7 @@ Bei der Suche nach Titel, Gruppe, Nutzer, usw. spielt der Nutzer, bei dem Sie su
 \end{enumerate}
 \end{description}
 \subsection{Konzepte}
-\underline{Was sind Konzepte\index{Konzepte}?}
+\underline{Was sind Konzepte\index{subsec:Konzepte}?}
 \newline
 Durch Konzepte können Sie Ihre Tags nach Gruppen ordnen und sich so die Suche erleichtern. Sie haben beispielsweise das Konzept mit dem Supertag\index{Supertag} (Namen) Obst, diesem sind die Subtags\index{Subtag} Banane, Apfel und Kiwi zugeordnet. Wenn Sie nun mit dem Konzept Obst suchen, werden Ihnen automatisch alle Publikationen und Lesezeichen angezeigt, die mit mindestens einem der Subtags getagged wurden. Dies erleichtert Ihre Suche, da oft nach Publikationen/Lesezeichen zu einem bestimmten Thema gesucht wird. 
 \newline Ihre angelegten Konzepte finden Sie über das Untermenü von \enquote{mein PUMA}. Um zu den beliebten Konzepten von PUMA zu gelangen klicken Sie im Hauptmenü auf \enquote{Beliebte} und anschließend im Untermenü auf \enquote{Konzepte}. 
