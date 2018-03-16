@@ -1,60 +1,53 @@
-\chapter{Export und Import}
+\chapter{Zusammenspiel mit anderen Anwendungen und Programmen}
 \label{ch:exportImport}
-\textit{Nicht nur in der Wirtschaft spielen Import und Export eine wichtige Rolle. Auch PUMA ist global vernetzbar.}
+\label{sec:EExpo}
+
 \section{Literaturlisten exportieren}
 \label{sec:llExportieren}
-PUMA ermöglicht den vollständigen Export\index{Export} von Publikationslisten aus PUMA in andere Programme. Das gängigste Datenformat, das die meisten Programme unterstützen, ist BibTex\index{BibTex}. \newline 
+PUMA ermöglicht einen Export\index{Export} von Publikationslisten aus PUMA in andere Programme.
 Der Export erfolgt in zwei Schritten. Es wird zuerst ein Literaturverzeichnis in Puma zusammengestellt und exportiert, bevor es dann in ein anderes Programm importiert wird.
-\subsection{Literaturverzeichnis zusammenstellen}
-\label{subsec:lvZusammenstellen}
-\begin{enumerate}
-    \item Um ein Literaturverzeichnis zusammenzustellen, müssen Sie im ersten Schritt die Publikationen, die in Ihrem Verzeichnis abgelegt werden sollen, in Ihre Ablage\index{Ablage} kopieren. Hierfür gehen Sie in Ihre persönliche Publikations- und Lesezeichensammlung über den @Ihr Benutzername-Button oder klicken im Dropdown-Menü von \enquote{meinPUMA} auf \enquote{meine Einträge}.  Neben jeder Publikation befindet sich eine Symbolleiste.
-    \item Klicken Sie auf das Aktenordner-Symbol (\enquote{Diese Publikation zur Ablage hinzufügen}). Die Publikation gelangt nun automatisch in Ihre Ablage und wird dort gespeichert.
+Um ein Literaturverzeichnis zusammenzustellen, müssen im ersten Schritt die Publikationen, die exportiert werden sollen, in die Ablage kopiert werden (vgl. \autoref{sec:ablage}).
+		
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel7/Zur_Ablage_hinzufuegen}}
  \caption{Zur Ablage hinzufügen}
  \label{fig:zurAblageHinzu}
 \end{figure}
-    \item Zur Ablage gelangen Sie über das Personensymbol. Klicken Sie im Dropdown-Menü auf \enquote{Ablage} und Ihnen werden alle Publikationen angezeigt, die sich in Ihrer Ablage befinden. 
-\end{enumerate} 
-Alle Publikationen hinzufügen: Klicken Sie auf das Einstellungs-Zahnrad im Inhaltsbereich über den Publikationen. Wählen Sie unter der Rubrik \enquote{Ablage} \enquote{alle hinzufügen} aus. Alle Publikationen aus dem Inhaltsbereich werden in die Ablage übernommen. 
-\subsection{Literaturverzeichnis exportieren}
-\label{subsec:lvExportieren}
-\textbf{Voraussetzung:} Sie haben ein Literaturverzeichnis zusammengestellt.
-\begin{enumerate}
-    \item Klicken Sie in der Ablage auf das Exportzeichen oben rechts. Ein Dropdown-Menü erscheint.
+
+In der Ablage über das Exportzeichen oben rechts das Format, in dem das Literaturverzeichnis exportiert werden soll auswählen. Über \enquote{mehr...} stehen weitere Exportformaten zur Verfügung. Sollte das gewünschte Format nicht dabei sein, kann auch ein eigenes generiert werden (vgl. \todo{Verweis}).
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/Exportformat_auswaehlen}}
  \caption{Das Exportformat auswählen}
  \label{fig:exportformatAuswaehlen}
 \end{figure}
-    \item Wählen Sie das Format, in dem Sie ihr Literaturverzeichnis haben möchten. PUMA gibt Ihnen die gängisten Exportformate vor (RSS, BibTex, RDF). Durch einen Klick auf \enquote{mehr...} haben Sie die Möglichkeit, aus weiteren Exportformaten zu wählen. 
+
+
+		
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/Das_Literaturverzeichnis}}
  \caption{Das Literaturverzeichnis}
  \label{fig:literaturverzeichnis}
 \end{figure}
-\begin{mdframed}[style=mdfexample1,frametitle={\texttt{TIPP}},backgroundcolor=gray!40] \texttt{Der Gebrauch des BibTex-Formates\index{BibTex} ist zu empfehlen, da dieses Format sehr verbreitet ist.}
-\end{mdframed}
-    \item Sobald Sie das gewählte Format angeklickt haben, erscheint ein neues Fenster. Klicken Sie mit der rechten Maustaste auf die Seite und wählen \enquote{Speichern unter}, um die Datei zu speichern.
-\end{enumerate}
+
+
 \subsection{Literaturverzeichnis exportieren - Programmspezifisch}
 \label{subsec:lvExportProgramme}
 \subsubsection*{Export nach Word\index{Export!Word}} \index{Word} \label{sss:exportWord}
-\begin{enumerate}
-    \item Klicken Sie in der Ablage auf das Exportzeichen.
-    \item Wählen Sie im Dropdown-Menü \enquote{mehr...} aus.
-    \item Es öffnet sich die Übersichtsseite der Exportformate. Wählen Sie das Format \enquote{MSOffice XML\index{MSOffice XML}}. Speichern Sie anschließend die Datei.
+In Microsoft Word kann die, im Format \enquote{MSOffice XML} \index{MSOffice XML} gespeicherte Datei verwendet werden, indem im Quellen-Manager (\enquote{Verweise}\enquote{Quellen verwalten}) die gespeicherte Datei ausgewählt wird \footcite{Genaue Anleitung im Blogbeitrag:https://blog.ub.uni-stuttgart.de/category/puma/}{}.\todo[inline]{mir geht die Beschreibung zu weit. Ich würde bei PUMA aufhören.}
+%\begin{enumerate}
+    %\item Klicken Sie in der Ablage auf das Exportzeichen.
+    %\item Wählen Sie im Dropdown-Menü \enquote{mehr...} aus.
+    %\item Es öffnet sich die Übersichtsseite der Exportformate. . Speichern Sie anschließend die Datei.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/MSOffice_XML}}
  \caption{Das Exportformat MSOffice XML}
  \label{fig:exportformatMSOfficeXml}
 \end{figure}
-    \item In Microsoft Word können Sie nun die gespeicherte Datei verwenden, indem Sie unter \enquote{Verweise} auf \enquote{Quellen verwalten} klicken. Im erscheinenden Dialog (Quellen-Manager) können Sie auf \enquote{Durchsuchen} klicken und die gespeicherte Datei auswählen.
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/Word}}
@@ -67,30 +60,15 @@ Alle Publikationen hinzufügen: Klicken Sie auf das Einstellungs-Zahnrad im Inha
  \caption{Quellen-Manager}
  \label{fig:quellenManager}
 \end{figure} 
-    \item Kopieren Sie die gewünschten Quellen in die aktuelle Liste, indem Sie diese im linken Bereich markieren und auf \enquote{Kopieren} klicken. Schließen Sie anschließend das Fenster.
-    \item Sie können sich nun das Literaturverzeichnis anzeigen lassen, indem Sie auf \enquote{Literaturverzeichnis} klicken und das gewünschte Layout wählen.
-\end{enumerate}
+
 \subsubsection*{Export nach Citavi\index{Export!Citavi}}\label{sss:exportCitavi}
-\begin{enumerate}
-	\item Klicken Sie auf den Titel der Publikation, die Sie nach Citavi\index{Citavi} importieren möchten.
-	\item Es öffnet sich die Detailansicht der Publikation. Wählen Sie unten auf der Seite unter \enquote{Zitieren Sie diese Publikation} den Stil \enquote{BibTex\index{BibTex}} aus. 
-	\item Markieren Sie den BibTeX-Code im Textfeld und kopieren Sie diesen in die Zwischenablage. Benutzen Sie hierfür entweder STRG+C oder die rechte Maustaste und \enquote{Kopieren}.
-	\item Öffnen Sie Citavi. Klicken Sie in der Menüleiste oben links auf \enquote{Datei}.
-	\item Wählen Sie im Dropdown-Menü \enquote{Importieren} aus. Es öffnet sich ein Popup-Fenster.
-	\item Wählen Sie \enquote{Aus einer Textdatei (Ris-, BibTex-formatiert o.ä.)} aus. Klicken Sie anschließend auf \enquote{Weiter}.
-	\item Wählen Sie auf der nächsten Seite BibTex als Format aus. Anschließend klicken Sie auf \enquote{Weiter}.
-	\item Wählen Sie \enquote{Textdaten in der Zwischenablage verwenden} aus und klicken anschließend auf \enquote{Weiter}.
-	\item Setzen Sie ein Häkchen bei \enquote{Importierte BibTex Keys ersetzen}. Klicken Sie auf \enquote{Weiter}.
-	\item Wählen Sie im letzten Schritt die entsprechende Datei aus und klicken auf \enquote{Titel übernehmen}. Sie werden gefragt, ob Sie die Tags mit übernehmen möchten. Setzen Sie für die Übernahmen ein Häkchen und klicken auf \enquote{OK}.
-\end{enumerate}
-
-
-
+Für Citavi die Literaturliste in BibTeX exportieren und in die Zwischenablage kopieren. 
+In Citavi in der Menüleiste oben links \enquote{Datei} auswählen und im Dropdown-Menü \enquote{Importieren} auswählen. 
+Über \enquote{Aus einer Textdatei (Ris-, BibTex-formatiert o.ä.)} BibTeX als Format auswählen und anschließend über \enquote{Textdaten in der Zwischenablage verwenden} Datei hochladen. Die BibTeX-Keys über \enquote{Importierte BibTex Keys ersetzen} normalisieren und die \enquote{Titel übernehmen}.
 
 \subsubsection*{Export nach Zotero\index{Export!Zotero}}\label{sss:exportZotero}
-\begin{enumerate}
-    \item Sie befinden sich auf einer PUMA-Seite (z.B. die Home-Seite oder Ihre Benutzerseite), von der Sie eine Publikation in Ihre Zotero-Bibliothek übernehmen möchten. Klicken Sie auf den schwarzen Pfeil neben dem Zotero\index{Zotero}-Symbol oben rechts bei Firefox.
-    \item Ein Dropdown-Menü öffnet sich. Wählen Sie \enquote{In Zotero mit \enquote{unAPI} speichern}.
+Auf der gewünschten PUMA-Seite, von der eine Publikation in die Zotero-Bibliothek übernommen werden soll, auf den schwarzen Pfeil neben dem Zotero\index{Zotero}-Symbol oben rechts bei Firefox.
+Ein Dropdown-Menü öffnet sich. \enquote{In Zotero mit \enquote{unAPI} speichern} auswählen.
     
 \begin{figure}[h!]
  \centering
@@ -99,8 +77,7 @@ Alle Publikationen hinzufügen: Klicken Sie auf das Einstellungs-Zahnrad im Inha
  \label{fig:dropdownMenue}
 \end{figure}
 
-    \item Es öffnet sich ein Popup-Fenster, in dem alle Publikationen der entsprechenden PUMA-Seite aufgelistet sind. Wählen Sie die Publikationen aus, die Sie in Ihre Zotero-Bibliothek übernehmen möchten. Bestätigen Sie anschließend Ihre Wahl mit \enquote{OK} und Ihre ausgewählten Einträge erscheinen in Ihrer Zotero-Bibliothek.
-
+Es öffnet sich ein Popup-Fenster, in dem alle Publikationen der entsprechenden PUMA-Seite aufgelistet sind. Die Publikationen auswählen, die in die Zotero-Bibliothek übernommen werden sollen.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel7/Zotero_Eintraege_auswaehlen}}
@@ -108,70 +85,54 @@ Alle Publikationen hinzufügen: Klicken Sie auf das Einstellungs-Zahnrad im Inha
  \label{fig:eintraegeAuswaehlen}
 \end{figure}
 
-\end{enumerate} 
+
 \subsubsection*{Export nach JabRef\index{Export!JabRef}}\label{sss:exportJabref}
-\begin{enumerate}
-    \item Legen Sie alle Publikationen, die Sie in JabRef\index{JabRef} exportieren möchten in Ihre Anlage.
-    \item Klicken Sie aus das Exportzeichen oben rechts in der Ablage und wählen Sie im Dropdown- Menü das Dateiformat \enquote{BibTex} aus.
-    \item Ihre Publikationen werden Ihnen anschließend im ausgewählten Dateiformat angezeigt. Klicken Sie mit der rechten Maustaste und speichern Sie die Publikationen, indem Sie \enquote{Speichern unter...} wählen und den gewünschten Speicherort aussuchen. 
-    \item Öffnen Sie JabRef und klicken auf den Reiter \enquote{Datei}. 
-    \item Es öffnet sich ein Dropdown-Menü. Wählen Sie zwischen den Optionen: \enquote{Importieren in neue Datenbank} oder \enquote{Importieren in aktuelle Datenbank}.
-    \item Auf dem Bildschirm erscheint ein Popup-Fenster, indem Sie, die in Schritt 3 abgespeicherte Datei, auswählen können. Bestätigen Sie anschließend Ihre Wahl mit \enquote{Öffnen}. Die Publikationen werden Ihnen in der ausgewählten Datenbank automatisch angezeigt.
-\end{enumerate}
+Für JabRef die Literaturliste in BibTeX exportieren und speichern. In JabRef dann die Datei über \enquote{Importieren in neue Datenbank} oder \enquote{Importieren in aktuelle Datenbank} importieren.
 
 \section{Literaturlisten importieren}
 \label{sec:llImportieren}
-Das Importieren\index{Import} von Literaturlisten aus anderen Programmen in PUMA ist jederzeit möglich. Das gängigste Datenformat, das die meisten Programme unterstützen, ist BibTex\index{BibTex}. \newline 
-Der Import erfolgt in zwei Schritten. Exportieren Sie zuerst die gewünschten Publikationen aus dem Litertaurverwaltungsprgramm, bevor Sie sie anschließend nach PUMA importieren. 
+Das Importieren\index{Import} von Literaturlisten aus anderen Programmen in PUMA ist jederzeit möglich. Der Import erfolgt in zwei Schritten. Zuerst werden die gewünschten Publikationen aus dem Literaturverwaltungsprogramm exportiert, um dann anschließend in PUMA importiert zu werden. 
 \subsection{BibTex-Export aus verwendeten Literaturverwaltungsprogrammen}
 \label{subsec:bibtexExport}
 \subsubsection*{Import aus Zotero\index{Import!Zotero}} \label{sss:importZotero}
 
 Um den Import von Zotero\index{Zotero} zu PUMA zu ermöglichen, muss Zotero zunächst für PUMA konfiguriert werden:
-\begin{enumerate}
-    \item Öffnen Sie Zotero, indem Sie oben rechts bei Firefox auf das Zotero-Symbol klicken.
-    \item Ändern Sie die Einstellungen, indem Sie auf das schwarze Zahnrad klicken. 
+
+Zotero öffnen und in den Einstellungen zu den Website-spezifischen Einstellungen einen neuen Eintrag hinzufügen. Dazu auf das \enquote{ '+'-Symbol}klicken und bei Domain/Pfad \textit{puma.ub.uni-stuttgart.de} eingeben und \textit{BibTeX\index{BibTex}} als Ausgabeformat auswählen.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel7/Zotero_Import}}
  \caption{Import aus Zotero}
  \label{fig:importZotero}
 \end{figure}
-    \item Wählen Sie im Dropdown-Menü \enquote{Einstellungen} aus.
-    \item Es öffnet sich ein Popup-Fenster. Wählen Sie hier den Menüpunkt \enquote{Export} aus.
+Im Dropdown-Menü \enquote{Einstellungen} $/to$ \enquote{Export}auswählen.
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel7/Zotero_Menuepunkt_Export}}
  \caption{Menüpunkt Export}
  \label{fig:menueExport}
 \end{figure} 
-    \item Fügen Sie zu den Website-spezifischen Einstellungen einen neuen Eintrag hinzu, indem Sie auf das \enquote{ '+'-Symbol} klicken. Geben Sie im Popup-Fenster bei Domain/Pfad \textit{puma.ub.uni-stuttgart.de} ein und wählen Sie \textit{BibTeX\index{BibTex}} als Ausgabeformat. Bestätigen Sie den Eintrag mit \enquote{OK}. 
-\end{enumerate}
-Nachdem Sie die Konfiguration vorgenommen haben, können Sie Publikationen nach PUMA importieren. 
-\begin{enumerate}
-    \item Klicken Sie im Hauptmenü auf \enquote{Eintragen} und wählen im Dropdown-Menü die Option \enquote{Publikation eintragen} aus.  
-    \item Klicken Sie auf den Reiter \enquote{BibTex\index{BibTex}/EndNote\index{EndNote}-Schnipsel}. In das Feld \enquote{Auswahl} können Sie nun den entsprechenden Eintrag aus Ihrer Zotero-Bibliothek durch Drag und Drop hineinziehen (klicken Sie auf den Zotero-Eintrag, halten Sie die linke Maustaste gedrückt, bewegen Sie den Mauszeiger in das Feld und lassen Sie dann die linke Maustaste los). Durch Klicken auf \enquote{Weiter} werden die Daten aus dem Zotero-Eintrag extrahiert und in die entsprechenden Felder eingetragen. 
+    
+Nachdem die Konfiguration vorgenommen wurde, können die Publikationen nach PUMA importiert werden. 
+Dazu im Reiter \enquote{BibTex\index{BibTex}/EndNote\index{EndNote}-Schnipsel}. In das Feld \enquote{Auswahl} den entsprechenden Eintrag aus der Zotero-Bibliothek durch Drag und Drop hineinziehen.
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel7/Zu_PUMA_importieren}}
  \caption{Zu PUMA importieren}
  \label{fig:zuPumaImportieren}
 \end{figure}
-    \item Klicken Sie anschließend auf \enquote{Speichern} um den Eintrag in Ihre Sammlung zu übernehmen.
-\end{enumerate}  
 
 \subsubsection*{Bib-TeX-Export aus Citavi\index{Import!Citavi}}\label{sss:importCitavi} 
-\begin{enumerate}
-    \item Klicken Sie bei Citavi\index{Citavi} oben rechts auf \enquote{Datei}, dann im Dropdown-Menü auf \enquote{Exportieren}.
-    \item Ein Dialog erscheint. Wählen Sie aus, ob Sie nur den markierten oder alle Artikel exportieren möchten. Klicken Sie dann im Dialog unten auf \enquote{Weiter}.
-
+Bei Citavi\index{Citavi} oben rechts über \enquote{Datei} im Dropdown-Menü \enquote{Exportieren} auswählen. Die gewünschten Einträge markieren und als Export-Format \enquote{BibTex} angeben.
+    
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel7/Citavi_Schritt2}}
  \caption{Auswählen der zu exportierenden Artikel}
  \label{fig:exportierendenArtikelAuswaehlen}
 \end{figure}
-    \item Im nächsten Schritt werden Sie nach dem Export-Format gefragt, wählen Sie hier \enquote{BibTex} aus und klicken anschließend auf \enquote{Weiter}.
+
   
 \begin{figure}[h!]
  \centering
@@ -179,7 +140,8 @@ Nachdem Sie die Konfiguration vorgenommen haben, können Sie Publikationen nach 
  \caption{Export-Format festlegen}
  \label{fig:exportFormatFestlegen}
 \end{figure}
-    \item Sie werden nach dem Speicherort gefragt, wählen Sie hier \enquote{Textdaten in der Zwischenablage speichern}. Klicken Sie anschließend auf \enquote{Weiter}.
+
+ Als Speicherort \enquote{Textdaten in der Zwischenablage speichern} wählen und die Export-Vorlage unter dem Namen \textit{BibTex} speichern.
    
 \begin{figure}[h!]
  \centering
@@ -187,79 +149,53 @@ Nachdem Sie die Konfiguration vorgenommen haben, können Sie Publikationen nach 
  \caption{Speicherort}
  \label{fig:speicherort}
 \end{figure}
-    \item Anschließend werden Sie gefragt, ob Sie die Export-Vorlage speichern möchten. Wählen Sie hierfür \enquote{Ja, unter dem Namen:} aus und tragen in das Textfeld \textit{BibTex} als Namen ein. Klicken Sie anschließend auf \enquote{Weiter}.
-   
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=9cm]{Bilder/Kapitel7/Citavi_Schritt5}}
  \caption{Export-Vorlage speichern}
  \label{fig:exportVorlageSpeichern}
 \end{figure}
-    \item Es öffnet sich ein Popup-Fenster \enquote{Export erfolgreich abgeschlossen}. Bestätigen Sie den Export mit \enquote{OK}.
-\end{enumerate}
-Die von Ihnen exportierten Daten befinden sich nun in der Zwischenablage. Fahren Sie mit Schritt 1 von \nameref{subsec:bibtexImportieren} fort, um Ihre Daten endgültig nach PUMA zu exportieren.\newline
+
+Die exportierte Daten befinden sich nun in der Zwischenablage. Wie in \nameref{subsec:bibtexImportieren} beschrieben fortfahren, um die Daten endgültig nach PUMA zu importieren.\newline
 
 \subsubsection{Import aus JabRef\index{Import!JabRef}\index{JabRef}}\label{sss:importJabRef}
-\begin{enumerate}
-    \item Klicken Sie mit der rechten Maustaste auf die Publikation, die Sie nach PUMA importieren möchten.
-    \item Es erscheint ein Dialog. Wählen Sie \enquote{In die Zwischenablage kopieren} aus.
-    \item Im nächsten Schritt werden Sie nach dem Export-Format gefragt, wählen Sie hier \enquote{Endnote} aus.
-\end{enumerate}
-Die von Ihnen exportierte Publikation befindet sich nun in der Zwischenablage. Fahren Sie mit Schritt 1 von \nameref{subsec:bibtexImportieren} fort, um Ihre Publikation endgültig nach PUMA zu exportieren.
+Mit der rechten Maustaste auf die Publikation, die nach PUMA importiert werden soll klicken.
+Diese in die Zwischenablage im Export-Format BibTex kopieren.
 
-\subsection{BibTex\index{BibTex}/ EndNote\index{EndNote} aus der Zwischenablage importieren}
-\label{subsec:bibtexImportieren}
-Voraussetzung ist, dass Sie Ihre Literaturliste im BibTeX oder EndNote-Format aus Ihrem bisherigen Literaturverwaltungsprogramm in die Zwischenablage exportiert haben (siehe \autoref{subsec:bibtexExport}).
-\begin{enumerate}
-    \item Klicken Sie in PUMA auf den Menüpunkt \enquote{Eintragen} im Hauptmenü (\autoref{sec:hauptmenue}). 
-    \item Klicken Sie im Untermenü auf \enquote{Publikation eintragen}.
-    \item Klicken Sie auf den Reiter \enquote{BibTex/~EndNote-Schnipsel}.
-    \item Fügen Sie den Text aus der Zwischenablage in das Textfeld \enquote{Auswahl} ein. Dies können Sie erreichen, indem Sie mit der rechten Maustaste auf das Textfeld Auswahl klicken und \enquote{Einfügen} auswählen. Erscheint das \enquote{Einfügen} grau, haben Sie keine Daten in die Zwischenablage exportiert und müssen die Literatureinträge erneut in die Zwischenablage einfügen (siehe \autoref{subsec:bibtexExport}).
-    \item Klicken Sie auf \enquote{Weiter}.
-    \item PUMA zeigt Ihnen nun eine Übersicht über alle Daten an. Überprüfen Sie diese auf ihre Richtigkeit.
-    \item Klicken Sie \enquote{Speichern}.
-\end{enumerate}
+
 \section{RSS-Feed abonnieren} 
 \label{sec:rssFeedAbonnieren}
-RSS\index{RSS} (engl. Really Simple Syndication)-Feeds informieren über Veränderungen auf Websites. So werden Sie immer über Neuigkeiten informiert. In PUMA können Sie eigene oder fremde Publikations-/~Lesezeichenlisten als RSS-Feed abonnieren. Dies funktioniert auch mit Publikationslisten von Gruppen. Nach dem Abonnieren werden Sie über jede Neuigkeit (z.~B. neue Einträge) informiert. 
-\begin{enumerate}
-    \item Klicken Sie auf das Exportzeichen in der Publikations-/~Lesezeichenspalte, die Sie abonnieren wollen (siehe \autoref{fig:rssFeedAbbonnieren}). Es öffnet sich ein Dropdown-Menü.
+RSS\index{RSS} (engl. Really Simple Syndication)-Feeds informieren über Veränderungen auf Websites. In PUMA können eigene oder fremde Publikations-/~Lesezeichenlisten als RSS-Feed abonniert werden. Dies funktioniert auch mit Publikationslisten von Gruppen. Dazu über das Exportzeichen in der Publikations-/~Lesezeichenspalte, die abonniert werden soll auf \enquote{RSS} klicken. 
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=10cm]{Bilder/Kapitel7/RSS-feed_abonnieren}}
  \caption{RSS-Feed abonnieren}
  \label{fig:rssFeedAbbonnieren}
 \end{figure}
-    \item  Klicken Sie auf \enquote{RSS}. Der RSS-Feed wird erzeugt und an Ihren RSS-Reader weitergeleitet. 
-\begin{mdframed}[style=mdfexample1,frametitle={\texttt{ACHTUNG}},backgroundcolor=gray!40]\texttt{Das weitere Vorgehen gilt exemplarisch für den Browser Mozilla Firefox. Je nach RSS-Reader können einzelne Schritte abweichen. Im gezeigten Fall übernimmt der Browser \enquote{Mozilla Firefox} sowohl die Aufgabe des Webbrowsers als auch die des RSS-Readers.}
-\end{mdframed}
-    \item Es werden Ihnen von Mozilla Firefox einige Optionen zum Abonnieren angeboten. Wählen Sie hier \enquote{Dynamische Lesezeichen} und klicken Sie anschließend auf \enquote{Jetzt abonnieren}.
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/RSS_dynamisches_Lesezeichen}}
  \caption{Das dynamische Lesezeichen}
  \label{fig:dynamischesLesezeichen}
 \end{figure}
-    \item Ein Pop-Up Fenster öffnet sich. Wählen Sie einen Namen für den RSS-Feed aus oder übernehmen Sie den von PUMA generierten Namen. 
-    \item Wählen Sie den Ordner aus, in dem der RSS-Feed gespeichert werden soll.
-    \item Klicken Sie abschließend auf \enquote{Abonnieren}, um den Feed zu abonnieren/speichern.
-\end{enumerate}
-Anschließend zeigt der RSS-Feed wie in \autoref{fig:rssReader} alle neuen Publikationen oder Lesezeichen als anklickbare Einträge an:
+
 \begin{figure}[h!]
  \centering
  \fbox{\includegraphics[width=11cm]{Bilder/Kapitel7/RSS-Reader}}
  \caption{Der RSS-Reader}
  \label{fig:rssReader}
 \end{figure}
+
 \section{Universitätsbibliografie\index{Unibibliografie}}
 \label{sec:unibibliografie}
 Die Universitätsbibliografie (kurz: Unibibliografie) bietet eine möglichst vollständige Übersicht über die Publikationen, die an der Universität Stuttgart veröffentlicht werden. Seit 2015 werden sämtliche Publikationen aller wissenschaftlichen Mitglieder (nach §9 LHG) der Universität Stuttgart angezeigt, die während und ggf. nach ihrer Zugehörigkeit zur Universität verfasst bzw. herausgegeben, öffentlich und dauerhaft verfügbar gemacht wurden.\newline\newline
-Geführt wird die Unibibliografie der Universität Stuttgart über PUMA. Für die Mitglieder der Universität besteht zukünftig die Möglichkeit, ihre Publikationen über PUMA zu melden. Die Universitätsbibliothek bearbeitet die Datensätze und veröffentlicht diese Publikationsmetadaten in der Gruppe \textit{unibibliografie} in PUMA. Die Einträge dieser Gruppe können über \texttt{/group/unibibliografie} eingesehen und über \texttt{/export/group/unibibliographie} in viele verschiedene Formate exportiert werden (siehe auch \autoref{sss:nachGruppe} und \autoref{subsec:export}). Weitere Informationen finden Sie auf der Homepage der Universitätsbibliothek Stuttgart. \footnote{\url{http://www.ub.uni-stuttgart.de/forschen-publizieren/unibibliografie/}}
+Geführt wird die Unibibliografie der Universität Stuttgart über PUMA. Für die Mitglieder der Universität besteht die Möglichkeit, Publikationen über PUMA zu melden. Die Universitätsbibliothek bearbeitet die Datensätze und veröffentlicht diese Publikationsmetadaten in der Gruppe \textit{unibibliografie} in PUMA. Die Einträge dieser Gruppe können über \texttt{/group/unibibliografie} eingesehen und über \texttt{/export/group/unibibliographie} in viele verschiedene Formate exportiert werden (siehe auch \autoref{sss:nachGruppe} und \autoref{subsec:export}). Weitere Informationen gibt es auf der Homepage der Universitätsbibliothek Stuttgart. \footnote{\url{http://www.ub.uni-stuttgart.de/forschen-publizieren/unibibliografie/}}
 \section{OPUS}
 \label{sec:opus}
-\subsection{Über OPUS}
-\label{subsec:ueberOpus}
-OPUS ist der Dokumentenserver (das institutionelle Repositorium) der Universität Stuttgart. Alle Angehörigen der Universität Stuttgart können über OPUS ihre Dokumente, die von dauerhaftem Interesse für Forschung und Lehre sind, online im Sinne von Open Access\index{Open Access} veröffentlichen. Durch diesen Schritt werden ihre Publikationen im Internet langfristig und weltweit frei zugänglich. Zudem werden die Veröffentlichungen auch in Bibliothekskatalogen, Datenbanken und allen gängigen Suchmaschinen nachgewiesen und somit die Sichtbarkeit der Publikationen deutlich erhöht. Die Zitierfähigkeit der Veröffentlichungen wird durch eine dauerhafte, stabile Internet-Adresse (Persistent Identifier) garantiert.
+OPUS ist der Dokumentenserver (das institutionelle Repositorium) der Universität Stuttgart. Alle Angehörigen der Universität Stuttgart können über OPUS ihre Dokumente, die von dauerhaftem Interesse für Forschung und Lehre sind, online im Sinne von Open Access\index{Open Access} veröffentlichen. Durch diesen Schritt werden Publikationen im Internet langfristig und weltweit frei zugänglich. Zudem werden die Veröffentlichungen auch in Bibliothekskatalogen, Datenbanken und allen gängigen Suchmaschinen nachgewiesen und somit die Sichtbarkeit der Publikationen deutlich erhöht. Die Zitierfähigkeit der Veröffentlichungen wird durch eine dauerhafte, stabile Internet-Adresse (Persistent Identifier) garantiert.
 \newline\newline
 Geplant ist die Möglichkeit, aus PUMA direkt in OPUS\index{OPUS} zu veröffentlichen. Bei der Verwendung des \tags \textit{myown} (\autoref{sss:systemtags}) wird den Nutzern dann automatisch die Veröffentlichung auf OPUS angeboten.  
 

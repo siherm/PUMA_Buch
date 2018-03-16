@@ -4,9 +4,9 @@
 \label{sec:einstellungen}
 Über das Personensymbol (\autoref{subsec:Personensymbol}) gelangt man zu den Einstellungen\index{Einstellungen} indem im Dropdown-Menü der entsprechende Reiter ausgewählt wird. In den Einstellungen kann zwischen unterschiedlichen Reitern gewählt werden:
 \begin{description}
-   \item[Mein Profil:]\index{Mein Profil}
+   \item[Mein Profil:]\index{Mein Profil}\label{MeinProfil}
 	\item[]
-Hier können persönliche Informationen ergänzt werden, die auf der Seite \enquote{meinLebenslauf} dargestellt werden. Im Auswahlmenü \enquote{Profil einsehbar für} wird eingestellt, wer diese Informationen einsehen kann (privat, Freunde, öffentlich). Hier kann auch der Link für die OpenUrl (\autoref{subsec:OpenURL}) hinterlegt werden. \index{OpenURL}
+Hier können persönliche Informationen ergänzt werden, die auf der Seite \enquote{meinLebenslauf} dargestellt werden. Im Auswahlmenü \enquote{Profil einsehbar für} wird eingestellt, wer diese Informationen einsehen kann (privat, Freunde, öffentlich). Hier kann auch der Link für die OpenUrl (\autoref{subsec:OpenURL})\index{OpenURL} hinterlegt werden. Unter Kontakt kann die Mitarbeiterseite eingegeben werden. Dadurch entsteht ein Link beim Benutzername.
    \item[Einstellungen:] 
    \begin{itemize}
       \item[] % schönerer Umbruch
@@ -16,7 +16,7 @@ Hier können persönliche Informationen ergänzt werden, die auf der Seite \enqu
       \item \tag-Auswahl: Top X oder mind. Häufigkeit. Bei TOP X werden nur die X häufigsten \tags angezeigt, bei min. Häufigkeit werden nur die \tags angezeigt die X-Mal vorkommen.
       \item Schrankenwert: Einstellung von X
       \item Einträge pro Seite: Kann bis 10000 hoch gesetzt werden, um im persönlichen Konto die Einträge sortieren zu können. Das Laden dieser Einträge dauert allerdings sehr lange. Empfehlung: Die Sortierung kann über zwei andere Wege gelöst werden \todo{Sortierung referenzieren und an anderer Stelle beschreiben}
-      \item \enquote{Bevorzugte Exportformate}: Auswahl von Zitationsstilen, die beim Export als erstes angezeigt werden sollen.
+      \item \enquote{Bevorzugte Exportformate}: \label{item:bevExpoForm} Auswahl von Zitationsstilen, die beim Export eines Eintrages angezeigt werden (vgl. \autocite{sec:EExpo}.
       \item Erscheinungsbild: erweitert oder einfach. Beim einfachen werden einige Funktionen, die nicht unbedingt benötigt werden nicht angezeigt: zum Beispiel werden unter \enquote{mein PUMA} mehr Auswahlfelder angeboten.
       \item Sprachauswahl: deutsch, englisch oder russisch
       \item API-Schlüssel\index{API-Schlüssel}: wird benötigt, um von externen Programmen auf PUMA zuzugreifen. Zum Beispiel für die Einbindung der Literaturliste in OpenCMS. Alternativer Weg über OAUTH \todo[inline]{Referenz setzen und an anderer Stelle beschreiben}
@@ -262,9 +262,10 @@ Die Bookmarklet-Buttons\index{Bookmarklet-Buttons} ermöglichen ein schnelles Ar
  \label{fig:bookmarkletButtons}
 \end{figure} 
 
-\section{Ablage}
+\section{Ablage und Stapelverarbeitung}
+\subsection{Ablage}
 \label{sec:ablage}
-Die Ablage\index{Ablage} ermöglicht es eigene und fremde Publikationen zusammenzustellen und Aktionen für diese gesammelt durchzuführen (Stapelverarbeitung). So können zum Beispiel Literaturlisten für den Export zusammengestellt werden oder alle ausgewählten Publikationen mit dem gleichen \tag versehen werden. Dazu auf das Ordnersymbol \enquote{Diese Publikation zur Ablage hinzufügen} klicken. Die Publikationen gelangen direkt in die Ablage, die über das Personensymbol geöffnet werden kann. Am Personensymbol wird auch die Anzahl der abgelegten Publikationen angezeigt. \todo[inline]]{Eingang? Hinweis und link}
+Die Ablage\index{Ablage} ermöglicht es eigene und fremde Publikationen zusammenzustellen und Aktionen für diese gesammelt durchzuführen (Stapelverarbeitung). So können zum Beispiel Literaturlisten für den Export zusammengestellt werden oder alle ausgewählten Publikationen mit dem gleichen \tag versehen werden. Dazu auf das Ordnersymbol \enquote{Diese Publikation zur Ablage hinzufügen} klicken. Die Publikationen gelangen direkt in die Ablage, die über das Personensymbol geöffnet werden kann. Am Personensymbol wird auch die Anzahl der abgelegten Publikationen angezeigt (vgl. auch \autoref{sec:Eingang}). 
 Über das (graue) Stiftsymbol oberhalb der gesammelten Einträge können alle Einträge in der Ablage bearbeitet werden. Folgende Aktionen stehen zur Verfügung:
 \begin{itemize}
 \item BibTex-Schlüssel normalisieren
@@ -280,9 +281,27 @@ Die Ablage\index{Ablage} ermöglicht es eigene und fremde Publikationen zusammen
  \label{fig:ablage}
 \end{figure} 
 Über das (graue) Ordnersymbol neben dem Stiftsymbol kann die gesamte Ablage geleert werden. Um einzelne Einträge zu entfernen, das Ordnersymbol neben dem Eintrag klicken. 
-\begin{tip}Über das schwarze \enquote{X} (diese Publikation aus Ihrer Sammlung löschen)) wird die Publiaktion auch in der eigenen Sammlung gelöscht und kann nicht wiederhergestellt werden.
+\begin{tip}Über das schwarze \enquote{X} (diese Publikation aus Ihrer Sammlung löschen)) wird die Publikation auch in der eigenen Sammlung gelöscht und kann nicht wiederhergestellt werden.
 \end{tip}
 Teilweise können die beschriebenen Funktionen können auch über die rechte Menüleiste ausgewählt werden.
+\subsection{Eigene Einträge bearbeiten}
+In der Sammlung befindet sich oben rechts oberhalb der Publikations- und Lesezeichenspalte ein Stift, mit dem eigene Einträge bearbeiten werden können. Durch das Klicken auf den Stift gelangt man auf die Seite \enquote{Eigene Einträge bearbeiten}. Hier kann ausgewählt werden, was an der/~den Publikation/~en geändert werden soll:
+\begin{itemize}
+\item Tags zu allen ausgewählten Einträgen hinzufügen
+\item Die Tags aller ausgewählten Einträge separat bearbeiten
+\item BibTex-Schlüssel normalisieren
+\item Einträge löschen
+\item Sichtbarkeit einstellen
+\end{itemize}
+Voreingestellt ist, dass Änderungen für alle Einträge durchgeführt werden. Es können aber auch nur einzelne Einträge ausgewählt werden.
+\begin{figure}[h!]
+ \centering
+ \fbox{\includegraphics[width=10cm]{Bilder/Kapitel6/Eigene_Eintraege_bearbeiten}}
+ \caption{Eigene Einträge bearbeiten}
+ \label{figure030}
+\end{figure}
+\subsection{Einzelne Einträge exportieren}
+Über die Ablage können auch einzelne Einträge können in verschiedene Formate exportiert werden. Dazu über den schwarzen Pfeil rechts unten am Eintrag das gewünschte Format auswählen. Die dort angezeigten Exportformate können über die eigenen Einstellungen ausgewählt werden (vgl. \autoref{item:bevExpoForm})
 %\end{wrapfigure}
 %\section{Frischalten erweiterter Funktionen}
 %\label{sec:freischaltenErweiterterFunktionen}
