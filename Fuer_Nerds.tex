@@ -410,7 +410,7 @@ Exhibit bietet dann eine Reihe von Möglichkeiten, die Daten zu filtern, zu sort
 \label{sec:plugins}
 \subsection{OpenCms\index{OpenCms}}
 \label{subsec:opencms}
-Mit dem OpenCms\index{Plugins!OpenCms} Plugin lassen sich Publikationslisten aus PUMA in OpenCMS integrieren. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Instituts\-publi\-kations\-liste: Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Instituts\-publi\-kations\-liste ausgegeben und auf der Instituts\-website veröffentlicht werden. Hierbei kann zwischen mehreren Zitationsstilen ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationslisten machen.
+Mit dem OpenCms\index{Plugins!OpenCms} Plugin lassen sich Publikationslisten aus PUMA in OpenCms integrieren. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Instituts\-publi\-kations\-liste: Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Instituts\-publi\-kations\-liste ausgegeben und auf der Instituts\-website veröffentlicht werden. Hierbei kann zwischen mehreren Zitationsstilen ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationslisten machen.
 \subsubsection*{Umsetzung:}\label{sss:iplPuma}
 \begin{enumerate}
 \item  Anmeldung auf \url{https://puma.ub.uni-stuttgart.de.}
@@ -574,14 +574,14 @@ Um ein CSL-Stylesheet zu löschen, klicken Sie wie gewohnt auf das Mülleimersym
 \end{figure}
 \subsection{WordPress\index{WordPress}}
 \label{subsec:wordpress}
-Um Publikationslisten aus PUMA in eine WordPress-Seite einzufügen, wird das WordPress-Plugin\index{Plugins!WordPress} \textit{BibSonomy CSL}\footnote{\url{https://wordpress.org/plugins/bibsonomy-csl/}} benötigt. Eine ausführliche Anleitung zur Installation und Nutzung finden Sie im BibSonomy Blog \footnote{\url{http://blog.bibsonomy.org/2012/12/feature-of-week-add-publication-lists.html}}. Aktivieren Sie das Plugin und das TagCloudWidget im Plugins-Menü von Wordpress.
+Um Publikationslisten aus PUMA in eine WordPress-Seite einzufügen, wird das WordPress-Plugin\index{Plugins!WordPress} \textit{BibSonomy/PUMA CSL} oder das Plugin \textit{BibSonomy/PUMA CSL - Publications \& Tag Cloud Widget}\footnote{\url{https://wordpress.org/plugins/bibsonomy-csl/}} benötigt. Eine ausführliche Anleitung zur Installation und Nutzung finden Sie im BibSonomy Blog. \footnote{\url{http://blog.bibsonomy.org/2012/12/feature-of-week-add-publication-lists.html}} Aktivieren Sie das Plugin und das TagCloudWidget im Plugins-Menü von Wordpress. Beides wurde vom PUMA-Team der UB Stuttgart zuletzt erfolgreich mit der WordPress-Version 4.9.5 getestet.
 
-Nach der Installation finden Sie im Einstellungen-Menü einen neuen Eintrag namens \textit{BibSonomy CSL}. Geben Sie dort als BibSonomy Host \textit{puma.ub.uni-stuttgart.de}, als user ID Ihren PUMA-Benutzernamen und als API key ihren individuellen API key ein, den Sie im Benutzermenü in den Einstellungen finden (siehe \autoref{subsec:apiAuth}).  
+Nach der Installation finden Sie im Menü \enquote{Einstellungen} einen neuen Eintrag namens \textit{BibSonomy CSL}. Geben Sie dort als BibSonomy Host \textit{puma.ub.uni-stuttgart.de}, als user ID Ihren PUMA-Benutzernamen und als API key ihren individuellen API key ein, den Sie im Benutzermenü in den Einstellungen finden (siehe \autoref{subsec:apiAuth}).  
 
 \subsubsection*{Publikationslisten hinzufügen}
 \label{sss:wordpressPublist}
 
-In Wordpress finden Sie nun bei Seiten und Beiträgen eine neue Meta-Box namens \textit{Add BibSonomy Publications}, mit der Sie PUMA-Publikationen in die Seite einfügen können. Sie legen die Auswahl der Publikationen mit Hilfe der folgenden Felder fest:
+In WordPress finden Sie nun bei Seiten und Beiträgen eine neue Meta-Box namens \textit{Add BibSonomy Publications}, mit der Sie PUMA-Publikationen in die Seite einfügen können. Sie legen die Auswahl der Publikationen mit Hilfe der folgenden Felder fest:
 
 \begin{description}
 \item [Inhaltstyp (content type)] \hfill \\
@@ -592,10 +592,15 @@ In Wordpress finden Sie nun bei Seiten und Beiträgen eine neue Meta-Box namens 
   Hier können Sie die Ergebnisliste einschränken, indem Sie Tags angeben, mit denen die Publikationen annotiert sein müssen. Mehrere Tags werden durch Leerzeichen getrennt.
 \item [Volltext-Suchbegriff (fulltext search)] \hfill \\
   Hiermit können Sie die Ergebnisliste durch einen Suchbegriff einschränken, nachdem die Ergebnisse per Volltextsuche durchsucht werden.
-\item [Länge (length)] \hfill \\
-  Hier geben Sie an, wieviele Einträge angezeigt werden sollen.
+\item [Länge der Ergebnisliste (length of the result list)] \hfill \\
+  Hier geben Sie an, wie viele Einträge angezeigt werden sollen.
 \item [CSL-Stylesheet] \hfill \\
   Hier wählen Sie den Zitationsstil aus, nach dem die Ergebnisse ausgegeben werden sollen. Ist der gewünschte Stil nicht im Drop-Down-Menü vorhanden, können Sie auch alternativ eine URL angeben.
+\item [Show link to abstract] Link zur Zusammenfassung in der Publikationsliste anzeigen lassen.
+\item [Show URL, BibTeX and EndNote links] Link zum BibTeX- oder EndNote-Code ausgeben.
+\item [Show download links] Links zum Download von Dokumenten, die mit dem Publikationseintrag verknüpft sind.
+\item [Show thumbnails of documents] Anzeige von Vorschaubildern zu den Dokumenten. 
+\item [Group publications by year] Publikationsliste nach Veröffentlichungsjahr gruppieren (mit Jahreszahl als Zwischenüberschrift), mit und ohne Sprungmarken.
 \item [CSS] \hfill \\
   Hier können Sie die Ausgabe der Publikationen mit Hilfe von CSS-Code genauer steuern.
 \end{description}
@@ -606,7 +611,7 @@ Um zum Beispiel die Liste der eigenen Publikationen anzuzeigen, wählen Sie beim
 \subsubsection*{Tagwolken hinzufügen}
 \label{sss:wordpressTagcloud}
 
-Um in Wordpress eine Tagwolke (Tagcloud) einzufügen, aktivieren Sie das TagCloudWidget. Anschließend können Sie auf der Widget-Seite im Design-Menü das BibSonomy TagCloud-Widget an die gewünschte Stelle ziehen. Auch hier können Sie beim Inhaltstyp (source type) wählen, ob sich die Tag-Wolke auf die Publikationssammlung eines Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder einer Sichtbarkeitseinstellung (\textit{viewable}) beziehen soll, ein Layout wählen und eine Überschrift angeben.
+Um in WordPress eine Tagwolke (Tagcloud) einzufügen, aktivieren Sie das TagCloudWidget. Anschließend können Sie auf der Widget-Seite im Design-Menü das BibSonomy/PUMA TagCloud-Widget an die gewünschte Stelle ziehen. Auch hier können Sie beim Inhaltstyp (source type) wählen, ob sich die Tag-Wolke auf die Sammlung von Publikationen eines Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder auf alle öffentlich geteilten Einträge (\textit{viewable}) beziehen soll. Bei \textit{BibSonomy source type value} tragen Sie dann entsprechend entweder Ihren Benutzernamen, den gewünschten Gruppennamen oder \enquote{public} ein. Drei Layouts stehen zur Verfügung: Simple, Decorated, Button Style. Die Überschrift kann auch weggelassen werden. Die angezeigten Tags verlinken auf die dazugehörigen Einträge in PUMA.
 
 
 \subsection{Zope\index{Zope}}
