@@ -1,9 +1,9 @@
 \chapter{Für Nerds}
 \label{ch:fuerNerds}
-\textit{Die eigene Sammlung auf der eigenen Homepage veröffentlichen. Mit Hilfe von Plugins für OpenCms kein Problem für PUMA.}
+
 \section{URL-Syntax\index{URL-Syntax}}
 \label{sec:urlSyntax}
-Sie können die Funktionen von PUMA nicht nur über das Menü (\autoref{sec:hauptmenue}) erreichen, sondern auch direkt über die URL ansteuern. Die URL ist die Adresse einer Seite, die im Adressfeld des Browsers eingegeben, bzw. angezeigt wird. Die Seite mit der Adresse \texttt{\begin{small}https://puma.ub.uni-stuttgart.de/user/mueller/forschungsdaten\end{small}} liefert beispielsweise alle Einträge des Benutzers \textit{mueller} zurück, die mit dem Tag \textit{forschungsdaten} gekennzeichnet sind.
+Die Funktionen von PUMA können nicht nur über das Menü (\autoref{sec:hauptmenue}) erreicht werden, sondern auch direkt über die URL angesteuert werden. Die URL ist die Adresse einer Seite, die im Adressfeld des Browsers eingegeben, bzw. angezeigt wird. Die Seite mit der Adresse \texttt{\begin{small}https://puma.ub.uni-stuttgart.de/user/mueller/forschungsdaten\end{small}} liefert beispielsweise alle Einträge des Benutzers \textit{mueller} zurück, die mit dem Tag \textit{forschungsdaten} gekennzeichnet sind.
 Der Teil \texttt{https://puma.ub.uni-stuttgart.de} bezeichnet den Ort der PUMA-Installation, der Rest der URL steuert, welche Seiten oder Inhalte von PUMA zurückgegeben werden. 
  
 \subsection{Allgemeine Seiten}
@@ -24,13 +24,13 @@ Der Teil \texttt{https://puma.ub.uni-stuttgart.de} bezeichnet den Ort der PUMA-I
 \subsection{Administrative Seiten}
 \label{subsec:adminSeiten}
 \begin{description}
-\item [/settings]  Einstellungsseite. Auf dieser Seite können Sie:
+\item [/settings]  Einstellungsseite. Auf dieser Seite kann:
     \begin{itemize}
-        \item Ihr Profil bearbeiten und Kontoeinstellungen ändern,
-        \item einen Benutzer zu Ihrer Gruppe hinzufügen,
-        \item Ihren API-Schlüssel finden und einen neuen erzeugen,
-        \item Ihr Passwort ändern und
-        \item Ihre Daten zwischen BibSonomy und PUMA synchronisieren.
+        \item das Profil bearbeitet und Kontoeinstellungen verändert werden,
+        \item ein Benutzer zu einer Gruppe hinzufügt werden,
+        \item der API-Schlüssel gefunden und ein neuer erzeugt werden,
+        \item das Passwort geändert und
+        \item Daten zwischen BibSonomy und PUMA synchronisiet werden.
     \end{itemize}
     \item [/postBookmark]    Neues Lesezeichen einfügen. \hfill \\Überprüft vorab, ob sich die URL der Seite bereits in der Sammlung befindet.
     \item [/postPublication]    Neue Publikation einfügen. 
@@ -38,12 +38,12 @@ Der Teil \texttt{https://puma.ub.uni-stuttgart.de} bezeichnet den Ort der PUMA-I
 
 \subsection{Publikations- und Lesezeichenlisten nach verschiedenen Kriterien erstellen}
 \label{subsec:suchenMitUrlSyntax}
-PUMA bietet Ihnen die Möglichkeit mit Hilfe der URL ihre Publikationslisten nach verschiedenen Kriterien zusammenzustellen und zu filtern. Möglichke Kriterien sind: Tags, Autor, Publikationsjahr, Benutzername der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. 
+PUMA bietet die Möglichkeit mit Hilfe der URL Publikationslisten nach verschiedenen Kriterien zusammenzustellen und zu filtern. Möglichke Kriterien sind: Tags, Autor, Publikationsjahr, Benutzername der Person, die den Eintrag gespeichert hat, sowie Freunde- und Gruppennamen. 
 
 \subsubsection*{Einträge nach Benutzer}
 \label{sss:nachBenutzer}
 
-Um die Einträge eines bestimmten Benutzers aufzulisten, verwenden Sie die Syntax \texttt{/user/<benutzername>}, wobei \texttt{<benutzername>} für den PUMA-Benutzername des gewünschten Nutzers steht. Das Ergebnis kann zusätzlich noch nach Tag gefiltert werden: \texttt{/user/<benutzername>/<tag>}. Mehrere Tags können durch ein + verknüpft werden.
+Um die Einträge eines bestimmten Benutzers aufzulisten, wird die Syntax \texttt{/user/<benutzername>} verwendet, wobei \texttt{<benutzername>} für den PUMA-Benutzername des gewünschten Nutzers steht. Das Ergebnis kann zusätzlich noch nach Tag gefiltert werden: \texttt{/user/<benutzername>/<tag>}. Mehrere Tags können durch ein + verknüpft werden.
 
 Beispiele:
 \begin{description}
@@ -57,7 +57,7 @@ Beispiele:
 
 \subsubsection*{Einträge nach Tag\index{Tags}}
 \label{sss:nachTag}
-Um alle Einträge aufzulisten, die mit einem bestimmten Tag annotiert sind, verwenden Sie die Syntax \texttt{/tag/<tag>}, wobei <tag> durch das gewünschte Tag ersetzt wird. Mehrere Tags können mit einem + verknüpft werden.
+Die Syntax \texttt{/tag/<tag>} listet alle Einträge, die mit einem bestimmten Tag annotiert sind, wobei <tag> durch das gewünschte Tag ersetzt wird. Mehrere Tags können mit einem + verknüpft werden.
 
 Beispiele:
 \begin{description}
@@ -70,7 +70,7 @@ Beispiele:
 \subsubsection*{Einträge nach Autor\index{Autoren}}
 \label{sss:nachAutor}
 
-Um alle Publikationen eines bestimmten Autors aufzulisten, verwenden Sie die Syntax \texttt{/autor/<name>}, wobei <name> durch den Nachnamen des Autors ersetzt wird. Die Liste lässt sich mit Hilfe der Syntax \texttt{/author/<name>/<tag>} auf bestimmte Tags eingrenzen oder durch \texttt{/author/<name>/sys:<systemtag>:<wert>} mit verschiedenen Systemtags (siehe auch \autoref{sss:systemtags}) weiter einschränken.
+Die Syntax \texttt{/autor/<name>} listet alle Publikationen eines bestimmten Autors, wobei <name> durch den Nachnamen des Autors ersetzt wird. Die Liste lässt sich mit Hilfe der Syntax \texttt{/author/<name>/<tag>} auf bestimmte Tags eingrenzen oder durch \texttt{/author/<name>/sys:<systemtag>:<wert>} mit verschiedenen Systemtags (siehe auch \autoref{sss:systemtags}) weiter einschränken.
 
 Beispiele:
 \begin{description}
@@ -100,16 +100,16 @@ Beispiele:
 
 \subsubsection*{Einträge von Freunden} 
 \label{sss:vonFreunden}
-Um die Einträge Ihrer Freunde (\autoref{sec:freunde}) zu sehen, verwenden Sie die Syntax \texttt{/friends} für alle Freunde oder \texttt{/friend/<name>} für die Einträge eines bestimmten Freundes. Sie können die Ergebnisse wie gewohnt durch die Angabe von Tags weiter einschränken. 
+Die Syntax \texttt{/friends} listet die Einträge von allen Freunden (\autoref{sec:freunde}), \texttt{/friend/<name>} listet die Einträge eines bestimmten Freundes. Die Ergebnisse können durch die Angabe von Tags weiter eingeschränkt werden. 
 
-Sie sehen nur die Einträge, die von Benutzern stammen, auf deren Freundesliste Sie stehen und die von diesen Benutzern für Freunde freigegeben wurden (für Freunde sichtbar).
+Es werden nur die Einträge angezeigt, die von Benutzern stammen, auf deren Freundesliste man steht und die von diesen Benutzern für Freunde freigegeben wurden (für Freunde sichtbar).
 
 Beispiele:
 \begin{description}
     \item [/friends] \hfill \\
-    Zeigt die für Freunde sichtbaren Einträge aller ihrer Freunde.
+    Zeigt die für Freunde sichtbaren Einträge aller Freunde.
     \item [/friend/eckert] \hfill \\
-    Zeigt die für Freunde sichtbaren Einträge des Benutzers \textit{eckert}. Sie können diese Einträge nur dann sehen, wenn \textit{eckert} Sie als Freund angegeben hat.
+    Zeigt die für Freunde sichtbaren Einträge des Benutzers \textit{eckert}. Es werden nur Einträge angezeigt, wenn \textit{eckert} einen als Freund angegeben hat.
     \item [/friend/eckert/politik] \hfill \\
     Zeit die für Freunde sichtbaren Einträge des Benutzers \textit{eckert} an, die mit dem Tag \textit{politik} annotiert wurden. 
     \item [/friend/eckert/politik+menschenrechte] \hfill \\
@@ -118,11 +118,11 @@ Beispiele:
 
 \subsubsection*{Einträge nach Sichtbarkeit}
 \label{sss:nachSichtbarkeit}
-Um zu sehen, welche ihrer Einträge für wen sichtbar sind, können Sie die Syntax \texttt{/viewable/<sichtbarkeit>} verwenden. Als \texttt{<sichtbarkeit>} sind folgende Ausprägungen möglich:
+Die Syntax \texttt{/viewable/<sichtbarkeit>} zeigt welche Einträge der eigenen Sammlung für wen sichtbar sind. Als \texttt{<sichtbarkeit>} sind folgende Ausprägungen möglich:
 \begin{description}
   \item[public] Einträge, die öffentlich sichtbar sind
-	\item[private] Einträge, die nur für Sie selber sichtbar sind
-	\item[friends] Einträge, die für die Benutzer sichtbar sind, die auf ihrer Freundeliste stehen
+	\item[private] Einträge, die nur für einen selber sichtbar sind
+	\item[friends] Einträge, die für die Benutzer sichtbar sind, die auf der Freundeliste stehen
 	\item[<gruppenname>] Einträge, die für die Mitglieder der Gruppe <gruppenname> sichtbar sind
 \end{description}  
 
@@ -131,15 +131,15 @@ Die Ergebnisse können mit Hilfe der Syntax \texttt{/viewable/<sichtbarkeit>/<ta
 Beispiele:
 \begin{description}
     \item [/viewable/public] \hfill \\
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt haben.
+    Zeigt alle eigenen Einträge an, die als \enquote{öffentlich sichtbar\index{Sichtbarkeit!öffentlich}} eingestellt wurden.
     \item [/viewable/public/politik] \hfill \\
-    Zeigt alle Ihre öffentlich sichtbaren Einträge, die mit dem Tag \textit{politik} annotiert wurden.
+    Zeigt alle eigenen öffentlich sichtbaren Einträge an, die mit dem Tag \textit{politik} annotiert wurden.
     \item [/viewable/private] \hfill \\
-    Zeigt alle Ihre Einträge, die Sie als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt haben.
+    Zeigt alle eigenen Einträge an, die als \enquote{privat sichtbar\index{Sichtbarkeit!privat}} eingestellt wurden.
     \item [/viewable/private/politik+menschenrechte] \hfill \\
-    Zeigt alle Ihre Einträge an, die nur für Sie sichtbar sind und sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} annotiert wurden. 
+    Zeigt alle eigenen Einträge an, die nur für einen selber sichtbar sind und sowohl mit dem Tag \textit{politik} als auch mit dem Tag \textit{menschenrechte} annotiert wurden. 
     \item [/viewable/friends] \hfill \\
-    Zeigt alle Ihre Einträge an, die Sie als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt haben.
+    Zeigt alle eigenen Einträge an, die als \enquote{für Freunde sichtbar\index{Sichtbarkeit!Freunde}} eingestellt wurden.
     \item [/viewable/puma] \hfill \\
     Zeigt alle Einträge an, die für die Gruppe \textit{puma} als sichtbar eingestellt wurden.
     \item [/viewable/puma/politik] \hfill \\
@@ -148,20 +148,20 @@ Beispiele:
 
 \subsubsection*{Einträge nach Gruppe\index{Gruppen}}
 \label{sss:nachGruppe}
-Wenn Sie Mitglied einer Gruppe (\autoref{sec:gruppen}) sind, können Sie mit Hilfe der Syntax \texttt{/group/<gruppenname>} die Einträge aller Gruppenmitglieder auflisten. Die Ergebnisse können mit \texttt{/group/<gruppenname>/<tags>} nach Tags gefiltert werden.
+Wenn man Mitglied einer Gruppe (\autoref{sec:gruppen}) ist, können mit Hilfe der Syntax \texttt{/group/<gruppenname>} die Einträge aller Gruppenmitglieder augeflistet werden. Die Ergebnisse können mit \texttt{/group/<gruppenname>/<tags>} nach Tags gefiltert werden.
 
 Beispiele:
 \begin{description}
     \item [/group/puma] \hfill \\
-    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, wenn Sie selber Gruppenmitglied sind.
+    Zeigt alle Einträge von Mitgliedern der Gruppe \textit{puma} an.
     \item [/group/puma/politik] \hfill \\
-    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} annotiert sind. 
+    Zeigt alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} annotiert sind. 
     \item [/group/puma/politik+menschenrechte] \hfill \\
-    Zeigt Ihnen alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} annotiert sind. 
+    Zeigt alle Einträge von Mitgliedern der Gruppe \textit{puma} an, die mit dem Tag \textit{politik} und dem Tag \textit{menschenrechte} annotiert sind. 
     \item [/relevantfor/group/puma] \hfill \\
-    Zeigt Ihnen alle Einträge an, die ein Gruppenmitglied der Gruppe \textit{puma} als relevant für diese Gruppe gekennzeichnet hat.
+    Zeigt alle Einträge an, die ein Gruppenmitglied der Gruppe \textit{puma} als relevant für diese Gruppe gekennzeichnet hat.
     \item [/followers] \hfill \\
-    Zeigt die neuesten Einträge aller Benutzer, denen Sie folgen. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für Sie relevantesten Einträge ganz oben stehen. 
+    Zeigt die neuesten Einträge aller Benutzer, denen man folgt. Diese Einträge werden mittels eines Rankings so umsortiert, dass die für einen selber relevantesten Einträge ganz oben stehen. 
 \end{description}
 
 
@@ -183,17 +183,17 @@ Beispiele:
     Zeigt alle Einträge der Gruppe \textit{puma} an. Für jedes Duplikat werden alle Tags \enquote{aufgesammelt} und aggregiert an einem einzelnen Eintrag angezeigt.
 \end{description}
 
-Weitere Parameter finden Sie im \autoref{subsec:parameter}.
+Weitere Parameter finden sich im \autoref{subsec:parameter}.
 
 \subsubsection*{Weitere Filterkriterien}
 \label{sss:weitereKriterien}
 
-PUMA bietet noch weitere Kriterien, nach denen Ergebnislisten zusammengestellt und gefiltert werden können. Mit der Syntax \texttt{/url/<hashkey>} werden alle Lesezeichen angezeigt, deren URL den Hash <hashkey> haben. Veröffentlichnungen mit einem bestimmten Intra-Hash (siehe \autoref{sec:duplikat}) erreichen Sie mit der Syntax \texttt{/bibtex/<intrahash>}. Mit der Syntax \texttt{/bibtexkey/<bibtexkey>} können Sie Veröffentlichungen mit einem bestimmten BibTeX-Key anzeigen.
+PUMA bietet noch weitere Kriterien, nach denen Ergebnislisten zusammengestellt und gefiltert werden können. Mit der Syntax \texttt{/url/<hashkey>} werden alle Lesezeichen angezeigt, deren URL den Hash <hashkey> haben. Veröffentlichnungen mit einem bestimmten Intra-Hash (siehe \autoref{sec:duplikat}) erreichen man mit der Syntax \texttt{/bibtex/<intrahash>}. Mit der Syntax \texttt{/bibtexkey/<bibtexkey>} können Veröffentlichungen mit einem bestimmten BibTeX-Key angezeigt werden.
 
 
 \subsection{Konzeptseiten}
 \label{subsec:konzeptseiten}
-Konzepte (\autoref{subsec:konzepte}) sind Überbegriffe, mit denen Sie Ihre Tags strukturiert können. Um die Konzepte eines Benutzers anzuzeigen, verwenden Sie die Syntax \texttt{/concepts/<benutzername>}. Um die Lesezeichen oder Publikationen zu erhalten, die mit einem Konzept oder eines seiner Untertags annotiert wurden, verwenden Sie die Syntax \texttt{/concept/user/<benutzername>/<konzept>}.
+Konzepte (\autoref{subsec:konzepte}) sind Überbegriffe, mit denen Tags strukturiert werden können. Die Syntax \texttt{/concepts/<benutzername>} zeigt die Konzepte eines Benutzers an. Um die Lesezeichen oder Publikationen zu erhalten, die mit einem Konzept oder eines seiner Untertags annotiert wurden, wird die Syntax \texttt{/concept/user/<benutzername>/<konzept>} verwendet.
 
 Beispiele:
 \begin{description}
@@ -229,8 +229,8 @@ Beispiele:
 
 \subsection{Export von Einträgen}
 \label{subsec:export}
-PUMA bietet Ihnen die Möglichkeit, Ihre Lesezeichen und Publikationen in viele verschiedene Formate zu exportieren.
-Die Exportfunktion von PUMA steuern Sie mit der Syntax \texttt{/<exportformat>}. Als Exportformat können Sie aus den folgenden Möglichkeiten wählen.
+PUMA bietet die Möglichkeit, Lesezeichen und Publikationen in viele verschiedene Formate zu exportieren.
+Die Exportfunktion von PUMA wird mit der Syntax \texttt{/<exportformat>} gesteuert. Als Exportformat können olgende Möglichkeiten gewählt werden.
 
 \begin{itemize}
     \item RSS Feeds\index{RSS}
@@ -264,7 +264,7 @@ Die Exportfunktion von PUMA steuern Sie mit der Syntax \texttt{/<exportformat>}.
     \end{description}
 \end{itemize}
 
-Die zu exportierenden Einträge können Sie dann über die Syntax \texttt{/<exportformat>/user/<benutzername>/<tags>} nach Benutzer filtern und auch zusätzlich noch auf bestimmte Tags einschränken. Möchten Sie nur nach Tag und nicht nach Benutzer filtern, verwenden Sie die Syntax \texttt{/<exportformat>/tag/<tags>}. Analog können Sie auch die anderen Kriterien zur Filterung der Ausgabe verwenden, die im \autoref{subsec:suchenMitUrlSyntax} beschrieben sind.
+Die zu exportierenden Einträge können dann über die Syntax \texttt{/<exportformat>/user/<benutzername>/<tags>} nach Benutzer gefiltert und zusätzlich auf bestimmte Tags eingeschränkt werden. Möchten man nur nach Tags und nicht nach Benutzer filtern, verwenden man die Syntax \texttt{/<exportformat>/tag/<tags>}. Analog können auch andere Kriterien zur Filterung der Ausgabe verwendet werden, die im \autoref{subsec:suchenMitUrlSyntax} beschrieben sind.
 
 Beispiele:
 \label{subsec:volltextsuche}
@@ -284,7 +284,7 @@ Mit einem Fragezeichen können an eine URL Parameter angehängt werden, die die 
 
 Mehrere Parameter werden durch ein \& getrennt. Die URL \texttt{\begin{small} /user/mueller?items=25\&sortPage=author\&sortPageOrder=desc\end{small}} liefert zum Beispiel die ersten 25 Einträge des Benutzers \textit{mueller} absteigend sortiert nach Autor. 
 
-Immer wenn Sie in PUMA eine Liste von Lesezeichen oder Publikationen ausgeben, können Sie diese sortieren, indem Sie an die URL einen oder mehrere der folgenden Suchparameter anhängen. Folgende Parameter stehen Ihnen zur Verfügung:
+Immer wenn in PUMA eine Liste von Lesezeichen oder Publikationen ausgegeben wird, können diese sortiert werden, indem an die URL eine oder mehrere der folgenden Suchparameter angehängt werden. Folgende Parameter stehen zur Verfügung:
 \begin{description}
     \item [sortPage] Wonach wird sortiert?
     \begin{description}
@@ -322,8 +322,8 @@ Die Parameter \texttt{items} und \texttt{duplicates} steuern wieviele Einträge 
 
 \section{Duplikatserkennung\index{Duplikat}} 
 \label{sec:duplikat}
-Die Duplikatserkennung von PUMA basiert auf Hashkeys. PUMA berechnet für jede Publikation zwei Hash Keys, den intrahash (zur Duplikatserkennung innerhalb der Sammlung eines Benutzers) und den interhash (zur Duplikatserkannung zwischen den Sammlungen verschiedener Benutzer). Zur Berechnung der Keys werden Titel, Autor und Jahr (beim intrahash zusätzlich noch Typ, Zeitschriften- oder Buchtitel, Band und Nummer) aneinander gefügt und ein Hash-Wert über dieser Zeichenfolge berechnet. Wird nun eine Publikation zum zweiten Mal in die Sammlung eingetragen, vergibt PUMA an diese Publikation den gleichen, schon vorhandenen Hashkey. Das System bemerkt die doppelte Vergabe und kennzeichnet die Publikationseinträge als Duplikate. 
-
+Die Duplikatserkennung von PUMA basiert auf Hashkeys. PUMA berechnet für jede Publikation zwei Hashkeys, den intrahash (zur Duplikatserkennung innerhalb der Sammlung eines Benutzers) und den interhash (zur Duplikatserkennung zwischen den Sammlungen verschiedener Benutzer). Zur Berechnung der Hashkeys werden Titel, Autor und Jahr (beim intrahash zusätzlich noch Typ, Zeitschriften- oder Buchtitel, Band und Nummer) aneinander gefügt und ein Hash-Wert über dieser Zeichenfolge berechnet. Wird nun eine Publikation zum zweiten Mal in die Sammlung eingetragen, vergibt PUMA an diese Publikation den gleichen, schon vorhandenen Hashkey. Das System bemerkt die doppelte Vergabe und kennzeichnet die Publikationseinträge als Duplikate. 
+\todo[inline]{Merke:intrahash: zur Duplikatserkennung innerhalb der Sammlung eines Benutzers) und den interhash (zur Duplikatserkennung zwischen den Sammlungen verschiedener Benutzer)TIP: Wenn man eine Dublette anlegen möchte, z.B. Vortrag an mehreren Orten, muss einer der Felder des Intrahashs belegt werden}
 
 \section{REST-API\index{REST-API}}
 \label{sec:restApi}
@@ -346,17 +346,17 @@ Um die Ansprache der API zu erleichtert, gibt es für verschiedene Programmiersp
 \subsection{Authentifizierung zum Zugriff auf die API}
 \label{subsec:apiAuth}\label{sss:apiKey}
 
-Um per API-Schnittstelle auf Ihre Inhalte in PUMA zugreifen zu können, müssen Sie sich  mit einem individuellen API-Key gegenüber PUMA authentifizieren. Eine Authentifizierung über OAuth wird nicht unterstützt.
+Um per API-Schnittstelle auf Inhalte in PUMA zugreifen zu können, muss man sich  mit einem individuellen API-Key gegenüber PUMA authentifizieren. Eine Authentifizierung über OAuth wird bisher nicht unterstützt.
 
-Ihren individuellen API-Key finden Sie in den Einstellungen (\autoref{sec:einstellungen}) im Reiter \textit{Einstellungen} unter \textit{API}. An dieser Stelle haben Sie auch die Möglichkeit, einen neuen Key zu erzeugen. 
+Ihren individuellen API-Key findet sich in den Einstellungen (\autoref{sec:einstellungen}) im Reiter \textit{Einstellungen} unter \textit{API}. An dieser Stelle besteht auch die Möglichkeit, einen neuen Key zu erzeugen. 
 
 \section{Integration von PUMA-Inhalten auf eigenen Webseiten}
 \label{sec:eigeneWebseiten}
-Es gibt mehrere Möglichkeiten, Inhalte aus PUMA oder Links zu PUMA auf Ihrer eigenen Webseite zu integrieren.
+Es gibt mehrere Möglichkeiten, Inhalte aus PUMA oder Links zu PUMA auf eigene Webseite zu integrieren.
 
 \subsection{Bookmarklinks\index{Bookmarklinks}}
 \label{subsec:bookmarklinks}
-Mit Hilfe eines kurzen JavaScript\index{JavaScript}-Codes\footnote{zu finden unter \url{https://ub.uni-stuttgart.de/buttons}} können Sie einen Link auf Ihrer Seite einfügen, mit dem die Besucher Ihre Seite mit einem Klick in ihre eigene PUMA-Sammlung übernehmen können.
+Mit Hilfe eines kurzen JavaScript\index{JavaScript}-Codes\footnote{zu finden unter \url{https://ub.uni-stuttgart.de/buttons}} kann ein Link auf die eigene Seite eingefügt werden, mit dem die Besucher der Seite mit einem Klick diese in ihre eigene PUMA-Sammlung übernehmen können.
 \lstset{language=JavaScript}
 \begin{lstlisting}
   <!-- post bookmark link code -->
@@ -377,7 +377,7 @@ Mit Hilfe eines kurzen JavaScript\index{JavaScript}-Codes\footnote{zu finden unt
 
 \subsection{iFrame}
 \label{subsec:iFrame}
-Mit Hilfe eines iFrames können Sie beliebige PUMA-Seiten im PUMA-Layout auf Ihrer Seite integrieren. 
+Mit Hilfe eines iFrames können beliebige PUMA-Seiten im PUMA-Layout auf eigenen Seite integriert werden. 
 \lstset{language=HTML}
 \begin{lstlisting}
   <iframe
@@ -386,15 +386,15 @@ Mit Hilfe eines iFrames können Sie beliebige PUMA-Seiten im PUMA-Layout auf Ihr
   </iframe>''
 \end{lstlisting}
 
-Sie können als \texttt{src} jede beliebige PUMA-Seite verwenden. Möchten Sie zum Beispiel eine Liste ihrer eigenen Publikationen \index{Publikationslisten!Eigene Publikationslisten} auf Ihrer Webseite einfügen, ersetzen Sie <UrlPumaSeite> durch \begin{small}https://puma.ub.uni-stuttgart.de/user/<benutzername>/myown\end{small}, wobei Sie für <benutzername> Ihren PUMA-Benutzernamen einsetzen.
+Es kann als \texttt{src} jede beliebige PUMA-Seite verwendet werden. Um eine Liste der eigenen Publikationen \index{Publikationslisten!Eigene Publikationslisten} auf der Webseite einzufügen, wird <UrlPumaSeite> durch \begin{small}https://puma.ub.uni-stuttgart.de/user/<benutzername>/myown\end{small} ersetzt, wobei  für <benutzername> der PUMA-Benutzernamen eingesetzt wird.
 
-Der Parameter \texttt{format=embed} sorgt dafür, dass nur die Inhalte und nicht die ganze PUMA-Seite integriert wird. Weitere Parameter finden Sie unter \autoref{subsec:parameter}.
+Der Parameter \texttt{format=embed} sorgt dafür, dass nur die Inhalte und nicht die ganze PUMA-Seite integriert wird. Weitere Parameter finden sich unter \autoref{subsec:parameter}.
 
 \subsection{JSON-Feed\index{JSON-Feed}}
 \label{subsec:jsonFeed}
-Sie können für jede PUMA-Seite einen JSON-Feed\footnote{\url{http://www.json.org/}} generieren, indem Sie \textit{json/} vor den Pfadteil der URL stellen. Um beispielsweise einen JSON-Feed mit allen Einträgen zu bekommen, die mit dem Tag \textit{fdm} annotiert wurden, geben Sie \textit{/json/tag/fdm} ein (siehe auch \autoref{subsec:export}). 
+Für jede PUMA-Seite kann einen JSON-Feed\footnote{\url{http://www.json.org/}} generiert werden, indem  \textit{json/} vor den Pfadteil der URL gestellt wird. Um beispielsweise einen JSON-Feed mit allen Einträgen zu bekommen, die mit dem Tag \textit{fdm} annotiert wurden, gibt man\textit{/json/tag/fdm} ein (siehe auch \autoref{subsec:export}). 
 
-Um die Inhalte des  JSON-Feeds auf Ihrer Seite anzuzeigen, können Sie beispielsweise die JavaScript-Bibliothek Exhibit \footnote{\url{http://www.simile-widgets.org/exhibit/}} verwenden. Der folgende Code stellt eine Publikationsliste aus PUMA als JSON-Feed für Exhibit zur Verfügung.
+Um die Inhalte des JSON-Feeds auf eigenen Seite anzuzeigen, kann beispielsweise die JavaScript-Bibliothek Exhibit \footnote{\url{http://www.simile-widgets.org/exhibit/}} verwendet werden. Der folgende Code stellt eine Publikationsliste aus PUMA als JSON-Feed für Exhibit zur Verfügung.
 
 \lstset{language=HTML}
 \begin{lstlisting}
@@ -405,12 +405,12 @@ Um die Inhalte des  JSON-Feeds auf Ihrer Seite anzuzeigen, können Sie beispiels
 \end{lstlisting}
 
 Exhibit bietet dann eine Reihe von Möglichkeiten, die Daten zu filtern, zu sortieren und in verschiedenen Formaten auszugeben.
-
+\todo[inline]{brauchen wir das hier noch? Ist bestimmt veraltet}
 \section{Plugins} 
 \label{sec:plugins}
 \subsection{OpenCms\index{OpenCms}}
 \label{subsec:opencms}
-Mit dem OpenCms\index{Plugins!OpenCms} Plugin lassen sich Publikationslisten aus PUMA in OpenCms integrieren. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Instituts\-publi\-kations\-liste: Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Instituts\-publi\-kations\-liste ausgegeben und auf der Instituts\-website veröffentlicht werden. Hierbei kann zwischen mehreren Zitationsstilen ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihre eigenen Publikationslisten machen.
+Mit dem OpenCms\index{Plugins!OpenCms} Plugin lassen sich Publikationslisten aus PUMA in OpenCms integrieren. Ein typischer Anwendungsfall des Plugins ist das Erstellen einer Instituts\-publi\-kations\-liste: Mitarbeiter und/~oder Hilfskräfte des Instituts pflegen die Publikationsdaten in PUMA ein. Die eingetragenen Publikationen können in einer Instituts\-publi\-kations\-liste ausgegeben und auf der Instituts\-website veröffentlicht werden. Hierbei kann zwischen mehreren Zitationsstilen ausgewählt und nach Datum in absteigender oder aufsteigender Reihenfolge sortiert werden. Das Gleiche können die Mitarbeiter ebenfalls für ihren eigenen Publikationslisten machen.
 \subsubsection*{Umsetzung:}\label{sss:iplPuma}
 \begin{enumerate}
 \item  Anmeldung auf \url{https://puma.ub.uni-stuttgart.de.}
@@ -488,141 +488,143 @@ Im folgenden Beispiel zeigen die Abbildungen \ref{fig:mplAllgemeineEinstellungen
  \label{fig:mplServerAnmeldedaten}
 \end{figure}
 Wenn die gewünschten Einstellungen veröffentlicht werden, importiert das Plugin die Literatureinträge im ausgewählten Zitationsstil auf die entsprechenden OpenCms-Seite. Veränderungen, die bei PUMA vorgenommen werden, Korrekturen oder weitere Einträge werden automatisch auf der OpenCms-Seite aktualisiert. Durch das Caching in OpenCms können Änderungen im PUMA-System zeitverzögert in OpenCms sichtbar werden.
-\subsection{Typo3\index{Typo3}}
-\label{subsec:typo3}
-\subsubsection*{Installation}\label{sss:installation}
-PUMA CSL ist eine Erweiterung (Extension) für Typo3\index{Plugins!Typo3}. Um sie zu installieren, suchen Sie im Extension Manager nach der Extension ext\_bibsonomy\_csl und importieren Sie diese.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/extension_manager.jpg}}
- \caption{Extension Manager}
- \label{fig:extensionManager}
-\end{figure}
-Nach erfolgreichem Import wird die Extension unter \enquote{Available Extensions} angezeigt. Klicken Sie auf das +-Symbol, um es zu aktivieren.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/available_extensions.jpg}}
- \caption{Available Extensions}
- \label{fig:availableExtensions}
-\end{figure}
 
-\subsubsection*{Publikationslisten hinzufügen mit dem Frontend Plugin}\label{sss:typo3Publikationslisten}
-Nachdem Sie die Extension importiert und aktiviert haben, können Sie Publikationslisten erstellen. Fügen Sie dazu der Seite, auf der die Publikationsliste erscheinen soll, ein neues Plugin hinzu. Wählen Sie hierfür aus der Liste \enquote{PUMA Publication List} aus.\newline
-\newline
-Im Reiter \enquote{General} tragen Sie den Titel für die Publikationsliste ein.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/reiter_general.jpg}}
- \caption{Reiter General}
- \label{fig:reiterGeneral}
-\end{figure}
-
-Gehen Sie auf den Reiter \enquote{Plugin} und nehmen Sie die gewünschten Einstellungen vor. Sie können zwischen den Inhaltstypen \textit{user}, \textit{group} oder \textit{viewable} wählen, um zu definieren, ob die Publikationsliste aus den Einträgen eines Benutzers, einer Gruppe oder einer Sichtbarkeitseinstellung bestehen soll. Geben Sie im untersten Textfeld als \textit{custom url} die Seite Ihrer PUMA-Installation ein, also \textit{http://puma.ub.uni-stuttgart.de}\newline
-\newline
-Beispiel: Sie möchten Ihre eigene Publikationsliste einbinden. Dazu wählen Sie zunächst unter der Rubrik \enquote{Content Source} die Option \enquote{user} aus. Tragen Sie dann den gewünschten (Ihren) Nutzernamen unter \enquote{Insert the id of user, group or viewable source} ein. Anschließend können Sie die Einträge der Publikationsliste über Tags filtern. Geben Sie hierfür die gewünschten Tags in das Feld \enquote{Select content via tags} ein. Um nur eigene Einträge anzeigen zu lassen, verwenden Sie das Systemtag \textit{myown}. Sie können zudem die Anzahl der angezeigten Publikationen begrenzen sowie mittels Freitext filtern.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=9cm]{Bilder/Kapitel9/reiter_plugin.jpg}}
- \caption{Reiter Plugin}
- \label{fig:reiterPlugin}
-\end{figure}
-
-\begin{mdframed}[style=mdfexample1,frametitle={ACHTUNG},backgroundcolor=gray!40]Bitte beachten Sie, dass die Extension Ihre gesamte Publi\-kations\-liste darstellt, wie Sie sie in PUMA sehen \textbf{(auch private Publikationen)}. Wenn Sie z.B. an eine Publikation ein Dokument angehängt haben, dann wird dieses auch in der Publikationsliste angezeigt. Dadurch können für Sie \textbf{urheberrechtliche Konsequenzen} entstehen. Wir empfehlen Ihnen daher für die Nutzung einen zusätzlichen Account anzulegen, mit dem Sie in PUMA nur die TYPO3-Publikationen verwalten.
-\end{mdframed} 
-Im Reiter \enquote{Layout} können Sie den Zitationsstil der Publikationsliste anpassen. Die Definition des Zitationsstils geschieht mit Hilfe der Citation Style Language (CSL\index{CSL}). Eine große Liste an frei verfügbaren CSL-Vorlagen finden Sie unter: \url{http://www.zotero.org/styles/}.
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=7cm]{Bilder/Kapitel9/csl_typo.jpg}}
- \caption{Citation Style Language(CSL)}
- \label{fig:csl}
-\end{figure}
-
-Im Reiter Rubrik \enquote{Login} müssen Sie Ihre PUMA
-API-Daten\index{API} hinterlegen. Nur so kann sich die TYPO3 Extension
-bei PUMA anmelden und Ihre Daten abrufen. Ihren API-Key finden Sie,
-wenn Sie im Benutzermenü (\autoref{sec:benutzermenue}) in die
-Einstellungen gehen und im Reiter \enquote{Einstellungen} nach unten
-scrollen.
-
-\subsubsection*{Tag-Wolken hinzufügen mit dem Frontend Plugin}\label{sss:typo3Tagwolken}
-Sie können Ihren Typo3-Seiten nicht nur Publikationslisten hinzufügen, sondern auch Ihre PUMA Tag-Wolke (Tagcloud). Fügen Sie dazu der Seite, auf der die Tag-Wolke\index{Tag!Wolke} erscheinen soll, ein neues Plugin hinzu. Wählen Sie aus der Liste \enquote{Bibsonomy Tag Cloud}.
-
-Wie in \autoref{sss:typo3Publikationslisten} können Sie auch hier zwischen verschiedenen Modi wählen.
-\subsubsection*{CSL Styles verwalten}\label{typo3CslBackend}
-
-Bei der Installation der Extension werden Ihnen eine Reihe von CSL-Stylesheets ausgeliefert. Um weitere Stylesheets hinzuzufügen, erstellen Sie einen neuen Ordner im Seitenbaum und nennen diesen \textit{CSL Styles}. Wählen Sie anschließend diesen Ordner aus. Klicken Sie auf \enquote{Neu} und wählen \enquote{Add a custom style}.
-
-\autoref{fig:neueStylesheets} zeigt die drei unterschiedlichen Möglichkeiten, ein neues Stylesheet anzulegen:
-\begin{enumerate}
-\item Geben Sie den CSL-Quellcode direkt in das Textfeld ein und klicken Sie anschließend auf \enquote{Save}.
-\item Geben Sie in das Textfeld die URL des CSL-Stylesheets ein und klicken Sie auf \enquote{Import}.
-\item Laden Sie ein CSL-Stylesheet von Ihrem Computer hoch, indem Sie auf \enquote{Upload} klicken. 
-\end{enumerate}
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/stylesheets.jpg}}
- \caption{Neue Stylesheets hinzuzufügen}
- \label{fig:neueStylesheets}
-\end{figure}
-Um eine Vorschau zu erhalten, klicken Sie auf \enquote{Show Styles}.\newline
-Um ein CSL-Stylesheet zu löschen, klicken Sie wie gewohnt auf das Mülleimersymbol in Typo3. 
-\begin{figure}[h!]
- \centering
- \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/csl_stylesheet.jpg}}
- \caption{CSL-Stylesheet löschen}
- \label{fig:cslLoeschen}
-\end{figure}
-\subsection{WordPress\index{WordPress}}
-\label{subsec:wordpress}
-Um Publikationslisten aus PUMA in eine WordPress-Seite einzufügen, wird das WordPress-Plugin\index{Plugins!WordPress} \textit{BibSonomy/PUMA CSL} oder das Plugin \textit{BibSonomy/PUMA CSL - Publications \& Tag Cloud Widget}\footnote{\url{https://wordpress.org/plugins/bibsonomy-csl/}} benötigt. Eine ausführliche Anleitung zur Installation und Nutzung finden Sie im BibSonomy Blog. \footnote{\url{http://blog.bibsonomy.org/2012/12/feature-of-week-add-publication-lists.html}} Aktivieren Sie das Plugin und das TagCloudWidget im Plugins-Menü von Wordpress. Beides wurde vom PUMA-Team der UB Stuttgart zuletzt erfolgreich mit der WordPress-Version 4.9.5 getestet.
-
-Nach der Installation finden Sie im Menü \enquote{Einstellungen} einen neuen Eintrag namens \textit{BibSonomy CSL}. Geben Sie dort als BibSonomy Host \textit{puma.ub.uni-stuttgart.de}, als user ID Ihren PUMA-Benutzernamen und als API key ihren individuellen API key ein, den Sie im Benutzermenü in den Einstellungen finden (siehe \autoref{subsec:apiAuth}).  
-
-\subsubsection*{Publikationslisten hinzufügen}
-\label{sss:wordpressPublist}
-
-In WordPress finden Sie nun bei Seiten und Beiträgen eine neue Meta-Box namens \textit{Add BibSonomy Publications}, mit der Sie PUMA-Publikationen in die Seite einfügen können. Sie legen die Auswahl der Publikationen mit Hilfe der folgenden Felder fest:
-
-\begin{description}
-\item [Inhaltstyp (content type)] \hfill \\
-  Hier können Sie wählen, ob Sie die Publikationen eines bestimmten Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder eines Sichtbarkeitstyps (\textit{viewable}) einfügen möchten.
-\item [Inhaltstyp-Wert (value of content type)] \hfill \\
-  Hier geben Sie den Benutzernamen (bei Inhaltstyp \textit{user}), den Gruppennamen (bei Inhaltstyp \textit{group}) oder den Sichtbarkeitstyp (bei Inhaltstyp \textit{viewable}) an.
-\item [Tags] \hfill \\
-  Hier können Sie die Ergebnisliste einschränken, indem Sie Tags angeben, mit denen die Publikationen annotiert sein müssen. Mehrere Tags werden durch Leerzeichen getrennt.
-\item [Volltext-Suchbegriff (fulltext search)] \hfill \\
-  Hiermit können Sie die Ergebnisliste durch einen Suchbegriff einschränken, nachdem die Ergebnisse per Volltextsuche durchsucht werden.
-\item [Länge der Ergebnisliste (length of the result list)] \hfill \\
-  Hier geben Sie an, wie viele Einträge angezeigt werden sollen.
-\item [CSL-Stylesheet] \hfill \\
-  Hier wählen Sie den Zitationsstil aus, nach dem die Ergebnisse ausgegeben werden sollen. Ist der gewünschte Stil nicht im Drop-Down-Menü vorhanden, können Sie auch alternativ eine URL angeben.
-\item [Show link to abstract] Link zur Zusammenfassung in der Publikationsliste anzeigen lassen.
-\item [Show URL, BibTeX and EndNote links] Link zum BibTeX- oder EndNote-Code ausgeben.
-\item [Show download links] Links zum Download von Dokumenten, die mit dem Publikationseintrag verknüpft sind.
-\item [Show thumbnails of documents] Anzeige von Vorschaubildern zu den Dokumenten. 
-\item [Group publications by year] Publikationsliste nach Veröffentlichungsjahr gruppieren (mit Jahreszahl als Zwischenüberschrift), mit und ohne Sprungmarken.
-\item [CSS] \hfill \\
-  Hier können Sie die Ausgabe der Publikationen mit Hilfe von CSS-Code genauer steuern.
-\end{description}
-
-Um zum Beispiel die Liste der eigenen Publikationen anzuzeigen, wählen Sie beim Inhaltstyp \textit{user}, geben als Wert Ihren Benutzernamen und als Tag \textit{myown} an. 
-
-
-\subsubsection*{Tagwolken hinzufügen}
-\label{sss:wordpressTagcloud}
-
-Um in WordPress eine Tagwolke (Tagcloud) einzufügen, aktivieren Sie das TagCloudWidget. Anschließend können Sie auf der Widget-Seite im Design-Menü das BibSonomy/PUMA TagCloud-Widget an die gewünschte Stelle ziehen. Auch hier können Sie beim Inhaltstyp (source type) wählen, ob sich die Tag-Wolke auf die Sammlung von Publikationen eines Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder auf alle öffentlich geteilten Einträge (\textit{viewable}) beziehen soll. Bei \textit{BibSonomy source type value} tragen Sie dann entsprechend entweder Ihren Benutzernamen, den gewünschten Gruppennamen oder \enquote{public} ein. Drei Layouts stehen zur Verfügung: Simple, Decorated, Button Style. Die Überschrift kann auch weggelassen werden. Die angezeigten Tags verlinken auf die dazugehörigen Einträge in PUMA.
-
-
-\subsection{Zope\index{Zope}}
-\label{subsec:zope}
-Sie können Inhalte aus PUMA in das Content Management System Zope\footnote{\url{http://www.zope.org/}} integrieren.
-\begin{enumerate}
-    \item Publikationen\newline
-    Publikationslisten können mit Hilfe von \textit{RDF Summary}\footnote{\url{http://old.zope.org/Members/EIONET/RDFSummary/}} als RSS-Feeds\index{RSS} (siehe \autoref{subsec:export}) in Ihre Zope-Seite integriert werden. 
-    \item Tagwolken\newline
-    Sie haben die Möglichkeit, mit Hilfe von \textit{Kebas Data}\footnote{\url{https://sourceforge.net/projects/kebasdata/}} Tagwolken auf Ihren Zope-Seiten einzufügen. Eine detaillierte Anleitung hierfür findet sich unter \footnote{\url{https://puma.uni-kassel.de/help_de/Tag-Wolken\%20auf\%20Zope-Seiten}}
-\end{enumerate}
+\todo[inline]{brauchen wir das?}
+%\subsection{Typo3\index{Typo3}}
+%\label{subsec:typo3}
+%\subsubsection*{Installation}\label{sss:installation}
+%PUMA CSL ist eine Erweiterung (Extension) für Typo3\index{Plugins!Typo3}. Um sie zu installieren, suchen Sie im Extension Manager nach der Extension ext\_bibsonomy\_csl und importieren Sie diese.
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/extension_manager.jpg}}
+% \caption{Extension Manager}
+% \label{fig:extensionManager}
+%\end{figure}
+%Nach erfolgreichem Import wird die Extension unter \enquote{Available Extensions} angezeigt. Klicken Sie auf das +-Symbol, um es zu aktivieren.
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/available_extensions.jpg}}
+% \caption{Available Extensions}
+% \label{fig:availableExtensions}
+%\end{figure}
+%
+%\subsubsection*{Publikationslisten hinzufügen mit dem Frontend Plugin}\label{sss:typo3Publikationslisten}
+%Nachdem Sie die Extension importiert und aktiviert haben, können Sie Publikationslisten erstellen. Fügen Sie dazu der Seite, auf der die Publikationsliste erscheinen soll, ein neues Plugin hinzu. Wählen Sie hierfür aus der Liste \enquote{PUMA Publication List} aus.\newline
+%\newline
+%Im Reiter \enquote{General} tragen Sie den Titel für die Publikationsliste ein.
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=8cm]{Bilder/Kapitel9/reiter_general.jpg}}
+% \caption{Reiter General}
+% \label{fig:reiterGeneral}
+%\end{figure}
+%
+%Gehen Sie auf den Reiter \enquote{Plugin} und nehmen Sie die gewünschten Einstellungen vor. Sie können zwischen den Inhaltstypen \textit{user}, \textit{group} oder \textit{viewable} wählen, um zu definieren, ob die Publikationsliste aus den Einträgen eines Benutzers, einer Gruppe oder einer Sichtbarkeitseinstellung bestehen soll. Geben Sie im untersten Textfeld als \textit{custom url} die Seite Ihrer PUMA-Installation ein, also \textit{http://puma.ub.uni-stuttgart.de}\newline
+%\newline
+%Beispiel: Sie möchten Ihre eigene Publikationsliste einbinden. Dazu wählen Sie zunächst unter der Rubrik \enquote{Content Source} die Option \enquote{user} aus. Tragen Sie dann den gewünschten (Ihren) Nutzernamen unter \enquote{Insert the id of user, group or viewable source} ein. Anschließend können Sie die Einträge der Publikationsliste über Tags filtern. Geben Sie hierfür die gewünschten Tags in das Feld \enquote{Select content via tags} ein. Um nur eigene Einträge anzeigen zu lassen, verwenden Sie das Systemtag \textit{myown}. Sie können zudem die Anzahl der angezeigten Publikationen begrenzen sowie mittels Freitext filtern.
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=9cm]{Bilder/Kapitel9/reiter_plugin.jpg}}
+% \caption{Reiter Plugin}
+% \label{fig:reiterPlugin}
+%\end{figure}
+%
+%\begin{mdframed}[style=mdfexample1,frametitle={ACHTUNG},backgroundcolor=gray!40]Bitte beachten Sie, dass die Extension Ihre gesamte Publi\-kations\-liste darstellt, wie Sie sie in PUMA sehen \textbf{(auch private Publikationen)}. Wenn Sie z.B. an eine Publikation ein Dokument angehängt haben, dann wird dieses auch in der Publikationsliste angezeigt. Dadurch können für Sie \textbf{urheberrechtliche Konsequenzen} entstehen. Wir empfehlen Ihnen daher für die Nutzung einen zusätzlichen Account anzulegen, mit dem Sie in PUMA nur die TYPO3-Publikationen verwalten.
+%\end{mdframed} 
+%Im Reiter \enquote{Layout} können Sie den Zitationsstil der Publikationsliste anpassen. Die Definition des Zitationsstils geschieht mit Hilfe der Citation Style Language (CSL\index{CSL}). Eine große Liste an frei verfügbaren CSL-Vorlagen finden Sie unter: \url{http://www.zotero.org/styles/}.
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=7cm]{Bilder/Kapitel9/csl_typo.jpg}}
+% \caption{Citation Style Language(CSL)}
+% \label{fig:csl}
+%\end{figure}
+%
+%Im Reiter Rubrik \enquote{Login} müssen Sie Ihre PUMA
+%API-Daten\index{API} hinterlegen. Nur so kann sich die TYPO3 Extension
+%bei PUMA anmelden und Ihre Daten abrufen. Ihren API-Key finden Sie,
+%wenn Sie im Benutzermenü (\autoref{sec:benutzermenue}) in die
+%Einstellungen gehen und im Reiter \enquote{Einstellungen} nach unten
+%scrollen.
+%
+%\subsubsection*{Tag-Wolken hinzufügen mit dem Frontend Plugin}\label{sss:typo3Tagwolken}
+%Sie können Ihren Typo3-Seiten nicht nur Publikationslisten hinzufügen, sondern auch Ihre PUMA Tag-Wolke (Tagcloud). Fügen Sie dazu der Seite, auf der die Tag-Wolke\index{Tag!Wolke} erscheinen soll, ein neues Plugin hinzu. Wählen Sie aus der Liste \enquote{Bibsonomy Tag Cloud}.
+%
+%Wie in \autoref{sss:typo3Publikationslisten} können Sie auch hier zwischen verschiedenen Modi wählen.
+%\subsubsection*{CSL Styles verwalten}\label{typo3CslBackend}
+%
+%Bei der Installation der Extension werden Ihnen eine Reihe von CSL-Stylesheets ausgeliefert. Um weitere Stylesheets hinzuzufügen, erstellen Sie einen neuen Ordner im Seitenbaum und nennen diesen \textit{CSL Styles}. Wählen Sie anschließend diesen Ordner aus. Klicken Sie auf \enquote{Neu} und wählen \enquote{Add a custom style}.
+%
+%\autoref{fig:neueStylesheets} zeigt die drei unterschiedlichen Möglichkeiten, ein neues Stylesheet anzulegen:
+%\begin{enumerate}
+%\item Geben Sie den CSL-Quellcode direkt in das Textfeld ein und klicken Sie anschließend auf \enquote{Save}.
+%\item Geben Sie in das Textfeld die URL des CSL-Stylesheets ein und klicken Sie auf \enquote{Import}.
+%\item Laden Sie ein CSL-Stylesheet von Ihrem Computer hoch, indem Sie auf \enquote{Upload} klicken. 
+%\end{enumerate}
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/stylesheets.jpg}}
+% \caption{Neue Stylesheets hinzuzufügen}
+% \label{fig:neueStylesheets}
+%\end{figure}
+%Um eine Vorschau zu erhalten, klicken Sie auf \enquote{Show Styles}.\newline
+%Um ein CSL-Stylesheet zu löschen, klicken Sie wie gewohnt auf das Mülleimersymbol in Typo3. 
+%\begin{figure}[h!]
+% \centering
+% \fbox{\includegraphics[width=11cm]{Bilder/Kapitel9/csl_stylesheet.jpg}}
+% \caption{CSL-Stylesheet löschen}
+% \label{fig:cslLoeschen}
+%\end{figure}
+%\subsection{WordPress\index{WordPress}}
+%\label{subsec:wordpress}
+%Um Publikationslisten aus PUMA in eine WordPress-Seite einzufügen, wird das WordPress-Plugin\index{Plugins!WordPress} \textit{BibSonomy/PUMA CSL} oder das Plugin \textit{BibSonomy/PUMA CSL - Publications \& Tag Cloud Widget}\footnote{\url{https://wordpress.org/plugins/bibsonomy-csl/}} benötigt. Eine ausführliche Anleitung zur Installation und Nutzung finden Sie im BibSonomy Blog. \footnote{\url{http://blog.bibsonomy.org/2012/12/feature-of-week-add-publication-lists.html}} Aktivieren Sie das Plugin und das TagCloudWidget im Plugins-Menü von Wordpress. Beides wurde vom PUMA-Team der UB Stuttgart zuletzt erfolgreich mit der WordPress-Version 4.9.5 getestet.
+%
+%Nach der Installation finden Sie im Menü \enquote{Einstellungen} einen neuen Eintrag namens \textit{BibSonomy CSL}. Geben Sie dort als BibSonomy Host \textit{puma.ub.uni-stuttgart.de}, als user ID Ihren PUMA-Benutzernamen und als API key ihren individuellen API key ein, den Sie im Benutzermenü in den Einstellungen finden (siehe \autoref{subsec:apiAuth}).  
+%
+%\subsubsection*{Publikationslisten hinzufügen}
+%\label{sss:wordpressPublist}
+%
+%In WordPress finden Sie nun bei Seiten und Beiträgen eine neue Meta-Box namens \textit{Add BibSonomy Publications}, mit der Sie PUMA-Publikationen in die Seite einfügen können. Sie legen die Auswahl der Publikationen mit Hilfe der folgenden Felder fest:
+%
+%\begin{description}
+%\item [Inhaltstyp (content type)] \hfill \\
+%  Hier können Sie wählen, ob Sie die Publikationen eines bestimmten Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder eines Sichtbarkeitstyps (\textit{viewable}) einfügen möchten.
+%\item [Inhaltstyp-Wert (value of content type)] \hfill \\
+%  Hier geben Sie den Benutzernamen (bei Inhaltstyp \textit{user}), den Gruppennamen (bei Inhaltstyp \textit{group}) oder den Sichtbarkeitstyp (bei Inhaltstyp \textit{viewable}) an.
+%\item [Tags] \hfill \\
+%  Hier können Sie die Ergebnisliste einschränken, indem Sie Tags angeben, mit denen die Publikationen annotiert sein müssen. Mehrere Tags werden durch Leerzeichen getrennt.
+%\item [Volltext-Suchbegriff (fulltext search)] \hfill \\
+%  Hiermit können Sie die Ergebnisliste durch einen Suchbegriff einschränken, nachdem die Ergebnisse per Volltextsuche durchsucht werden.
+%\item [Länge der Ergebnisliste (length of the result list)] \hfill \\
+%  Hier geben Sie an, wie viele Einträge angezeigt werden sollen.
+%\item [CSL-Stylesheet] \hfill \\
+%  Hier wählen Sie den Zitationsstil aus, nach dem die Ergebnisse ausgegeben werden sollen. Ist der gewünschte Stil nicht im Drop-Down-Menü vorhanden, können Sie auch alternativ eine URL angeben.
+%\item [Show link to abstract] Link zur Zusammenfassung in der Publikationsliste anzeigen lassen.
+%\item [Show URL, BibTeX and EndNote links] Link zum BibTeX- oder EndNote-Code ausgeben.
+%\item [Show download links] Links zum Download von Dokumenten, die mit dem Publikationseintrag verknüpft sind.
+%\item [Show thumbnails of documents] Anzeige von Vorschaubildern zu den Dokumenten. 
+%\item [Group publications by year] Publikationsliste nach Veröffentlichungsjahr gruppieren (mit Jahreszahl als Zwischenüberschrift), mit und ohne Sprungmarken.
+%\item [CSS] \hfill \\
+%  Hier können Sie die Ausgabe der Publikationen mit Hilfe von CSS-Code genauer steuern.
+%\end{description}
+%
+%Um zum Beispiel die Liste der eigenen Publikationen anzuzeigen, wählen Sie beim Inhaltstyp \textit{user}, geben als Wert Ihren Benutzernamen und als Tag \textit{myown} an. 
+%
+%
+%\subsubsection*{Tagwolken hinzufügen}
+%\label{sss:wordpressTagcloud}
+%
+%Um in WordPress eine Tagwolke (Tagcloud) einzufügen, aktivieren Sie das TagCloudWidget. Anschließend können Sie auf der Widget-Seite im Design-Menü das BibSonomy/PUMA TagCloud-Widget an die gewünschte Stelle ziehen. Auch hier können Sie beim Inhaltstyp (source type) wählen, ob sich die Tag-Wolke auf die Sammlung von Publikationen eines Benutzers (\textit{user}), einer Gruppe (\textit{group}) oder auf alle öffentlich geteilten Einträge (\textit{viewable}) beziehen soll. Bei \textit{BibSonomy source type value} tragen Sie dann entsprechend entweder Ihren Benutzernamen, den gewünschten Gruppennamen oder \enquote{public} ein. Drei Layouts stehen zur Verfügung: Simple, Decorated, Button Style. Die Überschrift kann auch weggelassen werden. Die angezeigten Tags verlinken auf die dazugehörigen Einträge in PUMA.
+%
+%
+%\subsection{Zope\index{Zope}}
+%\label{subsec:zope}
+%Sie können Inhalte aus PUMA in das Content Management System Zope\footnote{\url{http://www.zope.org/}} integrieren.
+%\begin{enumerate}
+%    \item Publikationen\newline
+%    Publikationslisten können mit Hilfe von \textit{RDF Summary}\footnote{\url{http://old.zope.org/Members/EIONET/RDFSummary/}} als RSS-Feeds\index{RSS} (siehe \autoref{subsec:export}) in Ihre Zope-Seite integriert werden. 
+%    \item Tagwolken\newline
+%    Sie haben die Möglichkeit, mit Hilfe von \textit{Kebas Data}\footnote{\url{https://sourceforge.net/projects/kebasdata/}} Tagwolken auf Ihren Zope-Seiten einzufügen. Eine detaillierte Anleitung hierfür findet sich unter \footnote{\url{https://puma.uni-kassel.de/help_de/Tag-Wolken\%20auf\%20Zope-Seiten}}
+%\end{enumerate}
 %\subsubsection*{Tag-Wolken auf Zope-Seiten} \label{sss:zopeTagwolken}
 %PUMA-Schlagwörter können auf einer Zope-Seite angezeigt werden. 
 %\begin{enumerate}
@@ -695,3 +697,4 @@ Sie können Inhalte aus PUMA in das Content Management System Zope\footnote{\url
 Die Weiterentwicklung von PUMA wird über Bitbucket\index{Bitbucket} verwaltet. Bitbucket ist ein auf Git basierendes Versionskontrollsystem, das die Zusammenarbeit innerhalb von Entwicklungs-Teams erleichtert.  
 
 Fehler innerhalb von PUMA können in Bitbucket an die Entwickler gemeldet werden. Hierzu benötigt man ein eigens Bitbucket-Nutzerkonto. Mit diesem melden Sie sich bei Bitbucket an und gehen auf die Bibsonomy/~Puma-Seite\footnote{\url{https://bitbucket.org/bibsonomy/puma}}. Unter dem Reiter \enquote{Issues} können neue Problemmeldungen verfasst werden.
+\todo[inline]{stimmt so nicht mehr}
